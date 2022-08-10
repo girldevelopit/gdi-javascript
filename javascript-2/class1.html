@@ -1,0 +1,664 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="Girl Develop It JavaScript Fundamentals 2 Cohort Series">
+  <meta name="author" content="Girl Develop It">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <!-- Update with GDI Course Name -->
+  <title>GDI - JavaScript Fundamentals 2, Class 1</title>
+
+  <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico" />
+
+  <!-- RevealJS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/theme/simple.css" id="theme">
+
+  <!-- GDI Custom Theme -->
+  <link rel="stylesheet" href="./assets/css/gdi-theme.css">
+
+  <!-- Theme used for syntax highlighted code -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/monokai.min.css">
+  <style>
+    p.gdi-p {
+      font-size: 32px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <!-- Start of Slides container -- Any section element in this container is displayed as a slide -->
+    <div class="slides">
+
+      <!-- Course and Class Titles -->
+      <section>
+        <h2>JavaScript Fundamentals 2</h2>
+        <h2>Class 1</h3>
+      </section>
+
+      <!-- Class Agenda -->
+      <section>
+        <h3>AGENDA</h3>
+          <ul>
+            <li>What is Modern JavaScript?</li>
+            <li>ES6 Features:
+              <ul>
+                <li>Variable Declarations</li>
+                <li>String Interpolation</li>
+                <li>Arrow Functions</li>
+                <li><code>for of</code> Loop</li>
+              </ul>
+            </li>
+            <!-- <li>Loops:
+              <ul>
+                <li><code>forEach()</code></li>
+                <li><code>for of</code> (ES6)</li>
+              </ul>
+            </li> -->
+            <li>Home Practice</li>
+            <li>Feedback & Class 2 Preview</li>
+          </ul>
+      </section>
+      
+      <!-- Stretch Break -->
+      <section>
+        <h3>Stretch - "Bio" Break</h3>
+        <p>4:00p PST /  6:00p CST / 7:00p EST</p>
+      </section>
+
+      <section>
+        <h3>JavaScript ES6</h3>
+      </section>
+
+      <section>
+        <h3>What is Modern JavaScript?</h3>
+        <p class="gdi-p" style="max-width: 800px; margin: 0 auto 24px auto;">Any version of JavaScript since ES6 or ES2015</p>
+        <p class="gdi-p" style="max-width: 800px; margin: 0 auto 24px auto;">"ES" stands for ECMAScript</p>
+        <p><a href="https://en.wikipedia.org/wiki/ECMAScript" target="_blank">ECMAScript (Wikipedia)</a></p>
+      </section>
+
+      <section>
+        <h3>ECMAScript</h3>
+        <ul>
+          <li>A set of standards for how JavaScript should work</li>
+          <li>Standards are set by a working group called <code>TC39</code></li>
+        </ul>
+        <p><a href="https://tc39.es/" target="_blank">TC39 - Specifying JavaScript</a></p>
+      </section>
+
+      <section>
+        <h3>JavaScript Timeline</h3>
+        <ul>
+          <li>1997: First Edition</li>
+          <li>1998: Second Edition</li>
+          <li>1999: Third Edition</li>
+          <li>2003: Fourth Edition (Abandoned)</li>
+          <li>2009-2011: ES5</li>
+          <li style="color: #f05b62; font-weight: bold;">2015: ES6 (ES2015)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>ES6 (ES2015)</h3>
+        <ul>
+          <li>Introduced new syntax and shorthands</li>
+          <li>Introduced new features</li>
+          <li>Improvements to existing features</li>
+          <li>More performant than previous versions of JS</li>
+        </ul>
+        <p  style="max-width: 600px; margin: 30px auto 0 auto;"><a href="http://blog.thefirehoseproject.com/posts/12-reasons-es6-future-javascript-web-development/" target="_blank">12 Reasons Why ES6 is the future of JavaScript and Web Development</a></p>
+      </section>
+
+      <section>
+        <h3>Modern JavaScript</h3>
+        <p class="gdi-p" style="max-width: 700px; margin: 0 auto 24px auto;">Yearly updates after ES6 (ES2015)</p>
+        <div class="flex" style="width: 700px; margin: 32px auto 0 auto;">
+          <ul>
+            <li>2015: ES2015</li>
+            <li>2016: ES2016</li>
+            <li>2017: ES2017</li>
+            <li>2018: ES2018</li>
+          </ul>
+          <ul>
+            <li>2019: ES2019</li>
+            <li>2020: ES2020</li>
+            <li>2021: ES2021</li>
+            <li style="color: #f05b62; font-weight: bold;">ES-Next (June)</li>
+          </ul>
+        </div>
+        <p  style="max-width: 600px; margin: 30px auto 0 auto;"><a href="https://www.w3schools.com/js/js_versions.asp" target="_blank">JavaScript Versions (w3schools)</a></p>
+      </section>
+
+      <section>
+        <h3>Why Learn ES6 & Beyond?</h3>
+        <ul>
+          <li>Fast adoption by web developers</li>
+          <li>Wide-spread browser support</li>
+          <li>Required for frameworks such as React</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>A Gentle Introduction to ES6+</h3>
+      </section>
+
+      <section>
+        <h3>Variable Declaration</h3>
+        <p class="gdi-p" style="max-width: 600px; margin: 0 auto 24px auto;">ES6 introduced two new keywords to declare variables</p>
+        <p class="gdi-p" style="max-width: 600px; margin: 0 auto 24px auto;"><code>let</code> and <code>const</code></p>
+      </section>
+
+      <section>
+        <h3><code>let</code> Variable Keyword</h3>
+        <ul>
+          <li>With <code>let</code>, variables can be changed or re-assigned</li>
+          <li>Variables cannot be re-declared</li>
+        </ul>
+<pre><code class="js">let firstName;
+
+let firstName = "Charmaine" // This will throw an error
+
+firstName = "Charmaine" // Initializing the variable
+
+firstName = "Michio" // Re-assigning the variable
+</code></pre>
+        <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let" target="_blank"><code>let</code> (MDN)</a></p>
+      </section>
+
+      <section>
+        <h3><code>const</code> Variable Keyword</h3>
+        <ul>
+          <li>Used for values that should be constant or unchanged</li>
+          <li>With <code>const</code>, a variable cannot be re-assigned or re-declared</li>
+          <li>Variables declared with <code>const</code> have to initialized</li>
+        </ul>
+<pre><code class="js">const userName; // Not initialized; this will throw an error
+  
+const userName = "Jasmine";
+
+userName = "Jackie" // Re-assignment; this will throw an error
+</code></pre>
+        <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const" target="_blank"><code>const</code> (MDN)</a></p>
+      </section>
+
+      <section>
+        <h3><code>var</code> Variable Keyword</h3>
+        <ul>
+          <li>The pre-ES6 way of declaring variables</li>
+          <li>Not recommended to declare variables this way anymore</li>
+          <li>But still used in legacy code</li>
+        </ul>
+<pre><code class="js">var yourName = 'Alina';</code></pre>
+      </section>
+
+      <section>
+        <h3>What else is unique about<br> <code>const</code> and <code>let</code>?</h3>
+      </section>
+
+      <section>
+        <h3>Scope</h3>
+        <p style="max-width: 700px; margin: 30px auto 0 auto;">Variables declared with <code>const</code> and <code>let</code> are block-scoped</p>
+      </section> 
+
+      <section>
+        <h3>Scope</h3>
+        <p style="max-width: 700px; margin: 30px auto 0 auto;">Scope is how JavaScript manages the ability to use or access declared variables</p>
+
+        <p  style="max-width: 700px; margin: 30px auto;">There are three types of scope:</p>
+        <ul>
+          <li>Global</li>
+          <li>Function</li>
+          <li>Block <span  style="color: #f05b62;">(Introduced in ES6)</span></li>
+        </ul>
+        <p><a href="https://dmitripavlutin.com/javascript-scope/" target="_blank">A Simple Explanation of Scope in JavaScript</a></p>
+      </section>
+
+      <section>
+        <h3>Global Scope</h3>
+        <p class="gdi-p" style="max-width: 700px; margin: 0 auto 24px auto;">A variable declared in the global scope can be used anywhere in the code</p>
+
+<pre><code class="js">let year = 2022; // Variable in global scope
+
+// Used anywhere in the code
+console.log (year)
+
+// Used in a function
+function printYear(){
+  console.log(year)
+}
+printYear()
+  
+// Used in a block
+if(true){
+  console.log(year)
+}</code></pre>
+      </section>
+
+      <section>
+        <h3>Function Scope</h3>
+        <p class="gdi-p" style="max-width: 700px; margin: 0 auto 24px auto;">A variable declared inside a function can only be used in that same function</p>
+<pre><code class="js">function printNewYear(){
+
+  var y2k = 2000;
+
+  console.log(y2k);
+
+}
+
+printNewYear() // Output: 2000
+
+console.log(y2k) // Error
+</code></pre>
+      </section>
+
+      <section>
+        <h3>Block Scope</h3>
+        <p class="gdi-p" style="max-width: 700px; margin: 0 auto 24px auto;">A variable declared inside of a block <code>{ }</code>, for example, an <code>if </code> or <code>else</code> block, can only be used inside that block</p>
+<pre><code class="js">let age = 20 
+
+if(age === 20){
+  
+  let greeting = `Happy Birthday!`
+
+  console.log(greeting) // Output: Happy Birthday!
+
+}
+
+console.log(greeting) // Error
+</code></pre>
+      </section>
+
+      <section>
+        <h3>Block Scope Practice</h3>
+        <p class="gdi-p" style="max-width: 800px; margin: 0 auto 24px auto;">Copy and paste the code below into your editor:</p>
+<pre><code class="js">function printName(){
+
+  var num = 5;
+
+  if(num === 5){
+    var firstName = 'Lisa'
+  } 
+
+  console.log(firstName)
+
+}
+
+printName()</code></pre>
+      </section>
+
+      <section>
+        <h3>Block Scope Practice (contd)</h3>
+        <ol>
+          <li>Run the <code>printName()</code> function; what is the output?</li>
+          <li>Change the <code>var</code> keyword in the <code>if</code> block to <code>let</code>, and run the function again; what happens?</li>
+          <li>Copy the <code>console</code> statement and paste it under the <code>firstName</code> declaration; you should now have two <code>console</code> statements</li>
+          <li>Comment out the second <code>console</code> statement and run your code; what is the output?</li>
+        </ol>
+      </section>
+
+      <section>
+        <h3>Block Scope Practice (contd)</h3>
+        <ol>
+          <li>Create an <code>else</code> block after the <code>if</code> block</li>
+          <li>Duplicate the code in the <code>if</code> block to the <code>else</code> block</li>
+          <li>Change the value of <code>firstName</code> in the <code>else</code> block to "Nikki"</li>
+          <li>Change the value of <code>num</code> variable to 6</li>
+          <li>Run the code; what is the output?</li>
+        </ol>
+      </section>
+
+      <section>
+        <h3>Scope<br> <code>const</code> and <code>let</code></h3>
+        <p class="gdi-p" style="max-width: 800px; margin: 0 auto 24px auto;">While all three variable keywords can be globally scoped and function-scoped, only <code>const</code> and <code>let</code> are block-scoped</p>
+      </section>
+
+      <section>
+        <h3>String Interpolation</h3>
+        <h4>or</h4>
+        <h3>Template Literals</h3>
+      </section>
+
+      <section>
+        <h3>String Interpolation</h3>
+        <ul>
+          <li>The ES6 way of combining strings</code></li>
+          <li>Also called <code>template literals</code></li>
+          <li>More efficient than concatenating</li>
+        </ul>
+<pre><code class="js">let firstName = 'Beverly'
+let lastName = 'Williams'
+
+// ES5 - Concatenation
+let fullName1 = firstName + ' ' + lastName
+console.log(fullName1)
+
+// ES6
+let fullName2 = `${firstName} ${lastName}`
+console.log(fullName2)</code></pre>
+        <p><a href="https://dmitripavlutin.com/string-interpolation-in-javascript/" target="_blank">String Interpolation in JavaScript</a></p>    
+      </section>
+
+      <section>
+        <h3>String Interpolation</h3>
+        <ul>
+          <li>Wrap the entire string in backticks</li>
+          <li>Use <code>${variable_name}</code> to denote and enclose variables</li>
+          <li>JavaScript expressions can be embedded into a string statement</li>
+        </ul>
+<pre><code class="js">let firstName = 'Beverly'
+
+let lastName = 'Williams'
+
+let currentYear = 2022
+
+let birthYear = 1948
+
+let statement = `My first name is ${firstName}; last name ${lastName}, and I am ${currentYear - birthYear} years old.`
+
+console.log(statement)
+</code></pre>      
+      </section>
+
+      <section>
+        <h3>String Interpolation Practice</h3>
+        <p class="gdi-p" style="max-width: 800px; margin: 0 auto 24px auto;">
+          Rewrite the output of the <code>hello</code> variable using string interpolation instead of concatenation</p>
+<pre><code class="js">const myName = 'Takeshi';
+const hello = 'Hello, my name is ' + myName;
+console.log(hello);
+</code></pre>
+      </section>
+
+      <section>
+        <h3>String Interpolation Practice</h3>
+        <ul>
+          <li>Copy and paste the code below into your editor</li>
+          <li>Run the code to see the output; then...</li>
+          <li>Rewrite the string using template literals or string interpolation</li>
+        </ul>
+
+<pre><code class="js">let teacher = 'Ms Williams'
+let student = 'Lisa Jones'
+let parent = 'Ms Jones'  
+let note = teacher + ',\n\n' +
+'Please excuse ' + student + '.\n' +
+'She is recovering from the flu.\n\n' +
+'Thank you,\n' + parent;
+  
+console.log(note)
+</code></pre>
+      </section>
+
+      <section>
+        <h3>Arrow Functions</h3>
+      </section>
+
+      <section>
+        <h3>Arrow Functions</h3>
+        <p class="gdi-p" style="max-width: 700px; margin: 0 auto 24px auto;">
+          Introduced in ES6, <code>arrow functions</code> provide an alternative and more concise way to write function syntax</p>
+          <p><a href="https://www.javascripttutorial.net/es6/javascript-arrow-function/" target="_blank">An Introduction to JavaScript Arrow Functions</a></p>
+      </section>
+
+      <section>
+        <h3>Arrow Functions</h3>
+<pre><code class="js">// Standard function syntax
+function greeting(name){
+  return `Hello ${name}`
+}
+
+console.log(greeting('Kemi'))
+
+
+// Same function;
+// Using an arrow function expression
+const greeting = (name) => {
+  return `Hello ${name}`
+}
+
+console.log(greeting('Keisha'))
+</code></pre>
+      </section>
+      
+      <section>
+        <h3>Arrow Function Syntax</h3>
+<pre><code class="js">const functionName = () => {
+
+// Code to run
+
+}
+
+functionName()
+</code></pre>
+      </section>
+
+      <!--  -->
+      <section>
+        <h3>Arrow Function Shorthands</h3>
+        <ul>
+          <li>An arrow function with a single parameter can omit the parentheses around the parameter</li>
+          <li>An arrow function with a single or simple expression can omit the curly brackets and the <code>return</code> keyword</li>
+        </ul>
+<pre><code class="js">function greetFriend (firstName) {
+
+  return `Hey ${firstName}`
+
+}
+  
+// Arrow Function Shorthand
+
+const greetFriend = firstName => `Hey ${firstName}`
+
+</code></pre>
+      </section>
+
+      <section>
+        <h3>Arrow Function Practice</h3>
+        <p>Rewrite and run the function below using arrow function syntax</p>
+<pre><code class="js">function firstLineOfCode (name) {
+  return `Hello ${name}`
+}
+
+console.log(firstLineOfCode())
+</code></pre>
+
+<pre><code class="js">// Arrow Function Syntax
+const functionName = () => {
+  // code
+}
+
+// Shorthand syntax
+const functionName = param => code
+</code></pre>
+      </section>
+
+      <section>
+        <h3>Arrow Function Practice</h3>
+        <p>Rewrite the functions below using arrow function syntax</p>
+<pre><code class="js">function addTwoNumbers (num1, num2) {
+  let sum = num1 + num2;  
+  return sum;
+}
+
+function squareNumber (num) {
+  return num * num;
+}
+</code></pre>
+
+<pre><code class="js">// Arrow Function Syntax
+const functionName = () => {
+  // code
+}
+
+// Shorthand syntax
+const functionName = param => code
+</code></pre>
+      </section>
+
+      <section>
+        <h3><code>for of</code> Loop</h3>
+      </section>
+
+      <section>
+        <h3><code>for of</code> Loop</h3>
+        <ul>
+          <li>The <code>for of</code> loop was introduced in ES6</li>
+          <li>It can be used on any data type that's countainable, such as strings and arrays</li>
+          <li>It is written differently than the standard <code>for</code> loop</li>
+        </ul>
+        <p><a href="https://www.javascripttutorial.net/es6/javascript-for-of/" target="_blank">Introduction to the JavaScript for...of Loop</a></p>
+      </section>
+
+      <section>
+        <h3><code>for of</code> Loop Syntax</h3>
+<pre><code class="js">for (let item of iterable) {
+  
+  // ...
+  // usually returning or doing something with 'variable'
+
+}
+</code></pre>
+        <p><code>iterable</code> is the element that's being looped</p>
+        <p><code>item</code> is each item in the looped element</p>
+      </section>
+
+      <section>
+        <h3>Comparison:</h3>
+        <h3>Standard <code>for</code> Loop</h3>
+        <p>Output each character of a string</p>
+<pre><code class="js">let famousName = "oprah"
+
+for(let i = 0; i < famousName.length; i++){
+  
+  console.log(famousName[i])
+
+}</code></pre>
+      </section>
+
+      <section>
+        <h3>Comparison:</h3>
+        <h3><code>for of</code> Loop</h3>
+        <p>Output each character of a string</p>
+<pre><code class="js">let famousName = "oprah"
+
+for(let char of famousName){
+  
+  console.log(char)
+
+}</code></pre>
+      </section>
+
+      <section>
+        <h3><code>for of</code> Loop Practice</h3>
+        <ul>
+          <li>Create an array of five countries</li>
+          <li>Use the <code>for of</code> loop to log each country in the array to the console</li>
+        </ul>
+<pre><code class="js">for (let item of iterable) {
+
+  // ...
+  // usually returning or doing something with 'variable'
+
+}
+</code></pre>
+      </section>
+
+      <!-- <p class="gdi-p" style="max-width: 800px; margin: 0 auto 24px auto;"></p> -->
+      <!-- <pre><code class="js"></code></pre> -->
+      <!-- 
+        <pre><code class="html">&lt;html&gt;
+        &lt;body&gt;
+          ...
+          <script src="script.js"></script>
+        &lt;/body&gt;
+      &lt;/html&gt;
+      </code></pre> 
+      -->
+
+      <!-- Home Practice -->
+      <section>
+        <h3>Home Practice</h3>
+        <ul>
+          <li><a href="https://replit.com/@tinuola/js2-class1-home-practice#script.js" target="_blank">REPL Home Practice</a></li>
+        </ul>
+      </section>
+
+      <!-- Next Class -->
+      <section>
+        <h3>Class 2 - Agenda</h3>
+        <ul>
+          <li>Review: Class 1</li>
+          <li>Array Methods & Iterators</li>
+        </ul>
+      </section>
+
+      <!-- MUST USE SLIDE - Course Feedback Survey-->
+      <section>
+        <h3>Class Feedback</h3>
+        <p><a href="https://forms.gle/v3pmYygbTfaBNVLPA" target="_blank">https://forms.gle/v3pmYygbTfaBNVLPA</a></p>
+      </section>
+
+      <!-- Q&A -->
+      <section>
+        <h2>Q&A</h2>
+      </section>
+
+      <!-- Thank You -->
+      <section>
+        <img src="./assets/images/gdi-logos/GDI-Logo_Peach.png" alt="GDI Logo" width="300px" class="noborder" />
+        <br>
+        <h2>Thank You!</h2>
+      </section>
+    </div> <!-- End of Slides container -->
+
+    <footer>
+      <!-- Update with Course Name -->
+      <div class="copyright">
+        <img src="./assets/images/gdi-logos/GDI-Logo_Peach.png" alt="GDI Logo" width="40px" class="noborder" />
+        <p>JavaScript Fundamentals 2 - Class 1</p>
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img
+            alt="Creative Commons License" style="border-width:0"
+            src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+      </div>
+    </footer>
+  </div> <!-- End of Reveal wrapper -->
+
+  <!-- REVEAL.JS Script Files - Do Not Edit -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/plugin/highlight/highlight.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/highlightjs-badge@0.1.9/highlightjs-badge.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jsPlumb/2.15.5/js/jsplumb.min.js"></script>
+  <script>
+    const srcUrlPrefix = "https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/";
+    Reveal.initialize({
+      hash: true,
+      center: true,
+      slideNumber: true,
+      showNotes: false,
+      margin: 0.1,
+      preloadIframes: true,
+      plugins: [RevealHighlight],
+      pdfSeparateFragments: true
+    });
+
+    // add HighlightJS-badge (options are optional)
+    var options = {
+      copyIconContent: "📄",
+      checkIconContent: "✅"
+    };
+    window.highlightJsBadge(options);
+
+    if (window.location.search == "?print-pdf") {
+      var uncounted = document.querySelectorAll("[data-visibility='uncounted']");
+      uncounted.forEach(node => {
+        node.parentNode.classList.add("no-print")
+      })
+    }
+  </script>
+</body>
+</html>

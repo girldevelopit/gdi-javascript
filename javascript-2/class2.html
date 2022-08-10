@@ -1,0 +1,407 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="Girl Develop It JavaScript Fundamentals 2 Cohort Series">
+  <meta name="author" content="Girl Develop It">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <!-- Update with GDI Course Name -->
+  <title>GDI - JavaScript Fundamentals 2, Class 2</title>
+
+  <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico" />
+
+  <!-- RevealJS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/theme/simple.css" id="theme">
+
+  <!-- GDI Custom Theme -->
+  <link rel="stylesheet" href="./assets/css/gdi-theme.css">
+
+  <!-- Theme used for syntax highlighted code -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/monokai.min.css">
+  <style>
+    p.gdi-p {
+      font-size: 32px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <!-- Start of Slides container -- Any section element in this container is displayed as a slide -->
+    <div class="slides">
+
+      <!-- Course and Class Titles -->
+      <section>
+        <h2>JavaScript Fundamentals 2</h2>
+        <h2>Class 2</h3>
+      </section>
+
+      <!-- Class Agenda -->
+      <section>
+        <h3>AGENDA</h3>
+          <ul>
+            <li>Slack Tour</li>
+            
+            <li>ES6 Features (contd):
+              <ul>
+                <li>Arrow Functions</li>
+                <li><code>for of</code> Loop</li>
+                <li>Home Practice Review</li>
+              </ul>
+            </li>
+            <li>Array Methods & Iterators</li>
+            <li>Home Practice</li>
+            <li>Feedback & Class 3 Preview</li>
+          </ul>
+      </section>
+      
+      <!-- Stretch Break -->
+      <section>
+        <h3>Stretch - "Bio" Break</h3>
+        <p>4:00p PST /  6:00p CST / 7:00p EST</p>
+      </section>
+
+      <section>
+        <h3>Arrays</h3>
+      </section>
+
+      <section>
+        <h3>Arrays: A Quick Review</h3>
+        <ul>
+          <li>Allow us to create ordered lists of values</li>
+          <li>Can contain different data types</li>
+          <li>Are zero-indexed</li>
+        </ul>
+<pre><code class="js">let primaryColors = ['red', 'blue', 'green']
+
+let lotteryNumbers = [2, 24, 54, 9, 30, 44]
+  
+let randomValues = ['hello', 66, true, ['item1', 'item2'] ]
+  </code></pre>
+        <p class="gdi-p"><a href="https://www.javascripttutorial.net/javascript-array/" target="_blank">A Beginner's Guide to JavaScript Arrays</a></p>
+      </section>
+
+      <section>
+        <h3>Array Methods</h3>
+        <p class="gdi-p" style="max-width: 700px; margin: 0 auto 24px auto;">JavaScript has default array methods that allow us to work with the data in an array</p>
+        <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">Arrays (MDN)</a></p>
+      </section>
+
+      <section>
+        <h3>Basic Array Methods: A Review</h3>
+        <ul>
+          <li><code>Sort</code> the array below to be in alphabetical order</li>
+          <li>Then <code>push</code> 'Tokyo' into the array</li>
+          <li>Does the array <code>include</code> 'Lhasa', Tibet's capital?</li>
+          <li>Find the <code>index</code> of 'Manilla'</li>
+        </ul>
+<pre><code class="js">let asianCapitals = ['Seoul', 'Dhaka', 'Manilla', 'Bangkok']</code></pre>
+      </section>
+
+      <section>
+        <h3>An Array Puzzle</h3>
+        <p class="gdi-p" style="max-width: 700px; margin: 0 auto">For the last task in the previous practice exercise, perhaps you attempted to use the <code>findIndex</code> method? What happened?</p>
+<pre><code class="js">console.log(asianCapitals.indexOf('Manilla')) 
+// Output: 2
+
+console.log(asianCapitals.findIndex('Manilla')) 
+// Error:  Manilla is not a function
+</code></pre>
+      </section>
+
+      <section>
+        <h3>An Array Puzzle</h3>
+        <p class="gdi-p" style="max-width: 700px; margin: 0 auto">Why is 'Manilla' expected to be a function?</p>
+<pre><code class="js">
+console.log(asianCapitals.findIndex('Manilla')) 
+
+// Error:  Manilla is not a function
+</code></pre>
+      </section>
+
+      <section>
+        <h3>Array Methods: <br>Higher Order Functions</h3>
+        <p class="gdi-p" style="max-width: 700px; margin: 0 auto 24px auto">The <code>findIndex</code> method is a type of function known as a <code>Higher Order Function</code></p>
+        <p class="gdi-p" style="max-width: 700px; margin: 0 auto">A <code>higher order function</code> accepts another function as a parameter or can return a function as an output</p>
+      </section>
+
+      <section>
+        <h3>Higher Order Function</h3>
+        <ul>
+          <li>To use <code>findIndex</code> to get the index of 'Manilla', we need to pass it another function as a parameter</li>
+          <li>This second function creates a <code>testing condition</code> that will be applied to each element in the array</li>
+        </ul>
+<pre><code class="js">let asianCapitals = ['Seoul', 'Dhaka', 'Manilla', 'Bangkok']
+
+let result = asianCapitals.findIndex(function(city,index){
+  if(city === 'Manilla'){
+    return index
+  }
+})
+
+console.log(result) // 2</code></pre>
+      </section>
+
+      <section>
+        <h3>Callback Function</h3>
+        <p class="gdi-p" style="max-width: 750px; margin: 0 auto 24px auto">A function that can be passed as a parameter is known as a <code>callback</code> function</p>
+        <p class="gdi-p" style="max-width: 850px; margin: 0 auto">Let's rewrite our code to illustrate a <code>callback</code> function getting passed to <code>findIndex()</code> </p>
+<pre><code class="js">let asianCapitals = ['Seoul', 'Dhaka', 'Manilla', 'Bangkok']
+
+function findManilla(city){
+  if(city === 'Manilla'){
+    return true;
+  }
+}
+
+let result = asianCapitals.findIndex(findManilla)
+
+// findManilla() is a callback function because 
+// it is passed as a parameter to findIndex()
+
+console.log(result) // 2</code></pre>     
+      </section>
+
+      <section>
+        <h3>Higher Order Functions <br>
+        and Arrow Function Syntax</h3>
+        <p class="gdi-p" style="max-width: 700px; margin: 0 auto">Arrow functions are often used to simplify how we write higher order functions</p>
+<pre><code class="js">let result = asianCapitals.findIndex(function(city,index){
+  if(city === 'Manilla'){
+    return index
+  }
+})
+  
+// Rewritten with arrow function syntax
+
+let result = asianCapitals.findIndex((city, index) => {
+  if(city === 'Manilla'){
+    return index
+  }
+})</code></pre>
+      </section>
+
+      <section>
+        <h3>Array Iteration Methods</h3>
+        <p class="gdi-p" style="max-width: 800px; margin: 0 auto 30px auto;">The <code>findIndex</code> method is one of several array methods that can iterate (loop) through an array and execute an action on each item in the array</p>
+        <p class="gdi-p" style="max-width: 850px; margin: 0 auto 24px auto;">These methods are all higher order functions because they require another function as a parameter</p>
+        <p><a href="https://www.w3schools.com/js/js_array_iteration.asp" target="_blank">JavaScript Array Iteration (w3schools)</a></p>
+      </section>
+
+      <section>
+        <h3>Common Array Iteration Methods</h3>
+        <div class="flex" style="width: 700px; margin: 0 auto;" >
+          <ul style="list-style: none;">
+            <li><code>.map()</code></li>
+            <li><code>.forEach()</code></li>
+            <li><code>.filter()</code></li>
+          </ul>
+          <ul style="list-style: none;">
+            <li><code>.reduce()</code></li>
+            <li><code>.every()</code></li>
+            <li><code>.some()</code></li>
+          </ul>
+        </div>
+        <p><a href="https://www.digitalocean.com/community/tutorials/how-to-use-array-methods-in-javascript-iteration-methods">How to Use Array Iteration Methods in JavaScript</a></p>
+
+      </section>
+
+      <section>
+        <h3><code>.map()</code></h3>
+        <p class="gdi-p" style="max-width: 700px; margin: 0 auto 24px auto;">Creates a new array that contains the results of a callback function that's been applied to every element in the original array</p>
+<pre><code class="js">const numbers = [1,2,3,4]
+
+const doubleNumbers = numbers.map((num) => {
+  return num * num
+})
+
+console.log(doubleNumbers) // Output: [1,4,9,16]
+
+// Arrow syntax shorthand version:
+
+// const doubleNumbers = numbers.map(num => num * num)
+</code></pre>
+        <p class="gdi-p"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map" target="_blank">Array.prototype.map() - MDN</a></p>
+      </section>
+
+      <section>
+        <h3><code>.filter()</code></h3>
+        <p class="gdi-p" style="max-width: 700px; margin: 0 auto 24px auto;">Creates a new array with elements that pass the test condition of a callback function</p>
+<pre><code class="js">// Filter words that don't contain the string 'cat'
+  
+let catStrings = ['avocado', 'advocate', 'catty', 'catacomb']
+
+let nonCatStrings = catStrings.filter((item) => {
+  return !item.includes('cat')
+})
+
+console.log(nonCatStrings) 
+
+// Arrow syntax shorthand version:
+
+// const nonCatStrings = catStrings.filter(item => !item.includes('cat'))</code></pre>
+
+        <p class="gdi-p"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter" target="_blank">Array.prototype.filter() - MDN</a></p>
+      </section>
+
+      <section>
+        <h3>Return Values</h3>
+        <p class="gdi-p" style="max-width: 800px; margin: 0 auto 24px auto;">While some iteration methods create a new array, others return elements from the original array or a boolean value; and one particular method, the <code>forEach</code>, does not return any value at all</p>
+      </section>
+
+      <section>
+        <h3><code>.forEach()</code></h3>
+        <p class="gdi-p" style="max-width: 800px; margin: 0 auto 24px auto;">Runs an action on every element in an array; unlike other methods, it does not return an actual value</p>
+<pre><code class="js">let ageList = [4,5,6,7]
+
+const updatedAgeList = ageList.forEach( element => element + 5 ) 
+
+console.log(updatedAgeList) // Returns undefined
+
+</code></pre>
+        <p class="gdi-p"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach" target="_blank">.forEach() - MDN</a></p>
+      </section>
+
+      <section>
+        <h3><code>.forEach()</code></h3>
+        <p class="gdi-p" style="max-width: 700px; margin: 0 auto 24px auto;">The <code>forEach</code> behaves similarly to the <code>for</code> loop and the <code>for of</code> loop</p> 
+<pre><code class="js">let ageList = [4,5,6,7]
+
+ageList.forEach( element => console.log(element + 5) ) 
+// Output: 9, 10, 11, 12
+
+for(let i = 0; i  < ageList.length; i++){
+  console.log( ageList[i] + 5)
+}
+// Output: 9, 10, 11, 12
+
+for(let age of ageList){
+  console.log(age + 5)
+}
+// Output: 9, 10, 11, 12
+</code></pre>
+        <p class="gdi-p"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach" target="_blank">.forEach() - MDN</a></p>
+      </section>
+
+      <section>
+        <h3>When to Use <code>.forEach</code>?</h3>
+        <p class="gdi-p" style="max-width: 700px; margin: 0 auto 24px auto;"><code>forEach</code> can be an alternative to using a <code>for</code> loop or a  <code>for...of</code> loop; all three iterate through every element in an array</p>
+      </section>
+
+      <section>
+        <h3>What About Other Methods?</h3>
+        <p class="gdi-p">A few tips:</p>
+        <ul>
+          <li>Use <code>.map</code> to change items in an array</li>
+          <li>Use <code>.filter</code> to select a subset of an array </li>
+          <li>Use <code>.find</code> to select one item in an array</li>
+        </ul>
+        <p class="gdi-p"><a href="https://medium.com/@JeffLombardJr/understanding-foreach-map-filter-and-find-in-javascript-f91da93b9f2c" target="_blank">Why and when to use forEach, map,<br> filter, reduce, and find in JavaScript</a></p>
+      </section>
+
+      <section>
+        <h3>Explore the other iteration methods!</h3>
+      </section>
+
+      <!-- 
+<p class="gdi-p" style="max-width: 800px; margin: 0 auto 24px auto;"></p>
+
+<p class="gdi-p"><a href="" target="_blank"></a></p>
+
+<pre><code class="js"></code></pre>
+      
+<pre><code class="html">&lt;html&gt;
+&lt;body&gt;
+...
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre> 
+      -->
+
+      <!-- Home Practice -->
+      <section>
+        <h3>Home Practice</h3>
+        <ul>
+          <li><a href="https://replit.com/@tinuola/js2-class2-home-practice#script.js" target="_blank">REPL Home Practice</a></li>
+        </ul>
+      </section>
+
+      <!-- Next Class -->
+      <section>
+        <h3>Class 3 - Agenda</h3>
+        <ul>
+          <li>Review: Class 2</li>
+          <li>Objects & Object Methods</li>
+        </ul>
+      </section>
+
+      <!-- MUST USE SLIDE - Course Feedback Survey-->
+      <section>
+        <h3>Class Feedback</h3>
+        <p><a href="https://forms.gle/v3pmYygbTfaBNVLPA" target="_blank">https://forms.gle/v3pmYygbTfaBNVLPA</a></p>
+      </section>
+
+      <!-- Q&A -->
+      <section>
+        <h2>Q&A</h2>
+      </section>
+
+      <!-- Thank You -->
+      <section>
+        <img src="./assets/images/gdi-logos/GDI-Logo_Peach.png" alt="GDI Logo" width="300px" class="noborder" />
+        <br>
+        <h2>Thank You!</h2>
+      </section>
+    </div> <!-- End of Slides container -->
+
+    <footer>
+      <!-- Update with Course Name -->
+      <div class="copyright">
+        <img src="./assets/images/gdi-logos/GDI-Logo_Peach.png" alt="GDI Logo" width="40px" class="noborder" />
+        <p>JavaScript Fundamentals 2 - Class 2</p>
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img
+            alt="Creative Commons License" style="border-width:0"
+            src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+      </div>
+    </footer>
+  </div> <!-- End of Reveal wrapper -->
+
+  <!-- REVEAL.JS Script Files - Do Not Edit -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/plugin/highlight/highlight.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/highlightjs-badge@0.1.9/highlightjs-badge.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jsPlumb/2.15.5/js/jsplumb.min.js"></script>
+  <script>
+    const srcUrlPrefix = "https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/";
+    Reveal.initialize({
+      hash: true,
+      center: true,
+      slideNumber: true,
+      showNotes: false,
+      margin: 0.1,
+      preloadIframes: true,
+      plugins: [RevealHighlight],
+      pdfSeparateFragments: true
+    });
+
+    // add HighlightJS-badge (options are optional)
+    var options = {
+      copyIconContent: "📄",
+      checkIconContent: "✅"
+    };
+    window.highlightJsBadge(options);
+
+    if (window.location.search == "?print-pdf") {
+      var uncounted = document.querySelectorAll("[data-visibility='uncounted']");
+      uncounted.forEach(node => {
+        node.parentNode.classList.add("no-print")
+      })
+    }
+  </script>
+</body>
+</html>

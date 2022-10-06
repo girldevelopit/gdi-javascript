@@ -1,4 +1,6 @@
-# Course Information
+# Introduction to JavaScript
+
+## Course Information
 
 This README file should contain course details, outline, guidelines, tips etc for instructors--essentially what instructors will need to run the course "out of the box".
 

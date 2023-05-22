@@ -4,7 +4,7 @@
 
 Code should display:
 
-```
+```js
 "This week's lineup at Madison Square Garden:
  - beyonce
  - drake
@@ -14,24 +14,23 @@ Code should display:
 
 #### Part 2 & 3 - Refactoring with ES6
 
-```
+```js
 const theatre = 'Madison Square Garden';
 
 let artists = ['beyonce', 'drake', 'billie eilish', 'coldplay'];
 
 const billboard = () => {
+  let announcement = `This week's lineup at ${theatre}:`;
 
-  let announcement = `This week's lineup at ${theatre}:`
-
-  for(let artist of artists){
+  for (let artist of artists) {
     announcement += `
-- ${artist.toUpperCase()}`
+- ${artist.toUpperCase()}`;
   }
 
   return announcement;
-}
+};
 
-let displayBillboard = billboard()
+let displayBillboard = billboard();
 
-console.log(displayBillboard)
+console.log(displayBillboard);
 ```

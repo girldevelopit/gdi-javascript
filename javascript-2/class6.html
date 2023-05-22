@@ -93,14 +93,14 @@
           <h3>Promises</h3>
         </section>
 
+        <!-- Single Threaded -->
         <section>
-          <p
-            class="gdi-p"
-            style="max-width: 800px; margin: 0 auto 24px auto">
-            JavaScript is a <code>single-threaded</code> language; meaning it executes
-            code in order and can only do so one code at a time
+          <p class="fs-32 width-800">
+            JavaScript is a
+            <span class="highlight--yellow">single-threaded</span> language; meaning it
+            executes code in order and can only do so one code at a time
           </p>
-          <p class="gdi-p">
+          <p class="fs-24 mt-32">
             <a
               href="https://youtu.be/ZvbzSrg0afE?t=131"
               target="_blank"
@@ -110,50 +110,35 @@
           </p>
         </section>
 
+        <!-- Scenario -->
         <section>
-          <p
-            class="gdi-p"
-            style="max-width: 800px; margin: 0 auto 20px auto">
-            Imagine you're at a restaurant
+          <h4>Imagine you're at a restaurant</h4>
+
+          <p class="fs-32 width-800 mb-32">
+            You place your order for a drink
+            <span class="highlight--yellow">BUT</span> you can't order your appetizer
+            until you finish your drink
           </p>
 
-          <p
-            class="gdi-p"
-            style="max-width: 800px; margin: 0 auto 20px auto">
-            You place your order for a drink <code>BUT</code> you can't order your
-            appetizer until you finish your drink
-          </p>
-
-          <p
-            class="gdi-p"
-            style="max-width: 800px; margin: 0 auto 20px auto">
+          <p class="fs-32 width-800 mb-32">
             You can't order your entree until you finish your appetizer
           </p>
-          <p
-            class="gdi-p"
-            style="max-width: 800px; margin: 0 auto 20px auto">
-            And on and on and on...
-          </p>
+          <p class="fs-32 width-800 mb-32">And on and on and on...</p>
 
-          <p
-            class="gdi-p"
-            style="max-width: 800px; margin: 0 auto 24px auto">
-            It would be a very long and tedious meal!
-          </p>
+          <p class="fs-32 width-800">It would be a very long and tedious meal!</p>
         </section>
 
         <section>
-          <h4 style="max-width: 850px; margin: 0 auto 24px auto">
+          <h4 class="width-900">
             If that sounds like a nightmare dining experience, imagine the equivalent when
             running a website or an application
           </h4>
         </section>
 
+        <!-- Async JS -->
         <section>
           <h3>Asynchronous JavaScript</h3>
-          <p
-            class="gdi-p"
-            style="max-width: 800px; margin: 0 auto 24px auto">
+          <p class="fs-32 width-800 mb-32">
             Asynchronous JavaScript is how we get around the single-threaded nature of the
             language, by using specific features and protocols such as:
           </p>
@@ -165,43 +150,44 @@
           </ul>
         </section>
 
+        <!-- Promises -->
         <section>
           <h3>Promises</h3>
-          <p
-            class="gdi-p"
-            style="max-width: 850px; margin: 0 auto 24px auto">
+          <p class="fs-32 width-900 mb-32">
             Promises allow us to write code that can be executed asynchronously or out of
             order, meaning other code can run synchronously without interruption
           </p>
 
-          <p
-            class="gdi-p"
-            style="max-width: 850px; margin: 0 auto 24px auto">
+          <p class="fs-32 width-900 mb-32">
             Promises are predominantly used with server or API calls--requests that may
             take some time to complete
           </p>
         </section>
 
+        <!-- Promise states -->
         <section>
           <h3>Promise States</h3>
-          <p
-            class="gdi-p"
-            style="max-width: 700px; margin: 0 auto 24px auto">
+          <p class="fs-32 width-800 mb-32">
             When we write a <code>promise</code>, our code is in one of three states:
           </p>
           <ul>
-            <li>Pending: Initial state of the operation</li>
-            <li>Fulfilled: The operation was successful</li>
-            <li>Rejected: The operation failed</li>
+            <li>
+              <span class="highlight--yellow">Pending:</span> Initial state of the
+              operation
+            </li>
+            <li>
+              <span class="highlight--yellow">Fulfilled:</span> The operation was
+              successful
+            </li>
+            <li><span class="highlight--yellow">Rejected:</span> The operation failed</li>
           </ul>
-          <p
-            class="gdi-p"
-            style="max-width: 700px; margin: 24px auto 24px auto">
+          <p class="fs-32 width-800 mt-32">
             When a promise is fulfilled, we get some value or data back; when it is
             rejected, we get an error message--the reason why
           </p>
         </section>
 
+        <!-- Promise syntax -->
         <section>
           <h3>Basic Promise Syntax</h3>
           <pre><code class="js">const myFirstPromise = new Promise()
@@ -210,29 +196,23 @@
 </code></pre>
         </section>
 
+        <!-- Promise in Practice -->
         <section>
           <h3>Promise Syntax</h3>
-          <p
-            class="gdi-p"
-            style="max-width: 800px; margin: 0 auto 24px auto">
+          <p class="fs-32 width-800 mb-32">
             Let's create a simple <code>promise</code> to see its full syntax
           </p>
 
-          <p
-            class="gdi-p"
-            style="max-width: 800px; margin: 0 auto 20px auto">
-            The scenario:
-          </p>
+          <p class="fs-32 width-800 mb-32">The scenario:</p>
 
-          <p
-            class="gdi-p"
-            style="max-width: 800px; margin: 0 auto 24px auto">
+          <p class="fs-32 width-800">
             I promise to bake muffins if you find blueberries at the supermarket; if you
             don't find blueberries, buy muffins at the bakery instead
           </p>
           <pre><code class="js">const muffinPromise = new Promise()</code></pre>
         </section>
 
+        <!-- Full Syntax -->
         <section>
           <h3>Full Promise Syntax</h3>
           <pre><code class="js">const muffinPromise = new Promise( ( resolve, reject ) => {
@@ -252,40 +232,20 @@ muffinPromise.then( () => console.log(`We're baking muffins!`))
 muffinPromise.catch( () => console.log(`Boo. Buy muffins instead.`))</code></pre>
         </section>
 
+        <!-- Syntax breakdown -->
         <section>
-          <h3>Syntax Breakdown</h3>
-          <p
-            class="gdi-p"
-            style="max-width: 800px; margin: 0 auto 24px auto">
-            A <code>promise</code> takes two callback functions:
+          <h3>Syntax Breakdown - Part 1</h3>
+          <p class="fs-32 width-800 mb-32">
+            A <code>promise</code> takes two
+            <span class="highlight--yellow">callback functions</span>:
           </p>
           <ul>
-            <li><code>resolve</code>: runs when the request is successful</li>
-            <li><code>reject</code>: runs when the request fails</li>
-          </ul>
-          <pre><code class="js">const muffinPromise = new Promise( ( resolve, reject ) => {
-
-  // if the operation is successful, run resolve()
-  // else run reject()
-})
-
-muffinPromise.then( () => console.log(`We're baking muffins!`))
-
-muffinPromise.catch( () => console.log(`Boo. Buy muffins instead.`))</code></pre>
-        </section>
-
-        <section>
-          <h3>Syntax Breakdown</h3>
-          <p
-            class="gdi-p"
-            style="max-width: 800px; margin: 0 auto 24px auto">
-            Both callbacks are triggers for two respective <code>promise</code> methods:
-          </p>
-          <ul>
-            <li><code>.then()</code>: code to run when the request is successful</li>
             <li>
-              <code>.catch()</code>: code to run or error message to display if request
-              fails
+              <span class="highlight--yellow">resolve</span>: runs when the request is
+              successful
+            </li>
+            <li>
+              <span class="highlight--yellow">reject</span>: runs when the request fails
             </li>
           </ul>
           <pre><code class="js">const muffinPromise = new Promise( ( resolve, reject ) => {
@@ -300,9 +260,37 @@ muffinPromise.catch( () => console.log(`Boo. Buy muffins instead.`))</code></pre
         </section>
 
         <section>
-          <p
-            class="gdi-p"
-            style="max-width: 800px; margin: 0 auto 24px auto">
+          <h3>Syntax Breakdown - Part 2</h3>
+          <p class="fs-32 width-800 mb-32">
+            Both callbacks are triggers for two respective
+            <span class="highlight--yellow">promise methods</span>:
+          </p>
+          <ul
+            class="fs-28"
+            style="list-style: none">
+            <li>
+              <code class="highlight--yellow">.then()</code>: code to run when the request
+              is successful
+            </li>
+            <li>
+              <code class="highlight--yellow">.catch()</code>: code to run or error
+              message to display if request fails
+            </li>
+          </ul>
+          <pre><code class="js">const muffinPromise = new Promise( ( resolve, reject ) => {
+
+  // if the operation is successful, run resolve()
+  // else run reject()
+})
+
+muffinPromise.then( () => console.log(`We're baking muffins!`))
+
+muffinPromise.catch( () => console.log(`Boo. Buy muffins instead.`))</code></pre>
+        </section>
+
+        <!-- Chaining then and catch -->
+        <section>
+          <p class="fs-32 width-800">
             <code>.then</code> and <code>.catch</code> are typically chained
           </p>
 
@@ -323,23 +311,16 @@ muffinPromise
 .catch( () => console.log(`Boo. Buy muffins instead.`))</code></pre>
         </section>
 
+        <!-- Video: Promises in Plain English -->
         <section>
-          <p
-            class="gdi-p"
-            style="max-width: 800px; margin: 0 auto 20px auto">
-            Confused? 👀 Lost? 🤷 That's okay! 😅
-          </p>
+          <p class="fs-32">Confused? 👀 Lost? 🤷 That's okay! 😅</p>
           <img
-            src="./assets/images/confusion.jpg"
+            src="./images/confusion.jpg"
             alt=""
             width="500px" />
           <!-- https://www.npr.org/sections/13.7/2015/12/14/459651340/sometimes-confusion-is-a-good-thing -->
-          <p
-            class="gdi-p"
-            style="max-width: 800px; margin: 0 auto 20px auto">
-            A good explainer video about Promises:
-          </p>
-          <p class="gdi-p">
+          <p class="fs-32">A good explainer video about Promises:</p>
+          <p class="fs-24">
             <a
               href="https://youtu.be/YiYtwbnPfkY"
               target="_blank"
@@ -348,29 +329,23 @@ muffinPromise
           </p>
         </section>
 
+        <!-- Slide title: Practical/Common Use of Promises -->
         <section>
           <h3>A Practical and Common Use of Promises</h3>
         </section>
 
+        <!-- Public APIs -->
         <section>
           <h3>Public APIs</h3>
-          <p
-            class="gdi-p"
-            style="max-width: 800px; margin: 0 auto 20px auto">
+          <p class="fs-28 width-800 mb-32">
             Public or open APIs contain data or code that developers can use freely
           </p>
-          <p
-            class="gdi-p"
-            style="max-width: 800px; margin: 0 auto 20px auto">
+          <p class="fs-28 width-900 mb-32">
             We make requests to these APIs and get data back in response
           </p>
-          <p
-            class="gdi-p"
-            style="max-width: 800px; margin: 0 auto 20px auto">
-            Collections of Free, Open API Listings:
-          </p>
+          <p class="fs-28 width-800 mb-32">Collections of Free, Open API Listings:</p>
 
-          <ul>
+          <ul class="fs-28">
             <li>
               <a
                 href="https://apilist.fun/"
@@ -395,28 +370,24 @@ muffinPromise
           </ul>
         </section>
 
+        <!-- Opening Slide: Fetch API -->
         <section>
           <h3>Fetch API</h3>
-          <p
-            class="gdi-p"
-            style="max-width: 800px; margin: 0 auto 24px auto">
+        </section>
+
+        <!-- Fetch API and Promises -->
+        <section>
+          <h3>Fetch API</h3>
+          <p class="fs-28 width-800 mb-32">
             The Fetch API is a protocol or method that we use to make requests to external
             servers
           </p>
-          <p
-            class="gdi-p"
-            style="max-width: 800px; margin: 0 auto 24px auto">
-            Understanding how <code>promises</code> work is key when or if we have to use
-            the Fetch API--why?
+          <p class="fs-28 width-800 mb-32">
+            Understanding how <code>promises</code> work is important because a Fetch
+            request always returns a <code>Promise</code>
           </p>
 
-          <p
-            class="gdi-p"
-            style="max-width: 800px; margin: 0 auto 24px auto">
-            Because a Fetch request always returns a <code>Promise</code>
-          </p>
-
-          <p class="gdi-p">
+          <p class="fs-24">
             <a
               href="https://www.javascripttutorial.net/javascript-fetch-api/"
               target="_blank"
@@ -425,26 +396,22 @@ muffinPromise
           </p>
         </section>
 
+        <!-- Basic Fetch Syntax -->
         <section>
           <h3>Basic Fetch Syntax</h3>
-          <p
-            class="gdi-p"
-            style="max-width: 800px; margin: 0 auto 24px auto">
+          <p class="fs-32 width-800 mb-32">
             The fetch method takes in a <code>string</code> url value
           </p>
-          <p
-            class="gdi-p"
-            style="max-width: 800px; margin: 0 auto 24px auto">
+          <p class="fs-32 width-800 mb-32">
             The url is the API destination; where the data lives
           </p>
           <pre><code class="js">let variableName = fetch( url )</code></pre>
         </section>
 
+        <!-- Fetch demo -->
         <section>
           <h3>Fetch Demo</h3>
-          <p
-            class="gdi-p"
-            style="max-width: 800px; margin: 0 auto 24px auto">
+          <p class="fs-32 width-800 mb-32">
             Let's make a fetch request to a public API called
             <code
               ><a
@@ -458,18 +425,17 @@ muffinPromise
           <pre><code class="js">let getDogImage = fetch( 'https://dog.ceo/api/breeds/image/random' )
 
 console.log( getDogImage )</code></pre>
-          <p
-            class="gdi-p"
-            style="max-width: 800px; margin: 0 auto 24px auto">
+          <p class="fs-28 width-800 mt-32">
             What happens when we log <code>getDogImage</code> to the console?
           </p>
         </section>
 
         <section>
-          <h3></h3>
-          <p
-            class="gdi-p"
-            style="max-width: 800px; margin: 0 auto 24px auto">
+          <img
+            src="./images/fetch-api-1.png"
+            width="600"
+            alt="" />
+          <p class="fs-32 width-800 mb-32">
             We get a successful, or fulfilled or <code>resolved</code> Promise that's
             <code>pending</code>--this means we have data waiting to be used!
           </p>
@@ -479,16 +445,20 @@ console.log( getDogImage )</code></pre>
         </section>
 
         <section>
+          <img
+            src="./images/fetch-api-2.png"
+            width="600"
+            alt="" />
+        </section>
+
+        <!-- Resolving Promise -->
+        <section>
           <h3>Enter the Promise Handlers!</h3>
-          <p
-            class="gdi-p"
-            style="max-width: 800px; margin: 0 auto 24px auto">
+          <p class="fs-32 width-800 mb-32">
             Remember when we used <code>.then()</code> and <code>.catch()</code> in our
             <code>muffinPromise</code> example?
           </p>
-          <p
-            class="gdi-p"
-            style="max-width: 800px; margin: 0 auto 24px auto">
+          <p class="fs-32 width-800 mb-32">
             We'll use these two methods to unpack our resolved
             <code>getDogImage</code> promise
           </p>
@@ -499,27 +469,25 @@ console.log( getDogImage )</code></pre>
 </code></pre>
         </section>
 
+        <!-- Response Data -->
         <section>
           <h3>Response Data</h3>
-          <p
-            class="gdi-p"
-            style="max-width: 800px; margin: 0 auto 24px auto">
+          <p class="fs-32 width-800 mb-32">
             We get back an <code>object</code> with data we can now use!
           </p>
           <img
-            src="./assets/images/promise-data.png"
+            src="./images/promise-data.png"
             alt="" />
-          <p
-            class="gdi-p"
-            style="max-width: 800px; margin: 0 auto 24px auto">
+          <p class="fs-32 width-800">
             Do you have a similar object in your console? Post the url value from the
             <code>message</code> key to a new tab; what do you see?
           </p>
         </section>
 
+        <!-- Response Data Breakdown -->
         <section>
-          <h3>Response Breakdown</h3>
-          <ul>
+          <h3>Response Data Breakdown</h3>
+          <ul class="fs-28">
             <li>
               The first <code>.then</code> receives a response back from the server in a
               raw format that still needs to be converted
@@ -557,47 +525,38 @@ console.log( getDogImage )</code></pre>
 .catch( (err) => console.log(err))</code></pre>
         </section>
 
+        <!-- Practice -->
         <section>
-          <h3>Demo: DOM Play</h3>
-          <p
-            class="gdi-p"
-            style="max-width: 800px; margin: 0 auto 24px auto">
+          <h3>Fetch API Practice</h3>
+          <p class="fs-32 width-800 mb-32">
             What can we do with API data? We can display or use it on our websites and web
             applications
           </p>
-          <p class="gdi-p">
+          <p class="fs-32">
             <a
-              href="https://tinuola.github.io/doggie-browser/"
+              href="https://tinuola.github.io/proj_doggie-browser/"
               target="_blank"
               >Doggie Browser</a
             >
           </p>
         </section>
 
-        <!-- Home Practice -->
+        <!-- Practice -->
         <section>
-          <h3>Home Practice</h3>
+          <h3>Practice: <br />Using Fetch with Github API</h3>
+          <p class="fs-32">
+            <a
+              href="https://replit.com/@tinuola/js2-class6-home-practice-github-api#promise.js"
+              target="_blank"
+              >REPL Practice</a
+            >
+          </p>
+        </section>
+
+        <!-- More API Practice -->
+        <section>
+          <h3>Explore Public APIs and Practice!</h3>
           <ul>
-            <li>
-              REPL Home Practice:
-              <ul>
-                <li>
-                  <a
-                    href="https://replit.com/@tinuola/js2-class6-home-practice-mystery-api#index.html"
-                    target="_blank"
-                    >Mystery API</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://replit.com/@tinuola/js2-class6-home-practice-github-api#index.html"
-                    target="_blank"
-                    >Github API</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li>Play around with some APIs!</li>
             <li>
               A few more videos on Async JS:
               <ul style="margin-top: 16px">

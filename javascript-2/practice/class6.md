@@ -141,7 +141,7 @@ e. Once you've identified the `key:value` pairs you need, assign them to their a
 
 f. Open or refresh `index.html` in your browser. You should have an updated display that looks similar to this--with your selected Github profile name, url and image:
 
-https://girldevelopit.github.io/gdi-javascript/javascript-2/images/github-api-starter.png
+https://girldevelopit.github.io/gdi-javascript/javascript-2/images/github-api-completed.png
 
 #### Part 7 - Optional
 

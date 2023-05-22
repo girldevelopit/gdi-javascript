@@ -51,9 +51,5 @@ Working with the `studentData` object:
 
 See how far you can get before going to the solution key--ideally no more than 30-45 minutes overall.
 
-_Solution Key: class2-key.md_
+_Solution Key: class3-key.md_
 _(Update this page's url with the solution key's file name)_
-
-/_ Solution Key:
-https://replit.com/@tinuola/js2-class4-home-practice-key#script.js
-_/

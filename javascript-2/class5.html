@@ -1,169 +1,240 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="description" content="Girl Develop It JavaScript Fundamentals 2 Cohort Series">
-  <meta name="author" content="Girl Develop It">
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta
+      name="description"
+      content="Girl Develop It JavaScript Fundamentals 2 Cohort Series" />
+    <meta
+      name="author"
+      content="Girl Develop It" />
+    <meta
+      name="apple-mobile-web-app-capable"
+      content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent" />
 
-  <!-- Update with GDI Course Name -->
-  <title>GDI - JavaScript Fundamentals 2, Class 5</title>
+    <!-- Update with GDI Course Name -->
+    <title>GDI - JavaScript Fundamentals 2, Class 5</title>
 
-  <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./assets/images/favicon.ico" />
 
-  <!-- RevealJS CDN -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reset.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reveal.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/theme/simple.css" id="theme">
+    <!-- RevealJS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reveal.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/theme/simple.css"
+      id="theme" />
 
-  <!-- GDI Custom Theme -->
-  <link rel="stylesheet" href="./assets/css/gdi-theme.css">
+    <!-- GDI Custom Theme -->
+    <link
+      rel="stylesheet"
+      href="../shared-assets/css/gdi-theme.css" />
 
-  <!-- Theme used for syntax highlighted code -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/monokai.min.css">
-  <style>
-    p.gdi-p {
-      font-size: 32px;
-      line-height: 1.5;
-    }
-  </style>
-</head>
-<body>
-  <div class="reveal">
-    <!-- Start of Slides container -- Any section element in this container is displayed as a slide -->
-    <div class="slides">
+    <!-- Theme used for syntax highlighted code -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/monokai.min.css" />
 
-      <!-- Course and Class Titles -->
-      <section>
-        <h2>JavaScript Fundamentals 2</h2>
-        <h2>Class 5</h3>
-      </section>
+    <!-- Course Custom Styles if Applicable-->
+    <link
+      rel="stylesheet"
+      href="./css/style.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <!-- Start of Slides container -->
+      <!-- Any section element in this container is displayed as a single slide -->
+      <!-- Comment out rather than delete slide instructions -->
+      <div class="slides">
+        <!-- Course and Class Titles -->
+        <section>
+          <h2>JavaScript Fundamentals 2</h2>
+          <h3>Class 5</h3>
+        </section>
 
-      <!-- Class Agenda -->
-      <section>
-        <h3>AGENDA</h3>
+        <!-- Class Agenda -->
+        <section>
+          <h3>AGENDA</h3>
           <ul>
             <li>Home Practice Review</li>
-            <li>Destructuring</li>
+            <li>Destructuring Arrays & Objects</li>
             <li><code>Spread</code> Operator</li>
+            <li><code>Rest</code> Operator</li>
             <li>Class Feedback</li>
           </ul>
-      </section>
-      
-      <!-- Stretch Break -->
-      <section>
-        <h3>Stretch - "Bio" Break</h3>
-        <p>4:00p PST /  6:00p CST / 7:00p EST</p>
-      </section>
+        </section>
 
-      <section>
-        <h3>Destructuring</h3>
-      </section>
+        <!-- Stretch Break -->
+        <section>
+          <h3>Stretch - "Bio" Break</h3>
+          <p>4:00p PST / 6:00p CST / 7:00p EST</p>
+        </section>
 
-      <section>
-        <p class="gdi-p" style="max-width: 800px; margin: 0 auto 24px auto;"><code>Destructuring</code> is an ES6 feature that allows us to extract specific data or values from arrays and objects and assign them to new variables</p>
+        <!-- Opening Slide: Destructuring -->
+        <section>
+          <h3>Destructuring</h3>
+        </section>
 
-        <p class="gdi-p"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment" target="_blank">Destructuring Assignment (MDN)</a></p>
-        <p class="gdi-p"><a href="https://www.freecodecamp.org/news/array-vs-object-destructuring-in-javascript/" target="_blank">Array vs Object Destructuring in JavaScript (FreeCodeCamp)</a></p>
-      </section>
+        <!-- Definition: Destructuring -->
+        <section>
+          <h3>Destructuring</h3>
+          <p class="fs-32 width-800">
+            <span class="highlight--yellow">Destructuring</span> is an ES6 feature that
+            allows us to extract specific data or values from arrays and objects and
+            assign them to new variables
+          </p>
 
-      <section>
-        <h3>Pre ES6:<br> Assigning Array Values</h3>
-        <p class="gdi-p" style="max-width: 800px; margin: 0 auto 24px auto;">If we wanted to create new variables from items in an array, we would have to do so individually</p>
-<pre><code class="js">let people = ['layla', 'keiko', 'amina', 'temi']
+          <p class="fs-24 mt-32">
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment"
+              target="_blank"
+              >Destructuring Assignment (MDN)</a
+            >
+          </p>
+          <p class="fs-24">
+            <a
+              href="https://www.freecodecamp.org/news/array-vs-object-destructuring-in-javascript/"
+              target="_blank"
+              >Array vs Object Destructuring in JavaScript (FreeCodeCamp)</a
+            >
+          </p>
+        </section>
+
+        <!-- Pre ES6: Assigning Array Values -->
+        <section>
+          <h3>
+            Pre ES6:<br />
+            Assigning Array Values
+          </h3>
+          <p class="fs-32 width-800">
+            If we wanted to create new variables from items in an array, we would have to
+            do so individually
+          </p>
+          <pre><code class="js">let people = ['layla', 'keiko', 'amina', 'temi']
 
 let mySister = people[0]
+
 let myBFF = people[1]
+
 let myCoworker = people[2]
+
 let myCousin = people[3]
 
 console.log( mySister, myBFF, myCoworker, myCousin)
 
 // Output: layla keiko amina temi</code></pre>
-      </section>
+        </section>
 
-      <section>
-        <h3>ES6: Destructuring Arrays</h3>
-        <p class="gdi-p" style="max-width: 800px; margin: 0 auto 24px auto;">With destructuring, we can extract values more efficiently -- with less code</p>
-<pre><code class="js">let people = ['layla', 'keiko', 'amina', 'temi']
+        <!-- Destructuring Arrays -->
+        <section>
+          <h3>ES6: Destructuring Arrays</h3>
+          <p class="fs-32 width-800">
+            With destructuring, we can extract values more efficiently -- with less code
+          </p>
+          <pre><code class="js">let people = ['layla', 'keiko', 'amina', 'temi']
 
 let [ mySister, myBFF, myCoworker, myCousin ] = people
 
 console.log( mySister, myBFF, myCoworker, myCousin)
 
 // Output: layla keiko amina temi</code></pre>
-      </section>
+        </section>
 
-      <section>
-        <h3>Destructuring Syntax: Arrays</h3>
-        <p class="gdi-p" style="max-width: 800px; margin: 0 auto 24px auto;">We are copying items from an array into variables</p>
-<pre><code class="js">let [ variable1, variable2.....variableN ] = array
+        <section>
+          <h3>Destructuring Syntax: Arrays</h3>
+          <p class="fs-32 width-800">We are copying items from an array into variables</p>
+          <pre><code class="js">let [ variable1, variable2.....variableN ] = array
 </code></pre>
-      </section>
+        </section>
 
-      <section>
-        <h3></h3>
-        <p class="gdi-p" style="max-width: 700px; margin: 0 auto 24px auto;">Another variation: Omit the array declaration altogether</p>
-<pre><code class="js">let [ mySister, myBFF, myCoworker, myCousin ] = ['layla', 'keiko', 'amina', 'temi']
+        <section>
+          <h3>Destructuring</h3>
+          <p class="fs-32 width-750">
+            Another variation:<br />
+            Omit the array declaration altogether
+          </p>
+          <pre><code class="js">let [ mySister, myBFF, myCoworker, myCousin ] = ['layla', 'keiko', 'amina', 'temi']
 
 console.log( mySister, myBFF, myCoworker, myCousin)
 
 // Output: layla keiko amina temi</code></pre>
-      </section>
+        </section>
 
-      <section>
-        <p class="gdi-p" style="max-width: 800px; margin: 0 auto 24px auto;">With destructuring, we can extract specific values and leave others out</p>
-<pre><code class="js">let people = ['layla', 'keiko', 'amina', 'temi']
+        <section>
+          <h3>Destructuring</h3>
+          <p class="fs-32 width-800">
+            With destructuring, we can extract specific values and leave others out
+          </p>
+          <pre><code class="js">let people = ['layla', 'keiko', 'amina', 'temi']
 
 let [ mySister, , , myCousin ] = people
 
 console.log(mySister, myCousin)
 
 // Output: layla temi</code></pre>
-      </section>
+        </section>
 
-      <section>
-        <h3>Destructuring Arrays</h3>
-        <p class="gdi-p" style="max-width: 800px; margin: 0 auto 24px auto;">When destructuring arrays, order matters</p>
-      </section>
+        <!-- Order matters -->
+        <section>
+          <h3>Destructuring Arrays</h3>
+          <p class="fs-32 width-800">When destructuring arrays, order matters</p>
+        </section>
 
-      <section>
-        <h3>Let's Develop It!</h3>
-        <ul>
-          <li>Destructure the array below</li>
-          <li>Create 4 new variables:</li>
+        <!-- Practice -->
+        <section>
+          <h3>Let's Develop It!</h3>
           <ul>
-            <li><code>firstName</code>, <code>lastName</code></li>
-            <li><code>age</code>, <code>occupation</code></li>
+            <li>Destructure the array below</li>
+            <li>Create 4 new variables:</li>
+            <ul>
+              <li><code>firstName</code>, <code>lastName</code></li>
+              <li><code>age</code>, <code>occupation</code></li>
+            </ul>
+            <li>Log the variables to the console</li>
           </ul>
-          <li>Log the variables to the console</li>
-        </ul>
-<pre><code class="js">let newUser = ['Meghan', 'Lawson', '35', 'Designer']
+          <pre><code class="js">let newUser = ['Meghan', 'Lawson', '35', 'Designer']
 </code></pre>
-      </section>
+        </section>
 
-      <section>
-        <h3>Let's Develop It!</h3>
-        <ul>
-          <li>Destructure the array below</li>
-          <li>Extract only 1 variable <code>favoriteMeal</code> (your choice!)</li>
-          <li>Skip the rest!</li>
-        </ul>
-<pre><code class="js">let meals = ['breakfast', 'lunch', 'dinner']
+        <!-- Practice -->
+        <section>
+          <h3>Let's Develop It!</h3>
+          <ul>
+            <li>Destructure the array below</li>
+            <li>Extract only 1 variable <code>favoriteMeal</code> (your choice!)</li>
+            <li>Skip the rest!</li>
+          </ul>
+          <pre><code class="js">let meals = ['breakfast', 'lunch', 'dinner']
 </code></pre>
-      </section>
+        </section>
 
-      <section>
-        <h3>Destructuring Objects</h3>
-        <p class="gdi-p" style="max-width: 800px; margin: 0 auto 24px auto;">Destructuring also works with objects; the syntax is similar to how arrays are destructured</p>
-      </section>
+        <!-- Destructuring Objects -->
+        <section>
+          <h3>Destructuring Objects</h3>
+          <p class="fs-32 width-800">
+            Destructuring also works with objects; the syntax is similar to how arrays are
+            destructured
+          </p>
+        </section>
 
-      <section>
-        <h3>Pre ES6: Assigning Object Properties</h3>
-        <p class="gdi-p" style="max-width: 800px; margin: 0 auto 24px auto;">Let's look at the old way first</p>
-<pre><code class="js">const animalSounds = {
+        <!-- Pre ES6: Assigning Object Properties -->
+        <section>
+          <h3>Pre ES6: Assigning Object Properties</h3>
+          <p class="fs-32 width-800">Let's look at the old way first</p>
+          <pre><code class="js">const animalSounds = {
   cat:   'meow',
   dog:   'bark',
   snake: 'sssss'
@@ -176,12 +247,16 @@ const snake = animalSounds.snake
 console.log( cat, dog, snake )
 
 // Output: meow bark sssss</code></pre>
-      </section>
+        </section>
 
-      <section>
-        <h3>ES6: Destructuring Objects</h3>
-        <p class="gdi-p" style="max-width: 800px; margin: 0 auto 24px auto;">With objects, we can unpack or extract its values by referencing its <code>keys</code></p>
-<pre><code class="js">const animalSounds = {
+        <!-- Destructuring objects -->
+        <section>
+          <h3>ES6: Destructuring Objects</h3>
+          <p class="fs-32 width-800">
+            With objects, we can unpack or extract its values by referencing its
+            <code>keys</code>
+          </p>
+          <pre><code class="js">const animalSounds = {
   cat: 'meow',
   dog: 'bark',
   snake: 'sssss'
@@ -192,19 +267,26 @@ const { cat, dog, snake } = animalSounds
 console.log( cat, dog, snake )
 
 // Output: meow bark sssss</code></pre>
-      </section>
+        </section>
 
-      <section>
-        <h3>Destructuring Syntax: Objects</h3>
-        <p class="gdi-p" style="max-width: 800px; margin: 0 auto 24px auto;">We are copying property values from an object by referencing its keys</p>
-        <pre><code class="js">let { key1, key2.....keyN } = object
+        <!-- Destructuring objects -->
+        <section>
+          <h3>Destructuring Syntax: Objects</h3>
+          <p class="fs-32 width-800">
+            We are copying property values from an object by referencing its keys
+          </p>
+          <pre><code class="js">let { key1, key2.....keyN } = object
         </code></pre>
-      </section>
+        </section>
 
-      <section>
-        <h3>Destructuring Objects</h3>
-        <p class="gdi-p" style="max-width: 800px; margin: 0 auto 24px auto;">If we prefer to use new variable names instead of the key names, we can assign them this way:</p>
-<pre><code class="js">const animalSounds = {
+        <!-- Destructuring objects -->
+        <section>
+          <h3>Destructuring Objects</h3>
+          <p class="fs-32 width-800">
+            If we prefer to use new variable names instead of the key names, we can assign
+            them this way:
+          </p>
+          <pre><code class="js">const animalSounds = {
   cat: 'meow',
   dog: 'bark',
   snake: 'sssss'
@@ -219,22 +301,30 @@ const {
 console.log( catSound, dogSound, snakeSound )
 
 // Output: meow bark sssss</code></pre>
-      </section>
+        </section>
 
-      <section>
-        <h3>Destructuring Order in Objects</h3>
-        <p class="gdi-p" style="max-width: 800px; margin: 0 auto 24px auto;">Because objects are not zero-indexed, the order in which they are destructured does not matter as long as the correct <code>key</code> is referenced</p>
-<pre><code class="js">const { dog, snake, cat } = animalSounds
+        <!-- Destructuring objects -->
+        <section>
+          <h3>Destructuring Order in Objects</h3>
+          <p class="fs-32 width-800">
+            Because objects are not zero-indexed, the order in which they are destructured
+            does not matter as long as the correct <code>key</code> is referenced
+          </p>
+          <pre><code class="js">const { dog, snake, cat } = animalSounds
 
 // Will still return the right values
 // Output: bark, sssss, meow
 </code></pre>
-      </section>
+        </section>
 
-      <section>
-        <h3>Extracting Specific Values</h3>
-        <p class="gdi-p" style="max-width: 800px; margin: 0 auto 24px auto;">We can extract specific values, but unlike arrays, we don't need to use blank spaces as placeholders</p>
-<pre><code class="js">const animalSounds = {
+        <!-- Extracting Specific Values -->
+        <section>
+          <h3>Extracting Specific Values</h3>
+          <p class="fs-32 width-800">
+            We can extract specific values, but unlike arrays, we don't need to use blank
+            spaces as placeholders
+          </p>
+          <pre><code class="js">const animalSounds = {
   cat: 'meow',
   dog: 'bark',
   snake: 'sssss'
@@ -245,40 +335,62 @@ const { dog } = animalSounds
 console.log(dog)
 
 // Output: Bark </code></pre>
-      </section>
+        </section>
 
-      <section>
-        <h3>Let's Develop It!</h3>
-        <ul>
-          <li>Destructure the object below into distinct variables</li>
-          <li>Verify in the console</li>
-        </ul>
-<pre><code class="js">let menu = {
+        <!-- Practice -->
+        <section>
+          <h3>Let's Develop It!</h3>
+          <ul>
+            <li>Destructure the object below into distinct variables</li>
+            <li>Verify in the console</li>
+          </ul>
+          <pre><code class="js">let menu = {
   breakfast: 'pancakes',
   lunch: 'tacos',
   dinner: 'sushi',
   dessert: 'tiramisu'
 }</code></pre>
-      </section>
+        </section>
 
-      <section>
-        <h3>Spread Operator</h3>
-      </section>
+        <!-- Opening Slides: Spread Operator -->
+        <section>
+          <h3>Spread Operator</h3>
+        </section>
 
-      <section>
-        <h3><code>...</code></h3>
-        <p class="gdi-p" style="max-width: 800px; margin: 0 auto 24px auto;">We use the <code>Spread</code> operator to copy or combine an array or object into another array or object </p>
-        <p class="gdi-p" style="max-width: 800px; margin: 0 auto 24px auto;">The <code>Spread</code> operator syntax is signified by three dots: <code>...</code></p>
+        <!-- Spread Operator syntax -->
+        <section>
+          <h3>Syntax: <code>...</code></h3>
+          <p class="fs-32 width-800 mb-32">
+            We use the <code>Spread</code> operator to copy or combine an array or object
+            into another array or object
+          </p>
+          <p class="fs-32 width-800 mb-32">
+            The <code>Spread</code> operator syntax is signified by three dots:
+            <code>...</code>
+          </p>
 
-        <p class="gdi-p"><a href="https://youtu.be/iLx4ma8ZqvQ" target="_blank">...spread operator (FreeCodeCamp, YouTube)</a></p>
-        <p class="gdi-p"><a href="https://www.w3schools.com/react/react_es6_spread.asp" target="_blank">ES6 Spread Operator (w3schools)</a></p>
-<!-- <pre><code class="js"></code></pre> -->
-      </section>
+          <p class="fs-24">
+            <a
+              href="https://youtu.be/iLx4ma8ZqvQ"
+              target="_blank"
+              >...spread operator (FreeCodeCamp, YouTube)</a
+            >
+          </p>
+          <p class="fs-24">
+            <a
+              href="https://www.w3schools.com/react/react_es6_spread.asp"
+              target="_blank"
+              >ES6 Spread Operator (w3schools)</a
+            >
+          </p>
+          <!-- <pre><code class="js"></code></pre> -->
+        </section>
 
-      <section>
-        <h3>Spread Operator: Arrays</h3>
-        <p class="gdi-p" style="max-width: 800px; margin: 0 auto 24px auto;">Example 1</p>
-<pre><code class="js">let usCities = [ 'New York City', 'Los Angeles' ]
+        <!-- Spread Operator: Arrays - Example 1 -->
+        <section>
+          <h3>Spread Operator: Arrays</h3>
+          <p class="fs-32 width-800">Example 1</p>
+          <pre><code class="js">let usCities = [ 'New York City', 'Los Angeles' ]
 
 let bigCities = [ 'London', ...usCities, 'Tokyo', 'Barcelona' ]
 
@@ -288,11 +400,13 @@ console.log( bigCities )
 
 // [ 'London', 'New York City', 'Los Angeles', 'Tokyo', 'Barcelona' ]
 </code></pre>
-      </section>
-      <section>
-        <h3>Spread Operator: Arrays</h3>
-        <p class="gdi-p" style="max-width: 800px; margin: 0 auto 24px auto;">Example 2</p>
-<pre><code class="js">let usCities = ['New York City', 'Los Angeles']
+        </section>
+
+        <!-- Spread Operator: Arrays - Example 2 -->
+        <section>
+          <h3>Spread Operator: Arrays</h3>
+          <p class="fs-32 width-800">Example 2</p>
+          <pre><code class="js">let usCities = ['New York City', 'Los Angeles']
 
 let bigCities = ['London', 'Tokyo', 'Barcelona']
 
@@ -304,12 +418,13 @@ console.log(bigCities)
 
 // ['London', 'Tokyo', 'Barcelona', 'New York City', 'Los Angeles']
 </code></pre>
-      </section>
+        </section>
 
-      <section>
-        <h3>Spread Operator: Arrays</h3>
-        <p class="gdi-p" style="max-width: 800px; margin: 0 auto 24px auto;">Example 3</p>
-<pre><code class="js">let usCities = ['New York City', 'Los Angeles']
+        <!-- Spread Operator: Arrays - Example 3 -->
+        <section>
+          <h3>Spread Operator: Arrays</h3>
+          <p class="fs-32 width-800">Example 3</p>
+          <pre><code class="js">let usCities = ['New York City', 'Los Angeles']
 
 let dupUsCities = [...usCities]
 
@@ -319,20 +434,25 @@ console.log(dupUsCities)
 
 // ['New York City', 'Los Angeles']
 </code></pre>
-      </section>
+        </section>
 
-      <section>
-        <h3>Let's Develop It!</h3>
-        <p class="gdi-p" style="max-width: 800px; margin: 0 auto 24px auto;">Use the spread operator to combine the two arrays into a new array: <code>basketballTeams</code></p>
-<pre><code class="js">let easternTeams = ['knicks', 'nets']
+        <!-- Practice -->
+        <section>
+          <h3>Let's Develop It!</h3>
+          <p class="fs-32 width-800">
+            Use the spread operator to combine the two arrays into a new array:
+            <code>basketballTeams</code>
+          </p>
+          <pre><code class="js">let easternTeams = ['knicks', 'nets']
 
 let westernTeams = ['golden state warriors', 'lakers']</code></pre>
-      </section>
+        </section>
 
-      <section>
-        <h3>Spread Operator: Objects</h3>
-        <p class="gdi-p" style="max-width: 800px; margin: 0 auto 24px auto;">Copying Objects</p>
-<pre><code class="js">let movieEntry1 = {
+        <!-- Spread Operator: Objects - Example 1-->
+        <section>
+          <h3>Spread Operator: Objects</h3>
+          <p class="fs-32 width-800">Copying Objects</p>
+          <pre><code class="js">let movieEntry1 = {
   title: 'Spider-Man: No Way Home',
   year: 2022
 }
@@ -345,12 +465,13 @@ console.log(spiderman8)
 
 // {title: 'Spider-Man: No Way Home', year: 2021}
 </code></pre>
-      </section>
+        </section>
 
-      <section>
-        <h3>Spread Operator: Objects</h3>
-        <p class="gdi-p" style="max-width: 800px; margin: 0 auto 24px auto;">Combining Objects</p>
-<pre><code class="js">let movieEntry1 = {
+        <!-- Spread Operator: Arrays - Example 2 -->
+        <section>
+          <h3>Spread Operator: Objects</h3>
+          <p class="fs-32 width-800">Combining Objects</p>
+          <pre><code class="js">let movieEntry1 = {
   title: 'Spider-Man: No Way Home',
   year: 2021
 }
@@ -371,12 +492,16 @@ console.log(spiderman8data)
 
 // {title: 'Spider-Man: No Way Home', year: 2021, actor: 'Tom Holland', boxOffice: '1.8b'}
 </code></pre>
-      </section>
+        </section>
 
-      <section>
-        <h3>Let's Develop It!</h3>
-        <p class="gdi-p" style="max-width: 800px; margin: 0 auto 24px auto;">Using the <code>spread</code> operator, combine the two objects below into a brand new object: <code>dogData</code></p>
-<pre><code class="js">let dog = {
+        <!-- Practice -->
+        <section>
+          <h3>Let's Develop It!</h3>
+          <p class="fs-32 width-800">
+            Using the <code>spread</code> operator, combine the two objects below into a
+            brand new object: <code>dogData</code>
+          </p>
+          <pre><code class="js">let dog = {
   name: 'Toby',
   breed: 'French Bulldog'
 }
@@ -385,23 +510,41 @@ let owner = {
   ownerName: 'Lola Ojo',
   city: 'Los Angeles' 
 }</code></pre>
-      </section>
+        </section>
 
-      <section>
-        <h3>Spread or Rest?</h3>
-        <p class="gdi-p" style="max-width: 800px; margin: 0 auto 24px auto;">If this new <code>...</code> syntax isn't strange or confusing enough, it is the same exact syntax for another ES6 feature called the <code>Rest</code> operator!</p>
-        <p class="gdi-p" style="max-width: 800px; margin: 0 auto 24px auto;"><a href="https://www.freecodecamp.org/news/javascript-rest-vs-spread-operators/" target="_blank">JavaScript Rest vs Spread Operator – What’s the Difference? (FreeCodeCamp)</a></p>
-      </section>
+        <!-- Spread and Rest -->
+        <section>
+          <h3>Spread or Rest?</h3>
+          <p class="fs-32 width-800">
+            If this new <code>...</code> syntax isn't strange or confusing enough, it is
+            the same exact syntax for another ES6 feature called the
+            <code>Rest</code> operator!
+          </p>
+          <p class="fs-24 width-800 mt-32">
+            <a
+              href="https://www.freecodecamp.org/news/javascript-rest-vs-spread-operators/"
+              target="_blank"
+              >JavaScript Rest vs Spread Operator – What’s the Difference?
+              (FreeCodeCamp)</a
+            >
+          </p>
+        </section>
 
-      <section>
-        <h3><code>Rest</code> Operator</h3>
-        <p class="gdi-p" style="max-width: 800px; margin: 0 auto 24px auto;">The <code>Rest</code> operator is often used with functions</p>
-        <p class="gdi-p" style="max-width: 800px; margin: 0 auto 24px auto;">It does the opposite of the <code>Spread</code> operator--it packs up 'leftover' values into an array</p>
-      </section>
+        <!-- Rest Operator -->
+        <section>
+          <h3><code>Rest</code> Operator</h3>
+          <p class="fs-32 width-800 mb-32">
+            The <code>Rest</code> operator is often used with functions
+          </p>
+          <p class="fs-32 width-800">
+            It does the opposite of the <code>Spread</code> operator--it packs up
+            'leftover' values into an array
+          </p>
+        </section>
 
-      <section>
-        <h3><code>Rest</code> Operator</h3>
-<pre><code class="js">function addTwoNumbers( a, b, ...otherNumbers ){
+        <section>
+          <h3><code>Rest</code> Operator</h3>
+          <pre><code class="js">function addTwoNumbers( a, b, ...otherNumbers ){
 
   console.log( a + b )
   
@@ -411,96 +554,100 @@ let owner = {
 
 addTwoNumbers( 2, 4, 5, 6, 12 )
 
-// Output:
-// 6
-// 5 6 12</code></pre>
-      </section>
+// Output: 6
+// Output: 5 6 12</code></pre>
+        </section>
 
-      <section>
-        <h3>Caveat</h3>
-        <p class="gdi-p" style="max-width: 750px; margin: 0 auto 24px auto;">Unlike the <code>spread</code> operator variable which can be placed in any order, the <code>rest</code> operator parameter must come last</p>
-      </section>
+        <!-- Rest operator caveat -->
+        <section>
+          <h3>Caveat</h3>
+          <p
+            class="gdi-p"
+            style="max-width: 750px; margin: 0 auto 24px auto">
+            Unlike the <code>spread</code> operator variable which can be placed in any
+            order, the <code>rest</code> operator parameter must come last
+          </p>
+        </section>
 
+        <!-- Home Practice -->
+        <section>
+          <h3>Home Practice</h3>
+          <ul>
+            <li>
+              <a
+                href="https://replit.com/@tinuola/js2-class5-home-practice#script.js"
+                target="_blank"
+                >REPL Home Practice</a
+              >
+            </li>
+          </ul>
+        </section>
 
+        <!-- Next Class -->
+        <section>
+          <h3>Class 6 - Agenda</h3>
+          <ul>
+            <li>Intro to Asynchronous JavaScript</li>
+          </ul>
+        </section>
 
-      <!-- Home Practice -->
-      <section>
-        <h3>Home Practice</h3>
-        <ul>
-          <li><a href="https://replit.com/@tinuola/js2-class5-home-practice#script.js" target="_blank">REPL Home Practice</a></li>
-        </ul>
-      </section>
+        <!-- MUST USE SLIDE - Course Feedback Survey-->
+        <section>
+          <h3>Class Feedback</h3>
+          <p>
+            <a
+              href=""
+              target="_blank"></a>
+          </p>
+        </section>
 
-      <!-- Next Class -->
-      <section>
-        <h3>Class 6 - Agenda</h3>
-        <ul>
-          <li>Intro to Asynchronous JavaScript</li>
-        </ul>
-      </section>
+        <!-- Q&A -->
+        <section>
+          <h2>Q&A</h2>
+        </section>
 
-      <!-- MUST USE SLIDE - Course Feedback Survey-->
-      <section>
-        <h3>Class Feedback</h3>
-        <p><a href="https://forms.gle/v3pmYygbTfaBNVLPA" target="_blank">https://forms.gle/v3pmYygbTfaBNVLPA</a></p>
-      </section>
-
-      <!-- Q&A -->
-      <section>
-        <h2>Q&A</h2>
-      </section>
-
-      <!-- Thank You -->
-      <section>
-        <img src="./assets/images/gdi-logos/GDI-Logo_Peach.png" alt="GDI Logo" width="300px" class="noborder" />
-        <br>
-        <h2>Thank You!</h2>
-      </section>
-    </div> <!-- End of Slides container -->
-
-    <footer>
-      <!-- Update with Course Name -->
-      <div class="copyright">
-        <img src="./assets/images/gdi-logos/GDI-Logo_Peach.png" alt="GDI Logo" width="40px" class="noborder" />
-        <p>JavaScript Fundamentals 2 - Class 5</p>
-        <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img
-            alt="Creative Commons License" style="border-width:0"
-            src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+        <!-- Thank You -->
+        <section>
+          <img
+            src="../shared-assets/imgs/gdi-logos/gdi-logo_peach.png"
+            alt="GDI Logo"
+            width="300px"
+            class="noborder" />
+          <br />
+          <h2>Thank You!</h2>
+        </section>
       </div>
-    </footer>
-  </div> <!-- End of Reveal wrapper -->
-
-  <!-- REVEAL.JS Script Files - Do Not Edit -->
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reveal.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/plugin/highlight/highlight.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/highlightjs-badge@0.1.9/highlightjs-badge.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jsPlumb/2.15.5/js/jsplumb.min.js"></script>
-  <script>
-    const srcUrlPrefix = "https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/";
-    Reveal.initialize({
-      hash: true,
-      center: true,
-      slideNumber: true,
-      showNotes: false,
-      margin: 0.1,
-      preloadIframes: true,
-      plugins: [RevealHighlight],
-      pdfSeparateFragments: true
-    });
-
-    // add HighlightJS-badge (options are optional)
-    var options = {
-      copyIconContent: "📄",
-      checkIconContent: "✅"
-    };
-    window.highlightJsBadge(options);
-
-    if (window.location.search == "?print-pdf") {
-      var uncounted = document.querySelectorAll("[data-visibility='uncounted']");
-      uncounted.forEach(node => {
-        node.parentNode.classList.add("no-print")
-      })
-    }
-  </script>
-</body>
+      <!-- End of Slides container -->
+      <!---->
+      <!---->
+      <!-- Update Footer with Course Name -->
+      <footer>
+        <div class="copyright">
+          <img
+            src="../shared-assets/imgs/gdi-logos/gdi-logo_peach.png"
+            alt="GDI Logo"
+            width="40px"
+            class="noborder" />
+          <p>JavaScript Fundamentals 2 - Class 5</p>
+          <a
+            rel="license"
+            href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"
+            ><img
+              alt="Creative Commons License"
+              style="border-width: 0"
+              src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png"
+          /></a>
+        </div>
+      </footer>
+    </div>
+    <!-- End of Reveal wrapper -->
+    <!---->
+    <!---->
+    <!-- RevealJS Scripts & Config - Do Not Edit or Delete -->
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/plugin/highlight/highlight.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/highlightjs-badge@0.1.9/highlightjs-badge.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsPlumb/2.15.5/js/jsplumb.min.js"></script>
+    <script src="../shared-assets/js/revealConfig.js"></script>
+  </body>
 </html>

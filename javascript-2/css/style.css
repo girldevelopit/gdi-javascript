@@ -1,0 +1,70 @@
+/* Add Custom CSS Here if Applicable */
+p.gdi-p {
+  font-size: 32px;
+  line-height: 1.5;
+}
+
+.width-600 {
+  width: 600px;
+  margin: 0 auto !important;
+}
+
+.width-750 {
+  max-width: 750px;
+  margin: 0 auto !important;
+}
+
+.width-800 {
+  max-width: 800px;
+  margin: 0 auto !important;
+}
+
+.width-900 {
+  max-width: 900px;
+  margin: 0 auto !important;
+}
+
+.bold-600 {
+  font-weight: 600;
+}
+
+.highlight--yellow {
+  background-color: rgba(240, 225, 130, 0.7);
+  padding-left: 0.35rem;
+  padding-right: 0.35rem;
+}
+
+.highlight--black {
+  background-color: #1a1735;
+  padding-left: 0.35rem;
+  padding-right: 0.35rem;
+}
+
+.mt-16 {
+  margin-top: 1rem !important;
+}
+
+.mb-16 {
+  margin-bottom: 1rem !important;
+}
+
+.mt-32 {
+  margin-top: 2rem !important;
+}
+
+.mb-32 {
+  margin-bottom: 2rem !important;
+}
+
+/* Typography */
+.reveal .fs-24 {
+  font-size: 1.5rem;
+}
+
+.reveal .fs-28 {
+  font-size: 1.75rem;
+}
+
+.reveal .fs-32 {
+  font-size: 2rem;
+}

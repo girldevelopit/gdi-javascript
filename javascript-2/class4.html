@@ -1,440 +1,128 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="description" content="Girl Develop It JavaScript Fundamentals 2 Cohort Series">
-  <meta name="author" content="Girl Develop It">
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta
+      name="description"
+      content="Girl Develop It JavaScript Fundamentals 2 Cohort Series" />
+    <meta
+      name="author"
+      content="Girl Develop It" />
+    <meta
+      name="apple-mobile-web-app-capable"
+      content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent" />
 
-  <!-- Update with GDI Course Name -->
-  <title>GDI - JavaScript Fundamentals 2, Class 4</title>
+    <!-- Update with GDI Course Name -->
+    <title>GDI - JavaScript Fundamentals 2, Class 4</title>
 
-  <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../shared-assets/imgs/favicon.ico" />
 
-  <!-- RevealJS CDN -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reset.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reveal.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/theme/simple.css" id="theme">
+    <!-- RevealJS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reveal.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/theme/simple.css"
+      id="theme" />
 
-  <!-- GDI Custom Theme -->
-  <link rel="stylesheet" href="./assets/css/gdi-theme.css">
+    <!-- GDI Custom Theme -->
+    <link
+      rel="stylesheet"
+      href="../shared-assets/css/gdi-theme.css" />
 
-  <!-- Theme used for syntax highlighted code -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/monokai.min.css">
-  <style>
-    p.gdi-p {
-      font-size: 32px;
-      line-height: 1.5;
-    }
-  </style>
-</head>
-<body>
-  <div class="reveal">
-    <!-- Start of Slides container -- Any section element in this container is displayed as a slide -->
-    <div class="slides">
+    <!-- Theme used for syntax highlighted code -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/monokai.min.css" />
 
-      <!-- Course and Class Titles -->
-      <section>
-        <h2>JavaScript Fundamentals 2</h2>
-        <h2>Class 4</h3>
-      </section>
+    <!-- Course Custom Styles if Applicable-->
+    <link
+      rel="stylesheet"
+      href="./css/style.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <!-- Start of Slides container -->
+      <!-- Any section element in this container is displayed as a single slide -->
+      <!-- Comment out rather than delete slide instructions -->
+      <div class="slides">
+        <!-- Course and Class Titles -->
+        <section>
+          <h2>JavaScript Fundamentals 2</h2>
+          <h3>Class 4</h3>
+        </section>
 
-      <!-- Class Agenda -->
-      <section>
-        <h3>AGENDA</h3>
+        <!-- Class Agenda -->
+        <section>
+          <h3>AGENDA</h3>
           <ul>
-            <li>Optional: Home Practice Review</li>
-            <li>Data Type: Objects</li>
-            <li>Object Properties</li>
+            <li>Home Practice Review</li>
             <li><code>this</code> Keyword</li>
-            <li>Feedback & Class 5 Preview</li>
+            <li><code>for ... in</code> Loop</li>
+            <li>Built-in Object Methods</li>
+            <li>Class Feedback</li>
           </ul>
-      </section>
-      
-      <!-- Stretch Break -->
-      <section>
-        <h3>Stretch - "Bio" Break</h3>
-        <p>4:00p PST /  6:00p CST / 7:00p EST</p>
-      </section>
+        </section>
 
-      <section>
-        <h3>Objects</h3>
-      </section>
+        <!-- Stretch Break -->
+        <section>
+          <h3>Stretch - "Bio" Break</h3>
+          <p>4:00p PST / 6:00p CST / 7:00p EST</p>
+        </section>
 
-      <section>
-        <h3>The Object Data Type</h3>
-        <p class="gdi-p" style="max-width: 800px; margin: 0 auto 24px auto;">Objects are a JavaScript data type</p>
-        <p class="gdi-p" style="max-width: 800px; margin: 0 auto 24px auto;">Like arrays, objects hold a collection of data</p>
-        <p><a href="https://www.w3schools.com/js/js_objects.asp" target="_blank">JavaScript Objects (w3schools)</a></p>
-      </section>
+        <!-- Objects -->
+        <section>
+          <h3>Objects: <code>this</code> Keyword</h3>
+        </section>
 
-      <section>
-        <h3>Objects vs Arrays</h3>
-        <p class="gdi-p" style="max-width: 800px; margin: 0 auto 24px auto;">But objects differ from arrays:</p>
-        <ul>
-          <li>An object stores data that's specific to itself</li>
-          <li>Objects have a different syntax</li>
-          <li>Objects store data as <code>key:value</code> pairs</li>
-          <li>Objects are not zero-indexed</li>
-        </ul>
-      </section>
+        <!-- this: Object Referencing -->
+        <section>
+          <h3>Object References</h3>
+          <p class="fs-32 width-900 mb-32">
+            When we add methods to our objects, we can use these methods to work with
+            other data inside our objects
+          </p>
 
-      <section>
-        <h3>What is an Object?</h3>
-        <p class="gdi-p" style="max-width: 800px; margin: 0 auto 24px auto;">One way to understand the concept of <code>objects</code> in JavaScript is to use real world examples</p>
-      </section>
+          <p class="fs-32">
+            JavaScript has a keyword <span class="highlight--yellow">this</span> that
+            allows an object to reference data within itself
+          </p>
 
-      <section>
-        <h3>Objects in the Real World</h3>
-        <ul>
-          <li>A car is an object</li>
-          <li>A car has properties</li>
-        </ul><br>
-        <img src="./assets/images/blue-car.jpeg" width="500px" alt="Blue car">
-      </section>
+          <p>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#using_this_for_object_references"
+              target="_blank"
+              >This (MDN)</a
+            >
+          </p>
+        </section>
 
-      <section>
-        <h3>Car Object</h3>
-        <p class="gdi-p" style="max-width: 600px; margin: 0 auto;">What are some of the properties of this car?</p>
-        <img src="./assets/images/blue-car.jpeg" width="500px" alt="Blue car">
-      </section>
+        <!-- Example: Object Referencing -->
+        <section>
+          <h3>Object Referencing: <br />An Example</h3>
+          <p class="fs-32 mb-32 width-800">
+            In our <code>toddlerObj</code> example, the <code>faveWord()</code> method is
+            currently hard-coded to display "Mama"
+          </p>
 
-      <section>
-        <h3>Car Object</h3>
-        <ul>
-          <li>Blue</li>
-          <li>4 wheels</li>
-          <li>4 doors</li>
-          <li>A Bentley</li>
-          <li>Etc.</li>
-        </ul>
-        <img src="./assets/images/blue-car.jpeg" width="500px" alt="Blue car" style="margin-left: 20px">
-      </section>
-
-
-      <section>
-        <h3>Car Object</h3>
-        <p class="gdi-p" style="max-width: 700px; margin: 0 auto 24px auto;">What are actions this car can perform?</p>
-        <ul>
-          <li>Start</li>
-          <li>Stop</li>
-          <li>Move forward</li>
-          <li>Reverse</li>
-        </ul>
-      </section>
-
-      <section>
-        <h3>Many Things are Objects!</h3>
-        <p class="gdi-p" style="max-width: 800px; margin: 0 auto 24px auto;">A house is an object with <code>properties</code>: architectural style, number of floors, kitchen, basement (yes or no), price, etc.</p>
-        <p class="gdi-p" style="max-width: 700px; margin: 0 auto 24px auto;">Actions that can happen in a house: doors open or close, windows open or close, etc.</p>
-      </section>
-
-      <section>
-        <h3>Even More Objects!</h3>
-        <p class="gdi-p" style="max-width: 800px; margin: 0 auto 24px auto;">Your driver's license is an object. It has <code>properties</code>: your name, date of birth, state, registration number, etc.</p>
-        <p class="gdi-p" style="max-width: 700px; margin: 0 auto 24px auto;">It can expire, it can be renewed, etc.</p>
-      </section>
-
-<!-- https://unsplash.com/@karsten116
-https://unsplash.com/@abbyabby? -->
-      <section>
-        <h3>Objects in JavaScript</h3>
-        <p class="gdi-p" style="max-width: 700px; margin: 0 auto 24px auto;">An object in JavaScript is similar to a real-world object; it has <code>properties</code> (and <code>actions</code>) that are specific to it</p>
-      </section>
-
-      <section>
-        <h3>Syntax: Object Literal</h3>
-        <p class="gdi-p" style="max-width: 700px; margin: 0 auto 24px auto;">We can declare objects with a variable name and a pair of curly brackets <code>{}</code></p>
-<pre><code class="js">// Declare an object literal
-
-let objectName = {} /* An empty object */
-
-// Different syntax from an array:
-// let arrayName = []
-</code></pre>
-      </section>
-
-      <section>
-        <h3>Object Syntax</h3>
-        <p class="gdi-p" style="max-width: 650px; margin: 0 auto 24px auto;">The data or content inside of an object are its properties</p>
-
-        <p class="gdi-p" style="max-width: 650px; margin: 0 auto 24px auto;">Each property is separated by a comma</p>
-
-        <p class="gdi-p" style="max-width: 700px; margin: 0 auto;">Turning our car into a JavaScript object:</p>
-<pre><code class="js">let carObj = {
-  doors: 4,
-  color: 'blue',
-  brand: 'bentley',
-  year: 2021
-}</code></pre>
-      </section>
-
-      <section>
-        <h3>Key:Value Pairs</h3>
-        <p class="gdi-p" style="max-width: 600px; margin: 0 auto 24px auto;">The properties of an object are called <code>key:value</code> pairs</p>
-        <p class="gdi-p" style="max-width: 600px; margin: 0 auto 24px auto;"><code>brand: 'bentley'</code> is a key-value pair</p>
-        <p class="gdi-p" style="max-width: 700px; margin: 0 auto 24px auto;"><code>brand</code> is the key; <code>bentley</code> is the value</p>
-
-<pre><code class="js">let carObj = {
-  doors: 4,
-  color: 'blue',
-  brand: 'bentley',
-  year: 2021
-}</code></pre>
-      </section>
-
-      <section>
-        <h3>Let's Develop It!</h3>
-        <p class="gdi-p" style="max-width: 800px; margin: 0 auto;">Create a dog object; add two properties: <code>color</code> and <code>breed</code>; and assign their values</p>
-        <img src="./assets/images/bulldog.jpg" alt="A bulldog puppy" width="400px">
-<pre><code class="js">let dogObj = {
-  key: value,
-  key: value,
-}</code></pre>
-      </section>
-
-      <section>
-        <h3>Objects are Not Zero-Indexed</h3>
-        <ul>
-          <li>Objects are not like arrays; order is not guaranteed</li>
-          <li>We cannot use index positions to access object data</li>
-          <li>We use the <code>key</code> property to access an object</li>
-        </ul>
-      </section>
-
-      <section>
-        <h3>Accessing an Object</h3>
-        <p class="gdi-p" style="max-width: 700px; margin: 0 auto 24px auto;">Using the <code>key</code> property, there are two ways to access an object:</p>
-        <ul>
-          <li>Dot Notation</li>
-          <li>Bracket Notation</li>
-        </ul>
-        <p class="gdi-p"><a href="https://codeburst.io/javascript-quickie-dot-notation-vs-bracket-notation-333641c0f781" target="_blank">JavaScript Quickie— Dot Notation vs. Bracket Notation</a></p>
-      </section>
-
-      <section>
-        <h3>Dot Notation</h3>
-        <p class="gdi-p" style="max-width: 700px; margin: 0 auto 24px auto;"><code>objectName.key</code></p>
-<pre><code class="js">let dogObj = {
-  color: 'brown',
-  breed: 'bulldog'
-}
-
-// Access the color property
-let dogColor = dogObj.color
-
-console.log(dogColor)
-</code></pre>
-      </section>
-
-      <section>
-        <h3>Bracket Notation</h3>
-        <p class="gdi-p" style="max-width: 700px; margin: 0 auto 24px auto;"><code>objectName['key']</code></p>
-<pre><code class="js">let dogObj = {
-  color: 'brown',
-  breed: 'bulldog'
-}
-
-// Access the color property
-let dogColor2 = dogObj['color']
-
-console.log(dogColor2)
-</code></pre>
-      </section>
-
-      <section>
-        <h3>Updating an Object</h3>
-        <p class="gdi-p" style="max-width: 700px; margin: 0 auto 24px auto;">Updating a property: <code>color</code></p>
-<pre><code class="js">dogObj.color = 'blue'
-
-console.log (dogObj)
-
-// Output:
-// {color: 'blue', breed: 'bulldog'}</code></pre>
-      </section>
-
-      <section>
-        <h3>Updating an Object</h3>
-        <p class="gdi-p" style="max-width: 700px; margin: 0 auto 24px auto;">Adding a new property: <code>size</code></p>
-<pre><code class="js">dogObj.size = 'small'
-
-console.log (dogObj)
-
-// Output:
-// {color: 'blue', breed: 'bulldog', size: 'small'}</code></pre>
-      </section>
-
-      <section>
-        <h3>Deleting an Object Key</h3>
-        <p class="gdi-p" style="max-width: 700px; margin: 0 auto 24px auto;">Use the keyword <code>delete</code></p>
-        <p class="gdi-p" style="max-width: 700px; margin: 0 auto 24px auto;"><code>delete objectName.key</code></p>
-<pre><code class="js">delete dogObj.size
-
-console.log (dogObj)
-
-// Output:
-// {color: 'blue', breed: 'bulldog'}</code></pre>
-      </section>
-
-      <section>
-        <h3>Let's Develop It!</h3>
-        <p class="gdi-p" style="max-width: 700px; margin: 0 auto 24px auto;">Working with our <code>dogObj</code>:</p>
-        <ul>
-          <li>Change the color value back to <code>brown</code></li>
-          <li>Add a new key or property called <code>age</code></li>
-          <li>Give <code>age</code> a value of <code>1</code></li>
-          <li>Verify the updates in the console</li>
-        </ul>
-      </section>
-
-      <section>
-        <h3>Object Methods</h3>
-      </section>
-
-      <section>
-        <h3>Object Method</h3>
-        <p class="gdi-p" style="max-width: 700px; margin: 0 auto 24px auto;">In addition to <code>key:value</code> properties, objects can also store their own <code>functions</code>--actions that control or determine their behavior</p>
-      </section>
-
-      <section>
-        <h3>Object Method</h3>
-        <p class="gdi-p" style="max-width: 700px; margin: 0 auto 24px auto;">A function inside of an object is called a <code>method</code></p>
-      </section>
-
-      <section>
-        <h3>Declaring an Object Method</h3>
-        <p class="gdi-p" style="max-width: 650px; margin: 0 auto 24px auto;">We can create a method when declaring our object</p>
-<pre><code class="js">let toddlerObj = {
-  
-  age_in_months: 18,
-  
-  is_cute: true,
-  
-  new_word: 'no',
-
-  // Declaring a function or method
-  faveWord: function(){
-    console.log('Mama')
-  }
-}</code></pre>
-      </section>
-
-      <section>
-        <h3>Declaring an Object Method</h3>
-        <p class="gdi-p" style="max-width: 700px; margin: 0 auto 24px auto;">We can also declare a method without using the <code>function</code> keyword</p>
-<pre><code class="js">let toddlerObj = {
-  
-  age_in_months: 18,
-  
-  is_cute: true,
-  
-  new_word: 'no',
-
-  // Declaring a method without the function keyword
-  faveWord(){
-    console.log('Mama')
-  }
-}</code></pre>
-      </section>
-
-      <section>
-        <h3>Declaring an Object Method</h3>
-        <p class="gdi-p" style="max-width: 700px; margin: 0 auto 24px auto;">Using dot notation, we can add a new method after an object has been declared</p>
-<pre><code class="js">let toddlerObj = {
-  age_in_months: 18,
-  is_cute: true,
-  new_word: 'no',
-  faveWord(){ 
-    console.log('Mama') 
-  },
-}
-
-// Add new method
-toddlerObj.throwTantrum = function(){
-  console.log('Nooooo!')
-}
-
-console.log(toddlerObj) // Verify </code></pre>
-      </section>
-
-      <section>
-        <h3>Calling an Object Method</h3>
-        <p class="gdi-p" style="max-width: 800px; margin: 0 auto 18px auto;">To call an object method, use dot notation to access the method name and append with <code>()</code></p>
-        <p class="gdi-p" style="max-width: 800px; margin: 0 auto;"><code>objectName.objectMethod()</code></p>
-<pre><code class="js">let toddlerObj = {
-  age_in_months: 18,
-  is_cute: true,
-  new_word: 'no',
-  faveWord(){ 
-    console.log('Mama') 
-  },
-  throwTantrum: function(){
-    console.log('Nooooo!')
-  },
-}
-
-toddlerObj.throwTantrum()</code></pre>
-      </section>
-
-      <section>
-        <h3>Let's Develop It!</h3>
-        <p class="gdi-p" style="max-width: 700px; margin: 0 auto 24px auto;">Working with our <code>dogObj</code>:</p>
-        <ul>
-          <li>Declare a method: <code>dogBark</code>, inside the object</li>
-          <li>The method logs 'woof, woof!' to the console</li>
-          <li>Verify your update in the console</li>
-          <li>Call or run <code>dogBark()</code></li>
-        </ul>
-<pre><code class="js">let obj = {
-  
-  objMethod1: function(){},
-
-  objMethod2(){}
-
-}
-
-objectName.objectMethod()
-</code></pre>
-      </section>
-
-      <section>
-        <h3>Let's Develop It!</h3>
-        <p class="gdi-p" style="max-width: 700px; margin: 0 auto 24px auto;">Working with our <code>dogObj</code>:</p>
-        <ul>
-          <li>Using dot notation, declare a method: <code>goodDog</code>, from outside the method</li>
-          <li>The method logs 'Good girl Lucy!' to the console</li>
-          <li>Use dot notation to add <code>goodDog</code> to the object</li>
-          <li>Verify your update in the console</li>
-          <li>Call or run <code>goodDog()</code></li>
-        </ul>
-<pre><code class="js">objectName.objectMethod3 = function(){}
-
-objectName.objectMethod()
-</code></pre>
-      </section>
-
-      <section>
-        <h3><code>this</code> Keyword</h3>
-        <p class="gdi-p" style="max-width: 700px; margin: 0 auto 24px auto;"></p>
-      </section>
-
-      <section>
-        <h3>Object References</h3>
-        <p class="gdi-p" style="max-width: 700px; margin: 0 auto 24px auto;">When we add methods to our objects, we can use these methods to work with other data inside our objects</p>
-
-        <p class="gdi-p" style="max-width: 700px; margin: 0 auto 24px auto;">JavaScript has a keyword <code>this</code> that allows an object to reference data within itself</p>
-
-        <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#using_this_for_object_references" target="_blank">This (MDN)</a></p>
-      </section>
-
-      <section>
-        <h3><code>Object Referencing: <br>An Example</code></h3>
-        <p class="gdi-p" style="max-width: 800px; margin: 0 auto 24px auto;">In our <code>toddlerObj</code> example, the <code>faveWord()</code> method is currently hard-coded to display "Mama"</p>
-
-        <p class="gdi-p" style="max-width: 800px; margin: 0 auto 24px auto;">What if we wanted that method to display the value of <code>new_word</code> instead?</p>
-<pre><code class="js">let toddlerObj = {
+          <p class="fs-32 width-800">
+            What if we wanted that method to display the value of
+            <code>new_word</code> instead?
+          </p>
+          <pre><code class="js">let toddlerObj = {
   age_in_months: 18,
   is_cute: true,
   new_word: 'no',
@@ -442,12 +130,15 @@ objectName.objectMethod()
     console.log('Mama') 
   },
 }</code></pre>
-      </section>
+        </section>
 
-      <section>
-        <h3><code>this</code></h3>
-        <p class="gdi-p" style="max-width: 700px; margin: 0 auto 24px auto;">We would use the <code>this</code> keyword</p>
-<pre><code class="js">let toddlerObj = {
+        <!-- this example -->
+        <section>
+          <h3><code>this</code></h3>
+          <p class="fs-32">
+            We would use the <span class="highlight--yellow">this</span> keyword
+          </p>
+          <pre><code class="js">let toddlerObj = {
   
   age_in_months: 18,
   
@@ -461,22 +152,33 @@ objectName.objectMethod()
 }
 
 toddlerObj.faveWord() // Should output 'no'</code></pre>
-      </section>
+        </section>
 
-      <section>
-        <h3><code>this</code></h3>
-        <p class="gdi-p" style="max-width: 700px; margin: 0 auto 24px auto;"><code>this</code> means "inside of this current object"</p>
+        <!-- this -->
+        <section>
+          <h3><code>this</code></h3>
+          <p class="fs-32"><code>this</code> means "inside of this current object"</p>
 
-        <p class="gdi-p" style="max-width: 700px; margin: 0 auto 24px auto;">From our example: <code>this.new_word</code> means:</p>
+          <p class="fs-32">From our example: <code>this.new_word</code> means:</p>
 
-        <p class="gdi-p" style="max-width: 700px; margin: 0 auto 24px auto;">"the current value of new_word inside of this toddler object"</p>
-      </section>
+          <p class="fs-32 width-800">
+            <span class="highlight--yellow">
+              "the current value of new_word inside of this toddler object"</span
+            >
+          </p>
+        </section>
 
-      <section>
-        <h3><code>this</code></h3>
-        <p class="gdi-p" style="max-width: 700px; margin: 0 auto 24px auto;">the <code>this</code> keyword allows object methods to be versatile or reusable when values inside the object changes</p>
-        <p class="gdi-p" style="max-width: 700px; margin: 0 auto;">For example, we can now update <code>new_word</code> to be any value--as our toddler grows and expands her vocabulary!</p>
-<pre><code class="js">let toddlerObj = {
+        <section>
+          <h3><code>this</code></h3>
+          <p class="fs-28 width-800 mb-32">
+            the <code>this</code> keyword allows object methods to be versatile or
+            reusable when values inside the object changes
+          </p>
+          <p class="fs-28 width-800">
+            For example, we can now update <code>new_word</code> to be any value--as our
+            toddler grows and expands her vocabulary!
+          </p>
+          <pre><code class="js">let toddlerObj = {
   age_in_months: 18,
   is_cute: true,
   new_word: 'no',
@@ -488,150 +190,537 @@ toddlerObj.faveWord() // Should output 'no'</code></pre>
 toddlerObj.new_word = 'doggie'
 
 toddlerObj.faveWord() // Should output 'doggie'</code></pre>
-      </section>
+        </section>
 
-      <section>
-        <h3>Let's Develop It!</h3>
-        <p class="gdi-p" style="max-width: 700px; margin: 0 auto 16px auto;">Working with our <code>dogObj</code>:</p>
-        <ul>
-          <li>Using either dot or bracket notation, add a new key <code>dogName</code> with a value of 'Buddy'</li>
-          <li>Using the <code>this</code> keyword, update the <code>goodDog()</code> method so that it prints the value of the <code>dogName</code> key</li>
-          <li>Run <code>goodDog()</code> to verify the change</li>
-        </ul>
-<pre><code class="js">let objectName {
+        <!-- Practice -->
+        <section>
+          <h3>Let's Develop It!</h3>
+          <p class="fs-32">Working with our <code>dogObj</code>:</p>
+          <ul class="fs-28">
+            <li>
+              Using either dot or bracket notation, add a new key
+              <code>dogName</code> with a value of 'Buddy'
+            </li>
+            <li>
+              Using the <code>this</code> keyword, update the
+              <code>goodDog()</code> method so that it prints the value of the
+              <code>dogName</code> key
+            </li>
+            <li>Run <code>goodDog()</code> to verify the change</li>
+          </ul>
+          <pre><code class="js">let objectName {
   key:value
   
   objMethod(){
     this.key // Some action
   }
 }</code></pre>
-      </section>
+        </section>
 
-      <section>
-        <h3>Let's Develop It!</h3>
-        <p class="gdi-p" style="max-width: 700px; margin: 0 auto 16px auto;">Working with our <code>dogObj</code>:</p>
-        <ul>
-          <li>Update the value of <code>dogName</code> to 'Roscoe'</li>
-          <li>Run <code>goodDog()</code> again to verify this change</li>
-        </ul>
-<pre><code class="js">let objectName {
+        <section>
+          <h3>Let's Develop It!</h3>
+          <p class="fs-32">Working with our <code>dogObj</code>:</p>
+          <ul class="fs-28">
+            <li>Update the value of <code>dogName</code> to 'Roscoe'</li>
+            <li>Run <code>goodDog()</code> again to verify this change</li>
+          </ul>
+          <pre><code class="js">let objectName {
   key:value
   
   objMethod(){
     this.key // Some action
   }
 }</code></pre>
-      </section>
+        </section>
 
-      <!-- <section>
-        <h3></h3>
-        <p class="gdi-p" style="max-width: 700px; margin: 0 auto 24px auto;"></p>
-      </section>
+        <!-- Opening Slide: Looping through objects -->
+        <section>
+          <h3>Looping Through Objects</h3>
+        </section>
 
-      <section>
-        <h3></h3>
-        <p class="gdi-p" style="max-width: 700px; margin: 0 auto 24px auto;"></p>
-      </section>
+        <!-- for...in -->
+        <section>
+          <h3><code>for...in</code> Loop</h3>
+        </section>
 
-      <section>
-        <h3></h3>
-        <p class="gdi-p" style="max-width: 700px; margin: 0 auto 24px auto;"></p>
-      </section> -->
-      <!-- 
-<p class="gdi-p" style="max-width: 800px; margin: 0 auto 24px auto;"></p>
+        <!-- Looping objects-->
+        <section>
+          <h3>Looping Objects</h3>
+          <p class="fs-32 width-750 mb-16">
+            The <code>for...in</code> loop iterates over the properties of an object
+          </p>
+          <p class="fs-32 width-750">
+            It has the same syntax or setup as the <code>for...of</code>
+          </p>
+          <pre><code class="js">for( key in object ){
 
-<p class="gdi-p"><a href="" target="_blank"></a></p>
+  // code to run
 
-<pre><code class="js"></code></pre>
-      
-<pre><code class="html">&lt;html&gt;
-&lt;body&gt;
-...
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre> 
-      -->
+}</code></pre>
+          <p class="fs-24">
+            <a
+              href="https://www.w3schools.com/js/js_loop_forin.asp"
+              target="_blank"
+              >JavaScript For In (w3schools)</a
+            >
+          </p>
+        </section>
 
-      <!-- Home Practice -->
-      <section>
-        <h3>Home Practice</h3>
-        <ul>
-          <li><a href="https://replit.com/@tinuola/js2-class4-home-practice#script.js" target="_blank">REPL Home Practice</a></li>
-        </ul>
-      </section>
+        <!-- for...in -->
+        <section>
+          <h3><code>for...in</code> Loop</h3>
+          <ul class="fs-28">
+            <li>
+              <code>for...in</code> iterates and returns an object's
+              <span class="highlight--yellow">keys</span>
+            </li>
+            <li>
+              Each <code>key</code> is used to access its respective
+              <span class="highlight--yellow">value</span>
+            </li>
+          </ul>
+          <pre><code class="js">let carObj = {
+  model: 'BMW',
+  year: '2020',
+  color: 'red'
+}
 
-      <!-- Next Class -->
-      <section>
-        <h3>Class 5 - Agenda</h3>
-        <ul>
-          <li><code>for...in</code> Loop</li>
-          <li>Built-in Object Methods</li>
-          <li>Classes</li>
-        </ul>
-      </section>
+for( key in carObj ){
 
-      <!-- MUST USE SLIDE - Course Feedback Survey-->
-      <section>
-        <h3>Class Feedback</h3>
-        <p><a href="https://forms.gle/v3pmYygbTfaBNVLPA" target="_blank">https://forms.gle/v3pmYygbTfaBNVLPA</a></p>
-      </section>
+  console.log(key)
+  console.log( carObj[key] )
 
-      <!-- Q&A -->
-      <section>
-        <h2>Q&A</h2>
-      </section>
+}
+// Output: model, year, color
+// Output: BMW, 2020, red </code></pre>
+        </section>
 
-      <!-- Thank You -->
-      <section>
-        <img src="./assets/images/gdi-logos/GDI-Logo_Peach.png" alt="GDI Logo" width="300px" class="noborder" />
-        <br>
-        <h2>Thank You!</h2>
-      </section>
-    </div> <!-- End of Slides container -->
+        <!-- for...in vs for...of -->
+        <section>
+          <h3><code>for...in</code> VS <code>for...of</code></h3>
+          <ul class="fs-28">
+            <li>
+              While the <code>for...in</code> loop can iterate over an array, order is not
+              guaranteed
+            </li>
+            <li>
+              Use the <code>for...of</code> for
+              <span class="highlight--yellow">iterable (countable)</span> data such as
+              arrays and strings
+            </li>
+          </ul>
+          <pre><code class="js">for( key of carObj ){
 
-    <footer>
-      <!-- Update with Course Name -->
-      <div class="copyright">
-        <img src="./assets/images/gdi-logos/GDI-Logo_Peach.png" alt="GDI Logo" width="40px" class="noborder" />
-        <p>JavaScript Fundamentals 2 - Class 4</p>
-        <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img
-            alt="Creative Commons License" style="border-width:0"
-            src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+  console.log( carObj[key] )
+
+}
+// Output: Error!
+// carObj is not iterable </code></pre>
+          <p class="fs-24">
+            <a
+              href="https://www.tutorialrepublic.com/javascript-tutorial/javascript-loops.php"
+              target="_blank"
+              >JavaScript Loops (Tutorial Republic)</a
+            >
+          </p>
+        </section>
+
+        <!-- Practice -->
+        <section>
+          <h3>Let's Develop It!</h3>
+          <p class="width-750 fs-28">
+            Loop through <code>dogObj</code> and log its values to the console
+          </p>
+          <pre><code class="js">let dogObj = {
+  name: 'Lula',
+  breed: 'bulldog',
+  color: 'gray',
+  ageInMonths: 10,
+  dogBark(){
+    console.log('Woof!')
+  }
+}
+</code></pre>
+          <pre><code class="js">for ( key in object ){
+  // object[ key ]
+}</code></pre>
+        </section>
+
+        <!-- Built-in Object Methods -->
+        <section>
+          <h3>Built-in Object Methods</h3>
+          <p class="fs-32 width-800 mb-32">
+            Similar to <code>strings</code> and <code>arrays</code>,
+            <code>objects</code> have built-in or default methods
+          </p>
+          <p class="fs-24">
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"
+              target="_blank"
+              >Object Methods (MDN)</a
+            >
+          </p>
+        </section>
+
+        <!-- Commonly used object methods -->
+        <section>
+          <h3>Commonly Used Object Methods</h3>
+          <div class="flex">
+            <ul style="list-style-type: none">
+              <li><code>Object.keys()</code></li>
+              <li><code>Object.values()</code></li>
+              <li><code>Object.entries()</code></li>
+            </ul>
+            <ul style="list-style-type: none">
+              <li><code>Object.freeze()</code></li>
+              <li><code>Object.seal()</code></li>
+              <li><code>Object.fromEntries()</code></li>
+            </ul>
+          </div>
+          <p class="fs-24 mt-32">
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"
+              target="_blank"
+              >Object Methods (MDN)</a
+            >
+          </p>
+        </section>
+
+        <!-- Object.keys() -->
+        <section>
+          <h3><code>Object.keys()</code></h3>
+          <p class="fs-32">Returns an array of an object's keys</p>
+          <pre><code class="js">let carObj = {
+  model: 'BMW',
+  year: '2020',
+  color: 'red'
+}
+
+console.log( Object.keys(carObj) )
+
+// Output: ['model', 'year', 'color']</code></pre>
+          <p class="fs-24 mt-32">
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys"
+              target="_blank"
+              >Object.keys() - MDN</a
+            >
+          </p>
+        </section>
+
+        <!-- Object.values() -->
+        <section>
+          <h3><code>Object.values()</code></h3>
+          <p class="fs-32">Returns an array of an object's values</p>
+          <pre><code class="js">let carObj = {
+  model: 'BMW',
+  year: '2020',
+  color: 'red'
+}
+
+console.log( Object.values(carObj) )
+
+// Output: ['BMW', '2020', 'red']</code></pre>
+          <p class="fs-24 mt-32">
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/values"
+              target="_blank"
+              >Object.values() - MDN</a
+            >
+          </p>
+        </section>
+
+        <!-- Object.entries() -->
+        <section>
+          <h3><code>Object.entries()</code></h3>
+          <p class="fs-32">Returns arrays of an object's <code>key:value</code> pairs</p>
+          <pre><code class="js">let carObj = {
+  model: 'BMW',
+  year: '2020',
+  color: 'red'
+}
+
+console.log( Object.entries(carObj) )
+
+// Output: 3 arrays</code></pre>
+          <p class="fs-24 mt-32">
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries"
+              target="_blank"
+              >Object.entries() - MDN</a
+            >
+          </p>
+        </section>
+
+        <!-- Practice -->
+        <section>
+          <h3>Practicing Object Methods</h3>
+        </section>
+
+        <section>
+          <h3>Let's Develop It!</h3>
+          <p class="fs-32 mb-32">Part 1: Working with our <code>dogObj</code></p>
+          <ul class="fs-32">
+            <li>Look up the <code>Object.seal()</code> method</li>
+            <li>
+              Following the example syntax in MDN, use the method to prevent new
+              properties from being added to <code>dogObj</code>
+            </li>
+          </ul>
+          <p class="fs-24 mt-32">
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/seal#syntax"
+              target="_blank"
+              >Object.seal() - MDN</a
+            >
+          </p>
+        </section>
+
+        <section>
+          <h3>Let's Develop It!</h3>
+          <p class="fs-32 mb-32">Part 2: Working with our <code>dogObj</code></p>
+          <ul>
+            <li>
+              Add a new key:value pair to <code>dogObj</code>
+              <ul>
+                <li><code>size: 'small'</code></li>
+                <li>Use dot or bracket notation</li>
+              </ul>
+            </li>
+            <li>Log <code>dogObj</code> to the console</li>
+            <li>What do you notice?</li>
+          </ul>
+          <p class="fs-24 mt-32">
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/seal#syntax"
+              target="_blank"
+              >Object.seal() - MDN</a
+            >
+          </p>
+        </section>
+
+        <section>
+          <h3>Let's Develop It!</h3>
+          <p class="fs-32 mb-32">Part 3: Working with our <code>dogObj</code>:</p>
+          <ul>
+            <li>
+              Using the <code>delete</code> keyword, remove the
+              <code>color</code> property
+            </li>
+            <li>Log <code>dogObj</code> to the console</li>
+            <li>What do you notice?</li>
+          </ul>
+          <p class="fs-24 mt-32">
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/seal#syntax"
+              target="_blank"
+              >Object.seal() - MDN</a
+            >
+          </p>
+        </section>
+
+        <section>
+          <h3>Let's Develop It!</h3>
+          <p class="fs-32 mb-32">Part 4: Working with our <code>dogObj</code>:</p>
+          <ul>
+            <li>Update the value of <code>color</code> to 'white'</li>
+            <li>Log <code>dogObj</code> to the console</li>
+            <li>What do you notice?</li>
+          </ul>
+          <p class="fs-24 mt-32">
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/seal#syntax"
+              target="_blank"
+              >Object.seal() - MDN</a
+            >
+          </p>
+        </section>
+
+        <!-- .seal() -->
+        <section>
+          <h3><code>.seal()</code></h3>
+          <p class="fs-32 width-800 mb-32">
+            With <code>Object.seal()</code>, new properties cannot be added to an object,
+            nor can existing ones be removed; but existing properties can be updated
+          </p>
+
+          <p class="fs-32 width-800">
+            <code>Object.isSealed()</code> method checks if an object is sealed; it
+            returns a boolean
+          </p>
+        </section>
+
+        <!-- .freeze() -->
+        <section>
+          <h3><code>.freeze()</code></h3>
+          <p class="fs-32 width-800 mb-32">
+            With <code>Object.freeze()</code>, new properties cannot be added to an
+            object, existing ones cannot be removed nor updated; it is frozen!
+          </p>
+
+          <p class="fs-32 width-800">
+            <code>Object.isfrozen()</code> method checks if an object is frozen; it
+            returns a boolean
+          </p>
+        </section>
+
+        <!-- Immutable objects -->
+        <section>
+          <h3>Immutable Objects</h3>
+          <p class="fs-32 width-800 mb-32">
+            A frozen or sealed object cannot be reversed; there is no "unseal" or
+            "unfreeze" method
+          </p>
+
+          <p class="fs-32 width-800 mb-32">
+            But using the <code>Object.assign()</code> method, our immutable object can be
+            copied or cloned to a new object that is mutable
+          </p>
+
+          <p class="fs-24 mt-32">
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign"
+              target="_blank"
+              >Object.assign() - MDN</a
+            >
+          </p>
+        </section>
+
+        <!-- Practice -->
+        <section>
+          <h3>Let's Develop It!</h3>
+          <p class="fs-32 width-900">
+            Our <code>dogObj</code> is currently sealed; rather than remove the
+            <code>.seal()</code> method we previously applied, let's use
+            <code>.assign()</code> to create a copy we can then change
+          </p>
+        </section>
+
+        <!-- Practice -->
+        <section>
+          <h3>Let's Develop It!</h3>
+          <p class="fs-32">Part 1</p>
+          <ul>
+            <li>Create an empty object called <code>newDogObj</code></li>
+            <li>
+              Following the syntax on MDN, <code>assign</code> the properties of
+              <code>dogObj</code> to the new object
+            </li>
+            <li>Syntax hint: the new object is the <code>target</code></li>
+            <li>Verify the new object in the console</li>
+          </ul>
+          <p class="fs-24 mt-32">
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#syntax"
+              target="_blank"
+              >Object.assign() - MDN</a
+            >
+          </p>
+        </section>
+
+        <section>
+          <h3>Let's Develop It!</h3>
+          <p class="fs-32">Part 2</p>
+          <ul>
+            <li>
+              Add a new key: value property to the cloned object -
+              <code>size:'small'</code>
+            </li>
+            <li>Verify the update of <code>newDogObj</code></li>
+          </ul>
+          <p class="fs-24 mt-32">
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#syntax"
+              target="_blank"
+              >Object.assign() - MDN</a
+            >
+          </p>
+        </section>
+
+        <!-- Home Practice -->
+        <section>
+          <h3>Home Practice</h3>
+          <ul>
+            <li>
+              <a
+                href="https://replit.com/@tinuola/js2-class4-home-practice#script.js"
+                target="_blank"
+                >REPL Home Practice</a
+              >
+            </li>
+          </ul>
+        </section>
+
+        <!-- Next Class -->
+        <section>
+          <h3>Class 5 - Agenda</h3>
+          <ul>
+            <li>Important ES6 Features:</li>
+            <ul>
+              <li>Destructuring Arrays and Objects</li>
+              <li><code>Spread</code> Operator</li>
+              <li><code>Rest</code> Operator</li>
+            </ul>
+          </ul>
+        </section>
+
+        <!-- MUST USE SLIDE - Course Feedback Survey-->
+        <section>
+          <h3>Class Feedback</h3>
+          <p>
+            <a
+              href=""
+              target="_blank"></a>
+          </p>
+        </section>
+
+        <!-- Q&A -->
+        <section>
+          <h2>Q&A</h2>
+        </section>
+
+        <!-- Thank You -->
+        <section>
+          <img
+            src="../shared-assets/imgs/gdi-logos/gdi-logo_peach.png"
+            alt="GDI Logo"
+            width="300px"
+            class="noborder" />
+          <br />
+          <h2>Thank You!</h2>
+        </section>
       </div>
-    </footer>
-  </div> <!-- End of Reveal wrapper -->
-
-  <!-- REVEAL.JS Script Files - Do Not Edit -->
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reveal.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/plugin/highlight/highlight.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/highlightjs-badge@0.1.9/highlightjs-badge.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jsPlumb/2.15.5/js/jsplumb.min.js"></script>
-  <script>
-    const srcUrlPrefix = "https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/";
-    Reveal.initialize({
-      hash: true,
-      center: true,
-      slideNumber: true,
-      showNotes: false,
-      margin: 0.1,
-      preloadIframes: true,
-      plugins: [RevealHighlight],
-      pdfSeparateFragments: true
-    });
-
-    // add HighlightJS-badge (options are optional)
-    var options = {
-      copyIconContent: "📄",
-      checkIconContent: "✅"
-    };
-    window.highlightJsBadge(options);
-
-    if (window.location.search == "?print-pdf") {
-      var uncounted = document.querySelectorAll("[data-visibility='uncounted']");
-      uncounted.forEach(node => {
-        node.parentNode.classList.add("no-print")
-      })
-    }
-  </script>
-</body>
+      <!-- End of Slides container -->
+      <!---->
+      <!---->
+      <!-- Update Footer with Course Name -->
+      <footer>
+        <div class="copyright">
+          <img
+            src="../shared-assets/imgs/gdi-logos/gdi-logo_peach.png"
+            alt="GDI Logo"
+            width="40px"
+            class="noborder" />
+          <p>JavaScript Fundamentals 2 - Class 4</p>
+          <a
+            rel="license"
+            href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"
+            ><img
+              alt="Creative Commons License"
+              style="border-width: 0"
+              src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png"
+          /></a>
+        </div>
+      </footer>
+    </div>
+    <!-- End of Reveal wrapper -->
+    <!---->
+    <!---->
+    <!-- RevealJS Scripts & Config - Do Not Edit or Delete -->
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/plugin/highlight/highlight.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/highlightjs-badge@0.1.9/highlightjs-badge.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsPlumb/2.15.5/js/jsplumb.min.js"></script>
+    <script src="../shared-assets/js/revealConfig.js"></script>
+  </body>
 </html>

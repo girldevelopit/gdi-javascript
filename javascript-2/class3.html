@@ -70,7 +70,10 @@
           <h3>AGENDA</h3>
           <ul>
             <li>Home Practice Review</li>
-            <li>Feedback & Class 4 Preview</li>
+            <li>Data Type: Objects</li>
+            <li>Object Properties</li>
+            <li><code>this</code> Keyword</li>
+            <li>Class Feedback</li>
           </ul>
         </section>
 
@@ -80,576 +83,665 @@
           <p>4:00p PST / 6:00p CST / 7:00p EST</p>
         </section>
 
+        <!-- Objects -->
         <section>
-          <h3>Arrays Iterators (contd)</h3>
+          <h3>Objects</h3>
+        </section>
+
+        <!-- Object Data Type -->
+        <section>
+          <h3>The Object Data Type</h3>
+          <p class="fs-28">Objects are a JavaScript data type</p>
+          <p class="fs-28">Like arrays, objects hold a collection of data</p>
+          <p class="mt-32">
+            <a
+              href="https://www.w3schools.com/js/js_objects.asp"
+              target="_blank"
+              >JavaScript Objects (w3schools)</a
+            >
+          </p>
+        </section>
+
+        <!-- Objects vs Arrays -->
+        <section>
+          <h3>Objects vs Arrays</h3>
+          <p class="fs-28">But objects differ from arrays:</p>
+          <ul class="fs-28">
+            <li>An object stores data that's specific to itself</li>
+            <li>Objects have a different syntax</li>
+            <li>
+              Objects store data as <span class="highlight--yellow">key:value</span> pairs
+            </li>
+            <li>Objects are not zero-indexed</li>
+          </ul>
+        </section>
+
+        <!-- What is an object? -->
+        <section>
+          <h3>What is an Object?</h3>
+          <p
+            class="gdi-p"
+            style="max-width: 800px; margin: 0 auto 24px auto">
+            One way to understand the concept of <code>objects</code> in JavaScript is to
+            use real world examples
+          </p>
+        </section>
+
+        <!-- Objects in the real world -->
+        <section>
+          <h3>Objects in the Real World</h3>
+          <ul>
+            <li>A car is an object</li>
+            <li>A car has properties</li>
+          </ul>
+          <br />
+          <img
+            src="./images/blue-car.jpeg"
+            width="500px"
+            alt="Blue car" />
+        </section>
+
+        <!-- Car Object -->
+        <section>
+          <h3>Car Object</h3>
+          <p class="gdi-p">What are some of the properties of this car?</p>
+          <img
+            src="./images/blue-car.jpeg"
+            width="500px"
+            alt="Blue car" />
         </section>
 
         <section>
-          <h3>Array Iteration Methods</h3>
+          <h3>Car Object</h3>
+          <ul>
+            <li>Blue</li>
+            <li>4 wheels</li>
+            <li>4 doors</li>
+            <li>A Bentley</li>
+            <li>Etc.</li>
+          </ul>
+          <img
+            src="./images/blue-car.jpeg"
+            width="500px"
+            alt="Blue car"
+            style="margin-left: 20px" />
+        </section>
+
+        <section>
+          <h3>Car Object</h3>
+          <p class="fs-32 mb-16">What are actions this car can perform?</p>
+          <p class="fs-32">It can:</p>
+          <ul>
+            <li>Start</li>
+            <li>Stop</li>
+            <li>Move forward</li>
+            <li>Reverse</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Many Things are Objects!</h3>
+          <p class="fs-32 width-900 mb-32">
+            A house is an object with <span class="highlight--yellow">properties</span>:
+            architectural style, number of floors, kitchen, basement (yes or no), price,
+            etc.
+          </p>
+          <p class="fs-32 width-900">
+            <span class="highlight--yellow">Actions</span> that can happen in a house:
+            doors open or close, windows open or close, etc.
+          </p>
+        </section>
+
+        <section>
+          <h3>Even More Objects!</h3>
+          <p class="fs-32 width-900 mb-16">
+            Your driver's license is an object. It has
+            <span class="highlight--yellow">properties</span>: your name, date of birth,
+            state, registration number, etc.
+          </p>
+          <p class="fs-32 width-900">It can expire, it can be renewed, etc.</p>
+        </section>
+
+        <!-- Objects in JavaScript -->
+        <section>
+          <h3>Objects in JavaScript</h3>
+          <p class="fs-32 width-800">
+            An object in JavaScript is similar to a real-world object; it has
+            <span class="highlight--yellow">properties</span> (and
+            <span class="highlight--yellow">actions</span>) that are specific to it
+          </p>
+        </section>
+
+        <!-- Object Literal -->
+        <section>
+          <h3>Syntax: Object Literal</h3>
           <p
             class="gdi-p"
-            style="max-width: 800px; margin: 0 auto 30px auto">
-            Array iterators loop or iterate through an array and perform an action on each
-            item in the array
+            style="max-width: 700px; margin: 0 auto 24px auto">
+            We can declare objects with a variable name and a pair of curly brackets
+            <code>{}</code>
           </p>
+          <pre><code class="js">// Declare an object literal
+
+let objectName = {} /* An empty object */
+
+// Different syntax from an array:
+// let arrayName = []
+</code></pre>
+        </section>
+
+        <!-- Object Syntax -->
+        <section>
+          <h3>Object Syntax</h3>
+          <p class="fs-28 width-800 mb-16">
+            The data or content inside of an object are its
+            <span class="highlight--yellow">properties</span>
+          </p>
+
+          <p class="fs-28 width-800 mb-32">Each property is separated by a comma</p>
+
+          <p class="fs-28 width-800 mb-16">Turning our car into a JavaScript object:</p>
+          <pre><code class="js">let carObj = {
+  doors: 4,
+  color: 'blue',
+  brand: 'bentley',
+  year: 2021
+}</code></pre>
+        </section>
+
+        <!-- Key-Value Pairs -->
+        <section>
+          <h3>Key:Value Pairs</h3>
+          <p class="fs-28 mb-32">
+            The properties of an object are called
+            <span class="highlight--yellow">key:value</span> pairs
+          </p>
+          <p class="fs-28 mb-32">
+            <span class="highlight--yellow">brand: 'bentley'</span> is a key-value pair
+          </p>
+          <p class="fs-28 mb-32">
+            <code>brand</code> is the key; <code>bentley</code> is the value
+          </p>
+
+          <pre><code class="js">let carObj = {
+  doors: 4,
+  color: 'blue',
+  brand: 'bentley',
+  year: 2021
+}</code></pre>
+        </section>
+
+        <!-- Practice -->
+        <section>
+          <h3>Let's Develop It!</h3>
+          <p class="fs-28 width-800 mb-16">
+            Create a dog object; add two properties: <code>color</code> and
+            <code>breed</code>; and assign their values
+          </p>
+          <img
+            src="./images/bulldog.jpg"
+            alt="A bulldog puppy"
+            width="400px" />
+          <pre><code class="js">let dogObj = {
+  key: value,
+  key: value,
+}</code></pre>
+        </section>
+
+        <!-- Object characteristics -->
+        <section>
+          <h3>Objects are Not Zero-Indexed</h3>
+          <ul class="fs-28">
+            <li>Objects are not like arrays; order is not guaranteed</li>
+            <li>We cannot use index positions to access object data</li>
+            <li>
+              We use the <span class="highlight--yellow">key</span> property to access an
+              object
+            </li>
+          </ul>
+        </section>
+
+        <!-- Accessing Objects -->
+        <section>
+          <h3>Accessing an Object</h3>
+          <p class="fs-28 width-600 mb-16">
+            Using the <span class="highlight--yellow">key</span> property, there are two
+            ways to access an object:
+          </p>
+          <ul class="fs-28 mb-32">
+            <li>Dot Notation</li>
+            <li>Bracket Notation</li>
+          </ul>
+          <p class="fs-24">
+            <a
+              href="https://codeburst.io/javascript-quickie-dot-notation-vs-bracket-notation-333641c0f781"
+              target="_blank"
+              >JavaScript Quickie— Dot Notation vs. Bracket Notation</a
+            >
+          </p>
+        </section>
+
+        <!-- Dot Notation -->
+        <section>
+          <h3>Dot Notation</h3>
+          <p class="fs-32">
+            <code>objectName.key</code>
+          </p>
+          <pre><code class="js">let dogObj = {
+  color: 'brown',
+
+  breed: 'bulldog'
+}
+
+
+// Access the color property
+let dogColor = dogObj.color
+
+console.log(dogColor)
+</code></pre>
+        </section>
+
+        <!-- Brack Notation -->
+        <section>
+          <h3>Bracket Notation</h3>
+          <p class="fs-32">
+            <code>objectName['key']</code>
+          </p>
+          <pre><code class="js">let dogObj = {
+  color: 'brown',
+  
+  breed: 'bulldog'
+}
+
+// Access the color property
+let dogColor2 = dogObj['color']
+
+console.log(dogColor2)
+</code></pre>
+        </section>
+
+        <!-- Updating a property -->
+        <section>
+          <h3>Updating an Object Property</h3>
+          <p class="fs-32">Update the <code>color</code> property</p>
+          <pre><code class="js">dogObj.color = 'blue'
+
+console.log (dogObj)
+
+// Output:
+// {color: 'blue', breed: 'bulldog'}</code></pre>
+        </section>
+
+        <!-- Adding a new property -->
+        <section>
+          <h3>Adding a New Object Property</h3>
+          <p class="fs-32">Add a new <code>size</code> property</p>
+          <pre><code class="js">dogObj.size = 'small'
+
+console.log (dogObj)
+
+// Output:
+// {color: 'blue', breed: 'bulldog', size: 'small'}</code></pre>
+        </section>
+
+        <section>
+          <h3>Deleting an Object Key</h3>
+          <p class="fs-32">Use the keyword <code>delete</code></p>
+          <p class="fs-32">
+            <code>delete objectName.key</code>
+          </p>
+          <pre><code class="js">delete dogObj.size
+
+console.log (dogObj)
+
+// Output:
+// {color: 'blue', breed: 'bulldog'}</code></pre>
+        </section>
+
+        <!-- Practice -->
+        <section>
+          <h3>Let's Develop It!</h3>
           <p
             class="gdi-p"
-            style="max-width: 800px; margin: 0 auto 24px auto">
-            Array iterators require a second function to be passed as a parameter
+            style="max-width: 700px; margin: 0 auto 24px auto">
+            Working with our <code>dogObj</code>:
           </p>
+          <ul>
+            <li>Change the color value back to <code>brown</code></li>
+            <li>Add a new key or property called <code>age</code></li>
+            <li>Give <code>age</code> a value of <code>1</code></li>
+            <li>Verify the updates in the console</li>
+          </ul>
+        </section>
+
+        <!-- Object Methods -->
+        <section>
+          <h3>Creating Object Methods</h3>
+        </section>
+
+        <section>
+          <h3>Objects and Function Properties</h3>
+          <p class="fs-32 width-800">
+            In addition to <code>key:value</code> properties, objects can also store their
+            own <code>functions</code>--<span class="highlight--yellow"
+              >actions that control or determine their behavior</span
+            >
+          </p>
+        </section>
+
+        <!-- Object method -->
+        <section>
+          <h3>Object Method</h3>
+          <p class="fs-32">
+            A function inside of an object is called a
+            <span class="highlight--yellow">method</span>
+          </p>
+        </section>
+
+        <section>
+          <h3>Declaring an Object Method</h3>
+          <p class="fs-32">We can create a method when declaring a object</p>
+          <pre><code class="js">let toddlerObj = {
+  
+  age_in_months: 18,
+  
+  is_cute: true,
+  
+  new_word: 'no',
+
+  // Declaring a function or method
+  faveWord: function(){
+    console.log('Mama')
+  }
+}</code></pre>
+        </section>
+
+        <section>
+          <h3>Declaring an Object Method</h3>
+          <p class="fs-32 width-800">
+            We can also declare a method without using the <code>function</code> keyword
+          </p>
+          <pre><code class="js">let toddlerObj = {
+  
+  age_in_months: 18,
+  
+  is_cute: true,
+  
+  new_word: 'no',
+
+  // Declaring a method without the function keyword
+  faveWord(){
+    console.log('Mama')
+  }
+}</code></pre>
+        </section>
+
+        <section>
+          <h3>Declaring an Object Method</h3>
+          <p class="fs-32 width-800">
+            Using dot notation, we can add a new method after an object has been declared
+          </p>
+          <pre><code class="js">let toddlerObj = {
+  age_in_months: 18,
+  is_cute: true,
+  new_word: 'no',
+  faveWord(){ 
+    console.log('Mama') 
+  },
+}
+
+// Add new method
+toddlerObj.throwTantrum = function(){
+  console.log('Nooooo!')
+}
+
+console.log(toddlerObj) // Verify </code></pre>
+        </section>
+
+        <section>
+          <h3>Calling an Object Method</h3>
+          <p class="fs-32 width-800 mb-16">
+            To call an object method, use dot notation to access the method name and
+            append with <code>()</code>
+          </p>
+          <p class="fs-32">
+            <code>objectName.objectMethod()</code>
+          </p>
+          <pre><code class="js">let toddlerObj = {
+  age_in_months: 18,
+  is_cute: true,
+  new_word: 'no',
+  faveWord(){ 
+    console.log('Mama') 
+  },
+  throwTantrum: function(){
+    console.log('Nooooo!')
+  },
+}
+
+toddlerObj.throwTantrum()</code></pre>
+        </section>
+
+        <!-- Practice -->
+        <section>
+          <h3>Let's Develop It!</h3>
+          <p class="fs-32 mb-16">Working with our <code>dogObj</code>:</p>
+          <ul>
+            <li>Declare a method: <code>dogBark</code>, inside the object</li>
+            <li>The method logs 'woof, woof!' to the console</li>
+            <li>Verify your update in the console</li>
+            <li>Call or run <code>dogBark()</code></li>
+          </ul>
+          <pre><code class="js">let obj = {
+  
+  objMethod1: function(){},
+
+  objMethod2(){}
+
+}
+
+objectName.objectMethod()
+</code></pre>
+        </section>
+
+        <!-- Practice -->
+        <section>
+          <h3>Let's Develop It!</h3>
+          <p class="fs-32">Working with our <code>dogObj</code>:</p>
+          <ul class="fs-28">
+            <li>
+              Using dot notation, declare a method: <code>goodDog</code>, from outside the
+              method
+            </li>
+            <li>The method logs 'Good girl Lucy!' to the console</li>
+            <li>Use dot notation to add <code>goodDog</code> to the object</li>
+            <li>Verify your update in the console</li>
+            <li>Call or run <code>goodDog()</code></li>
+          </ul>
+          <pre><code class="js">objectName.objectMethod3 = function(){}
+
+objectName.objectMethod()
+</code></pre>
+        </section>
+
+        <section>
+          <h3><code>this</code> Keyword</h3>
           <p
             class="gdi-p"
-            style="max-width: 800px; margin: 0 auto 24px auto">
-            This second function contains the action to be applied to each element
+            style="max-width: 700px; margin: 0 auto 24px auto"></p>
+        </section>
+
+        <section>
+          <h3>Object References</h3>
+          <p
+            class="gdi-p"
+            style="max-width: 700px; margin: 0 auto 24px auto">
+            When we add methods to our objects, we can use these methods to work with
+            other data inside our objects
           </p>
+
+          <p
+            class="gdi-p"
+            style="max-width: 700px; margin: 0 auto 24px auto">
+            JavaScript has a keyword <code>this</code> that allows an object to reference
+            data within itself
+          </p>
+
           <p>
             <a
-              href="https://www.w3schools.com/js/js_array_iteration.asp"
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#using_this_for_object_references"
               target="_blank"
-              >JavaScript Array Iteration (w3schools)</a
+              >This (MDN)</a
             >
           </p>
         </section>
 
         <section>
-          <h3>Array Iteration Syntax</h3>
-          <pre><code class="js">// An array
-
-let arrayName = [ item, item, item]
-
-// An array iterator
-
-arrayName.arrayIterationMethod( (a parameter) {
-
-  // Code to apply to each element
-
-} )
-
-</code></pre>
-        </section>
-
-        <section>
-          <h3>Array Iteration Syntax</h3>
+          <h3>
+            <code>Object Referencing: <br />An Example</code>
+          </h3>
           <p
             class="gdi-p"
-            style="max-width: 800px; margin: 0 auto">
-            For example, the <code>.find()</code> method returns the first instance of an
-            element that passes a test condition
+            style="max-width: 800px; margin: 0 auto 24px auto">
+            In our <code>toddlerObj</code> example, the <code>faveWord()</code> method is
+            currently hard-coded to display "Mama"
           </p>
-          <pre><code class="js">let asianCapitals = ['Seoul', 'Dhaka', 'Manilla', 'Bangkok']
 
-// Find 'Manilla' in the array; return it if present
-
-let result = asianCapitals.find(function(city){
-  if(city === 'Manilla'){
-    return city;
-  }
-})
-
-console.log(result) // 'Manilla'</code></pre>
+          <p
+            class="gdi-p"
+            style="max-width: 800px; margin: 0 auto 24px auto">
+            What if we wanted that method to display the value of
+            <code>new_word</code> instead?
+          </p>
+          <pre><code class="js">let toddlerObj = {
+  age_in_months: 18,
+  is_cute: true,
+  new_word: 'no',
+  faveWord(){ 
+    console.log('Mama') 
+  },
+}</code></pre>
         </section>
 
         <section>
-          <h3>Syntax Breakdown</h3>
+          <h3><code>this</code></h3>
+          <p
+            class="gdi-p"
+            style="max-width: 700px; margin: 0 auto 24px auto">
+            We would use the <code>this</code> keyword
+          </p>
+          <pre><code class="js">let toddlerObj = {
+  
+  age_in_months: 18,
+  
+  is_cute: true,
+  
+  new_word: 'no',
+
+  faveWord(){ 
+    console.log(this.new_word) 
+  },
+}
+
+toddlerObj.faveWord() // Should output 'no'</code></pre>
+        </section>
+
+        <section>
+          <h3><code>this</code></h3>
+          <p
+            class="gdi-p"
+            style="max-width: 700px; margin: 0 auto 24px auto">
+            <code>this</code> means "inside of this current object"
+          </p>
+
+          <p
+            class="gdi-p"
+            style="max-width: 700px; margin: 0 auto 24px auto">
+            From our example: <code>this.new_word</code> means:
+          </p>
+
+          <p
+            class="gdi-p"
+            style="max-width: 700px; margin: 0 auto 24px auto">
+            "the current value of new_word inside of this toddler object"
+          </p>
+        </section>
+
+        <section>
+          <h3><code>this</code></h3>
+          <p
+            class="gdi-p"
+            style="max-width: 700px; margin: 0 auto 24px auto">
+            the <code>this</code> keyword allows object methods to be versatile or
+            reusable when values inside the object changes
+          </p>
           <p
             class="gdi-p"
             style="max-width: 700px; margin: 0 auto">
-            The <code>.find()</code> array method in its simplest form--waiting for a
-            parameter to be placed in between the <code>()</code>
+            For example, we can now update <code>new_word</code> to be any value--as our
+            toddler grows and expands her vocabulary!
           </p>
-          <pre><code class="js">// The array
-let asianCapitals = ['Seoul', 'Dhaka', 'Manilla', 'Bangkok']
-
-// The .find() array method
-let result = asianCapitals.find()
-
-// The output we want: 'Manilla'
-// console.log(result)</code></pre>
-        </section>
-
-        <section>
-          <h3>Syntax Breakdown</h3>
-          <p
-            class="gdi-p"
-            style="max-width: 800px; margin: 0 auto 30px auto">
-            The parameter is a second function that will specifically check for the city
-            <code>'Manilla'</code>
-          </p>
-
-          <p
-            class="gdi-p"
-            style="max-width: 800px; margin: 0 auto">
-            When used by the <code>.find()</code> method, the function will be applied to
-            each item in the array
-          </p>
-          <pre><code class="js">// let asianCapitals = ['Seoul', 'Dhaka', 'Manilla', 'Bangkok']
-// let result = asianCapitals.find()
-
-// The function that will 'test' for Manilla
-function(city){
-  if(city === 'Manilla'){
-    return city
-  }
+          <pre><code class="js">let toddlerObj = {
+  age_in_months: 18,
+  is_cute: true,
+  new_word: 'no',
+  faveWord(){ 
+    console.log(this.new_word) 
+  },
 }
 
-// console.log(result)</code></pre>
+toddlerObj.new_word = 'doggie'
+
+toddlerObj.faveWord() // Should output 'doggie'</code></pre>
         </section>
 
         <section>
-          <h3>Syntax Breakdown</h3>
+          <h3>Let's Develop It!</h3>
           <p
             class="gdi-p"
-            style="max-width: 800px; margin: 0 auto">
-            The array iteration syntax is simply taking the testing function and placing
-            all of that code in between the iterator's parentheses <code>()</code>
-          </p>
-          <pre><code class="js">// let asianCapitals = ['Seoul', 'Dhaka', 'Manilla', 'Bangkok']
-
-let result = asianCapitals.find( function(city){
-  if(city === 'Manilla'){
-    return city
-  }
-} )
-
-// console.log(result)
-</code></pre>
-        </section>
-
-        <section>
-          <h3>Let's Run the Code!</h3>
-          <pre><code class="js">let asianCapitals = ['Seoul', 'Dhaka', 'Manilla', 'Bangkok']
-
-let result = asianCapitals.find( function(city){
-  if(city === 'Manilla'){
-    return city
-  }
-} )
-
-console.log(result)
-</code></pre>
-        </section>
-
-        <section>
-          <h3>Longhand vs Shorthand Syntax</h3>
-          <p
-            class="gdi-p"
-            style="max-width: 800px; margin: 0 auto">
-            The code syntax we just practiced is considered longhand; you're more likely
-            to see and use <code>arrow functions</code> with array iterators
-          </p>
-        </section>
-
-        <section>
-          <h3>Basic Arrow Function Syntax</h3>
-          <p
-            class="gdi-p"
-            style="max-width: 800px; margin: 0 auto 30px auto">
-            Arrow functions allow us to write iteration methods a bit more concisely
-          </p>
-          <ul>
-            <li>Remove the <code>function</code> keyword</li>
-            <li>Add an arrow before the first opening curly brace <code>{</code></li>
-            <li>That's it!</li>
-          </ul>
-          <pre><code class="js">// ......
-let result = asianCapitals.find( (city) => {
-  if(city === 'Manilla'){
-    return city
-  }
-} )
-// ......
-</code></pre>
-        </section>
-
-        <section>
-          <h3>Basic Arrow Function Syntax</h3>
-          <p
-            class="gdi-p"
-            style="max-width: 800px; margin: 0 auto 30px auto">
-            We can strip the code down even more!
+            style="max-width: 700px; margin: 0 auto 16px auto">
+            Working with our <code>dogObj</code>:
           </p>
           <ul>
             <li>
-              Because we only have one parameter: <code>'city'</code>, in the testing
-              function, we can omit the <code>()</code> around it
+              Using either dot or bracket notation, add a new key
+              <code>dogName</code> with a value of 'Buddy'
             </li>
-          </ul>
-          <pre><code class="js">// ......
-let result = asianCapitals.find( city => {
-  if(city === 'Manilla'){
-    return city
-  }
-} )
-// ......
-</code></pre>
-        </section>
-
-        <section>
-          <h3>Arrow Function Shorthand</h3>
-          <p
-            class="gdi-p"
-            style="max-width: 800px; margin: 0 auto 30px auto">
-            The rules we learned for writing arrow function shorthand also apply with
-            iterators
-          </p>
-
-          <p
-            class="gdi-p"
-            style="max-width: 800px; margin: 0 auto 30px auto">
-            If an arrow function expression is simple enough, we can omit the
-            <code>return</code> keyword and keep our code to one line
-          </p>
-
-          <pre><code class="js">// ......
-
-let result = asianCapitals.find( city => city === 'Manilla' )
-
-// ......</code></pre>
-        </section>
-
-        <section>
-          <h3>Practice, Practice, Practice</h3>
-          <p
-            class="gdi-p"
-            style="max-width: 800px; margin: 0 auto 30px auto">
-            Using these methods and with arrow functions can be confusing initially!
-          </p>
-
-          <p
-            class="gdi-p"
-            style="max-width: 800px; margin: 0 auto">
-            Practicing the syntax often (following example code in MDN documentation, for
-            instance) will help us adapt to writing this way
-          </p>
-        </section>
-
-        <section>
-          <h3>Practice</h3>
-          <p
-            class="gdi-p"
-            style="max-width: 700px; margin: 0 auto">
-            Let's practice by getting to know a few more array iterators
-          </p>
-        </section>
-
-        <section>
-          <h3>Common Array Iteration Methods</h3>
-          <div
-            class="flex"
-            style="width: 700px; margin: 0 auto">
-            <ul style="list-style: none">
-              <li><code>.map()</code></li>
-              <li><code>.forEach()</code></li>
-              <li><code>.filter()</code></li>
-              <li><code>.find()</code></li>
-            </ul>
-            <ul style="list-style: none">
-              <li><code>.findIndex()</code></li>
-              <li><code>.every()</code></li>
-              <li><code>.some()</code></li>
-              <li><code>.reduce()</code></li>
-            </ul>
-          </div>
-          <p>
-            <a
-              href="https://www.digitalocean.com/community/tutorials/how-to-use-array-methods-in-javascript-iteration-methods"
-              >How to Use Array Iteration Methods in JavaScript</a
-            >
-          </p>
-        </section>
-
-        <section>
-          <h3><code>.map()</code></h3>
-          <p
-            class="gdi-p"
-            style="max-width: 800px; margin: 0 auto 30px auto">
-            Creates a new array that contains the results of an action that's been applied
-            to every element in the original array
-          </p>
-          <p class="gdi-p">
-            <a
-              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map"
-              target="_blank"
-              >Array.prototype.map() - MDN</a
-            >
-          </p>
-        </section>
-
-        <section>
-          <h3><code>.map()</code></h3>
-          <p
-            class="gdi-p"
-            style="max-width: 700px; margin: 0 auto 24px auto">
-            Square each item in the <code>numbers</code> array and return the results in a
-            new array
-          </p>
-          <pre><code class="js">const numbers = [1,2,3,4]
-
-const doubleNumbers = numbers.map( num => {
-
-  return num * num
-
-})
-
-console.log(doubleNumbers) // Output: [1,4,9,16]
-
-// Arrow syntax shorthand version:
-
-// numbers.map(num => num * num)
-</code></pre>
-          <p class="gdi-p">
-            <a
-              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map"
-              target="_blank"
-              >Array.prototype.map() - MDN</a
-            >
-          </p>
-        </section>
-
-        <section>
-          <h3>Let's Develop It!</h3>
-          <p
-            class="gdi-p"
-            style="max-width: 700px; margin: 0 auto 24px auto">
-            Loop through the <code>names</code> array using <code>.map()</code>; return a
-            new array with each name used in as a greeting: 'Hello (name)'
-          </p>
-          <pre><code class="js">const names = ['Ana', 'Sandra', 'Fabi']
-
-</code></pre>
-          <p class="gdi-p">
-            <a
-              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map"
-              target="_blank"
-              >Array.prototype.map() - MDN</a
-            >
-          </p>
-        </section>
-
-        <section>
-          <h3>Array Index Values</h3>
-          <p
-            class="gdi-p"
-            style="max-width: 800px; margin: 0 auto 24px auto">
-            When looping through items in an array, iterators are also keeping track of
-            index positions
-          </p>
-          <p
-            class="gdi-p"
-            style="max-width: 800px; margin: 0 auto 24px auto">
-            We can reference or return these index positions as results
-          </p>
-          <pre><code class="js">const zeeNames = ['Zoe', 'Zadie', 'Zazee']
-
-let getNamePosition = zeeNames.map((name, index) => {
-  return `The name ${name} has an index value of ${index} in the array.`;
-})
-
-console.log(getNamePosition)</code></pre>
-        </section>
-
-        <section>
-          <h3><code>.filter()</code></h3>
-          <p
-            class="gdi-p"
-            style="max-width: 700px; margin: 0 auto 24px auto">
-            Creates a new array with elements that pass the test condition of the
-            parameter function
-          </p>
-
-          <p class="gdi-p">
-            <a
-              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter"
-              target="_blank"
-              >Array.prototype.filter() - MDN</a
-            >
-          </p>
-        </section>
-
-        <section>
-          <h3><code>.filter()</code></h3>
-          <p
-            class="gdi-p"
-            style="max-width: 700px; margin: 0 auto 24px auto">
-            Filter out the words that contain the string <code>'cat'</code> into a new
-            array
-          </p>
-          <pre><code class="js">let catStrings = ['avocado', 'advocate', 'catty', 'catacomb']
-
-let nonCatStrings = catStrings.filter( item => {
-
-  return item.includes('cat')
-
-})
-
-console.log(nonCatStrings) 
-
-// Arrow syntax shorthand version:
-
-// catStrings.filter(item => !item.includes('cat'))</code></pre>
-
-          <p class="gdi-p">
-            <a
-              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter"
-              target="_blank"
-              >Array.prototype.filter() - MDN</a
-            >
-          </p>
-        </section>
-
-        <section>
-          <h3>Let's Develop It!</h3>
-          <p
-            class="gdi-p"
-            style="max-width: 700px; margin: 0 auto 24px auto">
-            Filter out words that contain the string <code>'cat'</code>; return the
-            <code>index</code> position of each item into a new array
-          </p>
-          <pre><code class="js">let catStrings = ['avocado', 'advocate', 'catty', 'catacomb']
-</code></pre>
-        </section>
-
-        <section>
-          <h3>Return Values</h3>
-          <p
-            class="gdi-p"
-            style="max-width: 800px; margin: 0 auto 24px auto">
-            While some iteration methods create a new array, others return elements from
-            the original array or a boolean value; and one particular method, the
-            <code>forEach</code>, does not return any value at all
-          </p>
-        </section>
-
-        <section>
-          <h3><code>.forEach()</code></h3>
-          <p
-            class="gdi-p"
-            style="max-width: 800px; margin: 0 auto 24px auto">
-            Runs an action on every element in an array; unlike other methods, it does not
-            return an actual value
-          </p>
-          <pre><code class="js">let ageList = [4,5,6,7]
-
-const updatedAgeList = ageList.forEach( element => element + 5 ) 
-
-console.log(updatedAgeList) // Returns undefined
-
-</code></pre>
-          <p class="gdi-p">
-            <a
-              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach"
-              target="_blank"
-              >.forEach() - MDN</a
-            >
-          </p>
-        </section>
-
-        <section>
-          <h3><code>.forEach()</code></h3>
-          <p
-            class="gdi-p"
-            style="max-width: 800px; margin: 0 auto 24px auto"></p>
-          <pre><code class="js">let ageList = [4,5,6,7]
-
-ageList.forEach( element => console.log(element + 5) ) </code></pre>
-          <p class="gdi-p">
-            <a
-              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach"
-              target="_blank"
-              >.forEach() - MDN</a
-            >
-          </p>
-        </section>
-
-        <section>
-          <h3><code>.forEach()</code></h3>
-          <p
-            class="gdi-p"
-            style="max-width: 700px; margin: 0 auto 24px auto">
-            The <code>forEach</code> behaves similarly to the <code>for</code> loop and
-            the <code>for of</code> loop
-          </p>
-          <pre><code class="js">let ageList = [4,5,6,7]
-
-ageList.forEach( element => console.log(element + 5) ) 
-// Output: 9, 10, 11, 12
-
-for(let i = 0; i  < ageList.length; i++){
-  console.log( ageList[i] + 5)
-}
-// Output: 9, 10, 11, 12
-
-for(let age of ageList){
-  console.log(age + 5)
-}
-// Output: 9, 10, 11, 12
-</code></pre>
-          <p class="gdi-p">
-            <a
-              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach"
-              target="_blank"
-              >.forEach() - MDN</a
-            >
-          </p>
-        </section>
-
-        <section>
-          <h3>Let's Develop It!</h3>
-          <ul>
-            <li>Create an empty array <code>duplicatePlanets</code></li>
             <li>
-              Using the <code>.forEach</code> method, loop through the
-              <code>planets</code> array and push each item into the
-              <code>duplicatePlanets</code> array
+              Using the <code>this</code> keyword, update the
+              <code>goodDog()</code> method so that it prints the value of the
+              <code>dogName</code> key
             </li>
+            <li>Run <code>goodDog()</code> to verify the change</li>
           </ul>
-          <pre><code class="js">let planets = ['Mercury', 'Venus', 'Jupiter']
-</code></pre>
+          <pre><code class="js">let objectName {
+  key:value
+  
+  objMethod(){
+    this.key // Some action
+  }
+}</code></pre>
         </section>
 
         <section>
-          <h3>When to Use <code>.forEach</code>?</h3>
+          <h3>Let's Develop It!</h3>
           <p
             class="gdi-p"
-            style="max-width: 700px; margin: 0 auto 24px auto">
-            <code>forEach</code> can be an alternative to using a <code>for</code> loop or
-            a <code>for...of</code> loop; all three iterate through every element in an
-            array
+            style="max-width: 700px; margin: 0 auto 16px auto">
+            Working with our <code>dogObj</code>:
           </p>
-        </section>
-
-        <section>
-          <h3>What About Other Methods?</h3>
-          <p class="gdi-p">A few tips:</p>
           <ul>
-            <li>Use <code>.map</code> to change items in an array</li>
-            <li>Use <code>.filter</code> to select a subset of an array</li>
-            <li>Use <code>.find</code> to select one item in an array</li>
+            <li>Update the value of <code>dogName</code> to 'Roscoe'</li>
+            <li>Run <code>goodDog()</code> again to verify this change</li>
           </ul>
-          <p class="gdi-p">
-            <a
-              href="https://medium.com/@JeffLombardJr/understanding-foreach-map-filter-and-find-in-javascript-f91da93b9f2c"
-              target="_blank"
-              >Why and when to use forEach, map,<br />
-              filter, reduce, and find in JavaScript</a
-            >
-          </p>
+          <pre><code class="js">let objectName {
+  key:value
+  
+  objMethod(){
+    this.key // Some action
+  }
+}</code></pre>
         </section>
-
-        <!-- 
-<p class="gdi-p" style="max-width: 800px; margin: 0 auto 24px auto;"></p>
-
-<p class="gdi-p"><a href="" target="_blank"></a></p>
-
-<pre><code class="js"></code></pre>
-      
-<pre><code class="html">&lt;html&gt;
-&lt;body&gt;
-...
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre> 
-      -->
 
         <!-- Home Practice -->
         <section>
@@ -657,7 +749,7 @@ for(let age of ageList){
           <ul>
             <li>
               <a
-                href="https://replit.com/@tinuola/js2-class2-home-practice#script.js"
+                href="https://replit.com/@tinuola/js2-class4-home-practice#script.js"
                 target="_blank"
                 >REPL Home Practice</a
               >
@@ -669,7 +761,9 @@ for(let age of ageList){
         <section>
           <h3>Class 4 - Agenda</h3>
           <ul>
-            <li>Objects & Object Methods</li>
+            <li><code>for...in</code> Loop</li>
+            <li>Built-in Object Methods</li>
+            <li>Classes</li>
           </ul>
         </section>
 
@@ -678,10 +772,8 @@ for(let age of ageList){
           <h3>Class Feedback</h3>
           <p>
             <a
-              href="https://forms.gle/v3pmYygbTfaBNVLPA"
-              target="_blank"
-              >https://forms.gle/v3pmYygbTfaBNVLPA</a
-            >
+              href=""
+              target="_blank"></a>
           </p>
         </section>
 
@@ -693,7 +785,7 @@ for(let age of ageList){
         <!-- Thank You -->
         <section>
           <img
-            src="./assets/images/gdi-logos/GDI-Logo_Peach.png"
+            src="../shared-assets/imgs/gdi-logos/gdi-logo_peach.png"
             alt="GDI Logo"
             width="300px"
             class="noborder" />
@@ -702,12 +794,13 @@ for(let age of ageList){
         </section>
       </div>
       <!-- End of Slides container -->
-
+      <!---->
+      <!---->
+      <!-- Update Footer with Course Name -->
       <footer>
-        <!-- Update with Course Name -->
         <div class="copyright">
           <img
-            src="./assets/images/gdi-logos/GDI-Logo_Peach.png"
+            src="../shared-assets/imgs/gdi-logos/gdi-logo_peach.png"
             alt="GDI Logo"
             width="40px"
             class="noborder" />
@@ -724,38 +817,13 @@ for(let age of ageList){
       </footer>
     </div>
     <!-- End of Reveal wrapper -->
-
-    <!-- REVEAL.JS Script Files - Do Not Edit -->
+    <!---->
+    <!---->
+    <!-- RevealJS Scripts & Config - Do Not Edit or Delete -->
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reveal.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/plugin/highlight/highlight.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/highlightjs-badge@0.1.9/highlightjs-badge.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jsPlumb/2.15.5/js/jsplumb.min.js"></script>
-    <script>
-      const srcUrlPrefix = 'https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/';
-      Reveal.initialize({
-        hash: true,
-        center: true,
-        slideNumber: true,
-        showNotes: false,
-        margin: 0.1,
-        preloadIframes: true,
-        plugins: [RevealHighlight],
-        pdfSeparateFragments: true,
-      });
-
-      // add HighlightJS-badge (options are optional)
-      var options = {
-        copyIconContent: '📄',
-        checkIconContent: '✅',
-      };
-      window.highlightJsBadge(options);
-
-      if (window.location.search == '?print-pdf') {
-        var uncounted = document.querySelectorAll("[data-visibility='uncounted']");
-        uncounted.forEach((node) => {
-          node.parentNode.classList.add('no-print');
-        });
-      }
-    </script>
+    <script src="../shared-assets/js/revealConfig.js"></script>
   </body>
 </html>

@@ -134,13 +134,157 @@ let randomValues = ['hello', 66, true, ['item1', 'item2'] ]
             <li><code>Sort</code> the array below to be in alphabetical order</li>
             <li>Then <code>push</code> 'Tokyo' into the array</li>
             <li>Does the array <code>include</code> 'Lhasa', Tibet's capital?</li>
+            <li>Find the <code>index</code> of 'Manilla'</li>
           </ul>
           <pre><code class="js">let asianCapitals = ['Seoul', 'Dhaka', 'Manilla', 'Bangkok']</code></pre>
+        </section>
+
+        <section>
+          <h3>An Array Puzzle</h3>
+          <p
+            class="gdi-p"
+            style="max-width: 700px; margin: 0 auto">
+            For the last task in the previous practice exercise, perhaps you attempted to
+            use the <code>findIndex</code> method? What happened?
+          </p>
+          <pre><code class="js">console.log(asianCapitals.indexOf('Manilla')) 
+// Output: 2
+
+console.log(asianCapitals.findIndex('Manilla')) 
+// Error:  Manilla is not a function
+</code></pre>
+        </section>
+
+        <section>
+          <h3>An Array Puzzle</h3>
+          <p
+            class="gdi-p"
+            style="max-width: 700px; margin: 0 auto">
+            Why is 'Manilla' expected to be a function?
+          </p>
+          <pre><code class="js">
+console.log(asianCapitals.findIndex('Manilla')) 
+
+// Error:  Manilla is not a function
+</code></pre>
+        </section>
+
+        <!-- Higher Order Functions -->
+        <section>
+          <h4>Array Methods: <br />Higher Order Functions</h4>
+          <p class="fs-28 width-800 mb-32">
+            The <code>findIndex</code> method is a type of function known as a
+            <span class="highlight--yellow">Higher Order Function</span>
+          </p>
+          <p class="fs-28 width-800">
+            A higher order function accepts another function as a parameter or can return
+            a function as an output
+          </p>
+        </section>
+
+        <section>
+          <h3>Higher Order Function</h3>
+          <ul class="fs-28">
+            <li>
+              To use <code>findIndex</code> to get the index of 'Manilla', we need to pass
+              it another function as a parameter
+            </li>
+            <li>
+              This second function creates a <code>testing condition</code> that will be
+              applied to each element in the array
+            </li>
+          </ul>
+          <pre><code class="js">let asianCapitals = ['Seoul', 'Dhaka', 'Manilla', 'Bangkok']
+
+let result = asianCapitals.findIndex(function(city,index){
+  if(city === 'Manilla'){
+    return index
+  }
+})
+
+console.log(result) // 2</code></pre>
+        </section>
+
+        <!-- Callback Functions -->
+        <section>
+          <h3>Callback Function</h3>
+          <p
+            class="gdi-p"
+            style="max-width: 750px; margin: 0 auto 24px auto">
+            A function that can be passed as a parameter is known as a
+            <span class="highlight--yellow">callback</span> function
+          </p>
+          <p
+            class="gdi-p"
+            style="max-width: 850px; margin: 0 auto">
+            Let's rewrite our code to illustrate a callback function getting passed to
+            <code>findIndex()</code>
+          </p>
+          <pre><code class="js">let asianCapitals = ['Seoul', 'Dhaka', 'Manilla', 'Bangkok']
+
+function findManilla(city){
+  if(city === 'Manilla'){
+    return true;
+  }
+}
+
+let result = asianCapitals.findIndex(findManilla)
+
+// findManilla() is a callback function because 
+// it is passed as a parameter to findIndex()
+
+console.log(result) // 2</code></pre>
+        </section>
+
+        <!-- Higher Order Functions & Arrow Functions -->
+        <section>
+          <h4>
+            Higher Order Functions <br />
+            and Arrow Function Syntax
+          </h4>
+          <p
+            class="gdi-p"
+            style="max-width: 700px; margin: 0 auto">
+            Arrow functions are often used to simplify how we write higher order functions
+          </p>
+          <pre><code class="js">let result = asianCapitals.findIndex(function(city,index){
+  if(city === 'Manilla'){
+    return index
+  }
+})
+  
+// Rewritten with arrow function syntax
+
+let result = asianCapitals.findIndex((city, index) => {
+  if(city === 'Manilla'){
+    return index
+  }
+})</code></pre>
         </section>
 
         <!-- Array Iteration Methods -->
         <section>
           <h3>Array Iteration Methods</h3>
+          <p
+            class="gdi-p"
+            style="max-width: 800px; margin: 0 auto 30px auto">
+            The <code>findIndex</code> method is one of several array methods that can
+            <span class="highlight--yellow">iterate (loop)</span> through an array and
+            execute an action on each item in the array
+          </p>
+          <p
+            class="gdi-p"
+            style="max-width: 850px; margin: 0 auto 24px auto">
+            These methods are all higher order functions because they require another
+            function as a parameter
+          </p>
+          <p>
+            <a
+              href="https://www.w3schools.com/js/js_array_iteration.asp"
+              target="_blank"
+              >JavaScript Array Iteration (w3schools)</a
+            >
+          </p>
         </section>
 
         <section>
@@ -154,10 +298,7 @@ let randomValues = ['hello', 66, true, ['item1', 'item2'] ]
           <p
             class="gdi-p"
             style="max-width: 800px; margin: 0 auto 24px auto">
-            Array iterators require a
-            <span class="highlight--yellow"
-              >second function to be passed as a parameter</span
-            >
+            Array iterators require a second function to be passed as a parameter
           </p>
           <p
             class="gdi-p"
@@ -174,172 +315,6 @@ let randomValues = ['hello', 66, true, ['item1', 'item2'] ]
         </section>
 
         <section>
-          <h3>New Terms</h3>
-          <p class="fs-32 width-800 mb-32">
-            Array iterators are a type of function known as a
-            <span class="highlight--yellow">higher order function</span>
-          </p>
-          <p class="fs-32 width-800 mb-32">
-            A higher order function accepts another function as a parameter or can return
-            a function as an output
-          </p>
-          <p class="fs-32 width-800">
-            A function that can be passed as a parameter is known as a
-            <span class="highlight--yellow">callback function</span>
-          </p>
-        </section>
-
-        <section>
-          <h3>Array Iteration Syntax</h3>
-          <pre><code class="js">// An array
-
-let arrayName = [ item1, item2, item3, item4]
-
-// An array iterator
-
-arrayName.arrayIterationMethod( callbackFunction() {
-
-  // Code to apply to each element
-
-} )
-</code></pre>
-        </section>
-
-        <section>
-          <h3>Syntax Breakdown</h3>
-          <p class="fs-28 mb-16 width-800">
-            Let's see the syntax in practice with the <code>.map()</code> method that
-            returns a new array
-          </p>
-          <pre><code class="js">
-let numbers = [ 13, 6, -3, 15]
-
-// Apply .map() method
-
-let doubled = numbers.map( function multiplyByTwo(num) {
-
-  return num * 2
-
-} )
-
-console.log(doubled) // [26,12,-6,30]
-</code></pre>
-        </section>
-
-        <section>
-          <h3>Syntax Breakdown</h3>
-          <p class="fs-28 mb-16 width-800">
-            <code>.map()</code>, the array iterator, is the
-            <span class="highlight--yellow">higher-order function</span>
-          </p>
-          <p class="fs-28 mb-16 width-800">
-            <code>multiplyByTwo()</code>, the function passed as a parameter, is the
-            <span class="highlight--yellow">callback function</span>
-          </p>
-          <p class="fs-28 mb-16 width-800">
-            The instruction in the callback function is applied to each element in the
-            array
-          </p>
-          <pre><code class="js">
-let numbers = [ 13, 6, -3, 15]
-
-// Apply .map() method
-
-let doubled = numbers.map( function multiplyByTwo(num) {
-
-  return num * 2
-
-} )
-
-console.log(doubled) // [26,12,-6,30]
-</code></pre>
-        </section>
-
-        <section>
-          <h3>Longhand vs Shorthand Syntax</h3>
-          <p class="fs-32 width-800">
-            The code syntax we just practiced is considered longhand; you're more likely
-            to see and use <span class="highlight--yellow">arrow functions</span> with
-            array iterators
-          </p>
-        </section>
-
-        <section>
-          <h4>Iterators and Arrow Function Syntax</h4>
-          <p class="fs-28 width-800 mb-16">
-            Arrow functions allow us to write iteration methods a bit more concisely
-          </p>
-          <ul class="fs-28">
-            <li>Remove the <code>function</code> keyword and function name</li>
-            <li>Add an arrow before the first opening curly brace <code>{</code></li>
-            <li>That's it!</li>
-          </ul>
-          <pre><code class="js">
-let numbers = [ 13, 6, -3, 15]
-
-let doubled = numbers.map( (num) => {
-
-  return num * 2
-
-} )
-
-console.log(doubled) // [26,12,-6,30]
-</code></pre>
-        </section>
-
-        <section>
-          <h4>Iterators and Arrow Function Syntax</h4>
-          <p class="fs-28 width-800 mb-16">We can strip the code down</p>
-          <ul class="fs-28">
-            <li>
-              Because we only have one parameter <code>'num'</code> in the testing
-              function, we can omit the <code>()</code> around it
-            </li>
-          </ul>
-          <pre><code class="js">
-let numbers = [ 13, 6, -3, 15]
-
-let doubled = numbers.map( num => {
-
-  return num * 2
-
-} )
-
-console.log(doubled) // [26,12,-6,30]
-</code></pre>
-        </section>
-
-        <section>
-          <h4>Iterators and Arrow Function Syntax</h4>
-          <p class="fs-28 width-800 mb-16">
-            The rules we learned for writing arrow function shorthand apply with iterators
-          </p>
-          <p class="fs-28 width-800 mb-16">
-            If an arrow function expression is simple enough, we can omit the
-            <code>return</code> keyword and keep our code to one line
-          </p>
-          <pre><code class="js">
-let numbers = [ 13, 6, -3, 15]
-
-let doubled = numbers.map( num => num * 2 )
-
-console.log(doubled) // [26,12,-6,30]
-</code></pre>
-        </section>
-
-        <section>
-          <h3>Practice, Practice, Practice</h3>
-          <p class="fs-28 mb-32">
-            Using iterators with arrow functions can be confusing initially!
-          </p>
-
-          <p class="fs-28 width-800 mb-32">
-            Practicing the syntax often (following example code in MDN documentation, for
-            instance) will help us adapt to writing this way
-          </p>
-        </section>
-
-        <section>
           <h3>Common Array Iteration Methods</h3>
           <div
             class="flex mb-32"
@@ -348,7 +323,6 @@ console.log(doubled) // [26,12,-6,30]
               <li><code>.map()</code></li>
               <li><code>.forEach()</code></li>
               <li><code>.filter()</code></li>
-              <li><code>.find()</code></li>
             </ul>
             <ul style="list-style: none">
               <li><code>.reduce()</code></li>
@@ -394,43 +368,6 @@ console.log(doubleNumbers) // Output: [1,4,9,16]
           </p>
         </section>
 
-        <section>
-          <h3>Let's Develop It!</h3>
-          <p
-            class="gdi-p"
-            style="max-width: 700px; margin: 0 auto 24px auto">
-            Loop through the <code>names</code> array using <code>.map()</code>; return a
-            new array with each name used in a greeting, such as:
-            <span class="highlight--yellow">'Hello (name)'</span>
-          </p>
-          <pre><code class="js">const names = ['Ana', 'Sandra', 'Fabi']
-
-</code></pre>
-        </section>
-
-        <!-- Array Index Values -->
-        <section>
-          <h3>Array Index Values</h3>
-          <p
-            class="gdi-p"
-            style="max-width: 800px; margin: 0 auto 24px auto">
-            When looping through items in an array, iterators are also keeping track of
-            index positions
-          </p>
-          <p
-            class="gdi-p"
-            style="max-width: 800px; margin: 0 auto 24px auto">
-            We can reference or return these index positions as results
-          </p>
-          <pre><code class="js">const zeeNames = ['Zoe', 'Zadie', 'Zazee']
-
-let getNamePosition = zeeNames.map((name, index) => {
-  return `The name ${name} has an index value of ${index} in the array.`;
-})
-
-console.log(getNamePosition)</code></pre>
-        </section>
-
         <!-- .filter -->
         <section>
           <h3><code>.filter()</code></h3>
@@ -461,19 +398,6 @@ console.log(nonCatStrings)
               >Array.prototype.filter() - MDN</a
             >
           </p>
-        </section>
-
-        <!-- Practice: .filter -->
-        <section>
-          <h3>Let's Develop It!</h3>
-          <p
-            class="gdi-p"
-            style="max-width: 700px; margin: 0 auto 24px auto">
-            Filter out words that <code>do contain</code> the string <code>'cat'</code>;
-            return the <code>index</code> position of each item into a new array
-          </p>
-          <pre><code class="js">let catStrings = ['avocado', 'advocate', 'catty', 'catacomb']
-</code></pre>
         </section>
 
         <!-- Return Values -->

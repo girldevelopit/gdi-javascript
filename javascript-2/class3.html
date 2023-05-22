@@ -72,7 +72,6 @@
             <li>Home Practice Review</li>
             <li>Data Type: Objects</li>
             <li>Object Properties</li>
-            <li><code>this</code> Keyword</li>
             <li>Class Feedback</li>
           </ul>
         </section>
@@ -151,6 +150,7 @@
             alt="Blue car" />
         </section>
 
+        <!-- Car Object -->
         <section>
           <h3>Car Object</h3>
           <ul>
@@ -167,6 +167,7 @@
             style="margin-left: 20px" />
         </section>
 
+        <!-- Car Object -->
         <section>
           <h3>Car Object</h3>
           <p class="fs-32 mb-16">What are actions this car can perform?</p>
@@ -179,6 +180,7 @@
           </ul>
         </section>
 
+        <!-- House Object -->
         <section>
           <h3>Many Things are Objects!</h3>
           <p class="fs-32 width-900 mb-32">
@@ -192,6 +194,7 @@
           </p>
         </section>
 
+        <!-- More Objects: Driver's License -->
         <section>
           <h3>Even More Objects!</h3>
           <p class="fs-32 width-900 mb-16">
@@ -384,6 +387,7 @@ console.log (dogObj)
 // {color: 'blue', breed: 'bulldog', size: 'small'}</code></pre>
         </section>
 
+        <!-- Deleting an object -->
         <section>
           <h3>Deleting an Object Key</h3>
           <p class="fs-32">Use the keyword <code>delete</code></p>
@@ -414,11 +418,12 @@ console.log (dogObj)
           </ul>
         </section>
 
-        <!-- Object Methods -->
+        <!-- Creating Object Methods -->
         <section>
           <h3>Creating Object Methods</h3>
         </section>
 
+        <!-- Object and Function properties -->
         <section>
           <h3>Objects and Function Properties</h3>
           <p class="fs-32 width-800">
@@ -438,6 +443,7 @@ console.log (dogObj)
           </p>
         </section>
 
+        <!-- Declaring Object methods -->
         <section>
           <h3>Declaring an Object Method</h3>
           <p class="fs-32">We can create a method when declaring a object</p>
@@ -456,6 +462,7 @@ console.log (dogObj)
 }</code></pre>
         </section>
 
+        <!-- Declaring Object methods -->
         <section>
           <h3>Declaring an Object Method</h3>
           <p class="fs-32 width-800">
@@ -476,6 +483,7 @@ console.log (dogObj)
 }</code></pre>
         </section>
 
+        <!-- Declaring Object methods -->
         <section>
           <h3>Declaring an Object Method</h3>
           <p class="fs-32 width-800">
@@ -498,6 +506,7 @@ toddlerObj.throwTantrum = function(){
 console.log(toddlerObj) // Verify </code></pre>
         </section>
 
+        <!-- Calling an Object method -->
         <section>
           <h3>Calling an Object Method</h3>
           <p class="fs-32 width-800 mb-16">
@@ -564,185 +573,6 @@ objectName.objectMethod()
 </code></pre>
         </section>
 
-        <section>
-          <h3><code>this</code> Keyword</h3>
-          <p
-            class="gdi-p"
-            style="max-width: 700px; margin: 0 auto 24px auto"></p>
-        </section>
-
-        <section>
-          <h3>Object References</h3>
-          <p
-            class="gdi-p"
-            style="max-width: 700px; margin: 0 auto 24px auto">
-            When we add methods to our objects, we can use these methods to work with
-            other data inside our objects
-          </p>
-
-          <p
-            class="gdi-p"
-            style="max-width: 700px; margin: 0 auto 24px auto">
-            JavaScript has a keyword <code>this</code> that allows an object to reference
-            data within itself
-          </p>
-
-          <p>
-            <a
-              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#using_this_for_object_references"
-              target="_blank"
-              >This (MDN)</a
-            >
-          </p>
-        </section>
-
-        <section>
-          <h3>
-            <code>Object Referencing: <br />An Example</code>
-          </h3>
-          <p
-            class="gdi-p"
-            style="max-width: 800px; margin: 0 auto 24px auto">
-            In our <code>toddlerObj</code> example, the <code>faveWord()</code> method is
-            currently hard-coded to display "Mama"
-          </p>
-
-          <p
-            class="gdi-p"
-            style="max-width: 800px; margin: 0 auto 24px auto">
-            What if we wanted that method to display the value of
-            <code>new_word</code> instead?
-          </p>
-          <pre><code class="js">let toddlerObj = {
-  age_in_months: 18,
-  is_cute: true,
-  new_word: 'no',
-  faveWord(){ 
-    console.log('Mama') 
-  },
-}</code></pre>
-        </section>
-
-        <section>
-          <h3><code>this</code></h3>
-          <p
-            class="gdi-p"
-            style="max-width: 700px; margin: 0 auto 24px auto">
-            We would use the <code>this</code> keyword
-          </p>
-          <pre><code class="js">let toddlerObj = {
-  
-  age_in_months: 18,
-  
-  is_cute: true,
-  
-  new_word: 'no',
-
-  faveWord(){ 
-    console.log(this.new_word) 
-  },
-}
-
-toddlerObj.faveWord() // Should output 'no'</code></pre>
-        </section>
-
-        <section>
-          <h3><code>this</code></h3>
-          <p
-            class="gdi-p"
-            style="max-width: 700px; margin: 0 auto 24px auto">
-            <code>this</code> means "inside of this current object"
-          </p>
-
-          <p
-            class="gdi-p"
-            style="max-width: 700px; margin: 0 auto 24px auto">
-            From our example: <code>this.new_word</code> means:
-          </p>
-
-          <p
-            class="gdi-p"
-            style="max-width: 700px; margin: 0 auto 24px auto">
-            "the current value of new_word inside of this toddler object"
-          </p>
-        </section>
-
-        <section>
-          <h3><code>this</code></h3>
-          <p
-            class="gdi-p"
-            style="max-width: 700px; margin: 0 auto 24px auto">
-            the <code>this</code> keyword allows object methods to be versatile or
-            reusable when values inside the object changes
-          </p>
-          <p
-            class="gdi-p"
-            style="max-width: 700px; margin: 0 auto">
-            For example, we can now update <code>new_word</code> to be any value--as our
-            toddler grows and expands her vocabulary!
-          </p>
-          <pre><code class="js">let toddlerObj = {
-  age_in_months: 18,
-  is_cute: true,
-  new_word: 'no',
-  faveWord(){ 
-    console.log(this.new_word) 
-  },
-}
-
-toddlerObj.new_word = 'doggie'
-
-toddlerObj.faveWord() // Should output 'doggie'</code></pre>
-        </section>
-
-        <section>
-          <h3>Let's Develop It!</h3>
-          <p
-            class="gdi-p"
-            style="max-width: 700px; margin: 0 auto 16px auto">
-            Working with our <code>dogObj</code>:
-          </p>
-          <ul>
-            <li>
-              Using either dot or bracket notation, add a new key
-              <code>dogName</code> with a value of 'Buddy'
-            </li>
-            <li>
-              Using the <code>this</code> keyword, update the
-              <code>goodDog()</code> method so that it prints the value of the
-              <code>dogName</code> key
-            </li>
-            <li>Run <code>goodDog()</code> to verify the change</li>
-          </ul>
-          <pre><code class="js">let objectName {
-  key:value
-  
-  objMethod(){
-    this.key // Some action
-  }
-}</code></pre>
-        </section>
-
-        <section>
-          <h3>Let's Develop It!</h3>
-          <p
-            class="gdi-p"
-            style="max-width: 700px; margin: 0 auto 16px auto">
-            Working with our <code>dogObj</code>:
-          </p>
-          <ul>
-            <li>Update the value of <code>dogName</code> to 'Roscoe'</li>
-            <li>Run <code>goodDog()</code> again to verify this change</li>
-          </ul>
-          <pre><code class="js">let objectName {
-  key:value
-  
-  objMethod(){
-    this.key // Some action
-  }
-}</code></pre>
-        </section>
-
         <!-- Home Practice -->
         <section>
           <h3>Home Practice</h3>
@@ -761,9 +591,9 @@ toddlerObj.faveWord() // Should output 'doggie'</code></pre>
         <section>
           <h3>Class 4 - Agenda</h3>
           <ul>
+            <li><code>this</code> Keyword</li>
             <li><code>for...in</code> Loop</li>
             <li>Built-in Object Methods</li>
-            <li>Classes</li>
           </ul>
         </section>
 

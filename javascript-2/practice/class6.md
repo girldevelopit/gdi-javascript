@@ -100,7 +100,7 @@ let githubURL = document.querySelector('.url-data');
 
 #### Part 4
 
-The setup for the exercise is now complete. Open the `index.html` file in a browser. You should have a simple display that looks like this:
+The setup for the exercise is now complete. Open the `index.html` file in a browser. You should have a simple display that looks similar to this:
 
 https://girldevelopit.github.io/gdi-javascript/javascript-2/images/github-api-starter.png
 
@@ -149,7 +149,7 @@ a. Update the CSS styling if you prefer
 
 b. Use JavaScript, instead of CSS, to uppercase your username
 
-c. Use string interpolation or concatenation to add on a unique error message to the err variable in the .catch() method
+c. Use string interpolation or concatenation to add a unique error message to the `err` variable in the `.catch()` method; then create a minor error (ex: mistype a variable or a fake github username) so you can log/see the error message
 
 d. If you have DOM manipulation knowledge, then retrieve other data from the API call and add them to the page!
 

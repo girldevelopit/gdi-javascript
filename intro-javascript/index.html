@@ -73,40 +73,40 @@
 
         <!-- Course Title -->
         <section>
-          <h3>Introduction to JavaScript</h3>
+          <h2>Introduction to JavaScript</h2>
         </section>
 
         <!-- Instructor Intro -->
         <!-- Add name -->
-        <section>
-          <h3>Instructor Intro</h3>
+        <!-- <section> -->
+          <!-- <h3>Instructor Intro</h3> -->
           <!-- <h4>Title</h4> -->
-        </section>
+        <!-- </section> -->
 
         <!-- OPTIONAL: TA Intro -->
         <!-- Add name -->
-        <section>
-          <h3>TA Intro</h3>
+        <!-- <section> -->
+          <!-- <h3>TA Intro</h3> -->
           <!-- <h4>Title</h4> -->
-        </section>
+        <!-- </section> -->
 
         <!-- Student Intros; IceBreakers, etc. -->
         <!-- Add icebreaker description if applicable -->
-        <section>
-          <h3>Student Intros / IceBreakers</h3>
-        </section>
+        <!-- <section> -->
+          <!-- <h3>Student Intros / IceBreakers</h3> -->
+        <!-- </section> -->
 
         <!-- Before we start... -->
-        <section>
+        <!-- <section>
           <h3>Before we start...</h3>
           <ul>
             <li>Display your preferred name and/or pronoun</li>
-            <li>Don't be camera-shy 🙂</li>
+            <li>We encourage keeping cameras on 🙂</li>
             <li>Participate and experiment</li>
             <li>Every question is important</li>
             <li>Have fun!</li>
           </ul>
-        </section>
+        </section> -->
 
         <!-- Course Goals -->
         <section>
@@ -127,7 +127,7 @@
             <li>JavaScript and the Web</li>
             <li>JavaScript Fundamentals</li>
             <li>Demos and Practice!</li>
-            <li>Q&A</li>
+            <!-- <li>Q&A</li> -->
           </ul>
         </section>
 
@@ -262,6 +262,30 @@
             src="./images/html-css-js.jpg"
             width="350px"
             alt="HTML, CSS, JS image" />
+        </section>
+
+        <!-- How does JavaScript Work? -->
+        <section>
+          <h4>How does JavaScript work?</h4>
+          <div class="left-align">
+            <ol
+              class="fs-28"
+              id="fragments">
+              <li>You visit a website that has JavaScript code in it</li>
+              <li class="fragment">
+                Your browser (e.g., Chrome) reads the code line-by-line
+              </li>
+              <li class="fragment">The browser runs each line of code as it reads it</li>
+              <li class="fragment">
+                Based on the code instructions, the browser performs calculations and
+                modifies or acts on the content on the page.
+              </li>
+              <li class="fragment">
+                But if the browser finds code it doesn't understand, it stops running the
+                program and creates an error message
+              </li>
+            </ol>
+          </div>
         </section>
 
         <!-- What can JavaScript do? -->
@@ -521,7 +545,15 @@
               Create a set of opening and closing <code> &lt;script&gt;</code> tags inside
               your <code>index.html</code> file
             </li>
-            <li>Write the code below in between the tags</li>
+            <li>Write the code below in between the script tags</li>
+</ul>
+<pre>
+  <code class="html">
+alert('Hello World!');
+  </code>
+</pre>
+<ul>
+
             <li>Click the green <code>"RUN"</code> button at the top of REPL</li>
           </ul>
           <pre>
@@ -554,7 +586,7 @@
             <li>Create a <code>script.js</code> file</li>
             <li>
               Inside your <code>index.html</code> file, copy the code between the script
-              tags and paste the code to the <code>script.js</code> file
+              tags and paste the code to the <code>script.js</code> file in REPL
             </li>
             <li>Delete the code between script tags, but not the tags themselves</li>
           </ul>
@@ -576,30 +608,6 @@
   &lt;script src="script.js"&gt;&lt;/script&gt;
               </code>
             </pre>
-        </section>
-
-        <!-- How does JavaScript Work? -->
-        <section>
-          <h4>How does JavaScript work?</h4>
-          <div class="left-align">
-            <ol
-              class="fs-28"
-              id="fragments">
-              <li>You visit a website that has JavaScript code in it</li>
-              <li class="fragment">
-                Your browser (e.g., Chrome) reads the code line-by-line
-              </li>
-              <li class="fragment">The browser runs each line of code as it reads it</li>
-              <li class="fragment">
-                Based on the code instructions, the browser performs calculations and
-                changes the HTML and CSS on the page.
-              </li>
-              <li class="fragment">
-                But if the browser finds code it doesn't understand, it stops running the
-                program and creates an error message
-              </li>
-            </ol>
-          </div>
         </section>
 
         <!-- JavaScript Console -->
@@ -676,7 +684,7 @@
         </section>
 
         <!-- JavaScript Statement-->
-        <section>
+        <!-- <section>
           <h4>Statements</h4>
           <p class="fs-28">
             A line of code or instruction in JavaScript is known as a "statement"
@@ -690,7 +698,7 @@
   console.log(3+ 4);
             </code>
           </pre>
-        </section>
+        </section> -->
 
         <!-- Displaying JavaScript -->
         <section>
@@ -981,7 +989,7 @@ console.log(numberOfKittens);
           <pre>
             <code class="javascript">let myAge = 30; 
 
-let price=34.99</code></pre>
+let price = 34.99</code></pre>
 
           <ul class="fs-28 mt-16">
             <li>Other data types: boolean, undefined, null, array, object, function</li>
@@ -1061,7 +1069,7 @@ let price=34.99</code></pre>
         </section>
 
         <!-- Shorthand -->
-        <section>
+        <!-- <section>
           <h4>A Shorthand for Combining Strings</h4>
           <p class="fs-28">
             You can also use <code class="highlight--yellow">+=</code> (the string
@@ -1077,7 +1085,7 @@ kittensName += 'Snuggles';
 console.log(kittensName); // Outputs 'Admiral Snuggles'
             </code>
           </pre>
-        </section>
+        </section> -->
 
         <!-- Practice -->
         <section>
@@ -1327,20 +1335,56 @@ if (age &gt; 18) { // if age is greater than 30
           <table>
             <thead>
               <tr>
+                <th>Operator</th>
+                <th>Name</th>
+              </tr>
+            </thead>
+            <tbody style="font-size: 20px">
+              <tr>
+                <td><code>a === b</code></td>
+                <td>Identical</td>
+              </tr>
+
+              <tr>
+                <td><code>a !== b</code></td>
+                <td>Not identical</td>
+              </tr>
+
+              <tr>
+                <td><code>a &lt; b</code></td>
+                <td>Less than</td>
+              </tr>
+
+              <tr>
+                <td><code>a &gt; b</code></td>
+                <td>Greater than</td>
+              </tr>
+
+              <tr>
+                <td><code>a &lt;= b</code></td>
+                <td>Less than or equal to</td>
+              </tr>
+
+              <tr>
+                <td><code>a &gt;= b</code></td>
+                <td>Greater than or equal to</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- Comparison Operators (WITH RESULTS)-->
+        <!-- <section>
+          <h4>Comparison Operators</h4>
+          <table>
+            <thead>
+              <tr>
                 <th>Example</th>
                 <th>Name</th>
                 <th>Result</th>
               </tr>
             </thead>
             <tbody style="font-size: 20px">
-              <!-- <tr>
-                <td><code>a == b</code></td>
-                <td>Equal</td>
-                <td>
-                  <strong><code>TRUE</code></strong> if <code>a</code> is equal to
-                  <code>b</code> (can be different types).
-                </td>
-              </tr> -->
               <tr>
                 <td><code>a === b</code></td>
                 <td>Identical</td>
@@ -1349,14 +1393,6 @@ if (age &gt; 18) { // if age is greater than 30
                   <code>b</code>, and the same type.
                 </td>
               </tr>
-              <!-- <tr>
-                <td><code>a != b</code></td>
-                <td>Not equal</td>
-                <td>
-                  <strong><code>TRUE</code></strong> if <code>a</code> is not equal to
-                  <code>b</code> (can be different types).
-                </td>
-              </tr> -->
               <tr>
                 <td><code>a !== b</code></td>
                 <td>Not identical</td>
@@ -1399,7 +1435,7 @@ if (age &gt; 18) { // if age is greater than 30
               </tr>
             </tbody>
           </table>
-        </section>
+        </section> -->
 
         <!-- Practice -->
         <section>
@@ -1450,6 +1486,32 @@ if (age &gt; 18) { // if age is greater than 30
             Use the <code>else</code> statement to provide an alternate set of
             instructions
           </p>
+          <pre>
+            <code class="javascript">
+if (condition) {
+
+  // what to do if condition is true
+
+} else {
+
+  // what to do if condition is not true
+
+}
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h4>The if/else statement</h4>
+          <pre>
+            <code class="javascript">
+if (condition) {
+  // code to execute if true
+} else {
+  // code to execute if false
+}
+            </code>
+          </pre>
           <pre>
             <code class="javascript">
 let age = 30;
@@ -1700,57 +1762,37 @@ addNumbers(num1, num2); // Outputs: 21
           <p class="fs-28">Parameters and Arguments make functions reusable</p>
         </section>
 
+        <!-- Practice -->
+        <section>
+          <h3>Let's Develop It!</h3>
+          <p>Writing functions with parameters and arguments</p>
+          <ul class="fs-24">
+            <li>Declare a function called 'createIntro'</li>
+            <li>Add two parameters called 'person' and 'animal'</li>
+            <li>The function displays a sentence that <span class="highlight--yellow">uses the parameters</span> to write an intro such as this:</li>
+            <li>Hi, my name is [PERSON] and my favorite animal is the [ANIMAL]</li>
+            <li>Call the function with different sets of arguments</li>
+            <li>🔥 Extra Challenge:</li>
+            <ul>
+              <li>Outside the function, declare two variables to hold a name value and an animal value</li>
+              <li>Pass those variables as your arguments</li>
+            </ul>
+          </ul>
+        </section>
+
         <!-- Final Practice -->
         <section>
-          <h3>Let's Put it All Together! 🔥</h3>
+          <h3>Let's Put it All Together! 🔥🔥🔥</h3>
           <p class="fs-28">Strings. Numbers. If/Else Statements. Functions.</p>
         </section>
 
         <!-- Final Practice -->
         <section>
           <h3>Let's Develop It!</h3>
-          <p class="fs-28">Write a function to calculate a user's age</p>
           <ul class="fs-24">
-            <li>
-              You will need variables for
-              <span class="highlight--yellow">birth year</span> and
-              <span class="highlight--yellow">current year</span>
-            </li>
-            <li>
-              Calculate <span class="highlight--yellow">age</span> and store it in a
-              variable
-            </li>
-            <li>Call (invoke) the function to display this result:</li>
-            <li>
-              <span class="highlight--yellow"
-                >"Hi <code>userName</code>, you are xx years old."</span
-              >
-            </li>
-            <li class="mt-32">
-              Optional extra challenge 1:
-              <ul>
-                <li>Include an <code>if/else</code> statement in your function:</li>
-                <li>
-                  If age is less than 43, display:
-                  <span class="highlight--yellow"
-                    >"You are either a Millennial or Gen Z."</span
-                  >
-                </li>
-                <li>
-                  Otherwise, display:
-                  <span class="highlight--yellow"
-                    >You are either Gen X or a Baby Boomer.</span
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="mt-32">
-              Optional extra challenge 2:
-              <ul>
-                <li>Write your function to use parameters and arguments</li>
-                <li>Call your function with different arguments</li>
-              </ul>
-            </li>
+            <li>Write a function to calculate a person's age and then display whether or not they are a Millenial/Gen Z or a Gen X/Baby Boomer</li>
+            <li>Example:</li>
+            <li>'Hi Jaden. Based on your age, you are either a Gen X or a Baby Boomer'</li>
           </ul>
         </section>
 
@@ -1780,28 +1822,36 @@ addNumbers(num1, num2); // Outputs: 21
         <!-- Course Survey -->
         <section>
           <h3>Give Us Your Feedback</h3>
-          <h3><a href="">Survey Link</a></h3>
+          <p>Take the survey linked in the course's video description.</p>
+          <!-- <h3><a href="">Survey Link</a></h3> -->
         </section>
 
         <!-- Q&A -->
-        <section>
+        <!-- <section>
           <h2>Q&A</h2>
-        </section>
+        </section> -->
 
         <!-- Resources -->
         <section>
-          <h2>Resources</h2>
+          <h3>Resources</h3>
+          <ul>
+            <li>FreeCodeCamp JavaScript Track</li>
+            <li>Codecademy</li>
+            <li>Scrimba</li>
+            <li>Udemy</li>
+            <li>Upcoming GDI Courses</li>
+          </ul>
         </section>
 
         <!-- MUST USE/SHOW SLIDE -->
         <!-- GDI Promo - Upcoming Courses -->
         <section>
           <h3>Upcoming GDI Courses</h3>
-          <ul>
+          <!-- <ul>
             <li>Course Name</li>
             <li>Course Name</li>
             <li>Course Name</li>
-          </ul>
+          </ul> -->
           <p class="fs-28 mt-16">
             <a
               href="https://girldevelopit.com/events/#/list"

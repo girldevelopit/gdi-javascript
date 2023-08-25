@@ -1,0 +1,630 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="Girl Develop It JavaScript Fundamentals 1 Cohort Series">
+  <meta name="author" content="Girl Develop It">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <!-- Update with GDI Course Name -->
+  <title>GDI - JavaScript Fundamentals 1, Class 5</title>
+
+  <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico" />
+
+  <!-- RevealJS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/theme/simple.css" id="theme">
+
+  <!-- GDI Custom Theme -->
+  <link rel="stylesheet" href="./assets/css/gdi-theme.css">
+
+  <!-- Theme used for syntax highlighted code -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/monokai.min.css">
+  <style>
+    p.gdi-p {
+      font-size: 32px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <!-- Start of Slides container -- Any section element in this container is displayed as a slide -->
+    <div class="slides">
+
+      <!-- Course and Class Titles -->
+      <section>
+        <h2>JavaScript Fundamentals 1</h2>
+        <h2>Class 5</h3>
+      </section>
+
+      <!-- Class Agenda -->
+      <section>
+        <h3>AGENDA</h3>
+          <ul>
+            <li>Review - Class 4 Practice</li>
+            <li>Functions (contd)</li>
+            <li>Loops</li>
+            <li>Feedback & Class 6 Preview</li>
+          </ul>
+      </section>
+      
+      <!-- Stretch Break -->
+      <section>
+        <h3>Stretch - "Bio" Break</h3>
+        <p>5:00p PST /  7:00p CST / 8:00p EST</p>
+      </section>
+
+      <section>
+        <h3>Class 4 Practice Review</h3>
+      </section>
+
+      <!--  -->
+      <section>
+        <h3>Functions (Contd)</h3>
+      </section>
+
+      <!--  -->
+      <section>
+        <h3>Return Statement</h3>
+        <p>A <code>return</code> statement sets the value a function<br> returns when the function is called</p>
+<pre><code class="js">function addTwoNumbers (num1, num2){
+
+  let sum = num1 + num2;
+
+  return sum;
+  
+}
+</code></pre>
+        <small><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/return" target="_blank">Return</a> and <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Return_values" target="_blank">Function Return Values</a> (MDN)</small>
+      </section>
+
+      <section>
+        <h3>Return Statement</h3>
+        <p>A <code>return</code> statement also ends a function's execution</p>
+<pre><code class="js">function addTwoNumbers (num1, num2){
+
+  let sum = num1 + num2
+
+  return sum
+
+  console.log('Hello') // This will not run
+  
+}
+</code></pre>
+      </section>
+
+      <section>
+        <h3>Return Statement</h3>
+        <p>A function without a <code>return</code> statement <br>will be <code>undefined</code></p>
+<pre><code class="js">function addTwoNumbers (num1, num2){
+
+  let sum = num1 + num2
+  
+}
+
+console.log(addTwoNumbers(4,5)) // Undefined
+
+</code></pre>
+      </section>
+
+      <!--  -->
+      <section>
+        <h3>Return Value</h3>
+        <p>A function's <code>return value</code> can be<br> saved and used at any time</p>
+<pre><code class="js">function addTwoNumbers (num1, num2){
+  
+  let sum = num1 + num2;
+  
+  return sum;
+
+}
+
+let calculateFiveAndTen = addTwoNumbers(5,10)
+
+console.log(calculateFiveAndTen)
+
+console.log(`5 plus 10 equals ${calculateFiveAndTen}`)
+
+</code></pre>
+      </section>
+
+      <!--  -->
+      <section>
+        <h3>Practice - Part 1</h3>
+        <ul>
+          <li>Declare a function called <code>doubleNumbers</code> that takes a single parameter <code>num</code></li>
+          <li><code>doubleNumbers</code> should <code>return</code> the product of multiplying <code>num</code> by itself</li>
+          <li>Run the <code>doubleNumbers</code> function with an argument of <code>4</code></li>
+          <li>Declare a variable <code>fourByFour</code> and assign it to the function call from the previous step</li>
+          <li>Print <code>fourByFour</code> to the console</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Practice - Part 2</h3>
+        <ul>
+          <li>Declare a function called <code>multiplyByTen</code> that takes a single parameter <code>num</code></li>
+          <li><code>multiplyByTen</code> should <code>return</code> the product of multiplying <code>num</code> by <code>10</code></li>
+          <li>Run the function <code>multiplyByTen</code> using the variable <code>fourByFour</code> from Part One as the argument</li>
+          <li>Set the result to a new variable <code>finalResult</code></li>
+          <li>Print <code>finalResult</code> to the console</li>
+        </ul>
+      </section>
+
+      <!--  -->
+      <section>
+        <h3>Arrow Functions</h3>
+        <p>Introduced in ES6, <code>arrow functions</code> provide<br> an alternative way to write function syntax</p>
+<pre><code class="js">function greeting(name){
+  return `Hello ${name}`
+}
+
+console.log(greeting('Kemi'))
+
+// Using an arrow function
+
+const greeting = (name) => {
+  return `Hello ${name}`
+}
+
+console.log(greeting('Keisha'))
+</code></pre>
+        <small><a href="https://www.javascripttutorial.net/es6/javascript-arrow-function/" target="_blank">An Introduction to JavaScript Arrow Functions</a> (JavaScriptTutorial.net)</small>
+      </section>
+
+      <!--  -->
+      <section>
+        <h3>Arrow Function Syntax</h3>
+<pre><code class="js">
+const functionName = () => {
+
+// Code to run
+
+}
+
+functionName()
+</code></pre>
+      </section>
+
+      <!--  -->
+      <section>
+        <h3>Arrow Function Shorthands</h3>
+        <ul>
+          <li>An arrow function with a single parameter can omit the parentheses around the parameter</li>
+          <li>An arrow function with a single or simple expression can omit the curly brackets and the <code>return</code> keyword</li>
+        </ul>
+<pre><code class="js">function greetFriend (firstName) {
+
+  return `Hey ${firstName}`
+
+}
+  
+// Arrow Function Shorthand
+
+const greetFriend = firstName => `Hey ${firstName}`
+
+</code></pre>
+      </section>
+
+      <!--  -->
+      <section>
+        <h3>Practice</h3>
+        <p>Rewrite the functions below using arrow function syntax</p>
+<pre><code class="js">function addTwoNumbers (num1, num2) {
+  let sum = num1 + num2;  
+  return sum;
+}
+
+function squareNumber (num) {
+  return num * num;
+}
+
+function firstLineOfCode () {
+  console.log('Hello World')
+}
+</code></pre>
+
+<pre><code class="js">// Arrow Function Syntax
+const functionName = () => {
+  // code
+}
+
+// Shorthand syntax
+const functionName = param => code
+</code></pre>
+      </section>
+
+      <!--  -->
+      <section>
+        <h3>Loops & Iteration</h3>
+      </section>
+
+      <!--  -->
+      <section>
+        <h3>Loops</h3>
+        <p>Another common behavior of code is to repeat<br> tasks--also known as looping or iterating. <br>JavaScript has multiple ways of executing loops.</p>
+        <small><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...in_statement" target="_blank">Loops and Iteration</a> (MDN)</small>
+      </section>
+
+      <!--  -->
+      <section>
+        <h3><code>for</code> Loop</h3>
+        <ul>
+          <li>A <code>for</code> loop is often the first type of loop we learn in JavaScript</li>
+          <li>A <code>for</code> loop executes a given task a set number of times under specific conditions</li>
+        </ul>
+      </section>
+
+      <!--  -->
+      <section>
+        <h3><code>for</code> Loop Syntax</h3>
+<pre><code class="js">for (expression1; expression2; expression3) {
+
+  // code to be repeated
+
+}
+
+// expression1 starts or initializes the loop
+
+// expression2 is the condition that 
+// determines if/when the loop should run
+
+// expression3 counts the looping cycle
+
+</code></pre>
+      </section>
+
+      <!--  -->
+      <section>
+        <h3><code>for</code> Loop Syntax</h3>
+<pre><code class="js">for ( let i = 1; i < 5; i++ ){
+
+  console.log(`I love JavaScript`)
+
+}
+// I love JavaScript
+// I love JavaScript
+// I love JavaScript
+// I love JavaScript
+</code></pre>
+        <ul>
+          <li><code>let i = 1;</code> initializes a variable <code>i</code> that starts the loop</li>
+          <li><code>i < 5;</code> lets the loop run as long as <code>i</code> is less than 5</li>
+          <li><code>i++</code> keeps track or count of the looping cycle</li>
+        </ul>
+      </section>
+
+      <!--  -->
+      <section>
+        <h3>Practice</h3>
+        <p>Evaluate each expression in the <code>for</code> loop below;<br> what will the loop print?</p>
+<pre><code class="js">for ( let age = 15; age < 100; age +=10 ){
+
+  console.log(age);
+
+}
+</code></pre>
+      </section>
+
+      <!--  -->
+      <section>
+        <h3>Practice</h3>
+        <ul>
+          <li>Create a variable <code>myName</code> and assign your name as its value</li>
+          <li>Create a variable <code>count</code> and assign it a number value</li>
+          <li>Create a <code>for</code> loop that prints <code>myName</code> up to <code>count</code> times</li>
+        </ul>
+      </section>
+
+      <!--  -->
+      <section>
+        <h3>Decrementing Loops</h3>
+        <p>Loops can also count down by:</p>
+        <ul>
+          <li>Changing the initializing value</li>
+          <li>Changing the condition to run against</li>
+          <li>Using the <code>--</code> decrement operator</li>
+        </ul>
+<pre><code class="js">for (let dirtySocks = 10; dirtySocks > 0; dirtySocks--) {
+
+  console.log("Dirty socks remaining: " + dirtysocks);  
+
+}
+
+// Dirty socks remaining: 10
+// Dirty socks remaining: 9
+// ...
+// Dirty socks remaining: 2
+// Dirty socks remaining: 1
+
+</code></pre>
+      </section>
+
+      <!--  -->
+      <section>
+        <h3>Loops & Conditionals</h3>
+        <p>Loops can execute conditionals</p>
+<pre><code class="js">for(let num = 0; num <= 10; num++){
+
+  if(num % 2 === 0 ){
+  
+    console.log('Lauren')
+  
+  } else {
+  
+    console.log(num)
+  
+  }
+
+}
+// If num is even, print the name 'Lauren'
+// Else if num is odd, just print the value of num
+</code></pre>
+      </section>
+
+      <section>
+        <h3>Loops and Strings</h3>
+        <p>We can loop through characters of a string</p>
+<pre><code class="js">let fruit = 'banana'
+
+for (let i = 0; i <= fruit.length; i++){
+
+  console.log(fruit[i])
+  
+}
+// b
+// a
+// n
+// a
+// n
+// a
+</code></pre>
+      </section>
+
+      <!--  -->
+      <section>
+        <h3>Practice</h3>
+        <p>Let's use a few concepts we've <br>learned in this cohort thus far!</p>
+      </section>
+
+      <!--  -->
+      <section>
+        <h3>Practice</h3>
+        <p>Part 1</p>
+        <ul>
+          <li>Declare a function <code>insertAmpersand</code> that takes one string parameter <code>str</code></li>
+          <li>Inside the function, declare a variable <code>newStr</code> and set it to an empty string</li>
+          <li>Next, declare a variable <code>count</code> and assign the length of <code>str</code> as its value
+        </ul>
+      </section>
+
+      <!--  -->
+      <section>
+        <h3>Practice</h3>
+        <p>Part 2</p>
+        <ul>
+          <li>Set up a <code>for</code> loop that will run as long as <code>count</code> is true</li>
+          <li>Inside the loop, set up a conditional that will evaluate each character in <code>str</code></li>
+          <li>If the character is the alphabeth <code>'a'</code>, then update the value of <code>newStr</code> to be an ampersand <code>'@'</code></li>
+          <li>Else, turn the character to uppercase and then update the value of <code>newStr</code></li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Practice</h3>
+        <p>Part 3</p>
+        <ul>
+          <li>At the end of the function, <code>return</code> <code>newStr</code></li>
+          <li>Outside the function, create a variable <code>fruit</code></li>
+          <li>Run the <code>insertAmpersand</code> function with an argument--the name of any fruit</li>
+          <li>Print the result of <code>fruit</code> to the console</li>
+        </ul>
+      </section>
+
+      <!--  -->
+      <section>
+        <h3>Infinite Loops</h3>
+        <p>Loops are finicky!</p>
+        <ul>
+          <li>When written incorrectly or inefficiently, a loop will crash your browser or application</li>
+          <li>Usually this happens when we write a loop in which the condition is always true</li>
+          <li>This means the loop will never stop running</li>
+        </ul>
+      </section>
+
+      <!--  -->
+      <section>
+        <h3>Infinite Loops</h3>
+<pre><code class="js">// This loop will run indefinitely because
+// it will ALWAYS be true that num is not 
+// equal to super.
+  
+for(let num = 0; num !== 'super'; num++){
+
+  console.log('Lauren ' + num)
+
+}
+</code></pre>
+
+      </section>
+
+      <!--  -->
+      <section>
+        <h3><code>while</code> Loop</h3>
+        <p>Similar to a <code>for</code> loop, a <code>while</code> loop also checks<br> that a specific condition must be met to run or<br> execute code. It has a different syntax, but<br> the concept is the same.</p>
+      </section>
+
+      <!--  -->
+      <section>
+        <h3><code>while</code> Loop Syntax</h3>
+<pre><code class="js">// Set up a starting condition
+// Then the while loop:
+
+while (condition is true) {
+
+  // code to run
+
+  // counter (increment or decrement)
+
+}
+</code></pre> 
+      </section>
+
+      <!--  -->
+      <section>
+        <h3><code>while</code> Loop Syntax</h3>
+<pre><code class="js">// Starting condition:
+let x = 1
+
+// The loop
+while (x <= 10) {
+
+  // Code to run
+  console.log(x)
+
+  // Counter
+  x++
+  
+}
+</code></pre> 
+      </section>
+
+      <!--  -->
+      <section>
+        <h3>Decrementing a <code>while</code> Loop</h3>
+        <p>Remember: Update the condition and the counter</p>
+<pre><code class="js">let y = 10
+
+while (y >= 0){
+
+  console.log(y);
+  
+  y--;
+}
+</code></pre> 
+      </section>
+
+      <!--  -->
+      <section>
+        <h3>Practice</h3>
+        <p>Evaluate the <code>while </code>loop below; <br> what will it print?</p>
+<pre><code class="js">let countName = 1;
+
+while(countName <= 50){
+  
+  document.write('Petra<br>');
+  
+  countName++;
+
+}
+</code></pre>
+      </section>
+
+      <!--  -->
+      <section>
+        <h3><code>for</code> or <code>while</code></h3>
+        <p>Both loops do the same thing; <br>but if deciding between the two: </p>
+        <ul>
+          <li>Use a <code>for</code> loop if you know how many times the loop should run</li>
+          <li>Use a <code>while</code> loop if you want the loop to run based on a condition rather than a set number of times</li>
+        </ul>
+        <small><a href="https://support.khanacademy.org/hc/en-us/articles/203327020-When-do-I-use-a-for-loop-and-when-do-I-use-a-while-loop-in-the-JavaScript-challenges" target="_blank">When do I use a for loop and when do I use a while loop?</a> (Khan Academy)</small>
+        <small><a href="https://levelup.gitconnected.com/the-difference-between-for-loops-and-while-loops-in-javascript-6029f45faeba" target="_blank">The Difference Between For Loops and While Loops in JavaScript</a> (GitConnected.com)</small>
+      </section>
+
+      <!--  -->
+      <section>
+        <h3>Loops Galore!</h3>
+        <p>With ES6, there are still a few more ways to iterate<br> in JavaScript; they'll be covered in the ES6 cohort.</p>
+      </section>
+
+<!-- <pre><code class="js"></code></pre>    -->
+<!-- <pre><code class="js"></code></pre>    -->
+
+      <!-- Home Practice -->
+      <section>
+        <h3>Home Practice</h3>
+        <ul>
+          <li><a href="https://replit.com/@tinuola/class05apractice#index.html" target="_blank">REPL Sandbox: Functions and Loops</a></li>
+          <li><a href="https://replit.com/@tinuola/class05bpractice#index.html" target="_blank">REPL Sandbox: Display Boxes</a></li>
+        </ul>
+      </section>
+
+      <!-- Next Class -->
+      <section>
+        <h3>Class 6 - Agenda</h3>
+        <ul>
+          <li>Review - Class 5 Practice</li>
+          <li>Array & Array Methods</li>
+        </ul>
+      </section>
+
+      <!-- MUST USE SLIDE - Course Feedback Survey-->
+      <section>
+        <h3>Class Feedback</h3>
+        <p><a href="https://forms.gle/rsV7GvrwSMbTCKmu7" target="_blank">https://forms.gle/rsV7GvrwSMbTCKmu7</a></p>
+      </section>
+
+      <!-- Q&A -->
+      <section>
+        <h2>Q&A</h2>
+      </section>
+
+      <!-- Thank You -->
+      <section>
+        <img src="./assets/images/gdi-logos/GDI-Logo_Peach.png" alt="GDI Logo" width="300px" class="noborder" />
+        <br>
+        <h2>Thank You!</h2>
+      </section>
+    </div> <!-- End of Slides container -->
+
+    <footer>
+      <!-- Update with Course Name -->
+      <div class="copyright">
+        <img src="./assets/images/gdi-logos/GDI-Logo_Peach.png" alt="GDI Logo" width="40px" class="noborder" />
+        <p>JavaScript Fundamentals 1 - Class 5</p>
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img
+            alt="Creative Commons License" style="border-width:0"
+            src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+      </div>
+    </footer>
+  </div> <!-- End of Reveal wrapper -->
+
+  <!-- REVEAL.JS Script Files - Do Not Edit -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/plugin/highlight/highlight.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/highlightjs-badge@0.1.9/highlightjs-badge.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jsPlumb/2.15.5/js/jsplumb.min.js"></script>
+  <script>
+    const srcUrlPrefix = "https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/";
+    Reveal.initialize({
+      hash: true,
+      center: true,
+      slideNumber: true,
+      showNotes: false,
+      margin: 0.1,
+      preloadIframes: true,
+      plugins: [RevealHighlight],
+      pdfSeparateFragments: true
+    });
+
+    // add HighlightJS-badge (options are optional)
+    var options = {
+      copyIconContent: "📄",
+      checkIconContent: "✅"
+    };
+    window.highlightJsBadge(options);
+
+    if (window.location.search == "?print-pdf") {
+      var uncounted = document.querySelectorAll("[data-visibility='uncounted']");
+      uncounted.forEach(node => {
+        node.parentNode.classList.add("no-print")
+      })
+    }
+  </script>
+</body>
+</html>

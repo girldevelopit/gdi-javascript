@@ -1,0 +1,789 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Girl Develop It JavaScript Fundamentals 1 Cohort Series">
+    <meta name="author" content="Girl Develop It">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  
+    <!-- Update with GDI Course Name -->
+    <title>GDI - JavaScript Fundamentals 1 (On Demand), Class 3</title>
+  
+    <link rel="icon" type="image/x-icon" href="../shared-assets/imgs/favicon.ico" />
+  
+    <!-- RevealJS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/theme/simple.css" id="theme">
+  
+    <!-- GDI Custom Theme - Do not delete -->
+    <link
+    rel="stylesheet"
+    href="../shared-assets/css/gdi-theme.css" />
+  
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/monokai.min.css">
+  
+    <!-- Course Custom Styles if Applicable-->
+    <link
+    rel="stylesheet"
+    href="./css/style.css" />
+  </head>
+
+<body>
+  <div class="reveal">
+    <!-- Start of Slides container -- Any section element in this container is displayed as a slide -->
+    <div class="slides">
+
+      <!-- Course and Class Titles -->
+      <section>
+        <h2>JavaScript Fundamentals 1</h2>
+        <h3>(On Demand)</h3>
+        <h3>Class 3</h3>
+      </section>
+
+      <!-- Class Agenda -->
+      <section>
+        <h3>AGENDA</h3>
+          <ul>
+            <li>Data Types:</li>
+            <ul>
+              <li>Numbers and Booleans</li>
+              <li>Null and Undefined</li>
+            </ul>
+            <li>Operators:</li>
+            <ul>
+              <li>Math Operators</li>
+              <li>Compound Assignment Operators</li>
+              <li>Comparison Operators</li>
+              <li>Logical Operators</li>
+            </ul>
+          </ul>
+      </section>
+
+      <!-- Data Type: Numbers -->
+      <section>
+        <h3>Numbers</h3>
+        <p>Integers and decimals make up the number data type</p>
+<pre><code class="js">let age = 35
+
+let taxRate = 27.5
+</code></pre>
+      </section>
+
+      <!-- Math Operators -->
+      <section>
+        <h3>Math Operators</h3>
+        <p>We can use standard math operators with the number type</p>
+<pre><code class="js">let sum = 35 + 20 // Addition
+
+let difference = 200 - 130 // Subtraction
+
+let product = 10 * 50 // Multiplication
+
+let square = 3 ** 3 // Exponentials
+
+let dividend = 18 / 3 // Division
+
+let remainder = 18 % 4 // Modulo
+
+/* Modulo is a special operator that returns
+the remainder of a division */ 
+</code></pre>
+        <small>Note: Calculations in JavaScript follow the <a href="https://www.mathsisfun.com/operation-order-pemdas.html" target="_blank">PEMDAS</a> rule.</small>
+      </section>
+
+      <!-- PEMDAS -->
+      <section>
+        <h3>Math Operators & PEMDAS</h3>
+        <p class="width-600 mb-32">Calculations in JavaScript follow the <a href="https://www.mathsisfun.com/operation-order-pemdas.html" target="_blank">PEMDAS</a> or Order of Operations rule.</p>
+
+        <p class="width-600 mb-32">Quick practice: First, calculate the math expression below without using the console. Then confirm the result in the console.</p>
+<pre><code class="js">let total = 4 * (2 + 9) - 3
+</code></pre>
+      </section>
+
+      <!-- Math Operators and Variables -->
+      <section>
+        <h3>Math Operators: Variables</h3>
+        <p>We can also perform math using number variables</p>
+<pre><code class="js">let currentYear = 2022
+
+let birthYear = 1993
+
+let age = currentYear - birthYear
+
+console.log(age)
+</code></pre>
+      </section>
+
+      <!-- Incrementing -->
+      <section>
+        <h3>Math Operators: Incrementing</h3>
+        <p>The increment operator <code>++</code> adds one to a value</p>
+<pre><code class="js">let age = 2
+
+age++;
+
+console.log(age) // This should be 3
+
+let newAge = ++age;
+
+console.log(newAge) // This should be 4
+</code></pre>
+        <small><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Increment" target="_blank">Increment (MDN)</a></small><br>
+        <small><a href="https://codeburst.io/javascript-increment-and-decrement-8c223858d5ed" target="_blank">JavaScript Increment and Decrement (Codeburst.io)</a></small>
+      </section>
+
+      <!-- Decrementing -->
+      <section>
+        <h3>Math Operators: Decrementing</h3>
+        <p>The decrement operator <code>--</code> subtracts one from a value</p>
+<pre><code class="js">let year = 1992
+
+year--;
+
+console.log(year) // This should be 3
+
+let oldYear = --year;
+
+console.log(oldYear) // This should be 4
+</code></pre>
+        <small><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Increment" target="_blank">Increment (MDN)</a></small><br>
+        <small><a href="https://codeburst.io/javascript-increment-and-decrement-8c223858d5ed" target="_blank">JavaScript Increment and Decrement (Codeburst.io)</a></small>
+      </section>
+
+      <!-- Compound Assignments -->
+      <section>
+        <h3>Math Operators: Compound Assignments</h3>
+        <ul>
+          <li>Compound assignment operators combine an assignment and a math operator</li>
+          <li>They take the value to the right of the assignment operator and apply it to the variable</li>
+        </ul>
+<pre><code class="js">let tip = 15
+
+console.log( tip += 20 ) // 35
+
+// This is the same as:
+// let tip = 15
+// tip = tip + 20
+</code></pre>
+      </section>
+
+      <section>
+        <h3>Math Operators: Compound Assignments</h3>
+        <p>The main math operators can be turned into compound operators</p>
+<pre><code class="js">let tip = 15
+
+console.log( tip += 20 ) // 35
+
+console.log( tip -= 10 ) // 25
+
+console.log( tip *= 4 ) // 100
+
+console.log( tip /= 8 ) // 12.5
+</code></pre>
+      </section>
+
+      <!-- Strings and Compound Operators -->
+      <section>
+        <h3>Strings and Compound Operators</h3>
+        <ul>
+          <li>Strings can be combined using the <code>+=</code> operator</li>
+          <li class="highlight--yellow">Using other operators with strings will return <code>NaN</code></li>
+        </ul>
+<pre><code class="js">let greeting = "hello"
+
+greeting += " world"
+
+console.log(greeting) // hello world
+
+greeting -= " world"
+
+console.log(greeting) // NaN
+</code></pre>
+      </section>
+
+      <!-- NaN -->
+      <section>
+        <h3><code>NaN</code></h3>
+        <p class="mb-16"><code>NaN</code> stands for <span class="highlight--yellow">Not-A-Number</span>, which is an actual number value!</p>
+        <p>Typically encountered when an operation or calculation has failed</p>
+        <small><a href="https://www.javascripttutorial.net/javascript-nan/" target="_blank">An Essential Guide to JavaScript NaN</a> (javascripttutorial.net)</small>
+      </section>
+
+      <!-- Combining Strings and Numbers -->
+      <section>
+        <h3>Combining Strings and Numbers</h3>
+        <ul>
+          <li>Strings and numbers can be combined with <code>+</code> operator</li>
+        </ul>
+<pre><code class="js">console.log( 7 + " oranges" ) // 7 oranges
+
+let myAge = "I am "
+
+console.log(myAge += 8) // I am 8
+</code></pre>
+        <ul>
+          <li>This is not recommended; turn the number into a string data type instead</li>
+        </ul>
+      </section>
+
+      <!-- Writing Numbers into Strings -->
+      <section>
+        <h3>Writing Numbers as Strings</h3>
+        <ul>
+          <li>Numbers can be written as strings by adding quote marks</li>
+          <li>But calculations done this way are unreliable and can introduce bugs</li>
+        </ul>
+<pre><code class="js">let num1 = '5' // Number as a String
+
+console.log (num1 + 5) // 55
+
+console.log (num1 * 5) // 25
+
+console.log (num1 - 5) // 0
+
+</code></pre>
+      </section>
+
+      <!-- Number Method -->
+      <section>Converting Numbers to Strings</section>
+
+      <!--Checking Data Types -->
+      <section>
+        <h3>Checking Data Types</h3>
+      </section>
+      
+      <!-- typeof -->
+      <section>
+        <h3>typeof Operator</h3>
+        <p>To make sure we're working with the correct data types, use the <code>typeof</code> operator for verification; this can prevent bugs</p>
+<pre><code class="js">let animal = 'dog'
+console.log(typeof animal) // string
+
+console.log(typeof 7) // number
+console.log(typeof '7') // string
+
+console.log(true) // boolean
+</code></pre>
+        <small><a href="https://www.freecodecamp.org/news/javascript-data-types-typeof-explained/" target="_blank">JavaScript Data Types: Typeof Explained (FreeCodeCamp)</a></small>
+      </section>
+
+      <!-- Class 4 -->
+      <!-- Data Type: Booleans -->
+      <section>
+        <h3>Boolean</h3>
+        <p>The boolean data type has two values <code>true</code> and <code>false</code></p>
+<pre><code class="js">let catsAreTheBest = true;
+
+let dogsAdoreCats = false;
+</code></pre>      
+      </section>
+
+      <section>
+        <h3>Default Boolean Values</h3>
+        <p>All variables in JavaScript have a default Boolean value:</p>
+        <p>They're either <code>"truthy"</code> or <code>"falsy"</code></p>
+      </section>
+
+      <!--  -->
+      <section>
+        <h3>Truthy and Falsy Boolean Values</h3>
+        <div class="flex" style="justify-content:space-around">
+          <ul><code>Truthy</code>
+            <li>true</li>
+            <li>4</li>
+            <li>'hello'</li>
+            <li>'0'</li>
+            <li>[]</li>
+            <li>{}</li>
+          </ul>
+          <ul><code>Falsy</code>
+            <li>false</li>
+            <li>0</li>
+            <li>-0</li>
+            <li>' '</li>
+            <li>null</li>
+            <li>undefined</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Boolean Function -->
+      <section>
+        <h3>Boolean Function</h3>
+        <p>We can use the Boolean function to determine <br>if a value is truthy or falsy</p>
+<pre><code class="js">Boolean('Jackie') // true
+
+Boolean (-0) // false
+
+Boolean (5 < 3) // false
+
+Boolean (undefined) // false
+</code></pre>
+      </section>
+
+        <!-- Comparison Operators -->
+        <section>
+          <h3>Comparison Operators</h3>
+          <p>Comparison operators compare two values <br>and return a boolean (<code>true</code> or <code>false</code>)</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Operator</th>
+                <th>Name</th>
+              </tr>
+            </thead>
+            <tbody style="font-size: 20px">
+              <tr>
+                <td><code>a === b</code></td>
+                <td>Identical</td>
+              </tr>
+
+              <tr>
+                <td><code>a !== b</code></td>
+                <td>Not identical</td>
+              </tr>
+
+              <tr>
+                <td><code>a &lt; b</code></td>
+                <td>Less than</td>
+              </tr>
+
+              <tr>
+                <td><code>a &gt; b</code></td>
+                <td>Greater than</td>
+              </tr>
+
+              <tr>
+                <td><code>a &lt;= b</code></td>
+                <td>Less than or equal to</td>
+              </tr>
+
+              <tr>
+                <td><code>a &gt;= b</code></td>
+                <td>Greater than or equal to</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+      <!-- Comparison Operators -->
+      <section>
+        <h3>Comparison Operators</h3>
+        <ul>
+          <li><code>></code> greater than </li>
+          <li><code><</code> less than </li>
+          <li><code>>=</code> greater than or equal to</li>
+          <li><code><=</code> less than or equal to</li>
+        </ul>
+<pre><code class="js">console.log( 19 > 20 ) // false
+
+console.log( 5 >= 5 ) // true
+
+console.log( 0 < 2 ) // true
+
+console.log( 6 <= 8 ) // true
+</code></pre>
+        <small><a href="https://www.w3schools.com/js/js_comparisons.asp" target="_blank">JavaScript Comparison and Logical Operators</a> (W3Schools)</small>
+      </section>
+
+      <!-- Equality Operators -->
+      <section>
+        <h3>Equality Operators</h3>
+        <p>Equality operators test if two values are the same. The equality operators look very similar but work differently.</p>
+      </section>
+
+      <!-- Double Equals -->
+      <section>
+        <h3>Loose Equality</h3>
+        <p>Double equals <code>'=='</code> or 'loose equality' <br>evaluates if values are the same</p>
+<pre><code class="js">console.log( 5 == '5' ) // true
+</code></pre>
+        <small><a href="https://codeburst.io/javascript-double-equals-vs-triple-equals-61d4ce5a121a" target="_blank">JavaScript — Double Equals vs. Triple Equals</a> (Codeburst)</small>
+      </section>
+
+      <!-- Triple Equals -->
+      <section>
+        <h3>Strict Equality</h3>
+        <p>Triple equals <code>'==='</code> or 'strict equality' <br>evaluates value AND type</p>
+<pre><code class="js">console.log( 5 === '5' ) // false
+
+// 5 as a number is not the same as 5 as a string value
+</code></pre>
+        <p>To prevent bugs, use strict equality over loose equality</p>
+        <small><a href="https://codeburst.io/javascript-double-equals-vs-triple-equals-61d4ce5a121a" target="_blank">JavaScript — Double Equals vs. Triple Equals</a> (Codeburst)</small>
+      </section>
+
+      <!-- Loose inequality -->
+      <section>
+        <h3>Inequality</h3>
+        <p>Both equality operators have their negation counterparts:</p>
+        <ul>
+          <li>Loose inequality</li>
+        </ul>
+<pre><code class="js">console.log( 5 != '5' ) // false
+</code></pre>
+        <ul>
+          <li>Strict inequality</li>
+        </ul>
+<pre><code class="js">console.log( 5 !== '5' ) // true
+</code></pre>
+      </section>
+
+      <!-- Basic conditional -->
+      <section>
+        <h3>Conditionals</h3>
+        <p>Conditional statements control the behavior of our application. They determine the conditions under which code should run, or in what way it should be executed.</p>
+      </section>
+
+      <!-- If  -->
+      <section>
+        <h3><code>if</code> Statement</h3>
+        <p>If a condition meets a criteria, then run the code</p>
+<pre><code class="markdown">if(condition is true){
+
+  then do something...
+}
+</code></pre>
+
+<pre><code class="js">let catsSay = 'meow';
+
+if(catsSay === 'meow'){
+
+  console.log(`I'm a cat and I love to sleep all day`)
+}
+</code></pre>
+      </section>
+
+      <!--  -->
+      <section>
+        <h3>Practice</h3>
+        <ul>
+          <li>Create a variable called "temperature" and assign a number value to it</li>
+          <li>Write an <code>if</code> statement that tells you to put on a coat if the temperature is below 50 degrees.</li>
+        </ul>
+<pre><code class="markdown">if(condition is true){
+
+  then do something...
+}
+</code></pre>
+      </section>
+
+      <!-- If else -->
+      <section>
+        <h3><code>if-else</code> Statement</h3>
+        <p><code>if-else</code> extends the <code>if</code> statement by taking into account what should happen if the original condition is NOT met</p>
+<pre><code class="markdown">if(condition is true){
+  then do a...
+} else {
+  do b...
+}
+</code></pre>
+
+<pre><code class="js">let catsSay = 'meow';
+
+if(catsSay === 'meow'){
+
+  console.log(`I'm a cat and I love to sleep all day`)
+
+} else {
+  
+  console.log(`I must be a dog then.... Woof!`)
+
+}
+</code></pre>
+      </section>
+
+      <section>
+        <h3>Practice</h3>
+        <ul>
+          <li>Extend the <code>if</code> statement you practiced</li>
+          <li>Add an <code>else</code> block that says it's okay to skip wearing a coat if the temperature is not below 50 degrees</li>
+        </ul>
+<pre><code class="markdown">if(condition is true){
+  do a...
+} else {
+  do b...
+}
+</code></pre>
+      </section>
+
+      <!-- Ternary Operator -->
+      <section>
+        <h3>Ternary Operator</h3>
+        <p>With ES6, we have a new, shorter way to write <br>conditionals with the <code>ternary operator</code> statement</p>
+<pre><code class="markdown">// ternary statement synax:
+
+condition we're evaluating ? what to do if true : what to do if false
+</code></pre>
+
+<pre><code class="js">let catsSay = 'meow';
+
+let catResponse = `I'm a cat and I love to sleep all day`
+
+let dogResponse = `I must be a dog then.... Woof!`
+
+catsSay === 'meow' ? console.log(catResponse) : console.log(dogResponse)
+</code></pre>
+        <small><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator" target="_blank">Conditional (ternary) operator</a> (MDN)</small>
+      </section>
+
+      <!--  -->
+      <section>
+        <h3>Practice</h3>
+        <p>Rewrite your temperature <code>if-else</code> statement<br> as a ternary statement</p>
+<pre><code class="markdown">// ternary statement synax:
+
+condition we're evaluating ? what to do if true : what to do if false
+</code></pre>
+      </section>
+
+      <!-- if - else if- else -->
+      <section>
+        <h3><code>if-elseif-else</code>:<br> Conditional Chains</h3>
+        <p>We can create conditional chains to <br>evaluate more than two conditions</p>
+<pre><code class="markdown">if ( condition1 is true ) {
+
+  do a...
+
+} else if ( a different condition is true ) {
+
+  do b...
+
+} else if ( another condition is true ) {
+
+  do c...
+
+} 
+
+...
+
+} else {
+
+  None of the above conditions is true? Then do z...
+  and let's end this chain!
+
+}
+</code></pre>
+      </section>
+
+      <!--  -->
+      <section>
+        <h3>Chaining Conditionals</h3>
+<pre><code class="js">let today = 'thursday';
+
+if( today === 'monday' ){
+
+  console.log( 'Here we go again....' )
+
+} else if( today === 'tuesday' ){
+
+  console.log( 'Are we done yet?' )
+
+} else if( today === 'wednesday' ){
+  
+  console.log( 'Getting a bit excited...' )
+
+} else {
+
+  console.log( 'Weekend is almost here!' )
+
+}
+</code></pre>
+      </section>
+
+      <!--  -->
+      <section>
+        <h3>Logical Operators</h3>
+        <p>Logical operators check the logic between values or <br>conditions. There are three operators:</p>
+        <ul>
+          <li>AND <code>&&</code></li>
+          <li>OR <code>||</code></li>
+          <li>NOT <code>!</code></li>
+        </ul>
+        <p><a href="https://www.programiz.com/javascript/comparison-logical" target="_target">JavaScript Comparison and Logical Operators</a> (Programiz)</p>
+      </section>
+
+      <!--  -->
+      <section>
+        <h3><code>&& : </code>The AND Operator</h3>
+        <p>The AND operator returns <code>true</code> if two conditions being evaluated are both true; otherwise it returns <code>false</code></p>
+<pre><code class="js">let sandyAge = 7
+
+let jamalAge = 5
+
+console.log( sandyAge > 4 && jamalAge < 9 ) // true
+
+console.log( sandyAge > 4 && jamalAge > 9 ) // false
+</code></pre>
+      </section>
+
+      <!--  -->
+      <section>
+        <h3><code>|| : </code>The OR Operator</h3>
+        <p>The OR operator returns <code>true</code> if one condition is true;<br> it returns <code>false</code> when both are false</p>
+<pre><code class="js">let sandyAge = 7
+
+let jamalAge = 5
+
+console.log( sandyAge > 4 || jamalAge > 9 ) // true
+
+console.log( sandyAge < 4 || jamalAge < 9 ) // false
+</code></pre>
+      </section>
+
+      <!--  -->
+      <section>
+        <h3><code>! : </code>The NOT Operator</h3>
+        <p>The NOT operator returns the opposite condition of what's evaluated. If a value is <code>true</code>, the operator will return <code>false</code> and vice versa</p>
+<pre><code class="js">let sandyAge = 7
+
+let jamalAge = 5
+
+console.log( !sandyAge ) // false
+
+console.log( !jamalAge > 3 ) // false
+
+!(true) // false
+
+!(false) // true
+</code></pre>
+      </section>
+
+      <!--  -->
+      <section>
+        <h3>Practice</h3>
+        <p>Let's add a slight update to the days-of-the-week<br> conditional chain</p>
+        <ul>
+          <li>In the second <code>else if</code> block, we want to 'get a bit excited' if it's Wednesday <code>OR</code> Thursday</li>
+        </ul>
+<pre><code class="js">let today = 'thursday';
+
+if( today === 'monday' ){
+  console.log( 'Here we go again....' )
+} else if( today === 'tuesday' ){
+  console.log( 'Are we done yet?' )
+} else if( today === 'wednesday' ){
+  console.log( 'Getting a bit excited...' )
+} else {
+  console.log( 'Weekend is heeereee!' )
+}
+</code></pre>
+      </section>
+
+      <section>
+        <h3>Practice</h3>
+        <p>Step 2:</p>
+        <ul>
+          <li>Declare a new variable <code>sunnyDay</code> at the top of the code block, set the value to <code>true</code></li>
+        </ul>
+<pre><code class="js">let today = 'thursday';
+
+if( today === 'monday' ){
+  console.log( 'Here we go again....' )
+} else if( today === 'tuesday' ){
+  console.log( 'Are we done yet?' )
+} else if( today === 'wednesday' ){
+  console.log( 'Getting a bit excited...' )
+} else {
+  console.log( 'Weekend is heeereee!' )
+}
+</code></pre>
+      </section>
+
+      <section>
+        <h3>Practice</h3>
+        <p>Step 3:</p>
+        <ul>
+          <li>Add a new <code>else if</code> block before the closing <code>else</code>; if it is Friday <code>AND</code> a sunny day, then print "I hope it stays sunny this weekend!"</li> 
+        </ul>
+<pre><code class="js">let today = 'thursday';
+
+if( today === 'monday' ){
+  console.log( 'Here we go again....' )
+} else if( today === 'tuesday' ){
+  console.log( 'Are we done yet?' )
+} else if( today === 'wednesday' ){
+  console.log( 'Getting a bit excited...' )
+} else {
+  console.log( 'Weekend is heeereee!' )
+}
+</code></pre>
+      </section>
+
+      <section>
+        <h3>DOM Practice</h3>
+        <h4>Temperature Converter</h4>
+      </section>
+<!-- <pre><code class="js"></code></pre>    -->
+<!-- <pre><code class="js"></code></pre>    -->
+
+      <!-- Home Practice -->
+      <section>
+        <h3>Home Practice</h3>
+        <ul>
+          <li><a href="https://replit.com/@tinuola/class03apractice" target="_blank">REPL Sandbox: Booleans & Conditionals </a></li>
+          <li><a href="https://replit.com/@tinuola/class03bpractice" target="_blank">REPL Sandbox: Taco Truck App V3</a> </li>
+          <li><a href="https://replit.com/@tinuola/class03dpractice#index.html" target="_blank">REPL Sandbox: Simple Temperature Converter V1</a>
+            <ul>
+              <li>Review and see if you can start to understand how <br>JavaScript is interacting with HTML & CSS</li>
+            </ul>
+          </li>
+          <li><a href="https://replit.com/@tinuola/class03cpractice#index.html" target="_blank">REPL Sandbox: Temperature Converter V2</a>
+            <ul>
+              <li>Fully coded (and pseudo-coded) demo to use <br>as a model or guide for the Taco Truck App V3</li>
+            </ul>
+        </li>
+        </ul>
+      </section>
+
+      <!-- Next Class -->
+      <section>
+        <h3>See you in Class 4!</h3>
+        <h4>👋 👋 👋 👋</h4>
+      </section>
+
+      <!-- MUST USE SLIDE - Course Feedback Survey-->
+      <!-- <section>
+        <h3>Class Feedback</h3>
+      </section> -->
+
+      <!-- Q&A -->
+      <!-- <section>
+        <h2>Q&A</h2>
+      </section> -->
+
+      <!-- Thank You -->
+      <section>
+        <img src="../shared-assets/imgs/gdi-logos/gdi-circle-logo_peach.png" alt="GDI Logo" width="300px" class="noborder" />
+        <br>
+        <h2>Thank You!</h2>
+      </section>
+    </div> <!-- End of Slides container -->
+
+    <footer>
+      <!-- Update with Course Name -->
+      <div class="copyright">
+        <img src="../shared-assets/imgs/gdi-logos/gdi-circle-logo_peach.png" alt="GDI Logo" width="40px" class="noborder" />
+        <p>JavaScript Fundamentals 1 (On Demand) - Class 3</p>
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img
+            alt="Creative Commons License" style="border-width:0"
+            src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+      </div>
+    </footer>
+  </div>
+  <!-- End of Reveal wrapper -->
+  <!---->
+  <!---->
+  <!-- RevealJS Scripts & Config - Do Not Edit or Delete -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/plugin/highlight/highlight.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/highlightjs-badge@0.1.9/highlightjs-badge.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jsPlumb/2.15.5/js/jsplumb.min.js"></script>
+  <script src="../shared-assets/js/revealConfig.js"></script>
+</body>
+</html>

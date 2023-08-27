@@ -9,27 +9,28 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
   <!-- Update with GDI Course Name -->
-  <title>GDI - JavaScript Fundamentals 1, Class 2</title>
+  <title>GDI - JavaScript Fundamentals 1 (On Demand), Class 2</title>
 
-  <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico" />
+  <link rel="icon" type="image/x-icon" href="../shared-assets/imgs/favicon.ico" />
 
   <!-- RevealJS CDN -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reset.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reveal.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/theme/simple.css" id="theme">
 
-  <!-- GDI Custom Theme -->
-  <link rel="stylesheet" href="./assets/css/gdi-theme.css">
+  <!-- GDI Custom Theme - Do not delete -->
+  <link
+  rel="stylesheet"
+  href="../shared-assets/css/gdi-theme.css" />
 
   <!-- Theme used for syntax highlighted code -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/monokai.min.css">
-  <style>
-    p.gdi-p {
-      font-size: 32px;
-      line-height: 1.5;
-    }
-  </style>
+  <!-- Course Custom Styles if Applicable-->
+  <link
+  rel="stylesheet"
+  href="./css/style.css" />
 </head>
+
 <body>
   <div class="reveal">
     <!-- Start of Slides container -- Any section element in this container is displayed as a slide -->
@@ -38,225 +39,137 @@
       <!-- Course and Class Titles -->
       <section>
         <h2>JavaScript Fundamentals 1</h2>
-        <h2>Class 2</h3>
+        <h3>(On Demand)</h3>
+        <h3>Class 2</h3>
       </section>
 
       <!-- Class Agenda -->
       <section>
         <h3>AGENDA</h3>
           <ul>
-            <li>Review - Class 1 Practice</li>
-            <li>Data Types: Number</li>
+            <li>Data Type: Strings</li>
+            <li>Working with Strings</li>
             <li>String Methods</li>
-            <li>Feedback & Class 3 Preview</li>
           </ul>
       </section>
-      
-      <!-- Stretch Break -->
+
+      <!-- Data Type: Strings -->
       <section>
-        <h3>Stretch - "Bio" Break</h3>
-        <p>5:00p PST /  7:00p CST / 8:00p EST</p>
+        <h3>Strings</h3>
+        <p class="fs-32">A string is any sequence of alphanumeric characters, spacing and symbols</p>
+      <pre><code class="js">let randomLetters = "helll...  ///o@33!%%l"
+      </code></pre>
       </section>
 
+      <!-- Strings and quotes -->
       <section>
-        <h3>Review:<br> Class 1 Practice Exercises</h3>
-      </section>
-
-      <!-- Data Type: Numbers -->
-      <section>
-        <h3>Numbers</h3>
-        <p>Integers and decimals make up the number data type</p>
-<pre><code class="js">let age = 35
-
-let taxRate = 27.5
-</code></pre>
-      </section>
-
-      <section>
-        <h3>Math Operators</h3>
-        <p>We can use standard math operators with the number type</p>
-<pre><code class="js">let sum = 35 + 20 // Addition
-
-let difference = 200 - 130 // Subtraction
-
-let product = 10 * 50 // Multiplication
-
-let average = 18 / 4 // Division
-
-let remainder = 18 % 3 // Modulo
-
-/* Modulo is a special operator that returns
-the remainder of a division */ 
-</code></pre>
-        <small>Note: Calculations in JavaScript follow the <a href="https://www.mathsisfun.com/operation-order-pemdas.html" target="_blank">PEMDAS</a> rule.</small>
-      </section>
-
-      <section>
-        <h3>Math Operators: Variables</h3>
-        <p>We can also perform math using number variables</p>
-<pre><code class="js">let currentYear = 2022
-
-let birthYear = 1993
-
-let age = currentYear - birthYear
-
-console.log(age)
-</code></pre>
-      </section>
-
-      <section>
-        <h3>Math Operators: Incrementing</h3>
-        <p>The increment operator <code>++</code> adds one to a value</p>
-<pre><code class="js">let age = 2
-
-age++;
-
-console.log(age) // This should be 3
-
-let newAge = ++age;
-
-console.log(newAge) // This should be 4
-</code></pre>
-        <small><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Increment" target="_blank">Increment (MDN)</a></small><br>
-        <small><a href="https://codeburst.io/javascript-increment-and-decrement-8c223858d5ed" target="_blank">JavaScript Increment and Decrement (Codeburst.io)</a></small>
-      </section>
-
-      <section>
-        <h3>Math Operators: Decrementing</h3>
-        <p>The decrement operator <code>--</code> subtracts one from a value</p>
-<pre><code class="js">let year = 1992
-
-year--;
-
-console.log(year) // This should be 3
-
-let oldYear = --year;
-
-console.log(oldYear) // This should be 4
-</code></pre>
-        <small><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Increment" target="_blank">Increment (MDN)</a></small><br>
-        <small><a href="https://codeburst.io/javascript-increment-and-decrement-8c223858d5ed" target="_blank">JavaScript Increment and Decrement (Codeburst.io)</a></small>
-      </section>
-
-      <section>
-        <h3>Practice</h3>
-        <p>Temperature Converter</p>
-        <ul>
-          <li>Store a temperature (celsius) into a variable</li>
-          <li>Convert the temperature into fahrenheit:
-            <ul>
-              <li>Multiply by 9</li>
-              <li>Divide by 5</li>
-              <li>Add 32</li>
-            </ul>
-          </li>
-          <li>Store the conversion into a new variable</li>
-          <li>Print the new variable</li>
+        <h3>Strings</h3>
+        <ul class="fs-28">
+          <li>Strings are characterized by opening and closing single or double quote marks</li>
+          <li>Opening and closing marks must be of the same type</li>
         </ul>
+<pre><code class="js">let randomLetters = "helll...  ///o@33!%%l"
+
+let greeting = 'Hello World'
+      </code></pre>
+      </section>
+
+      <!-- Escaping strings -->
+      <section>
+        <h3>Escaping Strings</h3>
+        <p class="width-750">If our string variables contain quotes or the backslash character, we will need to <code>"escape"</code> them</p>
+<pre><code class="js">let sentence = "I waved to them: "Hello""
+
+let sentence2 = 'What's your name?'
+
+let sentence3 = 'I want to insert a backslash \ here.'
+</code></pre>
       </section>
 
       <section>
-        <h3>Math Operators: Compound Assignments</h3>
+        <h3>Escaping Strings</h3>
+        <p>The Fix: Adding the backslash escape character</p>
+<pre><code class="js">let sentence = "I waved to them: \"Hello\""
+
+let sentence2 = 'What\'s your name?'
+
+let sentence3 = 'I want to insert a backslash \\ here.'
+</code></pre>
+      </section>
+
+      <!-- Concatenation -->
+      <section>
+        <h3>String Concatenation</h3>
+        <p>Strings can be combined using the <code>+</code> operator</p>
+<pre><code class="js">let fullName = "John" + "Wick"
+
+console.log(fullName)
+</code></pre>
+        <p class="highlight--yellow">Note: Empty or negative space is also considered a string</p>
+      </section>
+
+      <section>
+        <h3>String Concatenation</h3>
+        <p>String variables can also be combined or concatenated</p>
+<pre><code class="js">let firstName = "John"
+
+let lastName = "Wick"
+
+console.log(firstName + lastName)
+
+//or
+
+let fullName = firstName + lastName;
+
+console.log(fullName)
+</code></pre>
+      </section>
+
+      <!-- Interpolation -->
+      <section>
+        <h3>String Interpolation</h3>
         <ul>
-          <li>Compound assignment operators combine an assignment and a math operator</li>
-          <li>They take the value to the right of the assignment operator and apply it to the variable</li>
-        </ul>
-<pre><code class="js">let tip = 15
-
-console.log( tip += 20 ) // 35
-</code></pre>
+          <li>A newer or ES6 way to combine strings is with <code class="highlight--yellow">template literals</code></li>
+          <li>JavaScript expressions can be embedded into a string statement</li>
+        </ul>     
       </section>
 
       <section>
-        <h3>Math Operators: Compound Assignments</h3>
-        <p>The main math operators can be turned into compound operators</p>
-<pre><code class="js">let tip = 15
-
-console.log( tip += 20 ) // 35
-
-console.log( tip -= 10 ) // 25
-
-console.log( tip *= 4 ) // 100
-
-console.log( tip /= 8 ) // 12.5
-</code></pre>
-      </section>
-
-      <section>
-        <h3>Strings and Compound Operators</h3>
+        <h3>String Interpolation</h3>
         <ul>
-          <li>Strings can be combined using the <code>+=</code> operator</li>
-          <li>Using other operators will return <code>NaN</code>: Not a Number</li>
+          <li>The marker for template literals is an opening and closing backtick <code class="highlight--yellow">` `</code>and an expression <code class="highlight--yellow">${someVariable}</code></li>
         </ul>
-<pre><code class="js">let greeting = "hello"
+<pre><code class="js">let firstName = 'Beverly'
 
-greeting += " world"
+let lastName = 'Williams'
 
-console.log(greeting) // hello world
+let fullName = `${firstName} ${lastName}`
 
-greeting -= " world"
-
-console.log(greeting) // NaN
-</code></pre>
+console.log(fullName)
+</code></pre>        
       </section>
 
+      <!-- Concatenation or Interpolation -->
       <section>
-        <h3>Combining Strings and Numbers</h3>
-        <ul>
-          <li>Strings and numbers can be combined with <code>+</code> operator</li>
+        <h3>Concatenate or Interpolate?</h3>
+        <p>Interpolation is more efficient.</p>
+        <!-- <ul>
+          <li>Concatenate, then Interpolate the code below to output:</li>
+          <li><code> My favorite Target store is located at 320 Wilshire Boulevard, Santa Monica, CA 90044.</code></li>
+          <li>Which is easier?</li>
         </ul>
-<pre><code class="js">console.log( 7 + " oranges" ) // 7 oranges
-
-let myAge = "I am "
-
-console.log(myAge += 8) // I am 8
-</code></pre>
-        <ul>
-          <li>This is not recommended; turn the number into a string data type instead</li>
-        </ul>
-      </section>
-
-      <section>
-        <h3>Numbers as Strings</h3>
-        <ul>
-          <li>Numbers can be written as strings by adding quote marks</li>
-          <li>But calculations done this way are unreliable and can introduce bugs</li>
-        </ul>
-<pre><code class="js">let num1 = '5' // Number as a String
-
-console.log (num1 + 5) // 55
-
-console.log (num1 * 5) // 25
-
-console.log (num1 - 5) // 0
-
-</code></pre>
-      </section>
-
-      <!--Checking Data Types -->
-      <section>
-        <h3>Checking Data Types</h3>
-      </section>
-
-      <!-- typeof -->
-      <section>
-        <h3>typeof Operator</h3>
-        <p>To make sure we're working with the correct data types, use the <code>typeof</code> operator for verification; this can prevent bugs</p>
-<pre><code class="js">let animal = 'dog'
-console.log(typeof animal) // string
-
-console.log(typeof 7) // number
-console.log(typeof '7') // string
-
-console.log(true) // boolean
-</code></pre>
-        <small><a href="https://www.freecodecamp.org/news/javascript-data-types-typeof-explained/" target="_blank">JavaScript Data Types: Typeof Explained (FreeCodeCamp)</a></small>
+<pre><code class="js">let stem = "My favorite Target store is located at"
+let street = "320 Wilshire Boulevard"
+let city = "Santa Monica"
+let state = "California"
+let zipcode = "90034"
+</code></pre> -->
       </section>
 
       <!-- Data Type Methods -->
       <section>
         <h3>Data Type Methods</h3>
-        <p>JavaScript data types have built-in or default methods that allow us to work with these data types and their values in many ways.</p>
+        <p class="fs-32 width-750">JavaScript data types have built-in or default methods that allow us to work with these data types and their values in many ways.</p>
       </section>
 
       <!-- MDN Resources -->
@@ -274,7 +187,8 @@ console.log(true) // boolean
 <pre><code class="js">let badPassword = 'mydob'
 
 console.log(badPassword.length) // 5
-</code></pre> 
+</code></pre>
+      <p class="fs-24"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length" target="_blank">String: length (MDN)</a></p>
       </section>
 
       <!-- Zero Index -->
@@ -305,16 +219,22 @@ console.log( badPassword[4] ) // 'b'
 </code></pre> 
       </section>
 
+      <!-- Search string index -->
       <section>
         <h3>string.indexOf()</h3>
         <p>We can search for characters</p>
 <pre><code class="js">let shortName = 'Mary'
+
 console.log(shortName.indexOf('a')) // 1
 // Returns index of first occurrence of 'a'
 
+
 let song = "99 bottles of wine on the wall..."
+
 console.log(song.indexOf('beer')) // -1
+// Returns -1 if a character doesn't exist
 </code></pre>
+      <p class="fs-24"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf" target="_blank">String: indexOf (MDN)</a></p>
       </section>
 
       <!-- Uppercase -->
@@ -327,9 +247,10 @@ let shouting = greeting.toUpperCase()
 
 console.log(shouting) // HELLO WORLD
 </code></pre>
+      <p class="fs-24"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase" target="_blank">String: toUpperCase (MDN)</a></p>
       </section>
 
-      <!--  -->
+      <!-- Replacing characters -->
       <section>
         <h3>string.replace()</h3>
         <p>We can replace characters</p>
@@ -337,81 +258,47 @@ console.log(shouting) // HELLO WORLD
 
 // Replace words
 statement = statement.replace('JavaScript', 'Python')
+
 console.log(statement)
+
 
 // Replace characters
 statement = statement.replace('o', '0')
+
 console.log(statement)
 </code></pre>
+      <p class="fs-24"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace" target="_blank">String: replace (MDN)</a></p>
       </section>
 
-      <!--  -->
-      <section>
-        <h3>Practice</h3>
-        <p>Using <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">MDN</a> or <a href="https://www.w3schools.com/jsref/jsref_obj_string.asp" target="_blank">w3schools</a></p>
-        <ul>
-          <li>Find the string method to replace all occurences of 'a' to the '@' symbol in the variable below</li>
-          <li>What value is returned?</li>
-        </ul>
-<pre><code class="js">let magicPhrase = 'abracadabra!'</code></pre> 
-      </section>
+      <!-- <pre><code class="js"></code></pre> -->
 
+      <!-- Practice -->
       <section>
-        <h3>Practice</h3>
-        <p>Using <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">MDN</a> or <a href="https://www.w3schools.com/jsref/jsref_obj_string.asp" target="_blank">w3schools</a></p>
+        <h3>Practice Exercises</h3>
         <ul>
-          <li>Find the string method that checks if the variable below includes the word 'dog'</li>
-          <li>What value is returned?</li>
-        </ul>
-<pre><code class="js">let woof = 'who let the dogs out?!'</code></pre> 
-      </section>
-
-      <section>
-        <h3>Practice</h3>
-        <p>Using <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">MDN</a> or <a href="https://www.w3schools.com/jsref/jsref_obj_string.asp" target="_blank">w3schools</a></p>
-        <ul>
-          <li>Find the string method that will return the 'character' found at a specified index</li>
-          <li>In the variable below, the index value we want is the 3rd position</li>
-          <li>What value is returned?</li>
-        </ul>
-<pre><code class="js">let spanish = 'Buenos Dias'</code></pre> 
-      </section>
-
-      <!-- Home Practice -->
-      <section>
-        <h3>Home Practice</h3>
-        <ul>
-          <li><a href="https://replit.com/@tinuola/class02practice" target="_blank">REPL Sandbox: Operators & Strings</a></li>
-          <li><a href="https://replit.com/@tinuola/class02bpractice" target="_blank">REPL Sandbox: Taco Truck V2</a></li>
+          <li><a href="https://replit.com/@tinuola/JS1-Class2-Practice" target="_blank">Class 2 Practice Exercises</a></li>
         </ul>
       </section>
 
       <!-- Next Class -->
       <section>
-        <h3>Class 3 - Agenda</h3>
-        <ul>
-          <li>Review - Class 2 Practice</li>
-          <li>Data Type: Booleans</li>
-          <li>Control Flow</li>
-          <li>Boolean Operators</li>
-          <li>Logical Operators</li>
-        </ul>
+        <h3>See you in Class 3!</h3>
+        <h4>👋 👋 👋</h4>
       </section>
 
       <!-- MUST USE SLIDE - Course Feedback Survey-->
-      <section>
+      <!-- <section>
         <h3>Class Feedback</h3>
-        <p><a href="https://forms.gle/rsV7GvrwSMbTCKmu7" target="_blank">https://forms.gle/rsV7GvrwSMbTCKmu7</a></p>
-      </section>
+      </section> -->
 
       <!-- Q&A -->
-      <section>
+      <!-- <section>
         <h2>Q&A</h2>
-      </section>
+      </section> -->
 
       <!-- Thank You -->
       <section>
-        <img src="./assets/images/gdi-logos/GDI-Logo_Peach.png" alt="GDI Logo" width="300px" class="noborder" />
+        <img src="../shared-assets/imgs/gdi-logos/gdi-circle-logo_peach.png" alt="GDI Logo" width="300px" class="noborder" />
         <br>
         <h2>Thank You!</h2>
       </section>
@@ -420,46 +307,22 @@ console.log(statement)
     <footer>
       <!-- Update with Course Name -->
       <div class="copyright">
-        <img src="./assets/images/gdi-logos/GDI-Logo_Peach.png" alt="GDI Logo" width="40px" class="noborder" />
-        <p>JavaScript Fundamentals 1 - Class 1</p>
+        <img src="../shared-assets/imgs/gdi-logos/gdi-circle-logo_peach.png" alt="GDI Logo" width="40px" class="noborder" />
+        <p>JavaScript Fundamentals 1 (On Demand) - Class 2</p>
         <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img
             alt="Creative Commons License" style="border-width:0"
             src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
       </div>
     </footer>
-  </div> <!-- End of Reveal wrapper -->
-
-  <!-- REVEAL.JS Script Files - Do Not Edit -->
+  </div>
+  <!-- End of Reveal wrapper -->
+  <!---->
+  <!---->
+  <!-- RevealJS Scripts & Config - Do Not Edit or Delete -->
   <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reveal.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/plugin/highlight/highlight.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/highlightjs-badge@0.1.9/highlightjs-badge.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jsPlumb/2.15.5/js/jsplumb.min.js"></script>
-  <script>
-    const srcUrlPrefix = "https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/";
-    Reveal.initialize({
-      hash: true,
-      center: true,
-      slideNumber: true,
-      showNotes: false,
-      margin: 0.1,
-      preloadIframes: true,
-      plugins: [RevealHighlight],
-      pdfSeparateFragments: true
-    });
-
-    // add HighlightJS-badge (options are optional)
-    var options = {
-      copyIconContent: "📄",
-      checkIconContent: "✅"
-    };
-    window.highlightJsBadge(options);
-
-    if (window.location.search == "?print-pdf") {
-      var uncounted = document.querySelectorAll("[data-visibility='uncounted']");
-      uncounted.forEach(node => {
-        node.parentNode.classList.add("no-print")
-      })
-    }
-  </script>
+  <script src="../shared-assets/js/revealConfig.js"></script>
 </body>
 </html>

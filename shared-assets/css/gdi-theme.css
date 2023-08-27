@@ -119,11 +119,11 @@ body {
 
 .cta {
   display: inline-block;
-  padding: 20px;
+  padding: 16px;
   border-radius: 6px;
   background-color: #01a9b4;
   text-transform: uppercase;
-  font-size: 0.6em;
+  font-size: 0.5em;
   letter-spacing: 1px;
   font-weight: bold;
 }

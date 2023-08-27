@@ -9,27 +9,29 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
   <!-- Update with GDI Course Name -->
-  <title>GDI - JavaScript Fundamentals 1, Class 1</title>
+  <title>GDI - JavaScript Fundamentals 1 (On Demand), Class 1</title>
 
-  <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico" />
+  <link rel="icon" type="image/x-icon" href="../shared-assets/imgs/favicon.ico" />
 
   <!-- RevealJS CDN -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reset.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reveal.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/theme/simple.css" id="theme">
 
-  <!-- GDI Custom Theme -->
-  <link rel="stylesheet" href="./assets/css/gdi-theme.css">
+  <!-- GDI Custom Theme - Do not delete -->
+  <link
+  rel="stylesheet"
+  href="../shared-assets/css/gdi-theme.css" />
 
   <!-- Theme used for syntax highlighted code -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/monokai.min.css">
-  <style>
-    p.gdi-p {
-      font-size: 32px;
-      line-height: 1.5;
-    }
-  </style>
+
+  <!-- Course Custom Styles if Applicable-->
+  <link
+  rel="stylesheet"
+  href="./css/style.css" />
 </head>
+
 <body>
   <div class="reveal">
     <!-- Start of Slides container -- Any section element in this container is displayed as a slide -->
@@ -38,7 +40,8 @@
       <!-- Course and Class Titles -->
       <section>
         <h2>JavaScript Fundamentals 1</h2>
-        <h2>Class 1</h3>
+        <h3>(On Demand)</h3>
+        <h3>Class 1</h3>
       </section>
 
       <!-- Class Agenda -->
@@ -47,16 +50,9 @@
           <ul>
             <li>What is JavaScript?</li>
             <li>JavaScript Environments</li>
-            <li>Values and Variables</li>
-            <li>Data Types: String</li>
-            <li>Feedback & Class 2 Preview</li>
+            <li>Script Tags and Script Files</li>
+            <li>Basic JavaScript Syntax</li>
           </ul>
-      </section>
-      
-      <!-- Stretch Break -->
-      <section>
-        <h3>Stretch - "Bio" Break</h3>
-        <p>5:00p PST /  7:00p CST / 8:00p EST</p>
       </section>
 
       <!-- What is JavaScript -->
@@ -67,7 +63,7 @@
       <!-- What is JavaScript -->
       <section>
         <h3>Language of the Web</h3>
-        <p class="gdi-p">JavaScript pairs with HTML & CSS to let us build dynamic and interactive websites with:</p>
+        <p class="fs-32 width-750 mb-16">JavaScript pairs with HTML & CSS to let us build dynamic and interactive websites with:</p>
         <ul>
           <li>Sliders</li>
           <li>Animation</li>
@@ -76,10 +72,72 @@
         </ul>
       </section>
 
+      <!-- Interactive Elements & Behavior -->
+      <section>
+        <h4>Interactive Elements & Behavior</h4>
+        <p>Carousels, sliders, dropdown navigation, etc.</p>
+        <a
+          href="https://gyazo.com/4841d6f99367b28a1d6fca4395f408a2"
+          target="_blank"
+          ><img
+            src="https://i.gyazo.com/4841d6f99367b28a1d6fca4395f408a2.gif"
+            width="600px"
+            alt="https://gyazo.com/4841d6f99367b28a1d6fca4395f408a2"
+        /></a>
+      </section>
+
+      <!-- Modals & Lightboxes -->
+      <section>
+        <h4>Modals & Lightboxes</h4>
+        <a
+          href="https://gyazo.com/01b0065c2feee682dbffe3d7bf4e5545"
+          target="_blank"
+          ><img
+            src="https://i.gyazo.com/01b0065c2feee682dbffe3d7bf4e5545.gif"
+            width="500px"
+            alt="https://gyazo.com/01b0065c2feee682dbffe3d7bf4e5545"
+        /></a>
+      </section>
+
+      <!-- Drawing and Animation -->
+      <section>
+        <h4>Drawing and Animation</h4>
+        <div class="flex-container mt-32">
+          <div class="flex-item">
+            <a
+              href="https://gyazo.com/6e183501f7ae5df7f07d37b9513ccfb9"
+              target="_blank"
+              ><img
+                src="https://i.gyazo.com/6e183501f7ae5df7f07d37b9513ccfb9.gif"
+                height="400px"
+                alt="https://gyazo.com/6e183501f7ae5df7f07d37b9513ccfb9"
+            /></a>
+          </div>
+          <div class="flex-item">
+            <a
+              href="https://bizggro.com/newyear/"
+              target="_blank"
+              ><img
+                src="./images/animated-rocket.gif"
+                width="500px"
+                alt="Animation of a rocket launching"
+            /></a>
+            <p class="fs-20">
+              Image Credit:
+              <a
+                href="https://bizggro.com/newyear/"
+                target="_blank"
+                >Bizggro.com</a
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+
       <!-- JS Apps and Games -->
       <section>
         <h3>Language of the Web</h3>
-        <p>JavaScript powers many popular web and mobile applications, and games:</p>
+        <p class="fs-32 width-750 mb-16">JavaScript powers many popular web and mobile applications, and games:</p>
         <ul>
           <li>NetFlix</li>
           <li>Facebook</li>
@@ -91,20 +149,107 @@
       <!-- JS Everywhere -->
       <section>
         <h3>JavaScript is Everywhere</h3>
-        <img src="./assets/images/js-everywhere.png" alt="Quote by Eric Elliot">
+        <img src="./images/js-everywhere.png" alt="Quote by Eric Elliot">
         <small class="credit"><a href="https://medium.com/javascript-scene/how-popular-is-javascript-in-2019-823712f7c4b1" target="_blank">How Popular is JavaScript in 2019?</a> (Medium article, Eric Elliott)</small>
       </section>
 
-      <!-- JavaScript - Github Survey -->
+      <!-- JavaScript's Popularity -->
       <section>
-        <h3>JavaScript Rules!</h3>
-        <img src="./assets/images/js-octoverse.png" alt="Github Octoverse survey graph of popular languages">
-        <small><a href="https://octoverse.github.com/#top-languages-over-the-years" target="_blank">Github Survey: Top Languages Over the Years</a></small>
+        <h4>JavaScript Rules</h4>
+        <img
+          src="./images/js-popularity-04.jpeg"
+          heigth="400px"
+          alt="" />
+        <div>
+          <p class="fs-20">
+            <a
+              href="https://www.theregister.com/2021/07/16/jetbrains_developer_survey_2021/"
+              target="_blank"
+              >JetBrains Dev Ecosystem 2021</a
+            >
+          </p>
+        </div>
       </section>
 
       <!-- JS Environment  -->
       <section>
         <h3>Our JavaScript Environment</h3>
+      </section>
+
+      <!-- TOOLS: Browsers & Editors -->
+      <section>
+        <h3>Tools and Environment</h3>
+        <div class="flex-container">
+          <div class="flex-item">
+            <h4>Browsers:</h4>
+            <ul class="fs-28">
+              <li>Chrome</li>
+              <li>FireFox</li>
+              <li>Safari</li>
+            </ul>
+          </div>
+          <div class="flex-item">
+            <h4>Editors:</h4>
+            <ul class="fs-28">
+              <li>Visual Studio Code</li>
+              <li>Atom</li>
+              <li>Brackets</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Web-based Tools and Environments -->
+      <section>
+        <h4>Web-Based Tools and Environment</h4>
+        <ul class="fs-28">
+          <li>
+            REPL -
+            <a
+              href="https://replit.com/"
+              target="_blank"
+              >replit.com</a
+            >
+            <p class="fs-20 highlight--yellow">(Recommended for this series)</p>
+          </li>
+          <li>
+            Codepen -
+            <a
+              href="https://codepen.io/"
+              target="_blank"
+              >codepen.io</a
+            >
+          </li>
+          <li>
+            CodeSandbox -
+            <a
+              href="https://codesandbox.io/"
+              target="_blank"
+              >codesandbox.io</a
+            >
+          </li>
+        </ul>
+      </section>
+
+      <!-- Replit Signup -->
+      <section>
+        <h3>Get Started: replit.com</h3>
+        <ul>
+          <li>
+            Create a free account on
+            <a
+              href="https://replit.com/"
+              target="_blank"
+              >REPL</a
+            >
+          </li>
+          <li>Or an online editor of your choice</li>
+        </ul>
+      </section>
+
+      <!-- Replit Demo -->
+      <section>
+        <h3>replit.com Demo</h3>
       </section>
 
       <!-- Web Console -->
@@ -119,25 +264,25 @@
 
       <section>
         <h3>The Web Console</h3>
-        <img src="./assets/images/web-console.png" alt="Firefox web console">
+        <img src="./images/web-console.png" alt="Firefox web console">
         <p><a href="https://developer.mozilla.org/en-US/docs/Tools/Web_Console" target="_blank">Web Console (MDN)</a></p>
       </section>
 
       <!-- Console Shortcuts  -->
       <section>
         <h3>The Web Console</h3>
-        <p class="gdi-p">Keyboard Shortcuts:</p>
+        <p>Keyboard Shortcuts:</p>
         <ul>
           <li>Mac: Command Option J</li>
           <li>PC: Control Option J</li>
         </ul>
       </section>
 
-      <!-- Connecting JS with HTML -->
+      <!-- Connecting JS with HTML - Inline -->
       <section>
         <h3>Linking JavaScript to HTML</h3>
         <ul>
-          <li>Inline JavaScript with the <code>script</code> tag</li>
+          <li>Inline JavaScript with <code>script</code> tags</li>
         </ul>
 <pre><code class="html">&lt;html&gt;
   &lt;body&gt;
@@ -150,10 +295,11 @@
 </code></pre>
       </section>
 
+      <!-- Connecting JS with HTML - External -->
       <section>
         <h3>Linking JavaScript to HTML</h3>
         <ul>
-          <li>External Javascript file with the <code>script</code> tag and a <code>src</code> attribute</li>
+          <li>External Javascript file with <code>script</code> tags and the <code class="highlight--yellow">src</code> attribute</li>
         </ul>
 <pre><code class="html">&lt;html&gt;
   &lt;body&gt;
@@ -162,17 +308,6 @@
   &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
-      </section>
-
-      <!-- Students create external JS file -->
-      <section>
-        <h3>Practice</h3>
-        <ul>
-          <li>In your code editor, create an <code>index.html</code>file</li>
-          <li>Create a <code>script.js</code> file</li>
-          <li>Add a <code>script</code> tag before the closing <code>body</code> tag in the HTML file</li>
-          <li>Add a <code>src</code> attribute to the <code>script</code> tag, then point to the JavaScript file</li>
-        </ul>
       </section>
 
       <!-- Commenting in JS -->
@@ -191,7 +326,7 @@
       <!-- Displaying JavaScript -->
       <section>
         <h3>Displaying JavaScript</h3>
-        Four quick ways to output or read our JavaScript code:
+        <p>Four quick ways to output or read our JavaScript code:</p>
 <pre><code class="js">alert('Hello World');
 
 console.log('Hello World');
@@ -215,14 +350,14 @@ console.log('hello again');
       <!-- Values and Variables -->
       <section>
         <h3>Values and Variables</h3>
-        <p class="gdi-p">Value: A basic unit of data or information</p>
-        <p class="gdi-p">Variable: A "container" to store information</p>
+        <p>Value: A basic unit of data or information</p>
+        <p>Variable: A "container" to store information</p>
       </section>
 
       <!-- Declaring a Variable -->
       <section>
         <h3>Declaring a Variable</h3>
-        <p>There are three keywords used to declare variables in Javascript:</p>
+        <p>There are three <span class="highlight--yellow">keywords</span> used to declare variables in Javascript:</p>
 <pre><code class="js">let firstName;
   
 const userName;
@@ -239,6 +374,7 @@ var yourName;
         <p>We initialize a variable by assigning it a value</p>        
       </section>
 
+      <!-- Keyword: Let -->
       <section>
         <h3>let Variable Keyword</h3>
         <ul>
@@ -256,6 +392,7 @@ firstName = "Michio" // Re-assignment works
 </code></pre>
       </section>
 
+      <!-- Keyword: Const -->
       <section>
         <h3>const Variable Keyword</h3>
         <ul>
@@ -272,6 +409,7 @@ userName = "Jackie" // Re-assignment; this will throw an error
 </code></pre>
       </section>
 
+      <!-- Keyword: Var -->
       <section>
         <h3>var Variable Keyword</h3>
         <ul>
@@ -291,11 +429,16 @@ userName = "Jackie" // Re-assignment; this will throw an error
           <li>Can contain letters, numbers, _, $</li>
           <li>Case sensitive</li>
           <li>Should be descriptive</li>
-          <li>Best practice to write variables with camelCase syntax</li>
+          <li>Best practice: Write variables with camelCase syntax</li>
         </ul>
       </section>
 
-      <!-- Data Types -->
+      <!-- Values that variables hold? -->
+      <section> 
+        <h4>What type of values can variables hold?</h4>
+      </section>
+
+      <!-- Data Types Intro -->
       <section>
         <h3>Data Types</h3>
         <p>JavaScript has 6-7-8-9 data types?</p>
@@ -316,144 +459,35 @@ userName = "Jackie" // Re-assignment; this will throw an error
         </div>
       </section>
 
-      <!-- Data Type: Strings -->
-      <section>
-        <h3>Strings</h3>
-        <p>A string is any sequence of alphanumeric characters, spacing and symbols</p>
-<pre><code class="js">let randomLetters = "helll...  ///o@33!%%l"
-</code></pre>
-      </section>
+      <!-- <pre><code class="js"></code></pre> -->
 
+      <!-- Practice -->
       <section>
-        <h3>Strings</h3>
+        <h3>Practice Exercises</h3>
         <ul>
-          <li>Strings are characterized by opening and closing single or double quote marks</li>
-          <li>Opening and closing marks must be of the same type</li>
-        </ul>
-<pre><code class="js">let randomLetters = "helll...  ///o@33!%%l"
-
-let greeting = 'Hello World'
-</code></pre>
-      </section>
-
-      <section>
-        <h3>Escaping Strings</h3>
-        <p>If our string variables contain quotes or the backslash character, we will need to <code>"escape"</code> them</p>
-<pre><code class="js">let sentence = "I waved to them: "Hello""
-
-let sentence2 = 'What's your name?'
-
-let sentence3 = 'I want to insert a backslash \ here.'
-</code></pre>
-      </section>
-
-      <section>
-        <h3>Escaping Strings</h3>
-        <p>The Fix: Adding the backslash escape character</p>
-<pre><code class="js">let sentence = "I waved to them: \"Hello\""
-
-let sentence2 = 'What\'s your name?'
-
-let sentence3 = 'I want to insert a backslash \\ here.'
-</code></pre>
-      </section>
-
-      <section>
-        <h3>String Concatenation</h3>
-        <p>Strings can be combined using the <code>+</code> operator</p>
-<pre><code class="js">let fullName = "John" + "Wick"
-
-console.log(fullName)
-</code></pre>
-        <p>Note: Empty or negative space is also considered a string</p>
-      </section>
-
-      <section>
-        <h3>String Concatenation</h3>
-        <p>String variables can also be combined or concatenated</p>
-<pre><code class="js">let firstName = "John"
-let lastName = "Wick"
-console.log(firstName + lastName)
-
-//or
-
-let fullName = firstName + lastName;
-console.log(fullName)
-</code></pre>
-      </section>
-
-      <section>
-        <h3>String Interpolation</h3>
-        <ul>
-          <li>A newer or ES6 way to combine strings is with <code>template literals</code></li>
-          <li>JavaScript expressions can be embedded into a string statement</li>
-        </ul>     
-      </section>
-
-      <section>
-        <h3>String Interpolation</h3>
-        <ul>
-          <li>The marker for template literals is an opening and closing backtick <code>` `</code>and an expression <code>${someVariable}</code></li>
-        </ul>
-<pre><code class="js">let firstName = 'Beverly'
-
-let lastName = 'Williams'
-
-let fullName = `${firstName} ${lastName}`
-
-console.log(fullName)
-</code></pre>        
-      </section>
-
-      <section>
-        <h3>Concatenate or Interpolate?</h3>
-        <ul>
-          <li>Concatenate, then Interpolate the code below to output:</li>
-          <li><code> My favorite Target store is located at 320 Wilshire Boulevard, Santa Monica, CA 90044.</code></li>
-          <li>Which is easier?</li>
-        </ul>
-<pre><code class="js">let stem = "My favorite Target store is located at"
-let street = "320 Wilshire Boulevard"
-let city = "Santa Monica"
-let state = "California"
-let zipcode = "90034"
-</code></pre>
-      </section>
-
-<!-- <pre><code class="js"></code></pre>    -->
-
-      <!-- Home Practice -->
-      <section>
-        <h3>Home Practice</h3>
-        <ul>
-          <li><a href="https://replit.com/@tinuola/class01practice" target="_blank">REPL Sandbox</a></li>
+          <li><a href="https://replit.com/@tinuola/JS1-Class1-Practice" target="_blank">Class 1 Practice Exercises</a></li>
         </ul>
       </section>
 
       <!-- Next Class -->
       <section>
-        <h3>Class 2 - Agenda</h3>
-        <ul>
-          <li>Review - Class 1 Practice</li>
-          <li>Data Types: Number</li>
-          <li>String Methods</li>
-        </ul>
+        <h3>See you in Class 2!</h3>
+        <h4>👋 👋</h4>
       </section>
 
       <!-- MUST USE SLIDE - Course Feedback Survey-->
-      <section>
+      <!-- <section>
         <h3>Class Feedback</h3>
-        <p><a href="https://forms.gle/rsV7GvrwSMbTCKmu7" target="_blank">https://forms.gle/rsV7GvrwSMbTCKmu7</a></p>
-      </section>
+      </section> -->
 
       <!-- Q&A -->
-      <section>
+      <!-- <section>
         <h2>Q&A</h2>
-      </section>
+      </section> -->
 
       <!-- Thank You -->
       <section>
-        <img src="./assets/images/gdi-logos/GDI-Logo_Peach.png" alt="GDI Logo" width="300px" class="noborder" />
+        <img src="../shared-assets/imgs/gdi-logos/gdi-circle-logo_peach.png" alt="GDI Logo" width="300px" class="noborder" />
         <br>
         <h2>Thank You!</h2>
       </section>
@@ -462,46 +496,22 @@ let zipcode = "90034"
     <footer>
       <!-- Update with Course Name -->
       <div class="copyright">
-        <img src="./assets/images/gdi-logos/GDI-Logo_Peach.png" alt="GDI Logo" width="40px" class="noborder" />
-        <p>JavaScript Fundamentals 1 - Class 1</p>
+        <img src="../shared-assets/imgs/gdi-logos/gdi-circle-logo_peach.png" alt="GDI Logo" width="40px" class="noborder" />
+        <p>JavaScript Fundamentals 1 (On Demand) - Class 1</p>
         <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img
             alt="Creative Commons License" style="border-width:0"
             src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
       </div>
     </footer>
-  </div> <!-- End of Reveal wrapper -->
-
-  <!-- REVEAL.JS Script Files - Do Not Edit -->
+  </div>
+  <!-- End of Reveal wrapper -->
+  <!---->
+  <!---->
+  <!-- RevealJS Scripts & Config - Do Not Edit or Delete -->
   <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reveal.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/plugin/highlight/highlight.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/highlightjs-badge@0.1.9/highlightjs-badge.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jsPlumb/2.15.5/js/jsplumb.min.js"></script>
-  <script>
-    const srcUrlPrefix = "https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/";
-    Reveal.initialize({
-      hash: true,
-      center: true,
-      slideNumber: true,
-      showNotes: false,
-      margin: 0.1,
-      preloadIframes: true,
-      plugins: [RevealHighlight],
-      pdfSeparateFragments: true
-    });
-
-    // add HighlightJS-badge (options are optional)
-    var options = {
-      copyIconContent: "📄",
-      checkIconContent: "✅"
-    };
-    window.highlightJsBadge(options);
-
-    if (window.location.search == "?print-pdf") {
-      var uncounted = document.querySelectorAll("[data-visibility='uncounted']");
-      uncounted.forEach(node => {
-        node.parentNode.classList.add("no-print")
-      })
-    }
-  </script>
+  <script src="../shared-assets/js/revealConfig.js"></script>
 </body>
 </html>

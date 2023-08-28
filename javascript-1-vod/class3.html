@@ -64,7 +64,7 @@
 
       <!-- Data Type: Numbers -->
       <section>
-        <h3>Numbers</h3>
+        <h3>Data Type: Numbers</h3>
         <p>Integers and decimals make up the number data type</p>
 <pre><code class="js">let age = 35
 
@@ -216,7 +216,7 @@ console.log(greeting) // NaN
       <!-- Combining Strings and Numbers -->
       <section>
         <h3>Combining Strings and Numbers</h3>
-        <ul>
+        <ul class="fs-28">
           <li>Strings and numbers can be combined with <code>+</code> operator</li>
         </ul>
 <pre><code class="js">console.log( 7 + " oranges" ) // 7 oranges
@@ -225,7 +225,7 @@ let myAge = "I am "
 
 console.log(myAge += 8) // I am 8
 </code></pre>
-        <ul>
+        <ul class="fs-28">
           <li>This is not recommended; turn the number into a string data type instead</li>
         </ul>
       </section>
@@ -233,7 +233,7 @@ console.log(myAge += 8) // I am 8
       <!-- Writing Numbers into Strings -->
       <section>
         <h3>Writing Numbers as Strings</h3>
-        <ul>
+        <ul class="fs-28">
           <li>Numbers can be written as strings by adding quote marks</li>
           <li>But calculations done this way are unreliable and can introduce bugs</li>
         </ul>
@@ -248,31 +248,83 @@ console.log (num1 - 5) // 0
 </code></pre>
       </section>
 
-      <!-- Number Method -->
-      <section>Converting Numbers to Strings</section>
+      <!-- Number Methods -->
+      <section>
+        <h3>Number Methods</h3>
+        <p class="fs-28 mb-16">The number data type also has built-in methods</p>
+        <p class="fs-24"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank" rel="noopener noreferrer">Number</a> (MDN)</p>
+      </section>
+
+      <!-- Number.toString() -->
+      <section>
+        <h3><code>Number.toString()</code></h3>
+        <p class="fs-28">A more reliable way to convert numbers to the string data type</p>
+        <pre><code class="js">let oddNum = 11
+
+let convertToStr = oddNum.toString()
+
+console.log(convertToStr) // "11"
+        </code></pre>         
+        <p class="fs-24 mt-16"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString" target="_blank" rel="noopener noreferrer">toString() method</a> (MDN)</p>
+      </section>
 
       <!--Checking Data Types -->
       <section>
         <h3>Checking Data Types</h3>
       </section>
       
-      <!-- typeof -->
+      <!-- typeof Operator-->
       <section>
         <h3>typeof Operator</h3>
         <p>To make sure we're working with the correct data types, use the <code>typeof</code> operator for verification; this can prevent bugs</p>
 <pre><code class="js">let animal = 'dog'
+
 console.log(typeof animal) // string
 
 console.log(typeof 7) // number
+
 console.log(typeof '7') // string
 
 console.log(true) // boolean
+
+console.log(null) //
+
+console.log(undefined) //
 </code></pre>
         <small><a href="https://www.freecodecamp.org/news/javascript-data-types-typeof-explained/" target="_blank">JavaScript Data Types: Typeof Explained (FreeCodeCamp)</a></small>
       </section>
 
-<!-- <pre><code class="js"></code></pre>    -->
-<!-- <pre><code class="js"></code></pre>    -->
+      <!-- Undefined -->
+      <section>
+        <h3>Data Type: Undefined</h3>
+        <p class="fs-28 width-750"><code>undefined</code> means a variable has been declared but no value has been assigned</p>
+<pre><code class="js">let username
+
+console.log(username) // Undefined
+
+console.log(typeof username) // Undefined
+</code></pre>
+        <small><a href="https://youtu.be/VwaqJy_clnc?si=zZYEwXG97ZNd0auH" target="_blank">Null vs Undefined </a> (FreeCodeCamp-YouTube)</small>
+      </section>
+
+      <!-- Null -->
+      <section>
+        <h3>Data Type: Null</h3>
+        <ul class="fs-28">
+          <li><code>null</code> means an empty value</li>
+          <li>Unlike, undefined, null must be assigned</li>
+        </ul>
+<pre><code class="js">let password = null
+
+console.log(password) // null
+
+console.log(typeof password)
+// Returns `object`; this is a known bug in JavaScript
+</code></pre>
+        <small><a href="https://codeburst.io/javascript-null-vs-undefined-20f955215a2" target="_blank">JavaScript — Null vs. Undefined </a> (Codeburst.io)</small>
+      </section>
+
+      <!-- <pre><code class="js"></code></pre>    -->
 
       <!-- Practice -->
       <section>

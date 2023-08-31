@@ -303,7 +303,7 @@ let jamalAge = 5
 
 console.log( sandyAge > 4 || jamalAge > 9 ) // true
 
-console.log( sandyAge < 4 || jamalAge < 9 ) // false
+console.log( sandyAge < 4 || jamalAge > 9 ) // false
 </code></pre>
       </section>
 
@@ -317,7 +317,7 @@ let jamalAge = 5
 
 console.log( !sandyAge ) // false
 
-console.log( !jamalAge > 3 ) // false
+console.log( !jamalAge < 3 ) // true
 
 !(true) // false
 
@@ -345,15 +345,15 @@ console.log( !jamalAge > 3 ) // false
         <p>If a condition meets a criteria, then run the code</p>
 <pre><code class="js">if(condition is true){
 
-  then do something...
+  // then do something...
 }
 </code></pre>
 
-<pre><code class="js">let catsSay = 'meow';
+<pre><code class="js">let petSound = 'meow'
 
-if(catsSay === 'meow'){
+if(petSound === 'meow'){
 
-  console.log(`I'm a cat and I love to sleep all day`)
+  console.log(`I'm a cat; I love to sleep all day`)
 }
 </code></pre>
       </section>
@@ -361,7 +361,7 @@ if(catsSay === 'meow'){
       <!-- If - Else -->
       <section>
         <h3><code>if-else</code> Statement</h3>
-        <p class="width-600"><code>if-else</code> extends the <code>if</code> statement by taking into account what should happen if the original condition is NOT met</p>
+        <p class="fs 28 width-600"><code>if-else</code> extends the <code>if</code> statement by taking into account what should happen if the original condition is NOT met</p>
 <pre><code class="js">if (condition is true) {
   
   // then do a...
@@ -373,42 +373,64 @@ if(catsSay === 'meow'){
 }
 </code></pre>
 
-<pre><code class="js">if(catsSay === 'meow'){
+<pre><code class="js">let petSound = 'oink'
+
+if(petSound === 'meow'){
 
   console.log(`I'm a cat and I love to sleep all day`)
 
 } else {
   
-  console.log(`I must be a dog then.... Woof!`)
+  console.log(`I must be something else then!`)
 
 }
 </code></pre>
       </section>
 
+      <!-- Operators and Conditionals -->
+      <section>
+        <h3>Using Operators in Conditionals</h3>
+        <pre><code class="js">let dayOfWeek = 'Friday'
+
+let temperature = 65
+
+let isSunny = true
+
+
+if ( (dayOfWeek === 'Friday' && isSunny) && temperature > 80 ){
+
+  console.log(`Looks like a sunny weekend is up ahead!`)
+
+} else {
+
+  console.log(`I hope the weather warms up and the sun comes out.`)
+
+}
+
+        </code></pre>
+      </section>
+
+
       <!-- if - else if- else -->
       <section>
         <h4><code>if-elseif-else</code>:<br> Conditional Chains</h4>
         <p class="width-600">We can create conditional chains to evaluate more than two conditions</p>
-<pre><code class="markdown">if ( condition1 is true ) {
+<pre><code class="js">if ( condition1 is true ) {
 
-  do a...
+  // do a...
 
 } else if ( a different condition is true ) {
 
-  do b...
+  // do b...
 
 } else if ( another condition is true ) {
 
-  do c...
-
-} 
-
-...
+  // do c...
 
 } else {
 
-  None of the above conditions is true? Then do z...
-  and let's end this chain!
+  // None of the above conditions is true? 
+  // Then do z... and let's end this chain!
 
 }
 </code></pre>

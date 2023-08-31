@@ -48,10 +48,396 @@
       <section>
         <h3>AGENDA</h3>
           <ul>
+            <li>Data Type: Boolean</li>
+            <li>Truthy and Falsy Values</li>
+            <li>Comparison Operators</li>
+            <li>Logical Operators</li>
+            <li>Control Flow (Conditionals)</li>
           </ul>
       </section>
 
-      
+      <!-- Data Type: Booleans -->
+      <section>
+        <h3>Boolean</h3>
+        <p>The boolean data type has two values <code>true</code> and <code>false</code></p>
+<pre><code class="js">let catsAreTheBest = true;
+
+let dogsAdoreCats = false;
+</code></pre>      
+      </section>
+
+      <!-- Default Boolean Values -->
+      <section>
+        <h3>Default Boolean Values</h3>
+        <p>All variables in JavaScript have a default Boolean value:</p>
+        <p>They're either <code>"truthy"</code> or <code>"falsy"</code></p>
+      </section>
+
+      <!-- Truthy and Falsy -->
+      <section>
+        <h3>Truthy and Falsy Boolean Values</h3>
+        <div class="flex" style="justify-content:space-around">
+          <ul><code>Truthy</code>
+            <li>true</li>
+            <li>4</li>
+            <li>'hello'</li>
+            <li>'0'</li>
+            <li>[]</li>
+            <li>{}</li>
+          </ul>
+          <ul><code>Falsy</code>
+            <li>false</li>
+            <li>0</li>
+            <li>-0</li>
+            <li>' '</li>
+            <li>null</li>
+            <li>undefined</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Boolean Method -->
+      <section>
+        <h3>Boolean Method</h3>
+        <p>We can use the Boolean method to determine <br>if a value is truthy or falsy</p>
+<pre><code class="js">Boolean('Jackie') // true
+
+Boolean (-0) // false
+
+Boolean (5 < 3) // false
+
+Boolean (undefined) // false
+</code></pre>
+      </section>
+
+      <!-- Why Booleans -->
+      <section>
+        <h3>Control Flow</h3>
+        <p>If a condition meets a criteria, then run the code</p>
+<pre><code class="js">if (condition is true) {
+
+// then do something...
+
+}
+</code></pre>
+
+<pre><code class="js">if ('Jackie') {
+
+  console.log(`The name "Jackie" is a string and has a truthy value`)
+
+}
+</code></pre>
+      </section>
+
+      <!-- Comparison Operators -->
+      <section>
+        <h3>Comparison Operators</h3>
+      </section>
+
+      <!-- Comparison Operators -->
+      <section>
+        <h3>Comparison Operators</h3>
+        <p>Comparison operators compare two values <br>and return a boolean (<code>true</code> or <code>false</code>)</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Operator</th>
+              <th>Name</th>
+            </tr>
+          </thead>
+          <tbody style="font-size: 20px">
+            <tr>
+              <td><code>a === b</code></td>
+              <td>Identical</td>
+            </tr>
+
+            <tr>
+              <td><code>a !== b</code></td>
+              <td>Not identical</td>
+            </tr>
+
+            <tr>
+              <td><code>a &lt; b</code></td>
+              <td>Less than</td>
+            </tr>
+
+            <tr>
+              <td><code>a &gt; b</code></td>
+              <td>Greater than</td>
+            </tr>
+
+            <tr>
+              <td><code>a &lt;= b</code></td>
+              <td>Less than or equal to</td>
+            </tr>
+
+            <tr>
+              <td><code>a &gt;= b</code></td>
+              <td>Greater than or equal to</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Comparison Operators -->
+      <section>
+        <h3>Comparison Operators</h3>
+        <ul class="fs-28">
+          <li><code>></code> greater than </li>
+          <li><code><</code> less than </li>
+          <li><code>>=</code> greater than or equal to</li>
+          <li><code><=</code> less than or equal to</li>
+        </ul>
+    <pre><code class="js">console.log( 19 > 20 ) // false
+
+console.log( 5 >= 5 ) // true
+
+console.log( 0 < 2 ) // true
+
+console.log( 6 <= 8 ) // true
+    </code></pre>
+        <small><a href="https://www.w3schools.com/js/js_comparisons.asp" target="_blank">JavaScript Comparison and Logical Operators</a> (W3Schools)</small>
+      </section>
+
+      <!-- Equality Operators -->
+      <section>
+        <h3>Equality Operators</h3>
+        <p>Equality operators test if two values are the same. The equality operators look very similar but work differently.</p>
+      </section>
+
+      <!-- Double Equals -->
+      <section>
+        <h3>Loose Equality</h3>
+        <p>Double equals <code>'=='</code> or 'loose equality' <br>evaluates if values are the same</p>
+    <pre><code class="js">console.log( 5 == '5' ) // true
+    </code></pre>
+        <small><a href="https://codeburst.io/javascript-double-equals-vs-triple-equals-61d4ce5a121a" target="_blank">JavaScript — Double Equals vs. Triple Equals</a> (Codeburst)</small>
+      </section>
+
+      <!-- Triple Equals -->
+      <section>
+        <h3>Strict Equality</h3>
+        <p>Triple equals <code>'==='</code> or 'strict equality' <br>evaluates <span class="highlight--yellow">value AND type</span></p>
+    <pre><code class="js">console.log( 5 === '5' ) // false
+
+    // 5 as a number is not the same as 5 as a string value
+    </code></pre>
+        <p>To prevent bugs, use strict equality over loose equality</p>
+        <small><a href="https://codeburst.io/javascript-double-equals-vs-triple-equals-61d4ce5a121a" target="_blank">JavaScript — Double Equals vs. Triple Equals</a> (Codeburst)</small>
+      </section>
+
+      <!-- Loose inequality -->
+      <section>
+        <h3>Inequality</h3>
+        <p>Both equality operators have their negation counterparts:</p>
+        <ul>
+          <li>Loose inequality</li>
+        </ul>
+    <pre><code class="js">console.log( 5 != '5' ) // false
+    </code></pre>
+        <ul>
+          <li>Strict inequality</li>
+        </ul>
+    <pre><code class="js">console.log( 5 !== '5' ) // true
+    </code></pre>
+      </section>
+
+      <!-- Logical Operators -->
+      <section>
+        <h3>Logical Operators</h3>
+      </section>
+
+      <!-- Logical Operators -->
+      <section>
+        <h3>Logical Operators</h3>
+        <p class="mb-16">Logical operators check the logic between values or conditions</p>
+        <p class="mb-16">There are three operators:</p>
+        <table>
+          <thead class="fs-24">
+            <tr>
+              <th>Operator</th>
+              <th>Name</th>
+            </tr>
+          </thead>
+          <tbody class="fs-24">
+            <tr>
+              <td><code>&&</code></td>
+              <td>And</td>
+            </tr>
+
+            <tr>
+              <td><code>||</code></td>
+              <td>Or</td>
+            </tr>
+
+            <tr>
+              <td><code>!</code></td>
+              <td>Not</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="mt-32"><small><a href="https://www.programiz.com/javascript/comparison-logical" target="_target">JavaScript Comparison and Logical Operators</a> (Programiz)</small></div>
+      </section>
+
+      <!-- And Operator -->
+      <section>
+        <h4><code>&& : </code>The AND Operator</h4>
+        <p class="width-800">The AND operator returns <code>true</code> if two conditions being evaluated are both true; otherwise it returns <code>false</code></p>
+<pre><code class="js">let sandyAge = 7
+
+let jamalAge = 5
+
+console.log( sandyAge > 4 && jamalAge < 9 ) // true
+
+console.log( sandyAge > 4 && jamalAge > 9 ) // false
+</code></pre>
+      </section>
+
+      <!-- Or Operator -->
+      <section>
+        <h4><code>|| : </code>The OR Operator</h4>
+        <p class="width-800">The OR operator returns <code>true</code> if one condition is true; it returns <code>false</code> when both are false</p>
+<pre><code class="js">let sandyAge = 7
+
+let jamalAge = 5
+
+console.log( sandyAge > 4 || jamalAge > 9 ) // true
+
+console.log( sandyAge < 4 || jamalAge < 9 ) // false
+</code></pre>
+      </section>
+
+      <!-- Not Operator  -->
+      <section>
+        <h4><code>! : </code>The NOT Operator</h4>
+        <p class="width-800">The NOT operator returns the opposite condition of what's evaluated. If a value is <code>true</code>, the operator will return <code>false</code> and vice versa</p>
+<pre><code class="js">let sandyAge = 7
+
+let jamalAge = 5
+
+console.log( !sandyAge ) // false
+
+console.log( !jamalAge > 3 ) // false
+
+!(true) // false
+
+!(false) // true
+</code></pre>
+      </section>
+
+      <!-- Conditionals -->
+      <section>
+        <h3>Conditionals</h3>
+      </section>
+
+      <!-- Basic conditional -->
+      <section>
+        <h3>Conditionals</h3>
+        <ul class="fs-28">
+          <li>Conditional statements control the behavior of our application</li>
+          <li>They determine the conditions under which code should run, or in what way it should be executed</li>
+        </ul>
+      </section>
+
+      <!-- If  -->
+      <section>
+        <h3><code>if</code> Statement</h3>
+        <p>If a condition meets a criteria, then run the code</p>
+<pre><code class="js">if(condition is true){
+
+  then do something...
+}
+</code></pre>
+
+<pre><code class="js">let catsSay = 'meow';
+
+if(catsSay === 'meow'){
+
+  console.log(`I'm a cat and I love to sleep all day`)
+}
+</code></pre>
+      </section>
+
+      <!-- If - Else -->
+      <section>
+        <h3><code>if-else</code> Statement</h3>
+        <p class="width-600"><code>if-else</code> extends the <code>if</code> statement by taking into account what should happen if the original condition is NOT met</p>
+<pre><code class="js">if (condition is true) {
+  
+  // then do a...
+
+} else {
+
+  // do b...
+
+}
+</code></pre>
+
+<pre><code class="js">if(catsSay === 'meow'){
+
+  console.log(`I'm a cat and I love to sleep all day`)
+
+} else {
+  
+  console.log(`I must be a dog then.... Woof!`)
+
+}
+</code></pre>
+      </section>
+
+      <!-- if - else if- else -->
+      <section>
+        <h4><code>if-elseif-else</code>:<br> Conditional Chains</h4>
+        <p class="width-600">We can create conditional chains to evaluate more than two conditions</p>
+<pre><code class="markdown">if ( condition1 is true ) {
+
+  do a...
+
+} else if ( a different condition is true ) {
+
+  do b...
+
+} else if ( another condition is true ) {
+
+  do c...
+
+} 
+
+...
+
+} else {
+
+  None of the above conditions is true? Then do z...
+  and let's end this chain!
+
+}
+</code></pre>
+      </section>
+
+      <!-- Chaining Conditionals -->
+      <section>
+        <h3>Chaining Conditionals</h3>
+<pre><code class="js">let today = 'thursday';
+
+if( today === 'monday' ){
+
+  console.log( 'Here we go again....' )
+
+} else if( today === 'tuesday' ){
+
+  console.log( 'Are we done yet?' )
+
+} else if( today === 'wednesday' ){
+  
+  console.log( 'Getting a bit excited...' )
+
+} else {
+
+  console.log( 'Weekend is almost here!' )
+
+}
+</code></pre>
+      </section>
 
       <!-- <pre><code class="js"></code></pre> -->
 
@@ -66,7 +452,7 @@
       <!-- Next Class -->
       <section>
         <h3>See you in Class 5!</h3>
-        <h4>👋 👋 👋 👋</h4>
+        <h4>👋 👋 👋 👋 👋</h4>
       </section>
 
       <!-- MUST USE SLIDE - Course Feedback Survey-->

@@ -48,10 +48,140 @@
       <section>
         <h3>AGENDA</h3>
           <ul>
+            <li>Conditionals (contd):</li>
+            <ul>
+              <li>Ternary Operator</li>
+              <li>Switch Statement</li>
+            </ul>
           </ul>
       </section>
 
+      <!-- Ternary Operator -->
+      <section>
+        <h3>Ternary Operator</h3>
+        <p>With ES6, we have a new, shorter way to write <br>conditionals with the <code>ternary operator</code> statement</p>
+<pre><code class="markdown">// ternary statement synax:
+
+condition we're evaluating ? what to do if true : what to do if false
+</code></pre>
+
+<pre><code class="js">let catsSay = 'meow';
+
+let catResponse = `I'm a cat and I love to sleep all day`
+
+let dogResponse = `I must be a dog then.... Woof!`
+
+catsSay === 'meow' ? console.log(catResponse) : console.log(dogResponse)
+</code></pre>
+        <small><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator" target="_blank">Conditional (ternary) operator</a> (MDN)</small>
+      </section>
       
+      <!--  -->
+      <section>
+        <h3>Conditional Chaining:<br> Switch Statement</h3>
+        <p>A <code>switch statement</code> is an alternative to writing <br>long chains of <code>elseif</code> condition blocks</p>
+
+        <small><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch" target="_blank">Switch Statement</a> (MDN)</small>
+      </section>
+
+      <!--  -->
+      <section>
+        <h3>Switch Statement Syntax</h3>
+<pre><code class="js">switch (expression) {
+  case value1:
+    // do this if the expression (condition) matches value1
+    break; // then exit
+  case value2:
+    // do this if the expression (condition) matches value2
+    break; // then exit
+  case value3:
+    // do this if the expression (condition) matches value3
+    break; // then exit
+    ...
+  default:
+    // do this when nothing matches the condtion
+}
+</code></pre>
+        <small><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch" target="_blank">Switch Statement</a> (MDN)</small>
+      </section>
+
+      <!--  -->
+      <section>
+        <h3>Switch Statement Syntax</h3>
+        <ul>
+          <li><code>switch</code> keyword initializes the conditional </li>
+          <li><code>expression</code> is the condition to compare against</li>
+          <li><code>case valueN</code>:
+            <ul>
+              <li>The <code>case</code> clause defines what has to be compared to the <code>expression</code> and what to do if there's a match</li>
+              <li><code>valueN</code> is the value to compare against the <code>expression</code></li>
+            </ul>
+          </li>
+          <li><code>break</code> is an optional keyword that ends the program if there's a match found</li>
+          <li><code>default</code> sets the instruction to run if no match is found</li>
+        </ul>
+      </section>
+
+      <!--  -->
+      <section>
+        <h3>Switch Statement</h3>
+        <p>Using a <code>switch statement</code> on the<br> day-of-the-week conditional exercise from Class 3</p>
+<pre><code class="js">let today = 'thursday';
+
+switch (today){
+  case 'monday':
+    console.log( 'Here we go again....' )
+    break;
+  case 'tuesday':
+    console.log( 'Are we done yet?' )
+    break;
+  case 'wednesday':
+  case 'thursday':
+    console.log( 'Getting a bit excited...' )
+    break;
+  default:
+    console.log( 'I love the weekends!' )
+}
+</code></pre>
+      </section>
+
+      <!--  -->
+      <section>
+        <h3>Edge Case: Logical Operators</h3>
+        <ul>
+          <li>Caveat: When using logical operators in a <code>switch</code> <br>statement, the expression to evaluate against <br>should be a boolean value (<code>true</code> or <code>false</code>)</li>
+          <li>All case clauses have to be logical expressions</li>
+        </ul>
+        <small><a href="https://www.codecademy.com/forum_questions/50e4d0f8f45e1e74b1000bb7" target="_blank">Logical Operators in Switch Statements</a> (Codecademy)</small>
+        <small><a href="https://dev.to/jasterix/using-a-switch-statement-with-logical-operators-17ni" target="_blank">Using the Switch Statement with Logical Operators</a> (Dev.to)</small>
+        <small><a href="https://medium.com/@hammadali2404/the-difference-between-if-else-and-switch-case-statements-javascript-9688c7f04fe6" target="_blank">The Difference between If else and Switch case Statements</a><br>(Medium article; see point #3)</small>
+      </section>
+
+      <!--  -->
+      <section>
+        <h3>Edge Case: Logical Operators</h3>
+        <ul>
+          <li>Evaluating for the logical expressions in () will work</li>
+          <li>Evaluating for <code>monday</code> will not work</li>
+        </ul>
+  <pre><code class="js">let today = 'thursday';
+let sunnyDay = true
+
+switch (true){
+  case 'monday':
+    console.log('Here we go again')
+    break;
+  case (today === 'wednesday' && sunnyDay):
+    console.log( 'Getting a bit excited...' )
+    break;
+  case (today === 'friday' || sunnyDay):
+    console.log( 'Freeeedommmm' )
+    break;
+  default:
+    console.log( 'I love the weekends!' )
+  }
+  </code></pre>
+      </section>
 
       <!-- <pre><code class="js"></code></pre> -->
 
@@ -66,7 +196,7 @@
       <!-- Next Class -->
       <section>
         <h3>See you in Class 6!</h3>
-        <h4>👋 👋 👋 👋</h4>
+        <h4>👋 👋 👋 👋 👋 👋</h4>
       </section>
 
       <!-- MUST USE SLIDE - Course Feedback Survey-->

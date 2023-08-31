@@ -54,7 +54,236 @@
           </ul>
       </section>
 
-      
+          <!--  -->
+          <section>
+            <h3>Functions</h3>
+            <ul>
+              <li>A function is a block of code with instructions to perform a particular task</li>
+              <li>Functions are reusable--they can be called multiple times to perform the same task in different parts of a codebase
+              </li>
+              <li>Functions make our code organized and more efficient
+              </li>
+            </ul>
+            <small><a href="https://www.w3schools.com/js/js_functions.asp" target="_blank">JavaScript Functions</a> (W3Schools)</small>
+            <br>
+            <small><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions" target="_blank">Functions</a> (MDN)</small>
+          </section>
+    
+          <!--  -->
+          <section>
+            <h3>Function Declaration</h3>
+            <p>We declare a function with the keyword <code>function</code>, a function name, a pair of parentheses and curly braces</p>
+    <pre><code class="js">// The syntax of a function declaration:
+    
+    function funtionName(){
+      // instructions for the function
+      // to carry out 
+    }
+    </code></pre>
+          </section>
+    
+          <!--  -->
+          <section>
+            <h3>Function Call</h3>
+            <p>But declaring a function is not enough. It then needs to be <code>invoked</code> or <code>called</code> or <code>run</code>. These are all ways of saying we want to use or execute the function.</p>
+            
+    <pre><code class="js">// The syntax of a function call:
+    
+    functionName()
+    </code></pre>
+          </section>
+    
+          <!--  -->
+          <section>
+            <h3>Sample Function</h3>
+    <pre><code class="js">// Declaring the function
+    function parrotFacts(){
+    
+      // What the function should do
+      console.log('Parrots are very intelligent birds.');
+    
+    } 
+    
+    // Calling the function
+    parrotFacts()
+    </code></pre>
+          </section>
+
+   <!--  -->
+   <section>
+    <h3>Naming Functions</h3>
+    <ul>
+      <li>Naming functions is similiar to how we name variables:
+        <ul>
+          <li>Start with a lowercase alphabeth</li>
+          <li>Use camelCase syntax</li>
+          <li>Use descriptive names</li>
+        </ul>
+      </li>
+      <li>A function's name should reflect what the function is meant to do</li>
+    </ul>
+  </section>
+
+  <!--  -->
+  <section>
+    <h3>Function Naming</h3>
+    <div class="flex">
+      <ul>Vague Naming
+        <li><code>car()</code></li>
+        <li><code>username()</code></li>
+        <li><code>multiply()</code></li>
+      </ul>
+      <ul>Better Naming
+        <li><code>displayCarBrand()</code></li>
+        <li><code>getUsername()</code></li>
+        <li><code>multiplyByFour()</code></li>
+      </ul>
+    </div>
+  </section>
+
+  <!--  -->
+  <section>
+    <h3>Function Parameters</h3>
+    <ul>
+      <li>Functions can take (optional) input values known as <code>parameters</code></li>
+      <li>A parameter is a placeholder for a value that the function will use when called</li>
+    </ul>
+<pre><code class="js">// Syntax of using or passing a parameter:
+
+function friendlyGreeting( anyName ){
+
+console.log(`Hi ${anyName}`)
+
+}
+
+friendlyGreeting(...)
+</code></pre>
+  </section>
+
+  <!--  -->
+  <section>
+    <h3>Function Argument</h3>
+    <ul>
+      <li>An <code>argument</code> is the actual value passed to the function to use (when invoked) instead of the placeholder</li>
+      <li>Arguments can be any data type: Strings, Numbers, Boolean, Arrays, etc.</li>
+    </ul>
+<pre><code class="js">// Syntax of using an argument:
+
+function friendlyGreeting( anyName ){
+
+console.log(`Hi ${anyName}`)
+
+}
+
+friendlyGreeting('Tamara')
+// We've passed an argument, the string 
+// 'Tamara' to the function to use
+</code></pre>
+  </section>
+
+  <!--  -->
+  <section>
+    <h3>Function Argument</h3>
+    <ul>
+      <li>We can now reuse the function multiple times with different arguments </li>
+    </ul>
+<pre><code class="js">// Syntax of using an argument:
+
+function friendlyGreeting( anyName ){
+
+console.log(`Hi ${anyName}`)
+
+}
+
+friendlyGreeting('Tamara')
+friendlyGreeting('Jamal')
+friendlyGreeting('Cindy')
+</code></pre>
+  </section>
+
+  <section>
+    <h3>Variables as Arguments</h3>
+    <p>Since variables are values, they can be<br> passed to functions as arguments</p>
+<pre><code class="js">let firstNumber = 3
+let secondNumber = 7
+let thirdNumber = 8
+
+function addNumbers(num1, num2, num3){
+
+console.log(num1 + num2 + num3)
+
+}
+
+addNumbers(firstNumber, secondNumber, thirdNumber)
+// This adds 3 + 7 + 8
+    </code></pre>
+  </section>
+
+<!--  -->
+<section>
+  <h3>Return Statement</h3>
+  <p>A <code>return</code> statement sets the value a function<br> returns when the function is called</p>
+<pre><code class="js">function addTwoNumbers (num1, num2){
+
+let sum = num1 + num2;
+
+return sum;
+
+}
+</code></pre>
+  <small><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/return" target="_blank">Return</a> and <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Return_values" target="_blank">Function Return Values</a> (MDN)</small>
+</section>
+
+<section>
+  <h3>Return Statement</h3>
+  <p>A <code>return</code> statement also ends a function's execution</p>
+<pre><code class="js">function addTwoNumbers (num1, num2){
+
+let sum = num1 + num2
+
+return sum
+
+console.log('Hello') // This will not run
+
+}
+</code></pre>
+</section>
+
+<section>
+  <h3>Return Statement</h3>
+  <p>A function without a <code>return</code> statement <br>will be <code>undefined</code></p>
+<pre><code class="js">function addTwoNumbers (num1, num2){
+
+let sum = num1 + num2
+
+}
+
+console.log(addTwoNumbers(4,5)) // Undefined
+
+</code></pre>
+</section>
+
+<!--  -->
+<section>
+  <h3>Return Value</h3>
+  <p>A function's <code>return value</code> can be<br> saved and used at any time</p>
+<pre><code class="js">function addTwoNumbers (num1, num2){
+
+let sum = num1 + num2;
+
+return sum;
+
+}
+
+let calculateFiveAndTen = addTwoNumbers(5,10)
+
+console.log(calculateFiveAndTen)
+
+console.log(`5 plus 10 equals ${calculateFiveAndTen}`)
+
+</code></pre>
+</section>
+
 
       <!-- <pre><code class="js"></code></pre> -->
 

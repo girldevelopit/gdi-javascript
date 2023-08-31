@@ -53,7 +53,623 @@
           </ul>
       </section>
 
-      
+      <!-- Objects -->
+      <section>
+        <h3>Objects</h3>
+      </section>
+
+      <!-- Object Data Type -->
+      <section>
+        <h3>The Object Data Type</h3>
+        <p class="fs-28">Objects are a JavaScript data type</p>
+        <p class="fs-28">Like arrays, objects hold a collection of data</p>
+        <p class="mt-32">
+          <a
+            href="https://www.w3schools.com/js/js_objects.asp"
+            target="_blank"
+            >JavaScript Objects (w3schools)</a
+          >
+        </p>
+      </section>
+
+      <!-- Objects vs Arrays -->
+      <section>
+        <h3>Objects vs Arrays</h3>
+        <p class="fs-28">But objects differ from arrays:</p>
+        <ul class="fs-28">
+          <li>An object stores data that's specific to itself</li>
+          <li>Objects have a different syntax</li>
+          <li>
+            Objects store data as <span class="highlight--yellow">key:value</span> pairs
+          </li>
+          <li>Objects are not zero-indexed</li>
+        </ul>
+      </section>
+
+      <!-- What is an object? -->
+      <section>
+        <h3>What is an Object?</h3>
+        <p
+          class="gdi-p"
+          style="max-width: 800px; margin: 0 auto 24px auto">
+          One way to understand the concept of <code>objects</code> in JavaScript is to
+          use real world examples
+        </p>
+      </section>
+
+      <!-- Objects in the real world -->
+      <section>
+        <h3>Objects in the Real World</h3>
+        <ul>
+          <li>A car is an object</li>
+          <li>A car has properties</li>
+        </ul>
+        <br />
+        <img
+          src="./images/blue-car.jpeg"
+          width="500px"
+          alt="Blue car" />
+      </section>
+
+      <!-- Car Object -->
+      <section>
+        <h3>Car Object</h3>
+        <p class="gdi-p">What are some of the properties of this car?</p>
+        <img
+          src="./images/blue-car.jpeg"
+          width="500px"
+          alt="Blue car" />
+      </section>
+
+      <!-- Car Object -->
+      <section>
+        <h3>Car Object</h3>
+        <ul>
+          <li>Blue</li>
+          <li>4 wheels</li>
+          <li>4 doors</li>
+          <li>A Bentley</li>
+          <li>Etc.</li>
+        </ul>
+        <img
+          src="./images/blue-car.jpeg"
+          width="500px"
+          alt="Blue car"
+          style="margin-left: 20px" />
+      </section>
+
+      <!-- Car Object -->
+      <section>
+        <h3>Car Object</h3>
+        <p class="fs-32 mb-16">What are actions this car can perform?</p>
+        <p class="fs-32">It can:</p>
+        <ul>
+          <li>Start</li>
+          <li>Stop</li>
+          <li>Move forward</li>
+          <li>Reverse</li>
+        </ul>
+      </section>
+
+      <!-- House Object -->
+      <section>
+        <h3>Many Things are Objects!</h3>
+        <p class="fs-32 width-900 mb-32">
+          A house is an object with <span class="highlight--yellow">properties</span>:
+          architectural style, number of floors, kitchen, basement (yes or no), price,
+          etc.
+        </p>
+        <p class="fs-32 width-900">
+          <span class="highlight--yellow">Actions</span> that can happen in a house:
+          doors open or close, windows open or close, etc.
+        </p>
+      </section>
+
+      <!-- More Objects: Driver's License -->
+      <section>
+        <h3>Even More Objects!</h3>
+        <p class="fs-32 width-900 mb-16">
+          Your driver's license is an object. It has
+          <span class="highlight--yellow">properties</span>: your name, date of birth,
+          state, registration number, etc.
+        </p>
+        <p class="fs-32 width-900">It can expire, it can be renewed, etc.</p>
+      </section>
+
+      <!-- Objects in JavaScript -->
+      <section>
+        <h3>Objects in JavaScript</h3>
+        <p class="fs-32 width-800">
+          An object in JavaScript is similar to a real-world object; it has
+          <span class="highlight--yellow">properties</span> (and
+          <span class="highlight--yellow">actions</span>) that are specific to it
+        </p>
+      </section>
+
+      <!-- Object Literal -->
+      <section>
+        <h3>Syntax: Object Literal</h3>
+        <p
+          class="gdi-p"
+          style="max-width: 700px; margin: 0 auto 24px auto">
+          We can declare objects with a variable name and a pair of curly brackets
+          <code>{}</code>
+        </p>
+        <pre><code class="js">// Declare an object literal
+
+let objectName = {} /* An empty object */
+
+// Different syntax from an array:
+// let arrayName = []
+</code></pre>
+      </section>
+
+      <!-- Object Syntax -->
+      <section>
+        <h3>Object Syntax</h3>
+        <p class="fs-28 width-800 mb-16">
+          The data or content inside of an object are its
+          <span class="highlight--yellow">properties</span>
+        </p>
+
+        <p class="fs-28 width-800 mb-32">Each property is separated by a comma</p>
+
+        <p class="fs-28 width-800 mb-16">Turning our car into a JavaScript object:</p>
+        <pre><code class="js">let carObj = {
+doors: 4,
+color: 'blue',
+brand: 'bentley',
+year: 2021
+}</code></pre>
+      </section>
+
+      <!-- Key-Value Pairs -->
+      <section>
+        <h3>Key:Value Pairs</h3>
+        <p class="fs-28 mb-32">
+          The properties of an object are called
+          <span class="highlight--yellow">key:value</span> pairs
+        </p>
+        <p class="fs-28 mb-32">
+          <span class="highlight--yellow">brand: 'bentley'</span> is a key-value pair
+        </p>
+        <p class="fs-28 mb-32">
+          <code>brand</code> is the key; <code>bentley</code> is the value
+        </p>
+
+        <pre><code class="js">let carObj = {
+doors: 4,
+color: 'blue',
+brand: 'bentley',
+year: 2021
+}</code></pre>
+      </section>
+
+      <!-- Object characteristics -->
+      <section>
+        <h3>Objects are Not Zero-Indexed</h3>
+        <ul class="fs-28">
+          <li>Objects are not like arrays; order is not guaranteed</li>
+          <li>We cannot use index positions to access object data</li>
+          <li>
+            We use the <span class="highlight--yellow">key</span> property to access an
+            object
+          </li>
+        </ul>
+      </section>
+
+      <!-- Accessing Objects -->
+      <section>
+        <h3>Accessing an Object</h3>
+        <p class="fs-28 width-600 mb-16">
+          Using the <span class="highlight--yellow">key</span> property, there are two
+          ways to access an object:
+        </p>
+        <ul class="fs-28 mb-32">
+          <li>Dot Notation</li>
+          <li>Bracket Notation</li>
+        </ul>
+        <p class="fs-24">
+          <a
+            href="https://codeburst.io/javascript-quickie-dot-notation-vs-bracket-notation-333641c0f781"
+            target="_blank"
+            >JavaScript Quickie— Dot Notation vs. Bracket Notation</a
+          >
+        </p>
+      </section>
+
+      <!-- Dot Notation -->
+      <section>
+        <h3>Dot Notation</h3>
+        <p class="fs-32">
+          <code>objectName.key</code>
+        </p>
+        <pre><code class="js">let dogObj = {
+color: 'brown',
+
+breed: 'bulldog'
+}
+
+
+// Access the color property
+let dogColor = dogObj.color
+
+console.log(dogColor)
+</code></pre>
+      </section>
+
+      <!-- Brack Notation -->
+      <section>
+        <h3>Bracket Notation</h3>
+        <p class="fs-32">
+          <code>objectName['key']</code>
+        </p>
+        <pre><code class="js">let dogObj = {
+color: 'brown',
+
+breed: 'bulldog'
+}
+
+// Access the color property
+let dogColor2 = dogObj['color']
+
+console.log(dogColor2)
+</code></pre>
+      </section>
+
+      <!-- Updating a property -->
+      <section>
+        <h3>Updating an Object Property</h3>
+        <p class="fs-32">Update the <code>color</code> property</p>
+        <pre><code class="js">dogObj.color = 'blue'
+
+console.log (dogObj)
+
+// Output:
+// {color: 'blue', breed: 'bulldog'}</code></pre>
+      </section>
+
+      <!-- Adding a new property -->
+      <section>
+        <h3>Adding a New Object Property</h3>
+        <p class="fs-32">Add a new <code>size</code> property</p>
+        <pre><code class="js">dogObj.size = 'small'
+
+console.log (dogObj)
+
+// Output:
+// {color: 'blue', breed: 'bulldog', size: 'small'}</code></pre>
+      </section>
+
+      <!-- Deleting an object -->
+      <section>
+        <h3>Deleting an Object Key</h3>
+        <p class="fs-32">Use the keyword <code>delete</code></p>
+        <p class="fs-32">
+          <code>delete objectName.key</code>
+        </p>
+        <pre><code class="js">delete dogObj.size
+
+console.log (dogObj)
+
+// Output:
+// {color: 'blue', breed: 'bulldog'}</code></pre>
+      </section>
+
+      <!-- Creating Object Methods -->
+      <section>
+        <h3>Creating Object Methods</h3>
+      </section>
+
+      <!-- Object and Function properties -->
+      <section>
+        <h3>Objects and Function Properties</h3>
+        <p class="fs-32 width-800">
+          In addition to <code>key:value</code> properties, objects can also store their
+          own <code>functions</code>--<span class="highlight--yellow"
+            >actions that control or determine their behavior</span
+          >
+        </p>
+      </section>
+
+      <!-- Object method -->
+      <section>
+        <h3>Object Method</h3>
+        <p class="fs-32">
+          A function inside of an object is called a
+          <span class="highlight--yellow">method</span>
+        </p>
+      </section>
+
+      <!-- Declaring Object methods -->
+      <section>
+        <h3>Declaring an Object Method</h3>
+        <p class="fs-32">We can create a method when declaring a object</p>
+        <pre><code class="js">let toddlerObj = {
+
+age_in_months: 18,
+
+is_cute: true,
+
+new_word: 'no',
+
+// Declaring a function or method
+faveWord: function(){
+  console.log('Mama')
+}
+}</code></pre>
+      </section>
+
+      <!-- Declaring Object methods -->
+      <section>
+        <h3>Declaring an Object Method</h3>
+        <p class="fs-32 width-800">
+          We can also declare a method without using the <code>function</code> keyword
+        </p>
+        <pre><code class="js">let toddlerObj = {
+
+age_in_months: 18,
+
+is_cute: true,
+
+new_word: 'no',
+
+// Declaring a method without the function keyword
+faveWord(){
+  console.log('Mama')
+}
+}</code></pre>
+      </section>
+
+      <!-- Declaring Object methods -->
+      <section>
+        <h3>Declaring an Object Method</h3>
+        <p class="fs-32 width-800">
+          Using dot notation, we can add a new method after an object has been declared
+        </p>
+        <pre><code class="js">let toddlerObj = {
+age_in_months: 18,
+is_cute: true,
+new_word: 'no',
+faveWord(){ 
+  console.log('Mama') 
+},
+}
+
+// Add new method
+toddlerObj.throwTantrum = function(){
+console.log('Nooooo!')
+}
+
+console.log(toddlerObj) // Verify </code></pre>
+      </section>
+
+      <!-- Calling an Object method -->
+      <section>
+        <h3>Calling an Object Method</h3>
+        <p class="fs-32 width-800 mb-16">
+          To call an object method, use dot notation to access the method name and
+          append with <code>()</code>
+        </p>
+        <p class="fs-32">
+          <code>objectName.objectMethod()</code>
+        </p>
+        <pre><code class="js">let toddlerObj = {
+age_in_months: 18,
+is_cute: true,
+new_word: 'no',
+faveWord(){ 
+  console.log('Mama') 
+},
+throwTantrum: function(){
+  console.log('Nooooo!')
+},
+}
+
+toddlerObj.throwTantrum()</code></pre>
+      </section>
+
+
+ <!-- Built-in Object Methods -->
+ <section>
+  <h3>Built-in Object Methods</h3>
+  <p class="fs-32 width-800 mb-32">
+    Similar to <code>strings</code> and <code>arrays</code>,
+    <code>objects</code> have built-in or default methods
+  </p>
+  <p class="fs-24">
+    <a
+      href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"
+      target="_blank"
+      >Object Methods (MDN)</a
+    >
+  </p>
+</section>
+
+<!-- Commonly used object methods -->
+<section>
+  <h3>Commonly Used Object Methods</h3>
+  <div class="flex">
+    <ul style="list-style-type: none">
+      <li><code>Object.keys()</code></li>
+      <li><code>Object.values()</code></li>
+      <li><code>Object.entries()</code></li>
+    </ul>
+    <ul style="list-style-type: none">
+      <li><code>Object.freeze()</code></li>
+      <li><code>Object.seal()</code></li>
+      <li><code>Object.fromEntries()</code></li>
+    </ul>
+  </div>
+  <p class="fs-24 mt-32">
+    <a
+      href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"
+      target="_blank"
+      >Object Methods (MDN)</a
+    >
+  </p>
+</section>
+
+<!-- Object.keys() -->
+<section>
+  <h3><code>Object.keys()</code></h3>
+  <p class="fs-32">Returns an array of an object's keys</p>
+  <pre><code class="js">let carObj = {
+model: 'BMW',
+year: '2020',
+color: 'red'
+}
+
+console.log( Object.keys(carObj) )
+
+// Output: ['model', 'year', 'color']</code></pre>
+  <p class="fs-24 mt-32">
+    <a
+      href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys"
+      target="_blank"
+      >Object.keys() - MDN</a
+    >
+  </p>
+</section>
+
+<!-- Object.values() -->
+<section>
+  <h3><code>Object.values()</code></h3>
+  <p class="fs-32">Returns an array of an object's values</p>
+  <pre><code class="js">let carObj = {
+model: 'BMW',
+year: '2020',
+color: 'red'
+}
+
+console.log( Object.values(carObj) )
+
+// Output: ['BMW', '2020', 'red']</code></pre>
+  <p class="fs-24 mt-32">
+    <a
+      href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/values"
+      target="_blank"
+      >Object.values() - MDN</a
+    >
+  </p>
+</section>
+
+<!-- Object.entries() -->
+<section>
+  <h3><code>Object.entries()</code></h3>
+  <p class="fs-32">Returns arrays of an object's <code>key:value</code> pairs</p>
+  <pre><code class="js">let carObj = {
+model: 'BMW',
+year: '2020',
+color: 'red'
+}
+
+console.log( Object.entries(carObj) )
+
+// Output: 3 arrays</code></pre>
+  <p class="fs-24 mt-32">
+    <a
+      href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries"
+      target="_blank"
+      >Object.entries() - MDN</a
+    >
+  </p>
+</section>
+
+
+       <!-- Opening Slide: Looping through objects -->
+       <section>
+        <h3>Looping Through Objects</h3>
+      </section>
+
+      <!-- for...in -->
+      <section>
+        <h3><code>for...in</code> Loop</h3>
+      </section>
+
+      <!-- Looping objects-->
+      <section>
+        <h3>Looping Objects</h3>
+        <p class="fs-32 width-750 mb-16">
+          The <code>for...in</code> loop iterates over the properties of an object
+        </p>
+        <p class="fs-32 width-750">
+          It has the same syntax or setup as the <code>for...of</code>
+        </p>
+        <pre><code class="js">for( key in object ){
+
+// code to run
+
+}</code></pre>
+        <p class="fs-24">
+          <a
+            href="https://www.w3schools.com/js/js_loop_forin.asp"
+            target="_blank"
+            >JavaScript For In (w3schools)</a
+          >
+        </p>
+      </section>
+
+      <!-- for...in -->
+      <section>
+        <h3><code>for...in</code> Loop</h3>
+        <ul class="fs-28">
+          <li>
+            <code>for...in</code> iterates and returns an object's
+            <span class="highlight--yellow">keys</span>
+          </li>
+          <li>
+            Each <code>key</code> is used to access its respective
+            <span class="highlight--yellow">value</span>
+          </li>
+        </ul>
+        <pre><code class="js">let carObj = {
+model: 'BMW',
+year: '2020',
+color: 'red'
+}
+
+for( key in carObj ){
+
+console.log(key)
+console.log( carObj[key] )
+
+}
+// Output: model, year, color
+// Output: BMW, 2020, red </code></pre>
+      </section>
+
+      <!-- for...in vs for...of -->
+      <section>
+        <h3><code>for...in</code> VS <code>for...of</code></h3>
+        <ul class="fs-28">
+          <li>
+            While the <code>for...in</code> loop can iterate over an array, order is not
+            guaranteed
+          </li>
+          <li>
+            Use the <code>for...of</code> for
+            <span class="highlight--yellow">iterable (countable)</span> data such as
+            arrays and strings
+          </li>
+        </ul>
+        <pre><code class="js">for( key of carObj ){
+
+console.log( carObj[key] )
+
+}
+// Output: Error!
+// carObj is not iterable </code></pre>
+        <p class="fs-24">
+          <a
+            href="https://www.tutorialrepublic.com/javascript-tutorial/javascript-loops.php"
+            target="_blank"
+            >JavaScript Loops (Tutorial Republic)</a
+          >
+        </p>
+      </section>
+
+
 
       <!-- <pre><code class="js"></code></pre> -->
 

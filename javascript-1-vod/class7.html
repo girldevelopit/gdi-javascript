@@ -9,7 +9,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   
     <!-- Update with GDI Course Name -->
-    <title>GDI - JavaScript Fundamentals 1 (On Demand), Class 7</title>
+    <title>GDI - JavaScript Fundamentals 1 (On Demand), Class 9</title>
   
     <link rel="icon" type="image/x-icon" href="../shared-assets/imgs/favicon.ico" />
   
@@ -48,295 +48,265 @@
       <section>
         <h3>AGENDA</h3>
           <ul>
-            <li>Arrays</li>
-            <li>Basic Array Methods</li>
-            <li>Looping Arrays: <code>for...of</code></li>
+            <li>Functions</li>
+            <li>Function Declarations and Calls</li>
+            <li>Parameters and Arguments</li>
+            <li>Return Statements</li>
           </ul>
       </section>
 
-      <!-- Arrays -->
+      <!-- Function definition -->
       <section>
-        <h3>Arrays</h3>
-      </section>
-
-      <!-- Arrays -->
-      <section>
-        <h3>Arrays</h3>
-        <ul class="fs-28">
-          <li>An array is another JavaScript data type</li>
-          <li>An array is an ordered list of values</li>
-          <li>Arrays are great for storing multiple values under a single variable name</li>
+        <h3>Functions</h3>
+        <ul class="fs-24 mb-32">
+          <li>A function is a block of code with instructions to perform a particular task</li>
+          <li>Functions are reusable--they can be called multiple times to perform the same task in different parts of a codebase
+          </li>
+          <li>Functions make our code organized and more efficient
+          </li>
         </ul>
-<pre><code class="js">let fruits = ['apple', 'pear', 'mango']
-</code></pre>
-        <small><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Arrays" target="_blank">Arrays</a> (MDN)</small>
+        <p class="fs-20"><a href="https://www.w3schools.com/js/js_functions.asp" target="_blank">JavaScript Functions</a> (W3Schools)</p>
+        <p class="fs-20"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions" target="_blank">Functions</a> (MDN)</p>
       </section>
 
-      <!-- Array syntax -->
+      <!-- Function declaration -->
       <section>
-        <h3>Array Syntax</h3>
-        <p class="width-750">An array is declared with a variable name and square brackets <code>[]</code> that contain values; the values are separated by commas</p>
-<pre><code class="js"> let arrayName = [ item1, item2, item3, item4, .... ]
-</code></pre>
-        <small><a href="https://www.javascripttutorial.net/javascript-array/" target="_blank">A Beginner's Guide to JavaScript Arrays</a> (JavaScriptTutorial.net)</small>
-      </section>
+        <h3>Function Declaration</h3>
+        <p class="fs-28 width-750">We declare a function with the keyword <code>function</code>, a function name, a pair of parentheses and curly braces</p>
+<pre><code class="js">// The syntax of a function declaration:
 
-      <!-- Array values -->
-      <section>
-        <h3>Arrays</h3>
-        <p>Arrays can hold different types of data, even other arrays!</p>
-<pre><code class="js">let primaryColors = ['red', 'blue', 'green']
+function funtionName(){
 
-let lotteryNumbers = [2, 24, 54, 9, 30, 44]
+  // instructions to carry out 
 
-let randomValues = ['hello', 66, true, ['item1', 'item2'] ]
+}
 </code></pre>
       </section>
 
-      <!-- Zero-indexed -->
       <section>
-        <h3>Zero Index</h3>
-        <ul class="fs-28">
-          <li><code>Arrays</code> are zero-indexed, just like <code>strings</code></li>
-          <li>we count from <code>0</code>, not 1</li>
-        </ul>
-<pre><code class="js">let namesList = ['Anita', 'Naoko', 'Olga', 'Sandra']
+        <h3>Function Declaration</h3>
+<pre><code class="js">function sayGreeting(){
 
-console.log(namesList[0]) // Prints Anita
+  console.log('Hello everyone!')
 
-// Anita is the first item, and has an index value of 0
-
-
-console.log(namesList[3]) // Prints Sandra
-
-// Sandra is the fourth item, but has an index value of 3
-
-// because we're counting from 0
+}
 </code></pre>
       </section>
 
-      <!-- Updating an array -->
+      <!-- Function call -->
       <section>
-        <h3>Updating an Array</h3>
-        <p class="fs-28 width-800">Knowing the indices or positions in an array, means we can manually add or overwrite the values in the array</p>
-      </section>
+        <h3>Function Call</h3>
+        <p class="fs-28 width-750">But declaring a function is not enough. It then needs to be <code>invoked</code> or <code>called</code> or <code>run</code>. These are all ways of saying we want to use or execute the function.</p>
+        
+<pre><code class="js">// The syntax of a function call:
 
-      <!-- Manually adding an item to an array -->
-      <section>
-        <h3>Manually Add a New Item</h3>
-<pre><code class="js"> // namesList has 4 names, let's add a 5th
-
-let namesList = ['Anita', 'Naoko', 'Olga', 'Sandra']
-
-namesList[4] = 'Jules'
-
-console.log(namesList)
+functionName()
 </code></pre>
       </section>
 
-      <!-- Manually overwrite an array item -->
       <section>
-        <h3>Manually Overwrite an Item
-        </h3>
-<pre><code class="js"> // Our list: 'Anita', 'Naoko', 'Olga', 'Sandra', 'Jules'
+        <h4>Declaring and Calling a Function</h4>
+<pre><code class="js">function sayGreeting(){
 
-// Let's update Olga to Kiki
+  console.log('Hello everyone!')
 
-namesList[2] = 'Kiki'
+}
 
-console.log(namesList)
+sayGreeting()
 </code></pre>
       </section>
-      
-      <!-- Array methods -->
+
+      <!-- Naming Functions -->
       <section>
-        <h3>Array Methods</h3>
-        <p>JavaScript has default array methods that <br>allow us to work with the data in an array</p>
-      </section>
-      
-      <!-- Length property -->
-      <section>
-        <h3>Array.length</h3>
-        <p class="width-750 fs-28">We can use the <code>length</code> property to count the number of items in an array</p>
-<pre><code class="js">let countries = ['Peru', 'Japan', 'Canada', 'Ghana']
-
-console.log(countries.length) // 4
-</code></pre>
-        <small><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length#" target="_blank">Array.prototype.length</a> (MDN)</small>
-      </section>
-
-      <!-- .push -->
-      <section>
-        <h3>Adding to the back of an array<br><code>.push()</code></h3>
-<pre><code class="js">let countries = ['Peru', 'Japan', 'Canada', 'Ghana']
-
-countries.push('Belgium') // 5
-</code></pre>
-        <p>Note: <code>.push()</code> returns the new <br>length of the array, not the array itself</p>
-        <small><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push" target="_blank">Array.prototype.push()</a> (MDN)</small>
-      </section>
-
-      <!-- .unshift -->
-      <section>
-        <h3>Adding to the front of an array<br><code>.unshift()</code></h3>
-<pre><code class="js">countries.unshift('Turkey') // 6
-
-console.log(countries)
-
-// ['Turkey', 'Peru', 'Japan', 'Canada', 'Ghana', 'Belgium']
-</code></pre>
-        <p>Note: <code>.unshift()</code> also returns the new <br>length of the array, not the array itself</p>
-        <small><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift" target="_blank">Array.prototype.unshift()</a> (MDN)</small>
-      </section>
-
-      <!-- .sort -->
-      <section>
-        <h3>Sorting an Array<code><br>.sort()</code></h3>
-<pre><code class="js">countries.sort()
-
-// ['Belgium', 'Canada', 'Ghana', 'Japan', 'Peru', Turkey]
-</code></pre>
-        <small><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort" target="_blank">Array.prototype.sort()</a> (MDN)</small>
-      </section>
-
-      <!-- .reverse -->
-      <section>
-        <h3>Reversing an Array order<br><code>.reverse()</code></h3>
-<pre><code class="js">countries.reverse()
-
-// ['Turkey', 'Peru', 'Japan', 'Ghana', 'Canada', 'Belgium']
-</code></pre>
-        <small><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse" target="_blank">Array.prototype.reverse()</a> (MDN)</small> 
-      </section>
-
-      <!-- Arrays to string -->
-      <section>
-        <h3>Turning Arrays to Strings<br><code>.join()</code></h3>
-        <ul class="fs-28">
-          <li>Using the <code>.join()</code> array method</li>
-          <li>Print the four array variables below</li>
-          <li>Notice the difference in the strings that are returned</li>
-        </ul>
-<pre><code class="js">let primaryColors = ['blue', 'red', 'yellow']
-
-let arrayToStrings1 = primaryColors.join()
-// blue,red,yellow
-
-let arrayToStrings2 = primaryColors.join('')
-// blueredyellow
-
-let arrayToStrings3 = primaryColors.join(' ')
-// blue red yellow
-
-let arrayToStrings4 = primaryColors.join(', ')
-// blue, red, yellow
-</code></pre>
-        <small><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join" target="_blank">Array.prototype.join()</a> (MDN)</small>
-      </section>
-
-      <!-- Strings to Arrays with Array.from -->
-      <section>
-        <h3>Turning Strings into Arrays<br><code>Array.from()</code></h3>
-        <ul class="fs-28">
-          <li>Using the <code>Array.from()</code> array method</li>
-        </ul>
-<pre><code class="js">let warningStr = 'Winter is coming'
-
-let warningStrToArr = Array.from(warningStr) 
-
-// Returns each string character as an array item
-</code></pre>
-        <small><a href="https://www.w3schools.com/jsref/jsref_from.asp" target="_blank">JavaScript Array.from()</a> w3schools</small>
-      </section>
-
-      <!-- Strings to Array with .split() -->
-      <section>
-      <h3>Turning Strings into Arrays</h3>
+      <h3>Naming Functions</h3>
       <ul class="fs-28">
-        <li>Using the <code>.split()</code> string method</li>
-        <li>Print the three variables below; notice the difference<br> in the arrays that are returned</li>
+        <li>Naming functions is similiar to how we name variables:
+          <ul>
+            <li>Start with a lowercase alphabeth</li>
+            <li>Use camelCase syntax</li>
+            <li>Use descriptive names</li>
+          </ul>
+        </li>
+        <li>A function's name should reflect what the function is meant to do</li>
       </ul>
-<pre><code class="js">let str = 'Hello World'
-
-let strToArray1 = str.split()
-// Returns the whole string as one element in the array
-
-let strToArray2 = str.split('')
-// Splits each character as an array item, including blank space
-
-let strToArray3 = str.split(' ')
-// Splits each word, using a blank space as a separator 
-</code></pre>
-      <small><a href="https://www.w3schools.com/jsref/jsref_split.asp" target="_blank">JavaScript String split()</a> w3schools</small>
       </section>
 
-      <!-- Practice, Practice, Practice -->
+      <!-- Function Naming examples -->
       <section>
-        <h3>Array Methods Practice</h3>
-        <p class="width-750 fs-28">There are more array methods than we cover in class. The best way to learn is to use them.</p>
+        <h3>Function Naming</h3>
+        <div class="flex">
+          <ul class="fs-24">Vague Naming
+            <li><code>car()</code></li>
+            <li><code>username()</code></li>
+            <li><code>multiply()</code></li>
+          </ul>
+          <ul class="fs-24">Better Naming
+            <li><code>displayCarBrand()</code></li>
+            <li><code>getUsername()</code></li>
+            <li><code>multiplyByFour()</code></li>
+          </ul>
+        </div>
       </section>
 
-      <!-- Looping through Arrays -->
       <section>
-        <h3>Looping Through Arrays</h3>
-        <p class="width-750 fs-28">There are a number of ways to iterate through an array; let's explore two basic approaches:</p>
+        <h3>Function Practice</h3>
+        <p class="fs-28 mb-16">Write a function that repeats a name 10 times</p>
+        <p class="fs-28">We'll need a function and a loop</p>
+      </section>
+
+      <!-- Parameters -->
+      <section>
+        <h3>Function Parameters</h3>
         <ul class="fs-28">
-          <li><code>for</code> loop</li>
-          <li><code>for of</code> loop</li>
+          <li>Functions can take (optional) input values known as <code>parameters</code></li>
+          <li>A parameter is a placeholder for a value that the function will use when called</li>
         </ul>
-      </section>
-    
-      <!-- Standard for loop -->
-      <section>
-        <h3>Arrays and the Basic <code>for</code> Loop</h3>
-        <ul class="fs-24">
-          <li>The <code>for</code> loop syntax remains unchanged</li>
-          <li>We use the array's <code>length</code> as the condition that controls the loop</li>
-        </ul>
-<pre><code class="js">let oneNameSingers = ['Sia', 'Lizzo', 'Beyonce', 'Pink' ];
+    <pre><code class="js">// Syntax of using or passing a parameter:
 
-let arrLength = oneNameSingers.length;
-  
-for(let i=0; i < arrLength; i++){
+function friendlyGreeting( anyStringName ){
 
-  console.log(oneNameSingers[i])
+  console.log(`Hi ${anyStringName}`)
 
 }
-</code></pre>
-      </section>
-    
-      <!-- For of loop -->
-      <section>
-        <h3>Arrays and the <code>for of</code> Loop</h3>
-        <ul class="fs-24">
-          <li>The <code>for of</code> was introduced in ES6</li>
-          <li>It can be used on any data type that's countainable, such as arrays and strings</li>
-          <li>It has a different syntax:</li>
-        </ul>
-<pre><code class="js">for (item of array) {
-  
-  // usually returning or doing something with each item
 
-}
-</code></pre>
-        <!-- <p><code>iterable</code> is the object that's being looped<br>
-        <code>variable</code> is each item in the object</p> -->
+friendlyGreeting('') 
+// A string value goes into the function call
+    </code></pre>
       </section>
-    
-      <!-- For of loop example -->
+
+      <!-- Arguments -->
       <section>
-        <h3><code>for of</code> Loop</h3>
+        <h3>Function Argument</h3>
         <ul class="fs-28">
-          <li>With the <code>for of</code> loop, we don't need to rely<br> on the array's length</li>
+          <li>An <code>argument</code> is the actual value passed to the function to use (when invoked) instead of the placeholder</li>
+          <li>Arguments can be any data type: Strings, Numbers, Boolean, Arrays, etc.</li>
         </ul>
-<pre><code class="js">let moreOneNameCelebs = ['Oprah', 'Bjork', 'Madonna', 'JayZ']
+    <pre><code class="js">// Syntax of using an argument:
 
-for( celeb of moreOneNameCelebs ){
+function friendlyGreeting( anyName ){
 
-  console.log(celeb)
+  console.log(`Hi ${anyName}`)
 
 }
-</code></pre>
+
+friendlyGreeting('Tamara')
+
+// We've passed an argument, the string 
+// 'Tamara' to the function to use
+    </code></pre>
+      </section>
+
+      <!-- Using Function arguments -->
+      <section>
+        <h3>Function Argument</h3>
+        <ul class="fs-28">
+          <li>We can now reuse the function multiple times with different arguments </li>
+        </ul>
+    <pre><code class="js">// Syntax of using an argument:
+
+function friendlyGreeting( anyName ){
+
+  console.log(`Hi ${anyName}`)
+
+}
+
+friendlyGreeting('Tamara')
+friendlyGreeting('Jamal')
+friendlyGreeting('Cindy')
+    </code></pre>
+      </section>
+
+      <!-- Variables as arguments -->
+      <section>
+        <h3>Variables as Arguments</h3>
+        <p class="width-750">Since variables are values, they can be passed to functions as arguments</p>
+    <pre><code class="js">let firstNumber = 3
+let secondNumber = 7
+let thirdNumber = 8
+
+
+function addNumbers(num1, num2, num3){
+
+  console.log(num1 + num2 + num3)
+
+}
+
+addNumbers(firstNumber, secondNumber, thirdNumber)
+
+// This adds 3 + 7 + 8
+        </code></pre>
+      </section>
+
+      <!-- Beyond console.log -->
+      <section>
+        <h3>Return Statements</h3>
+        <p class="fs-24 width-800 mb-16">We've been using the <code>console.log</code> method to output our JavaScript code, but the console is a temporary environment; </p><p class="fs-24 width-750">We want the results of our code to be stored and available for use whenever it is needed</p>
+      </section>
+
+      <!-- Return Statements -->
+      <section>
+        <h3>Return Statement</h3>
+        <p class="fs-28 width-750">A <code>return</code> statement sets the value a function returns when the function is called</p>
+      <pre><code class="js">function addTwoNumbers (num1, num2){
+
+  let sum = num1 + num2;
+
+  return sum;
+
+}
+      </code></pre>
+        <p class="fs-20"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/return" target="_blank">Return</a> and <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Return_values" target="_blank">Function Return Values</a> (MDN)</p>
+      </section>
+
+      <section>
+        <h3>Return Statement</h3>
+        <p>A <code>return</code> statement also ends a function's execution</p>
+      <pre><code class="js">function addTwoNumbers (num1, num2){
+
+  let sum = num1 + num2
+
+  return sum
+
+  console.log('Hello') // This will not run
+
+}
+      </code></pre>
+      </section>
+
+      <!-- Undefined -->
+      <section>
+        <h3>Return Statement</h3>
+        <p>A function without a <code>return</code> statement <br>will be <code>undefined</code></p>
+      <pre><code class="js">function addTwoNumbers (num1, num2){
+
+  let sum = num1 + num2
+
+}
+
+console.log(addTwoNumbers(4,5)) // Undefined
+
+      </code></pre>
+      </section>
+
+      <!--  -->
+      <section>
+        <h3>Return Value</h3>
+        <p>A function's <code>return value</code> can be<br> saved and used at any time</p>
+      <pre><code class="js">function addTwoNumbers (num1, num2){
+
+  let sum = num1 + num2;
+
+  return sum;
+
+}
+
+let calculateFiveAndTen = addTwoNumbers(5,10)
+
+console.log(calculateFiveAndTen)
+
+console.log(`5 plus 10 equals ${calculateFiveAndTen}`)
+
+      </code></pre>
       </section>
 
       <!-- <pre><code class="js"></code></pre> -->

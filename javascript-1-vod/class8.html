@@ -9,7 +9,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   
     <!-- Update with GDI Course Name -->
-    <title>GDI - JavaScript Fundamentals 1 (On Demand), Class 8</title>
+    <title>GDI - JavaScript Fundamentals 1 (On Demand), Class 7</title>
   
     <link rel="icon" type="image/x-icon" href="../shared-assets/imgs/favicon.ico" />
   
@@ -48,629 +48,296 @@
       <section>
         <h3>AGENDA</h3>
           <ul>
-            <li>Objects</li>
-            <li>Object methods</li>
-            <li>Looping Objects: <code>for...in</code></li>
+            <li>Arrays</li>
+            <li>Basic Array Methods</li>
+            <li>Looping Arrays: <code>for...of</code></li>
           </ul>
       </section>
 
-      <!-- Objects -->
+      <!-- Arrays -->
       <section>
-        <h3>Objects</h3>
+        <h3>Arrays</h3>
       </section>
 
-      <!-- Object Data Type -->
+      <!-- Arrays -->
       <section>
-        <h3>The Object Data Type</h3>
-        <p class="fs-28">Objects are a JavaScript data type</p>
-        <p class="fs-28">Like arrays, objects hold a collection of data</p>
-        <p class="mt-32">
-          <a
-            href="https://www.w3schools.com/js/js_objects.asp"
-            target="_blank"
-            >JavaScript Objects (w3schools)</a
-          >
-        </p>
-      </section>
-
-      <!-- Objects vs Arrays -->
-      <section>
-        <h3>Objects vs Arrays</h3>
-        <p class="fs-28">But objects differ from arrays:</p>
+        <h3>Arrays</h3>
         <ul class="fs-28">
-          <li>An object stores data that's specific to itself</li>
-          <li>Objects have a different syntax</li>
-          <li>
-            Objects store data as <span class="highlight--yellow">key:value</span> pairs
-          </li>
-          <li>Objects are not zero-indexed</li>
+          <li>An array is another JavaScript data type</li>
+          <li>An array is an ordered list of values</li>
+          <li>Arrays are great for storing multiple values under a single variable name</li>
         </ul>
+<pre><code class="js">let fruits = ['apple', 'pear', 'mango']
+</code></pre>
+        <small><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Arrays" target="_blank">Arrays</a> (MDN)</small>
       </section>
 
-      <!-- What is an object? -->
+      <!-- Array syntax -->
       <section>
-        <h3>What is an Object?</h3>
-        <p
-          class="gdi-p"
-          style="max-width: 800px; margin: 0 auto 24px auto">
-          One way to understand the concept of <code>objects</code> in JavaScript is to
-          use real world examples
-        </p>
+        <h3>Array Syntax</h3>
+        <p class="width-750">An array is declared with a variable name and square brackets <code>[]</code> that contain values; the values are separated by commas</p>
+<pre><code class="js"> let arrayName = [ item1, item2, item3, item4, .... ]
+</code></pre>
+        <small><a href="https://www.javascripttutorial.net/javascript-array/" target="_blank">A Beginner's Guide to JavaScript Arrays</a> (JavaScriptTutorial.net)</small>
       </section>
 
-      <!-- Objects in the real world -->
+      <!-- Array values -->
       <section>
-        <h3>Objects in the Real World</h3>
-        <ul>
-          <li>A car is an object</li>
-          <li>A car has properties</li>
-        </ul>
-        <br />
-        <img
-          src="./images/blue-car.jpeg"
-          width="500px"
-          alt="Blue car" />
-      </section>
+        <h3>Arrays</h3>
+        <p>Arrays can hold different types of data, even other arrays!</p>
+<pre><code class="js">let primaryColors = ['red', 'blue', 'green']
 
-      <!-- Car Object -->
-      <section>
-        <h3>Car Object</h3>
-        <p class="gdi-p">What are some of the properties of this car?</p>
-        <img
-          src="./images/blue-car.jpeg"
-          width="500px"
-          alt="Blue car" />
-      </section>
+let lotteryNumbers = [2, 24, 54, 9, 30, 44]
 
-      <!-- Car Object -->
-      <section>
-        <h3>Car Object</h3>
-        <ul>
-          <li>Blue</li>
-          <li>4 wheels</li>
-          <li>4 doors</li>
-          <li>A Bentley</li>
-          <li>Etc.</li>
-        </ul>
-        <img
-          src="./images/blue-car.jpeg"
-          width="500px"
-          alt="Blue car"
-          style="margin-left: 20px" />
-      </section>
-
-      <!-- Car Object -->
-      <section>
-        <h3>Car Object</h3>
-        <p class="fs-32 mb-16">What are actions this car can perform?</p>
-        <p class="fs-32">It can:</p>
-        <ul>
-          <li>Start</li>
-          <li>Stop</li>
-          <li>Move forward</li>
-          <li>Reverse</li>
-        </ul>
-      </section>
-
-      <!-- House Object -->
-      <section>
-        <h3>Many Things are Objects!</h3>
-        <p class="fs-32 width-900 mb-32">
-          A house is an object with <span class="highlight--yellow">properties</span>:
-          architectural style, number of floors, kitchen, basement (yes or no), price,
-          etc.
-        </p>
-        <p class="fs-32 width-900">
-          <span class="highlight--yellow">Actions</span> that can happen in a house:
-          doors open or close, windows open or close, etc.
-        </p>
-      </section>
-
-      <!-- More Objects: Driver's License -->
-      <section>
-        <h3>Even More Objects!</h3>
-        <p class="fs-32 width-900 mb-16">
-          Your driver's license is an object. It has
-          <span class="highlight--yellow">properties</span>: your name, date of birth,
-          state, registration number, etc.
-        </p>
-        <p class="fs-32 width-900">It can expire, it can be renewed, etc.</p>
-      </section>
-
-      <!-- Objects in JavaScript -->
-      <section>
-        <h3>Objects in JavaScript</h3>
-        <p class="fs-32 width-800">
-          An object in JavaScript is similar to a real-world object; it has
-          <span class="highlight--yellow">properties</span> (and
-          <span class="highlight--yellow">actions</span>) that are specific to it
-        </p>
-      </section>
-
-      <!-- Object Literal -->
-      <section>
-        <h3>Syntax: Object Literal</h3>
-        <p
-          class="gdi-p"
-          style="max-width: 700px; margin: 0 auto 24px auto">
-          We can declare objects with a variable name and a pair of curly brackets
-          <code>{}</code>
-        </p>
-        <pre><code class="js">// Declare an object literal
-
-let objectName = {} /* An empty object */
-
-// Different syntax from an array:
-// let arrayName = []
+let randomValues = ['hello', 66, true, ['item1', 'item2'] ]
 </code></pre>
       </section>
 
-      <!-- Object Syntax -->
+      <!-- Zero-indexed -->
       <section>
-        <h3>Object Syntax</h3>
-        <p class="fs-28 width-800 mb-16">
-          The data or content inside of an object are its
-          <span class="highlight--yellow">properties</span>
-        </p>
-
-        <p class="fs-28 width-800 mb-32">Each property is separated by a comma</p>
-
-        <p class="fs-28 width-800 mb-16">Turning our car into a JavaScript object:</p>
-        <pre><code class="js">let carObj = {
-doors: 4,
-color: 'blue',
-brand: 'bentley',
-year: 2021
-}</code></pre>
-      </section>
-
-      <!-- Key-Value Pairs -->
-      <section>
-        <h3>Key:Value Pairs</h3>
-        <p class="fs-28 mb-32">
-          The properties of an object are called
-          <span class="highlight--yellow">key:value</span> pairs
-        </p>
-        <p class="fs-28 mb-32">
-          <span class="highlight--yellow">brand: 'bentley'</span> is a key-value pair
-        </p>
-        <p class="fs-28 mb-32">
-          <code>brand</code> is the key; <code>bentley</code> is the value
-        </p>
-
-        <pre><code class="js">let carObj = {
-doors: 4,
-color: 'blue',
-brand: 'bentley',
-year: 2021
-}</code></pre>
-      </section>
-
-      <!-- Object characteristics -->
-      <section>
-        <h3>Objects are Not Zero-Indexed</h3>
+        <h3>Zero Index</h3>
         <ul class="fs-28">
-          <li>Objects are not like arrays; order is not guaranteed</li>
-          <li>We cannot use index positions to access object data</li>
-          <li>
-            We use the <span class="highlight--yellow">key</span> property to access an
-            object
-          </li>
+          <li><code>Arrays</code> are zero-indexed, just like <code>strings</code></li>
+          <li>we count from <code>0</code>, not 1</li>
         </ul>
-      </section>
+<pre><code class="js">let namesList = ['Anita', 'Naoko', 'Olga', 'Sandra']
 
-      <!-- Accessing Objects -->
-      <section>
-        <h3>Accessing an Object</h3>
-        <p class="fs-28 width-600 mb-16">
-          Using the <span class="highlight--yellow">key</span> property, there are two
-          ways to access an object:
-        </p>
-        <ul class="fs-28 mb-32">
-          <li>Dot Notation</li>
-          <li>Bracket Notation</li>
-        </ul>
-        <p class="fs-24">
-          <a
-            href="https://codeburst.io/javascript-quickie-dot-notation-vs-bracket-notation-333641c0f781"
-            target="_blank"
-            >JavaScript Quickie— Dot Notation vs. Bracket Notation</a
-          >
-        </p>
-      </section>
+console.log(namesList[0]) // Prints Anita
 
-      <!-- Dot Notation -->
-      <section>
-        <h3>Dot Notation</h3>
-        <p class="fs-32">
-          <code>objectName.key</code>
-        </p>
-        <pre><code class="js">let dogObj = {
-color: 'brown',
-
-breed: 'bulldog'
-}
+// Anita is the first item, and has an index value of 0
 
 
-// Access the color property
-let dogColor = dogObj.color
+console.log(namesList[3]) // Prints Sandra
 
-console.log(dogColor)
+// Sandra is the fourth item, but has an index value of 3
+
+// because we're counting from 0
 </code></pre>
       </section>
 
-      <!-- Brack Notation -->
+      <!-- Updating an array -->
       <section>
-        <h3>Bracket Notation</h3>
-        <p class="fs-32">
-          <code>objectName['key']</code>
-        </p>
-        <pre><code class="js">let dogObj = {
-color: 'brown',
+        <h3>Updating an Array</h3>
+        <p class="fs-28 width-800">Knowing the indices or positions in an array, means we can manually add or overwrite the values in the array</p>
+      </section>
 
-breed: 'bulldog'
-}
+      <!-- Manually adding an item to an array -->
+      <section>
+        <h3>Manually Add a New Item</h3>
+<pre><code class="js"> // namesList has 4 names, let's add a 5th
 
-// Access the color property
-let dogColor2 = dogObj['color']
+let namesList = ['Anita', 'Naoko', 'Olga', 'Sandra']
 
-console.log(dogColor2)
+namesList[4] = 'Jules'
+
+console.log(namesList)
 </code></pre>
       </section>
 
-      <!-- Updating a property -->
+      <!-- Manually overwrite an array item -->
       <section>
-        <h3>Updating an Object Property</h3>
-        <p class="fs-32">Update the <code>color</code> property</p>
-        <pre><code class="js">dogObj.color = 'blue'
+        <h3>Manually Overwrite an Item
+        </h3>
+<pre><code class="js"> // Our list: 'Anita', 'Naoko', 'Olga', 'Sandra', 'Jules'
 
-console.log (dogObj)
+// Let's update Olga to Kiki
 
-// Output:
-// {color: 'blue', breed: 'bulldog'}</code></pre>
+namesList[2] = 'Kiki'
+
+console.log(namesList)
+</code></pre>
+      </section>
+      
+      <!-- Array methods -->
+      <section>
+        <h3>Array Methods</h3>
+        <p>JavaScript has default array methods that <br>allow us to work with the data in an array</p>
+      </section>
+      
+      <!-- Length property -->
+      <section>
+        <h3>Array.length</h3>
+        <p class="width-750 fs-28">We can use the <code>length</code> property to count the number of items in an array</p>
+<pre><code class="js">let countries = ['Peru', 'Japan', 'Canada', 'Ghana']
+
+console.log(countries.length) // 4
+</code></pre>
+        <small><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length#" target="_blank">Array.prototype.length</a> (MDN)</small>
       </section>
 
-      <!-- Adding a new property -->
+      <!-- .push -->
       <section>
-        <h3>Adding a New Object Property</h3>
-        <p class="fs-32">Add a new <code>size</code> property</p>
-        <pre><code class="js">dogObj.size = 'small'
+        <h3>Adding to the back of an array<br><code>.push()</code></h3>
+<pre><code class="js">let countries = ['Peru', 'Japan', 'Canada', 'Ghana']
 
-console.log (dogObj)
-
-// Output:
-// {color: 'blue', breed: 'bulldog', size: 'small'}</code></pre>
+countries.push('Belgium') // 5
+</code></pre>
+        <p>Note: <code>.push()</code> returns the new <br>length of the array, not the array itself</p>
+        <small><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push" target="_blank">Array.prototype.push()</a> (MDN)</small>
       </section>
 
-      <!-- Deleting an object -->
+      <!-- .unshift -->
       <section>
-        <h3>Deleting an Object Key</h3>
-        <p class="fs-32">Use the keyword <code>delete</code></p>
-        <p class="fs-32">
-          <code>delete objectName.key</code>
-        </p>
-        <pre><code class="js">delete dogObj.size
+        <h3>Adding to the front of an array<br><code>.unshift()</code></h3>
+<pre><code class="js">countries.unshift('Turkey') // 6
 
-console.log (dogObj)
+console.log(countries)
 
-// Output:
-// {color: 'blue', breed: 'bulldog'}</code></pre>
+// ['Turkey', 'Peru', 'Japan', 'Canada', 'Ghana', 'Belgium']
+</code></pre>
+        <p>Note: <code>.unshift()</code> also returns the new <br>length of the array, not the array itself</p>
+        <small><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift" target="_blank">Array.prototype.unshift()</a> (MDN)</small>
       </section>
 
-      <!-- Creating Object Methods -->
+      <!-- .sort -->
       <section>
-        <h3>Creating Object Methods</h3>
+        <h3>Sorting an Array<code><br>.sort()</code></h3>
+<pre><code class="js">countries.sort()
+
+// ['Belgium', 'Canada', 'Ghana', 'Japan', 'Peru', Turkey]
+</code></pre>
+        <small><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort" target="_blank">Array.prototype.sort()</a> (MDN)</small>
       </section>
 
-      <!-- Object and Function properties -->
+      <!-- .reverse -->
       <section>
-        <h3>Objects and Function Properties</h3>
-        <p class="fs-32 width-800">
-          In addition to <code>key:value</code> properties, objects can also store their
-          own <code>functions</code>--<span class="highlight--yellow"
-            >actions that control or determine their behavior</span
-          >
-        </p>
+        <h3>Reversing an Array order<br><code>.reverse()</code></h3>
+<pre><code class="js">countries.reverse()
+
+// ['Turkey', 'Peru', 'Japan', 'Ghana', 'Canada', 'Belgium']
+</code></pre>
+        <small><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse" target="_blank">Array.prototype.reverse()</a> (MDN)</small> 
       </section>
 
-      <!-- Object method -->
+      <!-- Arrays to string -->
       <section>
-        <h3>Object Method</h3>
-        <p class="fs-32">
-          A function inside of an object is called a
-          <span class="highlight--yellow">method</span>
-        </p>
-      </section>
-
-      <!-- Declaring Object methods -->
-      <section>
-        <h3>Declaring an Object Method</h3>
-        <p class="fs-32">We can create a method when declaring a object</p>
-        <pre><code class="js">let toddlerObj = {
-
-age_in_months: 18,
-
-is_cute: true,
-
-new_word: 'no',
-
-// Declaring a function or method
-faveWord: function(){
-  console.log('Mama')
-}
-}</code></pre>
-      </section>
-
-      <!-- Declaring Object methods -->
-      <section>
-        <h3>Declaring an Object Method</h3>
-        <p class="fs-32 width-800">
-          We can also declare a method without using the <code>function</code> keyword
-        </p>
-        <pre><code class="js">let toddlerObj = {
-
-age_in_months: 18,
-
-is_cute: true,
-
-new_word: 'no',
-
-// Declaring a method without the function keyword
-faveWord(){
-  console.log('Mama')
-}
-}</code></pre>
-      </section>
-
-      <!-- Declaring Object methods -->
-      <section>
-        <h3>Declaring an Object Method</h3>
-        <p class="fs-32 width-800">
-          Using dot notation, we can add a new method after an object has been declared
-        </p>
-        <pre><code class="js">let toddlerObj = {
-age_in_months: 18,
-is_cute: true,
-new_word: 'no',
-faveWord(){ 
-  console.log('Mama') 
-},
-}
-
-// Add new method
-toddlerObj.throwTantrum = function(){
-console.log('Nooooo!')
-}
-
-console.log(toddlerObj) // Verify </code></pre>
-      </section>
-
-      <!-- Calling an Object method -->
-      <section>
-        <h3>Calling an Object Method</h3>
-        <p class="fs-32 width-800 mb-16">
-          To call an object method, use dot notation to access the method name and
-          append with <code>()</code>
-        </p>
-        <p class="fs-32">
-          <code>objectName.objectMethod()</code>
-        </p>
-        <pre><code class="js">let toddlerObj = {
-age_in_months: 18,
-is_cute: true,
-new_word: 'no',
-faveWord(){ 
-  console.log('Mama') 
-},
-throwTantrum: function(){
-  console.log('Nooooo!')
-},
-}
-
-toddlerObj.throwTantrum()</code></pre>
-      </section>
-
-
- <!-- Built-in Object Methods -->
- <section>
-  <h3>Built-in Object Methods</h3>
-  <p class="fs-32 width-800 mb-32">
-    Similar to <code>strings</code> and <code>arrays</code>,
-    <code>objects</code> have built-in or default methods
-  </p>
-  <p class="fs-24">
-    <a
-      href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"
-      target="_blank"
-      >Object Methods (MDN)</a
-    >
-  </p>
-</section>
-
-<!-- Commonly used object methods -->
-<section>
-  <h3>Commonly Used Object Methods</h3>
-  <div class="flex">
-    <ul style="list-style-type: none">
-      <li><code>Object.keys()</code></li>
-      <li><code>Object.values()</code></li>
-      <li><code>Object.entries()</code></li>
-    </ul>
-    <ul style="list-style-type: none">
-      <li><code>Object.freeze()</code></li>
-      <li><code>Object.seal()</code></li>
-      <li><code>Object.fromEntries()</code></li>
-    </ul>
-  </div>
-  <p class="fs-24 mt-32">
-    <a
-      href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"
-      target="_blank"
-      >Object Methods (MDN)</a
-    >
-  </p>
-</section>
-
-<!-- Object.keys() -->
-<section>
-  <h3><code>Object.keys()</code></h3>
-  <p class="fs-32">Returns an array of an object's keys</p>
-  <pre><code class="js">let carObj = {
-model: 'BMW',
-year: '2020',
-color: 'red'
-}
-
-console.log( Object.keys(carObj) )
-
-// Output: ['model', 'year', 'color']</code></pre>
-  <p class="fs-24 mt-32">
-    <a
-      href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys"
-      target="_blank"
-      >Object.keys() - MDN</a
-    >
-  </p>
-</section>
-
-<!-- Object.values() -->
-<section>
-  <h3><code>Object.values()</code></h3>
-  <p class="fs-32">Returns an array of an object's values</p>
-  <pre><code class="js">let carObj = {
-model: 'BMW',
-year: '2020',
-color: 'red'
-}
-
-console.log( Object.values(carObj) )
-
-// Output: ['BMW', '2020', 'red']</code></pre>
-  <p class="fs-24 mt-32">
-    <a
-      href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/values"
-      target="_blank"
-      >Object.values() - MDN</a
-    >
-  </p>
-</section>
-
-<!-- Object.entries() -->
-<section>
-  <h3><code>Object.entries()</code></h3>
-  <p class="fs-32">Returns arrays of an object's <code>key:value</code> pairs</p>
-  <pre><code class="js">let carObj = {
-model: 'BMW',
-year: '2020',
-color: 'red'
-}
-
-console.log( Object.entries(carObj) )
-
-// Output: 3 arrays</code></pre>
-  <p class="fs-24 mt-32">
-    <a
-      href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries"
-      target="_blank"
-      >Object.entries() - MDN</a
-    >
-  </p>
-</section>
-
-
-       <!-- Opening Slide: Looping through objects -->
-       <section>
-        <h3>Looping Through Objects</h3>
-      </section>
-
-      <!-- for...in -->
-      <section>
-        <h3><code>for...in</code> Loop</h3>
-      </section>
-
-      <!-- Looping objects-->
-      <section>
-        <h3>Looping Objects</h3>
-        <p class="fs-32 width-750 mb-16">
-          The <code>for...in</code> loop iterates over the properties of an object
-        </p>
-        <p class="fs-32 width-750">
-          It has the same syntax or setup as the <code>for...of</code>
-        </p>
-        <pre><code class="js">for( key in object ){
-
-// code to run
-
-}</code></pre>
-        <p class="fs-24">
-          <a
-            href="https://www.w3schools.com/js/js_loop_forin.asp"
-            target="_blank"
-            >JavaScript For In (w3schools)</a
-          >
-        </p>
-      </section>
-
-      <!-- for...in -->
-      <section>
-        <h3><code>for...in</code> Loop</h3>
+        <h3>Turning Arrays to Strings<br><code>.join()</code></h3>
         <ul class="fs-28">
-          <li>
-            <code>for...in</code> iterates and returns an object's
-            <span class="highlight--yellow">keys</span>
-          </li>
-          <li>
-            Each <code>key</code> is used to access its respective
-            <span class="highlight--yellow">value</span>
-          </li>
+          <li>Using the <code>.join()</code> array method</li>
+          <li>Print the four array variables below</li>
+          <li>Notice the difference in the strings that are returned</li>
         </ul>
-        <pre><code class="js">let carObj = {
-model: 'BMW',
-year: '2020',
-color: 'red'
-}
+<pre><code class="js">let primaryColors = ['blue', 'red', 'yellow']
 
-for( key in carObj ){
+let arrayToStrings1 = primaryColors.join()
+// blue,red,yellow
 
-console.log(key)
-console.log( carObj[key] )
+let arrayToStrings2 = primaryColors.join('')
+// blueredyellow
 
-}
-// Output: model, year, color
-// Output: BMW, 2020, red </code></pre>
+let arrayToStrings3 = primaryColors.join(' ')
+// blue red yellow
+
+let arrayToStrings4 = primaryColors.join(', ')
+// blue, red, yellow
+</code></pre>
+        <small><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join" target="_blank">Array.prototype.join()</a> (MDN)</small>
       </section>
 
-      <!-- for...in vs for...of -->
+      <!-- Strings to Arrays with Array.from -->
       <section>
-        <h3><code>for...in</code> VS <code>for...of</code></h3>
+        <h3>Turning Strings into Arrays<br><code>Array.from()</code></h3>
         <ul class="fs-28">
-          <li>
-            While the <code>for...in</code> loop can iterate over an array, order is not
-            guaranteed
-          </li>
-          <li>
-            Use the <code>for...of</code> for
-            <span class="highlight--yellow">iterable (countable)</span> data such as
-            arrays and strings
-          </li>
+          <li>Using the <code>Array.from()</code> array method</li>
         </ul>
-        <pre><code class="js">for( key of carObj ){
+<pre><code class="js">let warningStr = 'Winter is coming'
 
-console.log( carObj[key] )
+let warningStrToArr = Array.from(warningStr) 
 
-}
-// Output: Error!
-// carObj is not iterable </code></pre>
-        <p class="fs-24">
-          <a
-            href="https://www.tutorialrepublic.com/javascript-tutorial/javascript-loops.php"
-            target="_blank"
-            >JavaScript Loops (Tutorial Republic)</a
-          >
-        </p>
+// Returns each string character as an array item
+</code></pre>
+        <small><a href="https://www.w3schools.com/jsref/jsref_from.asp" target="_blank">JavaScript Array.from()</a> w3schools</small>
       </section>
 
+      <!-- Strings to Array with .split() -->
+      <section>
+      <h3>Turning Strings into Arrays</h3>
+      <ul class="fs-28">
+        <li>Using the <code>.split()</code> string method</li>
+        <li>Print the three variables below; notice the difference<br> in the arrays that are returned</li>
+      </ul>
+<pre><code class="js">let str = 'Hello World'
 
+let strToArray1 = str.split()
+// Returns the whole string as one element in the array
+
+let strToArray2 = str.split('')
+// Splits each character as an array item, including blank space
+
+let strToArray3 = str.split(' ')
+// Splits each word, using a blank space as a separator 
+</code></pre>
+      <small><a href="https://www.w3schools.com/jsref/jsref_split.asp" target="_blank">JavaScript String split()</a> w3schools</small>
+      </section>
+
+      <!-- Practice, Practice, Practice -->
+      <section>
+        <h3>Array Methods Practice</h3>
+        <p class="width-750 fs-28">There are more array methods than we cover in class. The best way to learn is to use them.</p>
+      </section>
+
+      <!-- Looping through Arrays -->
+      <section>
+        <h3>Looping Through Arrays</h3>
+        <p class="width-750 fs-28">There are a number of ways to iterate through an array; let's explore two basic approaches:</p>
+        <ul class="fs-28">
+          <li><code>for</code> loop</li>
+          <li><code>for of</code> loop</li>
+        </ul>
+      </section>
+    
+      <!-- Standard for loop -->
+      <section>
+        <h3>Arrays and the Basic <code>for</code> Loop</h3>
+        <ul class="fs-24">
+          <li>The <code>for</code> loop syntax remains unchanged</li>
+          <li>We use the array's <code>length</code> as the condition that controls the loop</li>
+        </ul>
+<pre><code class="js">let oneNameSingers = ['Sia', 'Lizzo', 'Beyonce', 'Pink' ];
+
+let arrLength = oneNameSingers.length;
+  
+for(let i=0; i < arrLength; i++){
+
+  console.log(oneNameSingers[i])
+
+}
+</code></pre>
+      </section>
+    
+      <!-- For of loop -->
+      <section>
+        <h3>Arrays and the <code>for of</code> Loop</h3>
+        <ul class="fs-24">
+          <li>The <code>for of</code> was introduced in ES6</li>
+          <li>It can be used on any data type that's countainable, such as arrays and strings</li>
+          <li>It has a different syntax:</li>
+        </ul>
+<pre><code class="js">for (item of array) {
+  
+  // usually returning or doing something with each item
+
+}
+</code></pre>
+        <!-- <p><code>iterable</code> is the object that's being looped<br>
+        <code>variable</code> is each item in the object</p> -->
+      </section>
+    
+      <!-- For of loop example -->
+      <section>
+        <h3><code>for of</code> Loop</h3>
+        <ul class="fs-28">
+          <li>With the <code>for of</code> loop, we don't need to rely<br> on the array's length</li>
+        </ul>
+<pre><code class="js">let moreOneNameCelebs = ['Oprah', 'Bjork', 'Madonna', 'JayZ']
+
+for( celeb of moreOneNameCelebs ){
+
+  console.log(celeb)
+
+}
+</code></pre>
+      </section>
 
       <!-- <pre><code class="js"></code></pre> -->
 
@@ -678,7 +345,7 @@ console.log( carObj[key] )
       <section>
         <h3>Practice Exercises</h3>
         <ul>
-          <li><a href="https://replit.com/@tinuola/JS1-Class8-Practice" target="_blank">Class 85 Practice Exercises</a></li>
+          <li><a href="https://replit.com/@tinuola/JS1-Class8-Practice" target="_blank">Class 8 Practice Exercises</a></li>
         </ul>
       </section>
 
@@ -710,7 +377,7 @@ console.log( carObj[key] )
       <!-- Update with Course Name -->
       <div class="copyright">
         <img src="../shared-assets/imgs/gdi-logos/gdi-circle-logo_peach.png" alt="GDI Logo" width="40px" class="noborder" />
-        <p>JavaScript Fundamentals 1 (On Demand) - Class 8</p>
+        <p>JavaScript Fundamentals 1 (On Demand) - Class 7</p>
         <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img
             alt="Creative Commons License" style="border-width:0"
             src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>

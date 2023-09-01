@@ -1,0 +1,367 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Girl Develop It JavaScript Fundamentals 1 Cohort Series">
+    <meta name="author" content="Girl Develop It">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  
+    <!-- Update with GDI Course Name -->
+    <title>GDI - JavaScript Fundamentals 1 (On Demand), Class 9</title>
+  
+    <link rel="icon" type="image/x-icon" href="../shared-assets/imgs/favicon.ico" />
+  
+    <!-- RevealJS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/theme/simple.css" id="theme">
+  
+    <!-- GDI Custom Theme - Do not delete -->
+    <link
+    rel="stylesheet"
+    href="../shared-assets/css/gdi-theme.css" />
+  
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/monokai.min.css">
+  
+    <!-- Course Custom Styles if Applicable-->
+    <link
+    rel="stylesheet"
+    href="./css/style.css" />
+  </head>
+
+<body>
+  <div class="reveal">
+    <!-- Start of Slides container -- Any section element in this container is displayed as a slide -->
+    <div class="slides">
+
+      <!-- Course and Class Titles -->
+      <section>
+        <h2>JavaScript Fundamentals 1</h2>
+        <h3>(On Demand)</h3>
+        <h3>Class 7</h3>
+      </section>
+
+      <!-- Class Agenda -->
+      <section>
+        <h3>AGENDA</h3>
+          <ul>
+            <li>Functions</li>
+            <li>Function Declarations and Calls</li>
+            <li>Parameters and Arguments</li>
+            <li>Return Statements</li>
+          </ul>
+      </section>
+
+      <!-- Function definition -->
+      <section>
+        <h3>Functions</h3>
+        <ul class="fs-24 mb-32">
+          <li>A function is a block of code with instructions to perform a particular task</li>
+          <li>Functions are reusable--they can be called multiple times to perform the same task in different parts of a codebase
+          </li>
+          <li>Functions make our code organized and more efficient
+          </li>
+        </ul>
+        <p class="fs-20"><a href="https://www.w3schools.com/js/js_functions.asp" target="_blank">JavaScript Functions</a> (W3Schools)</p>
+        <p class="fs-20"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions" target="_blank">Functions</a> (MDN)</p>
+      </section>
+
+      <!-- Function declaration -->
+      <section>
+        <h3>Function Declaration</h3>
+        <p class="fs-28 width-750">We declare a function with the keyword <code>function</code>, a function name, a pair of parentheses and curly braces</p>
+<pre><code class="js">// The syntax of a function declaration:
+
+function funtionName(){
+
+  // instructions to carry out 
+
+}
+</code></pre>
+      </section>
+
+      <section>
+        <h3>Function Declaration</h3>
+<pre><code class="js">function sayGreeting(){
+
+  console.log('Hello everyone!')
+
+}
+</code></pre>
+      </section>
+
+      <!-- Function call -->
+      <section>
+        <h3>Function Call</h3>
+        <p class="fs-28 width-750">But declaring a function is not enough. It then needs to be <code>invoked</code> or <code>called</code> or <code>run</code>. These are all ways of saying we want to use or execute the function.</p>
+        
+<pre><code class="js">// The syntax of a function call:
+
+functionName()
+</code></pre>
+      </section>
+
+      <section>
+        <h4>Declaring and Calling a Function</h4>
+<pre><code class="js">function sayGreeting(){
+
+  console.log('Hello everyone!')
+
+}
+
+sayGreeting()
+</code></pre>
+      </section>
+
+      <!-- Naming Functions -->
+      <section>
+      <h3>Naming Functions</h3>
+      <ul class="fs-28">
+        <li>Naming functions is similiar to how we name variables:
+          <ul>
+            <li>Start with a lowercase alphabeth</li>
+            <li>Use camelCase syntax</li>
+            <li>Use descriptive names</li>
+          </ul>
+        </li>
+        <li>A function's name should reflect what the function is meant to do</li>
+      </ul>
+      </section>
+
+      <!-- Function Naming examples -->
+      <section>
+        <h3>Function Naming</h3>
+        <div class="flex">
+          <ul class="fs-24">Vague Naming
+            <li><code>car()</code></li>
+            <li><code>username()</code></li>
+            <li><code>multiply()</code></li>
+          </ul>
+          <ul class="fs-24">Better Naming
+            <li><code>displayCarBrand()</code></li>
+            <li><code>getUsername()</code></li>
+            <li><code>multiplyByFour()</code></li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h3>Function Practice</h3>
+        <p class="fs-28 mb-16">Write a function that repeats a name 10 times</p>
+        <p class="fs-28">We'll need a function and a loop</p>
+      </section>
+
+      <!-- Parameters -->
+      <section>
+        <h3>Function Parameters</h3>
+        <ul class="fs-28">
+          <li>Functions can take (optional) input values known as <code>parameters</code></li>
+          <li>A parameter is a placeholder for a value that the function will use when called</li>
+        </ul>
+    <pre><code class="js">// Syntax of using or passing a parameter:
+
+function friendlyGreeting( anyStringName ){
+
+  console.log(`Hi ${anyStringName}`)
+
+}
+
+friendlyGreeting('') 
+// A string value goes into the function call
+    </code></pre>
+      </section>
+
+      <!-- Arguments -->
+      <section>
+        <h3>Function Argument</h3>
+        <ul class="fs-28">
+          <li>An <code>argument</code> is the actual value passed to the function to use (when invoked) instead of the placeholder</li>
+          <li>Arguments can be any data type: Strings, Numbers, Boolean, Arrays, etc.</li>
+        </ul>
+    <pre><code class="js">// Syntax of using an argument:
+
+function friendlyGreeting( anyName ){
+
+  console.log(`Hi ${anyName}`)
+
+}
+
+friendlyGreeting('Tamara')
+
+// We've passed an argument, the string 
+// 'Tamara' to the function to use
+    </code></pre>
+      </section>
+
+      <!-- Using Function arguments -->
+      <section>
+        <h3>Function Argument</h3>
+        <ul class="fs-28">
+          <li>We can now reuse the function multiple times with different arguments </li>
+        </ul>
+    <pre><code class="js">// Syntax of using an argument:
+
+function friendlyGreeting( anyName ){
+
+  console.log(`Hi ${anyName}`)
+
+}
+
+friendlyGreeting('Tamara')
+friendlyGreeting('Jamal')
+friendlyGreeting('Cindy')
+    </code></pre>
+      </section>
+
+      <!-- Variables as arguments -->
+      <section>
+        <h3>Variables as Arguments</h3>
+        <p class="width-750">Since variables are values, they can be passed to functions as arguments</p>
+    <pre><code class="js">let firstNumber = 3
+let secondNumber = 7
+let thirdNumber = 8
+
+
+function addNumbers(num1, num2, num3){
+
+  console.log(num1 + num2 + num3)
+
+}
+
+addNumbers(firstNumber, secondNumber, thirdNumber)
+
+// This adds 3 + 7 + 8
+        </code></pre>
+      </section>
+
+      <!-- Beyond console.log -->
+      <section>
+        <h3>Return Statements</h3>
+        <p class="fs-24 width-800 mb-16">We've been using the <code>console.log</code> method to output our JavaScript code, but the console is a temporary environment; </p><p class="fs-24 width-750">We want the results of our code to be stored and available for use whenever it is needed</p>
+      </section>
+
+      <!-- Return Statements -->
+      <section>
+        <h3>Return Statement</h3>
+        <p class="fs-28 width-750">A <code>return</code> statement sets the value a function returns when the function is called</p>
+      <pre><code class="js">function addTwoNumbers (num1, num2){
+
+  let sum = num1 + num2;
+
+  return sum;
+
+}
+      </code></pre>
+        <p class="fs-20"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/return" target="_blank">Return</a> and <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Return_values" target="_blank">Function Return Values</a> (MDN)</p>
+      </section>
+
+      <section>
+        <h3>Return Statement</h3>
+        <p>A <code>return</code> statement also ends a function's execution</p>
+      <pre><code class="js">function addTwoNumbers (num1, num2){
+
+  let sum = num1 + num2
+
+  return sum
+
+  console.log('Hello') // This will not run
+
+}
+      </code></pre>
+      </section>
+
+      <!-- Undefined -->
+      <section>
+        <h3>Return Statement</h3>
+        <p>A function without a <code>return</code> statement <br>will be <code>undefined</code></p>
+      <pre><code class="js">function addTwoNumbers (num1, num2){
+
+  let sum = num1 + num2
+
+}
+
+console.log(addTwoNumbers(4,5)) // Undefined
+
+      </code></pre>
+      </section>
+
+      <!--  -->
+      <section>
+        <h3>Return Value</h3>
+        <p>A function's <code>return value</code> can be<br> saved and used at any time</p>
+      <pre><code class="js">function addTwoNumbers (num1, num2){
+
+  let sum = num1 + num2;
+
+  return sum;
+
+}
+
+let calculateFiveAndTen = addTwoNumbers(5,10)
+
+console.log(calculateFiveAndTen)
+
+console.log(`5 plus 10 equals ${calculateFiveAndTen}`)
+
+      </code></pre>
+      </section>
+
+      <!-- <pre><code class="js"></code></pre> -->
+
+      <!-- Practice -->
+      <section>
+        <h3>Practice Exercises</h3>
+        <ul>
+          <li><a href="https://replit.com/@tinuola/JS1-Class7-Practice" target="_blank">Class 7 Practice Exercises</a></li>
+        </ul>
+      </section>
+
+      <!-- Next Class -->
+      <section>
+        <h3>See you in Class 8!</h3>
+        <h4>👋 👋 👋 👋 👋 👋 👋 👋</h4>
+      </section>
+
+      <!-- MUST USE SLIDE - Course Feedback Survey-->
+      <!-- <section>
+        <h3>Class Feedback</h3>
+      </section> -->
+
+      <!-- Q&A -->
+      <!-- <section>
+        <h2>Q&A</h2>
+      </section> -->
+
+      <!-- Thank You -->
+      <section>
+        <img src="../shared-assets/imgs/gdi-logos/gdi-circle-logo_peach.png" alt="GDI Logo" width="300px" class="noborder" />
+        <br>
+        <h2>Thank You!</h2>
+      </section>
+    </div> <!-- End of Slides container -->
+
+    <footer>
+      <!-- Update with Course Name -->
+      <div class="copyright">
+        <img src="../shared-assets/imgs/gdi-logos/gdi-circle-logo_peach.png" alt="GDI Logo" width="40px" class="noborder" />
+        <p>JavaScript Fundamentals 1 (On Demand) - Class 7</p>
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img
+            alt="Creative Commons License" style="border-width:0"
+            src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+      </div>
+    </footer>
+  </div>
+  <!-- End of Reveal wrapper -->
+  <!---->
+  <!---->
+  <!-- RevealJS Scripts & Config - Do Not Edit or Delete -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/plugin/highlight/highlight.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/highlightjs-badge@0.1.9/highlightjs-badge.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jsPlumb/2.15.5/js/jsplumb.min.js"></script>
+  <script src="../shared-assets/js/revealConfig.js"></script>
+</body>
+</html>

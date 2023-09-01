@@ -1,0 +1,397 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Girl Develop It JavaScript Fundamentals 1 Cohort Series">
+    <meta name="author" content="Girl Develop It">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  
+    <!-- Update with GDI Course Name -->
+    <title>GDI - JavaScript Fundamentals 1 (On Demand), Class 7</title>
+  
+    <link rel="icon" type="image/x-icon" href="../shared-assets/imgs/favicon.ico" />
+  
+    <!-- RevealJS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/theme/simple.css" id="theme">
+  
+    <!-- GDI Custom Theme - Do not delete -->
+    <link
+    rel="stylesheet"
+    href="../shared-assets/css/gdi-theme.css" />
+  
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/monokai.min.css">
+  
+    <!-- Course Custom Styles if Applicable-->
+    <link
+    rel="stylesheet"
+    href="./css/style.css" />
+  </head>
+
+<body>
+  <div class="reveal">
+    <!-- Start of Slides container -- Any section element in this container is displayed as a slide -->
+    <div class="slides">
+
+      <!-- Course and Class Titles -->
+      <section>
+        <h2>JavaScript Fundamentals 1</h2>
+        <h3>(On Demand)</h3>
+        <h3>Class 8</h3>
+      </section>
+
+      <!-- Class Agenda -->
+      <section>
+        <h3>AGENDA</h3>
+          <ul>
+            <li>Arrays</li>
+            <li>Basic Array Methods</li>
+            <li>Looping Arrays: <code>for...of</code></li>
+          </ul>
+      </section>
+
+      <!-- Arrays -->
+      <section>
+        <h3>Arrays</h3>
+      </section>
+
+      <!-- Arrays -->
+      <section>
+        <h3>Arrays</h3>
+        <ul class="fs-28">
+          <li>An array is another JavaScript data type</li>
+          <li>An array is an ordered list of values</li>
+          <li>Arrays are great for storing multiple values under a single variable name</li>
+        </ul>
+<pre><code class="js">let fruits = ['apple', 'pear', 'mango']
+</code></pre>
+        <small><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Arrays" target="_blank">Arrays</a> (MDN)</small>
+      </section>
+
+      <!-- Array syntax -->
+      <section>
+        <h3>Array Syntax</h3>
+        <p class="width-750">An array is declared with a variable name and square brackets <code>[]</code> that contain values; the values are separated by commas</p>
+<pre><code class="js"> let arrayName = [ item1, item2, item3, item4, .... ]
+</code></pre>
+        <small><a href="https://www.javascripttutorial.net/javascript-array/" target="_blank">A Beginner's Guide to JavaScript Arrays</a> (JavaScriptTutorial.net)</small>
+      </section>
+
+      <!-- Array values -->
+      <section>
+        <h3>Arrays</h3>
+        <p>Arrays can hold different types of data, even other arrays!</p>
+<pre><code class="js">let primaryColors = ['red', 'blue', 'green']
+
+let lotteryNumbers = [2, 24, 54, 9, 30, 44]
+
+let randomValues = ['hello', 66, true, ['item1', 'item2'] ]
+</code></pre>
+      </section>
+
+      <!-- Zero-indexed -->
+      <section>
+        <h3>Zero Index</h3>
+        <ul class="fs-28">
+          <li><code>Arrays</code> are zero-indexed, just like <code>strings</code></li>
+          <li>we count from <code>0</code>, not 1</li>
+        </ul>
+<pre><code class="js">let namesList = ['Anita', 'Naoko', 'Olga', 'Sandra']
+
+console.log(namesList[0]) // Prints Anita
+
+// Anita is the first item, and has an index value of 0
+
+
+console.log(namesList[3]) // Prints Sandra
+
+// Sandra is the fourth item, but has an index value of 3
+
+// because we're counting from 0
+</code></pre>
+      </section>
+
+      <!-- Updating an array -->
+      <section>
+        <h3>Updating an Array</h3>
+        <p class="fs-28 width-800">Knowing the indices or positions in an array, means we can manually add or overwrite the values in the array</p>
+      </section>
+
+      <!-- Manually adding an item to an array -->
+      <section>
+        <h3>Manually Add a New Item</h3>
+<pre><code class="js"> // namesList has 4 names, let's add a 5th
+
+let namesList = ['Anita', 'Naoko', 'Olga', 'Sandra']
+
+namesList[4] = 'Jules'
+
+console.log(namesList)
+</code></pre>
+      </section>
+
+      <!-- Manually overwrite an array item -->
+      <section>
+        <h3>Manually Overwrite an Item
+        </h3>
+<pre><code class="js"> // Our list: 'Anita', 'Naoko', 'Olga', 'Sandra', 'Jules'
+
+// Let's update Olga to Kiki
+
+namesList[2] = 'Kiki'
+
+console.log(namesList)
+</code></pre>
+      </section>
+      
+      <!-- Array methods -->
+      <section>
+        <h3>Array Methods</h3>
+        <p>JavaScript has default array methods that <br>allow us to work with the data in an array</p>
+      </section>
+      
+      <!-- Length property -->
+      <section>
+        <h3>Array.length</h3>
+        <p class="width-750 fs-28">We can use the <code>length</code> property to count the number of items in an array</p>
+<pre><code class="js">let countries = ['Peru', 'Japan', 'Canada', 'Ghana']
+
+console.log(countries.length) // 4
+</code></pre>
+        <small><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length#" target="_blank">Array.prototype.length</a> (MDN)</small>
+      </section>
+
+      <!-- .push -->
+      <section>
+        <h3>Adding to the back of an array<br><code>.push()</code></h3>
+<pre><code class="js">let countries = ['Peru', 'Japan', 'Canada', 'Ghana']
+
+countries.push('Belgium') // 5
+</code></pre>
+        <p>Note: <code>.push()</code> returns the new <br>length of the array, not the array itself</p>
+        <small><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push" target="_blank">Array.prototype.push()</a> (MDN)</small>
+      </section>
+
+      <!-- .unshift -->
+      <section>
+        <h3>Adding to the front of an array<br><code>.unshift()</code></h3>
+<pre><code class="js">countries.unshift('Turkey') // 6
+
+console.log(countries)
+
+// ['Turkey', 'Peru', 'Japan', 'Canada', 'Ghana', 'Belgium']
+</code></pre>
+        <p>Note: <code>.unshift()</code> also returns the new <br>length of the array, not the array itself</p>
+        <small><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift" target="_blank">Array.prototype.unshift()</a> (MDN)</small>
+      </section>
+
+      <!-- .sort -->
+      <section>
+        <h3>Sorting an Array<code><br>.sort()</code></h3>
+<pre><code class="js">countries.sort()
+
+// ['Belgium', 'Canada', 'Ghana', 'Japan', 'Peru', Turkey]
+</code></pre>
+        <small><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort" target="_blank">Array.prototype.sort()</a> (MDN)</small>
+      </section>
+
+      <!-- .reverse -->
+      <section>
+        <h3>Reversing an Array order<br><code>.reverse()</code></h3>
+<pre><code class="js">countries.reverse()
+
+// ['Turkey', 'Peru', 'Japan', 'Ghana', 'Canada', 'Belgium']
+</code></pre>
+        <small><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse" target="_blank">Array.prototype.reverse()</a> (MDN)</small> 
+      </section>
+
+      <!-- Arrays to string -->
+      <section>
+        <h3>Turning Arrays to Strings<br><code>.join()</code></h3>
+        <ul class="fs-28">
+          <li>Using the <code>.join()</code> array method</li>
+          <li>Print the four array variables below</li>
+          <li>Notice the difference in the strings that are returned</li>
+        </ul>
+<pre><code class="js">let primaryColors = ['blue', 'red', 'yellow']
+
+let arrayToStrings1 = primaryColors.join()
+// blue,red,yellow
+
+let arrayToStrings2 = primaryColors.join('')
+// blueredyellow
+
+let arrayToStrings3 = primaryColors.join(' ')
+// blue red yellow
+
+let arrayToStrings4 = primaryColors.join(', ')
+// blue, red, yellow
+</code></pre>
+        <small><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join" target="_blank">Array.prototype.join()</a> (MDN)</small>
+      </section>
+
+      <!-- Strings to Arrays with Array.from -->
+      <section>
+        <h3>Turning Strings into Arrays<br><code>Array.from()</code></h3>
+        <ul class="fs-28">
+          <li>Using the <code>Array.from()</code> array method</li>
+        </ul>
+<pre><code class="js">let warningStr = 'Winter is coming'
+
+let warningStrToArr = Array.from(warningStr) 
+
+// Returns each string character as an array item
+</code></pre>
+        <small><a href="https://www.w3schools.com/jsref/jsref_from.asp" target="_blank">JavaScript Array.from()</a> w3schools</small>
+      </section>
+
+      <!-- Strings to Array with .split() -->
+      <section>
+      <h3>Turning Strings into Arrays</h3>
+      <ul class="fs-28">
+        <li>Using the <code>.split()</code> string method</li>
+        <li>Print the three variables below; notice the difference<br> in the arrays that are returned</li>
+      </ul>
+<pre><code class="js">let str = 'Hello World'
+
+let strToArray1 = str.split()
+// Returns the whole string as one element in the array
+
+let strToArray2 = str.split('')
+// Splits each character as an array item, including blank space
+
+let strToArray3 = str.split(' ')
+// Splits each word, using a blank space as a separator 
+</code></pre>
+      <small><a href="https://www.w3schools.com/jsref/jsref_split.asp" target="_blank">JavaScript String split()</a> w3schools</small>
+      </section>
+
+      <!-- Practice, Practice, Practice -->
+      <section>
+        <h3>Array Methods Practice</h3>
+        <p class="width-750 fs-28">There are more array methods than we cover in class. The best way to learn is to use them.</p>
+      </section>
+
+      <!-- Looping through Arrays -->
+      <section>
+        <h3>Looping Through Arrays</h3>
+        <p class="width-750 fs-28">There are a number of ways to iterate through an array; let's explore two basic approaches:</p>
+        <ul class="fs-28">
+          <li><code>for</code> loop</li>
+          <li><code>for of</code> loop</li>
+        </ul>
+      </section>
+    
+      <!-- Standard for loop -->
+      <section>
+        <h3>Arrays and the Basic <code>for</code> Loop</h3>
+        <ul class="fs-24">
+          <li>The <code>for</code> loop syntax remains unchanged</li>
+          <li>We use the array's <code>length</code> as the condition that controls the loop</li>
+        </ul>
+<pre><code class="js">let oneNameSingers = ['Sia', 'Lizzo', 'Beyonce', 'Pink' ];
+
+let arrLength = oneNameSingers.length;
+  
+for(let i=0; i < arrLength; i++){
+
+  console.log(oneNameSingers[i])
+
+}
+</code></pre>
+      </section>
+    
+      <!-- For of loop -->
+      <section>
+        <h3>Arrays and the <code>for of</code> Loop</h3>
+        <ul class="fs-24">
+          <li>The <code>for of</code> was introduced in ES6</li>
+          <li>It can be used on any data type that's countainable, such as arrays and strings</li>
+          <li>It has a different syntax:</li>
+        </ul>
+<pre><code class="js">for (item of array) {
+  
+  // usually returning or doing something with each item
+
+}
+</code></pre>
+        <!-- <p><code>iterable</code> is the object that's being looped<br>
+        <code>variable</code> is each item in the object</p> -->
+      </section>
+    
+      <!-- For of loop example -->
+      <section>
+        <h3><code>for of</code> Loop</h3>
+        <ul class="fs-28">
+          <li>With the <code>for of</code> loop, we don't need to rely<br> on the array's length</li>
+        </ul>
+<pre><code class="js">let moreOneNameCelebs = ['Oprah', 'Bjork', 'Madonna', 'JayZ']
+
+for( celeb of moreOneNameCelebs ){
+
+  console.log(celeb)
+
+}
+</code></pre>
+      </section>
+
+      <!-- <pre><code class="js"></code></pre> -->
+
+      <!-- Practice -->
+      <section>
+        <h3>Practice Exercises</h3>
+        <ul>
+          <li><a href="https://replit.com/@tinuola/JS1-Class8-Practice" target="_blank">Class 8 Practice Exercises</a></li>
+        </ul>
+      </section>
+
+      <!-- Next Class -->
+      <section>
+        <h3>See you in Class 9!</h3>
+        <h4>👋 👋 👋 👋 👋 👋 👋 👋 👋</h4>
+      </section>
+
+      <!-- MUST USE SLIDE - Course Feedback Survey-->
+      <!-- <section>
+        <h3>Class Feedback</h3>
+      </section> -->
+
+      <!-- Q&A -->
+      <!-- <section>
+        <h2>Q&A</h2>
+      </section> -->
+
+      <!-- Thank You -->
+      <section>
+        <img src="../shared-assets/imgs/gdi-logos/gdi-circle-logo_peach.png" alt="GDI Logo" width="300px" class="noborder" />
+        <br>
+        <h2>Thank You!</h2>
+      </section>
+    </div> <!-- End of Slides container -->
+
+    <footer>
+      <!-- Update with Course Name -->
+      <div class="copyright">
+        <img src="../shared-assets/imgs/gdi-logos/gdi-circle-logo_peach.png" alt="GDI Logo" width="40px" class="noborder" />
+        <p>JavaScript Fundamentals 1 (On Demand) - Class 7</p>
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img
+            alt="Creative Commons License" style="border-width:0"
+            src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+      </div>
+    </footer>
+  </div>
+  <!-- End of Reveal wrapper -->
+  <!---->
+  <!---->
+  <!-- RevealJS Scripts & Config - Do Not Edit or Delete -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/plugin/highlight/highlight.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/highlightjs-badge@0.1.9/highlightjs-badge.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jsPlumb/2.15.5/js/jsplumb.min.js"></script>
+  <script src="../shared-assets/js/revealConfig.js"></script>
+</body>
+</html>

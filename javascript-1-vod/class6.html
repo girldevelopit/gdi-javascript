@@ -1,0 +1,359 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Girl Develop It JavaScript Fundamentals 1 Cohort Series">
+    <meta name="author" content="Girl Develop It">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  
+    <!-- Update with GDI Course Name -->
+    <title>GDI - JavaScript Fundamentals 1 (On Demand), Class 6</title>
+  
+    <link rel="icon" type="image/x-icon" href="../shared-assets/imgs/favicon.ico" />
+  
+    <!-- RevealJS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/theme/simple.css" id="theme">
+  
+    <!-- GDI Custom Theme - Do not delete -->
+    <link
+    rel="stylesheet"
+    href="../shared-assets/css/gdi-theme.css" />
+  
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/monokai.min.css">
+  
+    <!-- Course Custom Styles if Applicable-->
+    <link
+    rel="stylesheet"
+    href="./css/style.css" />
+  </head>
+
+<body>
+  <div class="reveal">
+    <!-- Start of Slides container -- Any section element in this container is displayed as a slide -->
+    <div class="slides">
+
+      <!-- Course and Class Titles -->
+      <section>
+        <h2>JavaScript Fundamentals 1</h2>
+        <h3>(On Demand)</h3>
+        <h3>Class 6</h3>
+      </section>
+
+      <!-- Class Agenda -->
+      <section>
+        <h3>AGENDA</h3>
+          <ul>
+            <li>Iteration aka Looping:</li>
+            <ul>
+              <li>For Loop</li>
+              <li>While Loop</li>
+            </ul>
+          </ul>
+      </section>
+
+      <section>
+        <h3>Iteration aka Looping</h3>
+      </section>
+
+      <!-- Looping -->
+      <section>
+        <h3>Looping</h3>
+        <ul class="fs-28 mb-16">
+          <li>Another common behavior of code is to repeat tasks--also known as looping or iterating</li>
+          <li>JavaScript has multiple ways of executing loops</li>
+        </ul>
+        <small><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...in_statement" target="_blank">Loops and Iteration</a> (MDN)</small>
+      </section>
+
+      <!-- for loop -->
+      <section>
+        <h3>Standard <code>for</code> Loop</h3>
+        <ul class="fs-28">
+          <li class="mb-16">A <code>for</code> loop is often the first type of loop we learn in JavaScript</li>
+          <li>A <code>for</code> loop executes a given task a set number of times and under specific conditions</li>
+        </ul>
+      </section>
+
+      <!-- for loop syntax -->
+      <section>
+        <h3><code>for</code> Loop Syntax</h3>
+<pre><code class="js">for (expression1; expression2; expression3) {
+
+  // code to be repeated
+
+}
+
+// expression1 starts or initializes the loop
+
+// expression2 is the condition that 
+// determines if/when the loop should run
+
+// expression3 counts the looping cycle
+
+</code></pre>
+      </section>
+
+      <!-- for loop example -->
+      <section>
+        <h3><code>for</code> Loop Syntax</h3>
+<pre><code class="js">for ( let i = 1; i < 5; i++ ){
+
+  console.log(`I love JavaScript`)
+
+}
+// I love JavaScript
+// I love JavaScript
+// I love JavaScript
+// I love JavaScript
+</code></pre>
+        <ul class="fs-24">
+          <li><code class="highlight--yellow">let i = 1;</code> initializes a variable <code>i</code> that starts the loop</li>
+          <li><code class="highlight--yellow">i < 5;</code> how long the loop runs as long as <code>i</code> is less than 5</li>
+          <li><code class="highlight--yellow">i++</code> keeps track or count of the looping cycle</li>
+        </ul>
+      </section>
+
+      <!-- for loop practice -->
+      <section>
+        <h3>Practice</h3>
+        <p>Evaluate each expression in the <code>for</code> loop below;<br> what will the loop print?</p>
+<pre><code class="js">for ( let age = 10; age < 100; age +=10 ){
+
+  console.log(age);
+
+}
+</code></pre>
+      </section>
+
+      <!-- Decrementing Loops -->
+      <section>
+        <h3>Decrementing Loops</h3>
+        <p>Loops can also count down by:</p>
+        <ul class="fs-24">
+          <li>Changing the initializing value</li>
+          <li>Changing the condition to run against</li>
+          <li>Using the <code>--</code> decrement operator</li>
+        </ul>
+<pre><code class="js">for (let dirtySocks = 10; dirtySocks > 0; dirtySocks--) {
+
+  console.log("Dirty socks remaining: " + dirtysocks);  
+
+}
+
+// Dirty socks remaining: 10
+// Dirty socks remaining: 9
+// ...
+// Dirty socks remaining: 2
+// Dirty socks remaining: 1
+
+</code></pre>
+      </section>
+
+      <!-- Looping through strings -->
+      <section>
+        <h3>Looping through Strings</h3>
+        <p class="fs-28">We can loop through characters of a string</p>
+<pre><code class="js">let fruit = 'banana'
+
+for (let i = 0; i <= fruit.length; i++){
+
+  console.log(fruit[i])
+  
+}
+// b
+// a
+// n
+// a
+// n
+// a
+</code></pre>
+      </section>
+
+      <!-- Loops and Conditionals -->
+      <section>
+        <h3>Loops & Conditionals</h3>
+        <p>Loops can execute conditionals</p>
+<pre><code class="js">for(let num = 0; num <= 10; num++){
+
+  if(num % 2 === 0 ){
+  
+    console.log('Lauren')
+  
+  } else {
+  
+    console.log(num)
+  
+  }
+
+}
+// If num is even, print the name 'Lauren'
+// Else if num is odd, just print the value of num
+</code></pre>
+      </section>
+
+    <!-- Infinite Loops -->
+    <section>
+      <h3>Infinite Loops</h3>
+      <p>Loops are finicky!</p>
+      <ul class="fs-28">
+        <li>When written incorrectly or inefficiently, a loop will crash your browser or application</li>
+        <li>Usually this happens when we write a loop in which the condition is always true</li>
+        <li>This means the loop will never stop running</li>
+      </ul>
+    </section>
+
+    <!-- Infinite Loop example -->
+    <section>
+      <h3>Infinite Loops</h3>
+<pre><code class="js">// This loop will run indefinitely because
+// it will ALWAYS be true that num is not 
+// equal to super.
+
+for(let num = 0; num !== 'super'; num++){
+
+console.log('Lauren ' + num)
+
+}
+</code></pre>
+
+    </section>
+
+    <!-- While loop -->
+    <section>
+      <h3><code>while</code> Loop</h3>
+      <ul class="fs-28">
+        <li>Similar to a <code>for</code> loop, a <code>while</code> loop also checks that a specific condition must be met to run or execute code</li>
+        <li>It has a different syntax, but the concept is the same</li>
+      </ul>
+    </section>
+
+    <!-- while loop syntax -->
+    <section>
+      <h3><code>while</code> Loop Syntax</h3>
+<pre><code class="js">// Set up a starting condition
+// Then the while loop:
+
+while (condition is true) {
+
+// code to run
+
+// counter (increment or decrement)
+
+}
+</code></pre> 
+    </section>
+
+    <!-- while loop example -->
+    <section>
+      <h3><code>while</code> Loop Syntax</h3>
+<pre><code class="js">// Starting condition:
+let numOfBooks = 1
+
+// The loop
+while (numOfBooks <= 10) {
+
+// Code to run
+console.log(numOfBooks)
+
+// Counter
+numOfBooks++
+
+}
+</code></pre> 
+    </section>
+
+    <!-- Decrement -->
+    <section>
+      <h3>Decrementing a <code>while</code> Loop</h3>
+      <p class="width-800 fs-28">Remember that to decrement, we must update the condition and the counter</p>
+<pre><code class="js">let applesEaten = 10
+
+while (applesEaten >= 0){
+
+console.log(applesEaten);
+
+applesEaten--;
+
+}
+</code></pre> 
+    </section>
+
+      <!-- for or while -->
+      <section>
+        <h3><code>for</code> or <code>while</code></h3>
+        <p class="fs-28 mb-16">Both loops do the same thing; but if deciding between the two: </p>
+        <ul class="fs-24 mb-32">
+          <li>Use a <code>for</code> loop if you know how many times the loop should run</li>
+          <li>Use a <code>while</code> loop if you want the loop to run based on a condition rather than a set number of times</li>
+        </ul>
+        <small><a href="https://support.khanacademy.org/hc/en-us/articles/203327020-When-do-I-use-a-for-loop-and-when-do-I-use-a-while-loop-in-the-JavaScript-challenges" target="_blank">When do I use a for loop and when do I use a while loop?</a> (Khan Academy)</small>
+        <small><a href="https://levelup.gitconnected.com/the-difference-between-for-loops-and-while-loops-in-javascript-6029f45faeba" target="_blank">The Difference Between For Loops and While Loops in JavaScript</a> (GitConnected.com)</small>
+      </section>
+
+      <!-- More loops to come -->
+      <section>
+        <h3>Loops & Iterators Galore!</h3>
+        <p>There are still many more ways to loop and iterate code in JavaScript!</p>
+      </section>
+
+      <!-- <pre><code class="js"></code></pre> -->
+
+      <!-- Practice -->
+      <section>
+        <h3>Practice Exercises</h3>
+        <ul>
+          <li><a href="https://replit.com/@tinuola/JS1-Class6-Practice" target="_blank">Class 6 Practice Exercises</a></li>
+        </ul>
+      </section>
+
+      <!-- Next Class -->
+      <section>
+        <h3>See you in Class 7!</h3>
+        <h4>👋 👋 👋 👋 👋 👋 👋</h4>
+      </section>
+
+      <!-- MUST USE SLIDE - Course Feedback Survey-->
+      <!-- <section>
+        <h3>Class Feedback</h3>
+      </section> -->
+
+      <!-- Q&A -->
+      <!-- <section>
+        <h2>Q&A</h2>
+      </section> -->
+
+      <!-- Thank You -->
+      <section>
+        <img src="../shared-assets/imgs/gdi-logos/gdi-circle-logo_peach.png" alt="GDI Logo" width="300px" class="noborder" />
+        <br>
+        <h2>Thank You!</h2>
+      </section>
+    </div> <!-- End of Slides container -->
+
+    <footer>
+      <!-- Update with Course Name -->
+      <div class="copyright">
+        <img src="../shared-assets/imgs/gdi-logos/gdi-circle-logo_peach.png" alt="GDI Logo" width="40px" class="noborder" />
+        <p>JavaScript Fundamentals 1 (On Demand) - Class 6</p>
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img
+            alt="Creative Commons License" style="border-width:0"
+            src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+      </div>
+    </footer>
+  </div>
+  <!-- End of Reveal wrapper -->
+  <!---->
+  <!---->
+  <!-- RevealJS Scripts & Config - Do Not Edit or Delete -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/plugin/highlight/highlight.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/highlightjs-badge@0.1.9/highlightjs-badge.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jsPlumb/2.15.5/js/jsplumb.min.js"></script>
+  <script src="../shared-assets/js/revealConfig.js"></script>
+</body>
+</html>

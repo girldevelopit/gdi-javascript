@@ -57,26 +57,29 @@
       </section>
 
       <section>
-        <h3>Loops & Iteration</h3>
+        <h3>Iteration aka Looping</h3>
       </section>
 
-      <!--  -->
+      <!-- Looping -->
       <section>
-        <h3>Loops</h3>
-        <p>Another common behavior of code is to repeat<br> tasks--also known as looping or iterating. <br>JavaScript has multiple ways of executing loops.</p>
+        <h3>Looping</h3>
+        <ul class="fs-28 mb-16">
+          <li>Another common behavior of code is to repeat tasks--also known as looping or iterating</li>
+          <li>JavaScript has multiple ways of executing loops</li>
+        </ul>
         <small><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...in_statement" target="_blank">Loops and Iteration</a> (MDN)</small>
       </section>
 
-      <!--  -->
+      <!-- for loop -->
       <section>
-        <h3><code>for</code> Loop</h3>
-        <ul>
-          <li>A <code>for</code> loop is often the first type of loop we learn in JavaScript</li>
-          <li>A <code>for</code> loop executes a given task a set number of times under specific conditions</li>
+        <h3>Standard <code>for</code> Loop</h3>
+        <ul class="fs-28">
+          <li class="mb-16">A <code>for</code> loop is often the first type of loop we learn in JavaScript</li>
+          <li>A <code>for</code> loop executes a given task a set number of times and under specific conditions</li>
         </ul>
       </section>
 
-      <!--  -->
+      <!-- for loop syntax -->
       <section>
         <h3><code>for</code> Loop Syntax</h3>
 <pre><code class="js">for (expression1; expression2; expression3) {
@@ -95,7 +98,7 @@
 </code></pre>
       </section>
 
-      <!--  -->
+      <!-- for loop example -->
       <section>
         <h3><code>for</code> Loop Syntax</h3>
 <pre><code class="js">for ( let i = 1; i < 5; i++ ){
@@ -108,18 +111,30 @@
 // I love JavaScript
 // I love JavaScript
 </code></pre>
-        <ul>
-          <li><code>let i = 1;</code> initializes a variable <code>i</code> that starts the loop</li>
-          <li><code>i < 5;</code> lets the loop run as long as <code>i</code> is less than 5</li>
-          <li><code>i++</code> keeps track or count of the looping cycle</li>
+        <ul class="fs-24">
+          <li><code class="highlight--yellow">let i = 1;</code> initializes a variable <code>i</code> that starts the loop</li>
+          <li><code class="highlight--yellow">i < 5;</code> how long the loop runs as long as <code>i</code> is less than 5</li>
+          <li><code class="highlight--yellow">i++</code> keeps track or count of the looping cycle</li>
         </ul>
       </section>
 
-      <!--  -->
+      <!-- for loop practice -->
+      <section>
+        <h3>Practice</h3>
+        <p>Evaluate each expression in the <code>for</code> loop below;<br> what will the loop print?</p>
+<pre><code class="js">for ( let age = 10; age < 100; age +=10 ){
+
+  console.log(age);
+
+}
+</code></pre>
+      </section>
+
+      <!-- Decrementing Loops -->
       <section>
         <h3>Decrementing Loops</h3>
         <p>Loops can also count down by:</p>
-        <ul>
+        <ul class="fs-24">
           <li>Changing the initializing value</li>
           <li>Changing the condition to run against</li>
           <li>Using the <code>--</code> decrement operator</li>
@@ -139,7 +154,27 @@
 </code></pre>
       </section>
 
-      <!--  -->
+      <!-- Looping through strings -->
+      <section>
+        <h3>Looping through Strings</h3>
+        <p class="fs-28">We can loop through characters of a string</p>
+<pre><code class="js">let fruit = 'banana'
+
+for (let i = 0; i <= fruit.length; i++){
+
+  console.log(fruit[i])
+  
+}
+// b
+// a
+// n
+// a
+// n
+// a
+</code></pre>
+      </section>
+
+      <!-- Loops and Conditionals -->
       <section>
         <h3>Loops & Conditionals</h3>
         <p>Loops can execute conditionals</p>
@@ -161,37 +196,18 @@
 </code></pre>
       </section>
 
-      <section>
-        <h3>Loops and Strings</h3>
-        <p>We can loop through characters of a string</p>
-<pre><code class="js">let fruit = 'banana'
-
-for (let i = 0; i <= fruit.length; i++){
-
-  console.log(fruit[i])
-  
-}
-// b
-// a
-// n
-// a
-// n
-// a
-</code></pre>
-      </section>
-
-     <!--  -->
-     <section>
+    <!-- Infinite Loops -->
+    <section>
       <h3>Infinite Loops</h3>
       <p>Loops are finicky!</p>
-      <ul>
+      <ul class="fs-28">
         <li>When written incorrectly or inefficiently, a loop will crash your browser or application</li>
         <li>Usually this happens when we write a loop in which the condition is always true</li>
         <li>This means the loop will never stop running</li>
       </ul>
     </section>
 
-    <!--  -->
+    <!-- Infinite Loop example -->
     <section>
       <h3>Infinite Loops</h3>
 <pre><code class="js">// This loop will run indefinitely because
@@ -207,13 +223,16 @@ console.log('Lauren ' + num)
 
     </section>
 
-    <!--  -->
+    <!-- While loop -->
     <section>
       <h3><code>while</code> Loop</h3>
-      <p>Similar to a <code>for</code> loop, a <code>while</code> loop also checks<br> that a specific condition must be met to run or<br> execute code. It has a different syntax, but<br> the concept is the same.</p>
+      <ul class="fs-28">
+        <li>Similar to a <code>for</code> loop, a <code>while</code> loop also checks that a specific condition must be met to run or execute code</li>
+        <li>It has a different syntax, but the concept is the same</li>
+      </ul>
     </section>
 
-    <!--  -->
+    <!-- while loop syntax -->
     <section>
       <h3><code>while</code> Loop Syntax</h3>
 <pre><code class="js">// Set up a starting condition
@@ -229,45 +248,46 @@ while (condition is true) {
 </code></pre> 
     </section>
 
-    <!--  -->
+    <!-- while loop example -->
     <section>
       <h3><code>while</code> Loop Syntax</h3>
 <pre><code class="js">// Starting condition:
-let x = 1
+let numOfBooks = 1
 
 // The loop
-while (x <= 10) {
+while (numOfBooks <= 10) {
 
 // Code to run
-console.log(x)
+console.log(numOfBooks)
 
 // Counter
-x++
+numOfBooks++
 
 }
 </code></pre> 
     </section>
 
-    <!--  -->
+    <!-- Decrement -->
     <section>
       <h3>Decrementing a <code>while</code> Loop</h3>
-      <p>Remember: Update the condition and the counter</p>
-<pre><code class="js">let y = 10
+      <p class="width-800 fs-28">Remember that to decrement, we must update the condition and the counter</p>
+<pre><code class="js">let applesEaten = 10
 
-while (y >= 0){
+while (applesEaten >= 0){
 
-console.log(y);
+console.log(applesEaten);
 
-y--;
+applesEaten--;
+
 }
 </code></pre> 
     </section>
 
-      <!--  -->
+      <!-- for or while -->
       <section>
         <h3><code>for</code> or <code>while</code></h3>
-        <p>Both loops do the same thing; <br>but if deciding between the two: </p>
-        <ul>
+        <p class="fs-28 mb-16">Both loops do the same thing; but if deciding between the two: </p>
+        <ul class="fs-24 mb-32">
           <li>Use a <code>for</code> loop if you know how many times the loop should run</li>
           <li>Use a <code>while</code> loop if you want the loop to run based on a condition rather than a set number of times</li>
         </ul>
@@ -275,10 +295,10 @@ y--;
         <small><a href="https://levelup.gitconnected.com/the-difference-between-for-loops-and-while-loops-in-javascript-6029f45faeba" target="_blank">The Difference Between For Loops and While Loops in JavaScript</a> (GitConnected.com)</small>
       </section>
 
-      <!--  -->
+      <!-- More loops to come -->
       <section>
-        <h3>Loops Galore!</h3>
-        <p>With ES6, there are still a few more ways to iterate<br> in JavaScript; they'll be covered in the ES6 cohort.</p>
+        <h3>Loops & Iterators Galore!</h3>
+        <p>There are still many more ways to loop and iterate code in JavaScript!</p>
       </section>
 
       <!-- <pre><code class="js"></code></pre> -->

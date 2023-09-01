@@ -56,7 +56,35 @@
           </ul>
       </section>
 
-      <!-- Ternary Operator -->
+      <!-- If/Else review -->
+      <section>
+        <h3><code>if-else</code></h3>
+        <pre><code class="js">if (condition is true) {
+
+  // then do a...
+
+} else {
+
+  // do b...
+
+}
+        </code></pre>
+        
+        <pre><code class="js">let petSound = 'oink'
+
+if(petSound === 'meow'){
+
+  console.log(`I'm a cat; I love to sleep all day...`)
+
+} else {
+  
+  console.log(`I must be something else then!`)
+
+}
+        </code></pre>
+      </section>
+
+      <!-- Ternary Operator syntax -->
       <section>
         <h3>Ternary Operator</h3>
         <p>With ES6, we have a new, shorter way to write <br>conditionals with the <code>ternary operator</code> statement</p>
@@ -64,40 +92,91 @@
 
 condition we're evaluating ? what to do if true : what to do if false
 </code></pre>
-
-<pre><code class="js">let catsSay = 'meow';
-
-let catResponse = `I'm a cat and I love to sleep all day`
-
-let dogResponse = `I must be a dog then.... Woof!`
-
-catsSay === 'meow' ? console.log(catResponse) : console.log(dogResponse)
-</code></pre>
         <small><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator" target="_blank">Conditional (ternary) operator</a> (MDN)</small>
       </section>
       
-      <!--  -->
+      <section>
+        <h3>Ternary Operator</h3>
+<pre><code class="js">let petSound = 'meow'
+
+let catResponse = `I'm a cat; I love to sleep all day...`
+
+let otherResponse = `I must be something else then!`
+
+petSound === 'meow' ? console.log(catResponse) : console.log(otherResponse)
+</code></pre>
+      </section>
+
+      <!-- Ternary Practice -->
+      <section>
+        <h3>Ternary Practice</h3>
+        <p>Rewrite the <code>if-else</code> code below as a ternary statement</p>
+        <pre><code class="js">let temperature = 70
+
+if(temperature < 50){
+
+  console.log(`You'll need a coat!`)
+
+} else {
+
+  console.log(`It must be a warm day; wear whatever you want.`)
+
+}
+        </code></pre>
+      </section>
+
+      <!-- Conditional chains: Long Hand -->
+      <section>
+        <h3>Conditional Chains</h3>
+        <pre><code class="js">let today = 'thursday';
+
+
+if( today === 'monday' ){
+
+  console.log( 'Here we go again....' )
+
+} else if( today === 'tuesday' ){
+
+  console.log( 'Are we done yet?' )
+
+} else if( today === 'wednesday' ){
+  
+  console.log( 'Getting a bit excited...' )
+
+} else {
+
+  console.log( 'Weekend is almost here!' )
+
+}
+          </code></pre>
+      </section>
+
+      <!-- Switch Statement -->
       <section>
         <h3>Conditional Chaining:<br> Switch Statement</h3>
-        <p>A <code>switch statement</code> is an alternative to writing <br>long chains of <code>elseif</code> condition blocks</p>
+        <p>A <code>switch statement</code> is an alternative to writing <br>long chains of <code>else-if</code> condition blocks</p>
 
         <small><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch" target="_blank">Switch Statement</a> (MDN)</small>
       </section>
 
-      <!--  -->
+      <!-- Switch Statement Syntax -->
       <section>
         <h3>Switch Statement Syntax</h3>
 <pre><code class="js">switch (expression) {
+
   case value1:
     // do this if the expression (condition) matches value1
     break; // then exit
+  
   case value2:
     // do this if the expression (condition) matches value2
     break; // then exit
+  
   case value3:
     // do this if the expression (condition) matches value3
     break; // then exit
     ...
+  
   default:
     // do this when nothing matches the condtion
 }
@@ -105,16 +184,16 @@ catsSay === 'meow' ? console.log(catResponse) : console.log(dogResponse)
         <small><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch" target="_blank">Switch Statement</a> (MDN)</small>
       </section>
 
-      <!--  -->
+      <!-- Switch Statement Syntax -->
       <section>
         <h3>Switch Statement Syntax</h3>
-        <ul>
+        <ul class="fs-28">
           <li><code>switch</code> keyword initializes the conditional </li>
           <li><code>expression</code> is the condition to compare against</li>
           <li><code>case valueN</code>:
             <ul>
-              <li>The <code>case</code> clause defines what has to be compared to the <code>expression</code> and what to do if there's a match</li>
-              <li><code>valueN</code> is the value to compare against the <code>expression</code></li>
+              <li>The <code>case</code> clause defines what has to be compared to the expression and what to do if there's a match</li>
+              <li><code>valueN</code> is the value to compare against the expression</li>
             </ul>
           </li>
           <li><code>break</code> is an optional keyword that ends the program if there's a match found</li>
@@ -122,34 +201,39 @@ catsSay === 'meow' ? console.log(catResponse) : console.log(dogResponse)
         </ul>
       </section>
 
-      <!--  -->
+      <!-- Switch Statement -->
       <section>
         <h3>Switch Statement</h3>
-        <p>Using a <code>switch statement</code> on the<br> day-of-the-week conditional exercise from Class 3</p>
+        <p class="fs-28">Using a <code>switch statement</code> on the<br> day-of-the-week conditional chain</p>
 <pre><code class="js">let today = 'thursday';
 
 switch (today){
   case 'monday':
     console.log( 'Here we go again....' )
     break;
+
   case 'tuesday':
     console.log( 'Are we done yet?' )
     break;
+
   case 'wednesday':
-  case 'thursday':
+  // case 'thursday':
+  // case 'friday':
+  // Multiple cases/conditions can share the same outcome
     console.log( 'Getting a bit excited...' )
     break;
-  default:
+  
+    default:
     console.log( 'I love the weekends!' )
 }
 </code></pre>
       </section>
 
-      <!--  -->
+      <!-- Edge Cases -->
       <section>
         <h3>Edge Case: Logical Operators</h3>
-        <ul>
-          <li>Caveat: When using logical operators in a <code>switch</code> <br>statement, the expression to evaluate against <br>should be a boolean value (<code>true</code> or <code>false</code>)</li>
+        <ul class="fs-28 mb-32">
+          <li class="mb-16">Caveat: When using logical operators in a <code>switch</code> <br>statement, the expression to evaluate against <br>should be a boolean value (<code>true</code> or <code>false</code>)</li>
           <li>All case clauses have to be logical expressions</li>
         </ul>
         <small><a href="https://www.codecademy.com/forum_questions/50e4d0f8f45e1e74b1000bb7" target="_blank">Logical Operators in Switch Statements</a> (Codecademy)</small>
@@ -157,26 +241,30 @@ switch (today){
         <small><a href="https://medium.com/@hammadali2404/the-difference-between-if-else-and-switch-case-statements-javascript-9688c7f04fe6" target="_blank">The Difference between If else and Switch case Statements</a><br>(Medium article; see point #3)</small>
       </section>
 
-      <!--  -->
+      <!-- Edge Cases example -->
       <section>
         <h3>Edge Case: Logical Operators</h3>
-        <ul>
-          <li>Evaluating for the logical expressions in () will work</li>
-          <li>Evaluating for <code>monday</code> will not work</li>
+        <ul class="fs-24">
+          <li>In the code example below:</li>
+          <li>Evaluating logical expressions inside parentheses <span class="highlight--yellow">()</span> will work</li>
+          <li>Evaluating for the value <code>'monday'</code> will not work</li>
         </ul>
-  <pre><code class="js">let today = 'thursday';
-let sunnyDay = true
+  <pre><code class="js">let thisDay = 'thursday';
+let sunnyDay = false
 
 switch (true){
   case 'monday':
     console.log('Here we go again')
     break;
-  case (today === 'wednesday' && sunnyDay):
+
+  case (thisDay === 'wednesday' && sunnyDay):
     console.log( 'Getting a bit excited...' )
     break;
-  case (today === 'friday' || sunnyDay):
+
+  case (thisDay === 'friday' || sunnyDay):
     console.log( 'Freeeedommmm' )
     break;
+
   default:
     console.log( 'I love the weekends!' )
   }
